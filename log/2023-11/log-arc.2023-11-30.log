@@ -1,0 +1,140 @@
+2023-11-30 14:46:26.272 INFO  [com.main.ArchiveApplicationTests] - Starting ArchiveApplicationTests using Java 17.0.9 with PID 8072 (started by kcs in C:\Users\kcs\eclipse\workspace\Archive)
+2023-11-30 14:46:26.273 INFO  [com.main.ArchiveApplicationTests] - No active profile set, falling back to 1 default profile: "default"
+2023-11-30 14:46:27.152 INFO  [o.s.b.a.w.s.WelcomePageHandlerMapping] - Adding welcome page template: index
+2023-11-30 14:46:27.365 INFO  [com.main.ArchiveApplicationTests] - Started ArchiveApplicationTests in 1.41 seconds (process running for 2.395)
+2023-11-30 14:48:11.221 INFO  [com.main.ArchiveApplication] - Starting ArchiveApplication using Java 17.0.9 with PID 2840 (C:\Users\kcs\eclipse\workspace\Archive\bin\main started by kcs in C:\Users\kcs\eclipse\workspace\Archive)
+2023-11-30 14:48:11.222 INFO  [com.main.ArchiveApplication] - No active profile set, falling back to 1 default profile: "default"
+2023-11-30 14:48:11.251 INFO  [o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor] - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-11-30 14:48:11.251 INFO  [o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor] - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-11-30 14:48:11.902 INFO  [o.s.b.w.embedded.tomcat.TomcatWebServer] - Tomcat initialized with port 8080 (http)
+2023-11-30 14:48:11.908 INFO  [o.apache.coyote.http11.Http11NioProtocol] - Initializing ProtocolHandler ["http-nio-8080"]
+2023-11-30 14:48:11.909 INFO  [o.apache.catalina.core.StandardService] - Starting service [Tomcat]
+2023-11-30 14:48:11.910 INFO  [org.apache.catalina.core.StandardEngine] - Starting Servlet engine: [Apache Tomcat/10.1.16]
+2023-11-30 14:48:12.026 INFO  [org.apache.jasper.servlet.TldScanner] - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2023-11-30 14:48:12.032 INFO  [o.a.c.c.C.[Tomcat].[localhost].[/]] - Initializing Spring embedded WebApplicationContext
+2023-11-30 14:48:12.032 INFO  [o.s.b.w.s.c.ServletWebServerApplicationContext] - Root WebApplicationContext: initialization completed in 780 ms
+2023-11-30 14:48:12.104 INFO  [o.s.b.a.w.s.WelcomePageHandlerMapping] - Adding welcome page template: index
+2023-11-30 14:48:12.241 INFO  [o.s.b.d.a.OptionalLiveReloadServer] - LiveReload server is running on port 35729
+2023-11-30 14:48:12.250 INFO  [o.apache.coyote.http11.Http11NioProtocol] - Starting ProtocolHandler ["http-nio-8080"]
+2023-11-30 14:48:12.267 INFO  [o.s.b.w.embedded.tomcat.TomcatWebServer] - Tomcat started on port 8080 (http) with context path ''
+2023-11-30 14:48:12.273 INFO  [com.main.ArchiveApplication] - Started ArchiveApplication in 1.382 seconds (process running for 1.796)
+2023-11-30 14:48:27.160 INFO  [o.a.c.c.C.[Tomcat].[localhost].[/]] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-11-30 14:48:27.160 INFO  [o.s.web.servlet.DispatcherServlet] - Initializing Servlet 'dispatcherServlet'
+2023-11-30 14:48:27.161 INFO  [o.s.web.servlet.DispatcherServlet] - Completed initialization in 1 ms
+2023-11-30 14:48:27.184 INFO  [com.controller.HomeController] - INDEX
+2023-11-30 14:49:03.615 INFO  [o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener] - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-11-30 14:49:03.618 INFO  [o.apache.coyote.http11.Http11NioProtocol] - Stopping ProtocolHandler ["http-nio-8080"]
+2023-11-30 14:49:03.702 INFO  [com.main.ArchiveApplication] - Starting ArchiveApplication using Java 17.0.9 with PID 2840 (C:\Users\kcs\eclipse\workspace\Archive\bin\main started by kcs in C:\Users\kcs\eclipse\workspace\Archive)
+2023-11-30 14:49:03.702 INFO  [com.main.ArchiveApplication] - No active profile set, falling back to 1 default profile: "default"
+2023-11-30 14:49:03.888 INFO  [o.s.b.w.embedded.tomcat.TomcatWebServer] - Tomcat initialized with port 8080 (http)
+2023-11-30 14:49:03.888 INFO  [o.apache.coyote.http11.Http11NioProtocol] - Initializing ProtocolHandler ["http-nio-8080"]
+2023-11-30 14:49:03.888 INFO  [o.apache.catalina.core.StandardService] - Starting service [Tomcat]
+2023-11-30 14:49:03.888 INFO  [org.apache.catalina.core.StandardEngine] - Starting Servlet engine: [Apache Tomcat/10.1.16]
+2023-11-30 14:49:03.936 INFO  [org.apache.jasper.servlet.TldScanner] - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2023-11-30 14:49:03.939 INFO  [o.a.c.c.C.[Tomcat].[localhost].[/]] - Initializing Spring embedded WebApplicationContext
+2023-11-30 14:49:03.939 INFO  [o.s.b.w.s.c.ServletWebServerApplicationContext] - Root WebApplicationContext: initialization completed in 234 ms
+2023-11-30 14:49:03.953 INFO  [o.s.b.a.w.s.WelcomePageHandlerMapping] - Adding welcome page template: index
+2023-11-30 14:49:03.979 INFO  [o.s.b.d.a.OptionalLiveReloadServer] - LiveReload server is running on port 35729
+2023-11-30 14:49:03.982 INFO  [o.apache.coyote.http11.Http11NioProtocol] - Starting ProtocolHandler ["http-nio-8080"]
+2023-11-30 14:49:03.985 INFO  [o.s.b.w.embedded.tomcat.TomcatWebServer] - Tomcat started on port 8080 (http) with context path ''
+2023-11-30 14:49:03.989 INFO  [com.main.ArchiveApplication] - Started ArchiveApplication in 0.306 seconds (process running for 53.511)
+2023-11-30 14:49:03.991 INFO  [o.s.b.d.a.ConditionEvaluationDeltaLoggingListener] - Condition evaluation unchanged
+2023-11-30 14:49:32.957 INFO  [o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener] - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-11-30 14:49:32.959 INFO  [o.apache.coyote.http11.Http11NioProtocol] - Stopping ProtocolHandler ["http-nio-8080"]
+2023-11-30 14:49:33.040 INFO  [com.main.ArchiveApplication] - Starting ArchiveApplication using Java 17.0.9 with PID 2840 (C:\Users\kcs\eclipse\workspace\Archive\bin\main started by kcs in C:\Users\kcs\eclipse\workspace\Archive)
+2023-11-30 14:49:33.040 INFO  [com.main.ArchiveApplication] - No active profile set, falling back to 1 default profile: "default"
+2023-11-30 14:49:33.204 INFO  [o.s.b.w.embedded.tomcat.TomcatWebServer] - Tomcat initialized with port 8080 (http)
+2023-11-30 14:49:33.204 INFO  [o.apache.coyote.http11.Http11NioProtocol] - Initializing ProtocolHandler ["http-nio-8080"]
+2023-11-30 14:49:33.204 INFO  [o.apache.catalina.core.StandardService] - Starting service [Tomcat]
+2023-11-30 14:49:33.205 INFO  [org.apache.catalina.core.StandardEngine] - Starting Servlet engine: [Apache Tomcat/10.1.16]
+2023-11-30 14:49:33.254 INFO  [org.apache.jasper.servlet.TldScanner] - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2023-11-30 14:49:33.256 INFO  [o.a.c.c.C.[Tomcat].[localhost].[/]] - Initializing Spring embedded WebApplicationContext
+2023-11-30 14:49:33.256 INFO  [o.s.b.w.s.c.ServletWebServerApplicationContext] - Root WebApplicationContext: initialization completed in 214 ms
+2023-11-30 14:49:33.270 INFO  [o.s.b.a.w.s.WelcomePageHandlerMapping] - Adding welcome page template: index
+2023-11-30 14:49:33.293 INFO  [o.s.b.d.a.OptionalLiveReloadServer] - LiveReload server is running on port 35729
+2023-11-30 14:49:33.296 INFO  [o.apache.coyote.http11.Http11NioProtocol] - Starting ProtocolHandler ["http-nio-8080"]
+2023-11-30 14:49:33.300 INFO  [o.s.b.w.embedded.tomcat.TomcatWebServer] - Tomcat started on port 8080 (http) with context path ''
+2023-11-30 14:49:33.304 INFO  [com.main.ArchiveApplication] - Started ArchiveApplication in 0.283 seconds (process running for 82.826)
+2023-11-30 14:49:33.305 INFO  [o.s.b.d.a.ConditionEvaluationDeltaLoggingListener] - Condition evaluation unchanged
+2023-11-30 14:49:41.177 INFO  [o.a.c.c.C.[Tomcat].[localhost].[/]] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-11-30 14:49:41.177 INFO  [o.s.web.servlet.DispatcherServlet] - Initializing Servlet 'dispatcherServlet'
+2023-11-30 14:49:41.177 INFO  [o.s.web.servlet.DispatcherServlet] - Completed initialization in 0 ms
+2023-11-30 14:49:41.181 INFO  [com.controller.HomeController] - INDEX 34
+2023-11-30 14:50:00.369 INFO  [com.main.ArchiveApplicationTests] - Starting ArchiveApplicationTests using Java 17.0.9 with PID 6512 (started by kcs in C:\Users\kcs\eclipse\workspace\Archive)
+2023-11-30 14:50:00.371 INFO  [com.main.ArchiveApplicationTests] - No active profile set, falling back to 1 default profile: "default"
+2023-11-30 14:50:01.266 INFO  [o.s.b.a.w.s.WelcomePageHandlerMapping] - Adding welcome page template: index
+2023-11-30 14:50:01.474 INFO  [com.main.ArchiveApplicationTests] - Started ArchiveApplicationTests in 1.41 seconds (process running for 2.39)
+2023-11-30 16:39:17.795 INFO  [com.main.ArchiveApplication] - Starting ArchiveApplication using Java 17.0.9 with PID 15772 (C:\Users\kcs\eclipse\workspace\Archive\bin\main started by kcs in C:\Users\kcs\eclipse\workspace\Archive)
+2023-11-30 16:39:17.796 INFO  [com.main.ArchiveApplication] - No active profile set, falling back to 1 default profile: "default"
+2023-11-30 16:39:17.824 INFO  [o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor] - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-11-30 16:39:17.824 INFO  [o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor] - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-11-30 16:39:18.508 INFO  [o.s.b.w.embedded.tomcat.TomcatWebServer] - Tomcat initialized with port 8080 (http)
+2023-11-30 16:39:18.514 INFO  [o.apache.coyote.http11.Http11NioProtocol] - Initializing ProtocolHandler ["http-nio-8080"]
+2023-11-30 16:39:18.515 INFO  [o.apache.catalina.core.StandardService] - Starting service [Tomcat]
+2023-11-30 16:39:18.515 INFO  [org.apache.catalina.core.StandardEngine] - Starting Servlet engine: [Apache Tomcat/10.1.16]
+2023-11-30 16:39:18.637 INFO  [org.apache.jasper.servlet.TldScanner] - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2023-11-30 16:39:18.643 INFO  [o.a.c.c.C.[Tomcat].[localhost].[/]] - Initializing Spring embedded WebApplicationContext
+2023-11-30 16:39:18.643 INFO  [o.s.b.w.s.c.ServletWebServerApplicationContext] - Root WebApplicationContext: initialization completed in 819 ms
+2023-11-30 16:39:18.706 INFO  [o.s.b.a.w.s.WelcomePageHandlerMapping] - Adding welcome page template: index
+2023-11-30 16:39:18.843 WARN  [o.s.b.d.a.OptionalLiveReloadServer] - Unable to start LiveReload server
+2023-11-30 16:39:18.853 INFO  [o.apache.coyote.http11.Http11NioProtocol] - Starting ProtocolHandler ["http-nio-8080"]
+2023-11-30 16:39:18.857 WARN  [o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext] - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
+2023-11-30 16:39:18.868 INFO  [o.s.b.a.l.ConditionEvaluationReportLogger] - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2023-11-30 16:39:18.881 ERROR [o.s.b.d.LoggingFailureAnalysisReporter] - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8080 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
+
+2023-11-30 16:39:21.094 INFO  [o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin] - Application shutdown requested.
+2023-11-30 16:39:21.095 INFO  [o.apache.coyote.http11.Http11NioProtocol] - Stopping ProtocolHandler ["http-nio-8080"]
+2023-11-30 16:39:58.656 INFO  [com.main.ArchiveApplication] - Starting ArchiveApplication using Java 17.0.9 with PID 14644 (C:\Users\kcs\eclipse\workspace\Archive\bin\main started by kcs in C:\Users\kcs\eclipse\workspace\Archive)
+2023-11-30 16:39:58.657 INFO  [com.main.ArchiveApplication] - No active profile set, falling back to 1 default profile: "default"
+2023-11-30 16:39:58.686 INFO  [o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor] - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-11-30 16:39:58.686 INFO  [o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor] - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-11-30 16:39:59.357 INFO  [o.s.b.w.embedded.tomcat.TomcatWebServer] - Tomcat initialized with port 8080 (http)
+2023-11-30 16:39:59.362 INFO  [o.apache.coyote.http11.Http11NioProtocol] - Initializing ProtocolHandler ["http-nio-8080"]
+2023-11-30 16:39:59.363 INFO  [o.apache.catalina.core.StandardService] - Starting service [Tomcat]
+2023-11-30 16:39:59.364 INFO  [org.apache.catalina.core.StandardEngine] - Starting Servlet engine: [Apache Tomcat/10.1.16]
+2023-11-30 16:39:59.477 INFO  [org.apache.jasper.servlet.TldScanner] - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2023-11-30 16:39:59.482 INFO  [o.a.c.c.C.[Tomcat].[localhost].[/]] - Initializing Spring embedded WebApplicationContext
+2023-11-30 16:39:59.483 INFO  [o.s.b.w.s.c.ServletWebServerApplicationContext] - Root WebApplicationContext: initialization completed in 797 ms
+2023-11-30 16:39:59.545 INFO  [o.s.b.a.w.s.WelcomePageHandlerMapping] - Adding welcome page template: index
+2023-11-30 16:39:59.682 INFO  [o.s.b.d.a.OptionalLiveReloadServer] - LiveReload server is running on port 35729
+2023-11-30 16:39:59.692 INFO  [o.apache.coyote.http11.Http11NioProtocol] - Starting ProtocolHandler ["http-nio-8080"]
+2023-11-30 16:39:59.710 INFO  [o.s.b.w.embedded.tomcat.TomcatWebServer] - Tomcat started on port 8080 (http) with context path ''
+2023-11-30 16:39:59.716 INFO  [com.main.ArchiveApplication] - Started ArchiveApplication in 1.383 seconds (process running for 1.797)
+2023-11-30 16:40:03.148 INFO  [o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin] - Application shutdown requested.
+2023-11-30 16:40:03.151 INFO  [o.apache.coyote.http11.Http11NioProtocol] - Stopping ProtocolHandler ["http-nio-8080"]
+2023-11-30 16:40:29.691 INFO  [com.main.ArchiveApplication] - Starting ArchiveApplication using Java 17.0.9 with PID 16156 (C:\Users\kcs\eclipse\workspace\Archive\bin\main started by kcs in C:\Users\kcs\eclipse\workspace\Archive)
+2023-11-30 16:40:29.693 INFO  [com.main.ArchiveApplication] - The following 1 profile is active: "local"
+2023-11-30 16:40:29.724 INFO  [o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor] - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-11-30 16:40:29.724 INFO  [o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor] - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-11-30 16:40:30.409 INFO  [o.s.b.w.embedded.tomcat.TomcatWebServer] - Tomcat initialized with port 8080 (http)
+2023-11-30 16:40:30.415 INFO  [o.apache.coyote.http11.Http11NioProtocol] - Initializing ProtocolHandler ["http-nio-8080"]
+2023-11-30 16:40:30.416 INFO  [o.apache.catalina.core.StandardService] - Starting service [Tomcat]
+2023-11-30 16:40:30.416 INFO  [org.apache.catalina.core.StandardEngine] - Starting Servlet engine: [Apache Tomcat/10.1.16]
+2023-11-30 16:40:30.530 INFO  [org.apache.jasper.servlet.TldScanner] - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2023-11-30 16:40:30.536 INFO  [o.a.c.c.C.[Tomcat].[localhost].[/]] - Initializing Spring embedded WebApplicationContext
+2023-11-30 16:40:30.536 INFO  [o.s.b.w.s.c.ServletWebServerApplicationContext] - Root WebApplicationContext: initialization completed in 812 ms
+2023-11-30 16:40:30.596 INFO  [o.s.b.a.w.s.WelcomePageHandlerMapping] - Adding welcome page template: index
+2023-11-30 16:40:30.734 INFO  [o.s.b.d.a.OptionalLiveReloadServer] - LiveReload server is running on port 35729
+2023-11-30 16:40:30.744 INFO  [o.apache.coyote.http11.Http11NioProtocol] - Starting ProtocolHandler ["http-nio-8080"]
+2023-11-30 16:40:30.761 INFO  [o.s.b.w.embedded.tomcat.TomcatWebServer] - Tomcat started on port 8080 (http) with context path ''
+2023-11-30 16:40:30.769 INFO  [com.main.ArchiveApplication] - Started ArchiveApplication in 1.419 seconds (process running for 1.827)
+2023-11-30 16:40:34.315 INFO  [o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin] - Application shutdown requested.
+2023-11-30 16:40:34.319 INFO  [o.apache.coyote.http11.Http11NioProtocol] - Stopping ProtocolHandler ["http-nio-8080"]
+2023-11-30 16:44:47.918 INFO  [com.main.ArchiveApplicationTests] - Starting ArchiveApplicationTests using Java 17.0.9 with PID 11700 (started by kcs in C:\Users\kcs\eclipse\workspace\Archive)
+2023-11-30 16:44:47.919 INFO  [com.main.ArchiveApplicationTests] - The following 1 profile is active: "local"
+2023-11-30 16:44:48.933 INFO  [o.s.b.a.w.s.WelcomePageHandlerMapping] - Adding welcome page template: index
+2023-11-30 16:44:49.158 INFO  [com.main.ArchiveApplicationTests] - Started ArchiveApplicationTests in 1.566 seconds (process running for 2.728)
