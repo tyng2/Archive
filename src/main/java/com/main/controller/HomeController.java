@@ -21,14 +21,19 @@ public class HomeController {
 	@Autowired
 	private TestService testService;
 	
-	@GetMapping("/")
-	public String index(HttpServletRequest request, Model model) {
+	@GetMapping("/test")
+	public String test(HttpServletRequest request, Model model) {
 		String a = request.getParameter("a");
 		log.info("INDEX {}", a);
 		Map<String, Object> resultMap = testService.test();
 		model.addAttribute("test", resultMap);
 		log.info("id : {}", resultMap.get("id"));
 		log.info("val : {}", resultMap.get("val"));
+		return "index_old";
+	}
+	
+	@GetMapping("/")
+	public String index() {
 		return "index";
 	}
 	
