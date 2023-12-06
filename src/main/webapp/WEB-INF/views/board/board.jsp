@@ -1,79 +1,80 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <head>
-    <title>board TESTPAGE</title>
+    <title>board TEST</title>
 </head>
 <body>
-    <main class="flex-shrink-0">
-        
-        <!-- Page Content-->
-        <section class="py-5">
-            <div class="container px-5 my-5">
-                <div class="row gx-5 justify-content-center">
-                    <div class="col-lg-6">
-                        <div class="text-center mb-5">
-                            <h1 class="fw-bolder">Project Title</h1>
-                            <p class="lead fw-normal text-muted mb-0">Lorem ipsum dolr sit amet consectetur adipisicing.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="row gx-5">
-                    <div class="col-12"><img class="img-fluid rounded-3 mb-5" src="https://dummyimage.com/1300x700/343a40/6c757d" alt="..." /></div>
-                    <div class="col-lg-6"><img class="img-fluid rounded-3 mb-5" src="https://dummyimage.com/600x400/343a40/6c757d" alt="..." /></div>
-                    <div class="col-lg-6"><img class="img-fluid rounded-3 mb-5" src="https://dummyimage.com/600x400/343a40/6c757d" alt="..." /></div>
-                </div>
-                
-                <div class="row gx-5">
-                	<div class="col-12">
-                		<table class="table table-hover">
-                			<colgroup>
-                				<col width="60px">
-                				<col>
-                				<col width="20%">
-                				<col width="10%">
-                				<col width="60px">
-                			</colgroup>
-                			<thead class="table-light">
-	                			<tr>
-	                				<td scope="colgroup" colspan="2">Title</td>
-	                				<td scope="col">작성자</td>
-	                				<td scope="col">일시</td>
-	                				<td scope="col">조회</td>
-	                			</tr>
-                			</thead>
-                			<tbody class="table-group-divider">
-                				<tr>
-                					<td scope="row">a</td>
-                					<td>a</td>
-                					<td>b</td>
-                					<td>c</td>
-                					<td>d</td>
-                				</tr>
-                				<tr>
-                					<td scope="row">a</td>
-                					<td>b</td>
-                					<td>b</td>
-                					<td>c</td>
-                					<td>d</td>
-                				</tr>
-                			</tbody>
-                		</table>
-					</div>
-                </div>
-                
-<%--
-                <div class="row gx-5 justify-content-center">
-                    <div class="col-lg-6">
-                        <div class="text-center mb-5">
-                            <p class="lead fw-normal text-muted">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Totam deserunt architecto enim eos accusantium fugit recusandae illo iste dignissimos possimus facere ducimus odit voluptatibus exercitationem, ex laudantium illum voluptatum corporis.</p>
-                            <a class="text-decoration-none" href="#!">
-                                View project
-                                <i class="bi-arrow-right"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
---%>
-            </div>
-        </section>
-    </main>
+	<header>
+		<!-- Jumbotron -->
+		<div id="intro" class="p-5 text-center bg-light">
+			<h1 class="mb-0 h4">This is a long title of the article</h1>
+		</div>
+		<!-- Jumbotron -->
+	</header>
+
+	<!--Main layout-->
+	<main class="mt-4 mb-5">
+		<div class="container">
+		<!--Grid row-->
+		<div class="row">
+      		<table class="table table-hover">
+      			<colgroup>
+      				<col width="60px;" class="xs_none">
+      				<col>
+      				<col width="10%;">
+      				<col width="20%;">
+      				<col width="60px;" class="xs_none">
+      			</colgroup>
+      			<thead>
+      				<tr>
+      					<th scope="col" class="xs_none">No</th>
+      					<th scope="col">title</th>
+      					<th scope="col">user</th>
+      					<th scope="col">time</th>
+      					<th scope="col" class="xs_none">cnt</th>
+      				</tr>
+      			</thead>
+      			<tbody class="table-group-divider table-divider-color">
+      				<tr>
+      					<td scope="row" class="xs_none">1001</td>
+      					<td>3234523462</td>
+      					<td>32</td>
+      					<td>12</td>
+      					<td class="xs_none">1</td>
+      				</tr>
+      				<tr>
+      					<td scope="row" class="xs_none">1000</td>
+      					<td>3234523462</td>
+      					<td>32</td>
+      					<td>12</td>
+      					<td class="xs_none">1</td>
+      				</tr>
+      				<tr>
+      					<td scope="row" class="xs_none">999</td>
+      					<td>3234523462</td>
+      					<td>32</td>
+      					<td>12</td>
+      					<td class="xs_none">1</td>
+      				</tr>
+      			</tbody>
+      		</table>
+		</div>
+      
+		<!--Grid row-->
+    </div>
+  </main>
+  <!--Main layout-->
+  
+	<div id="app">
+		<input v-model="message">
+		<p>{{ message }}</p>
+	</div>
+
+<script>
+	var vm = new Vue({
+	    el: '#app',
+	    data: {
+			message: 'Vue.js! TEST'
+	    }
+	});
+</script>
 </body>

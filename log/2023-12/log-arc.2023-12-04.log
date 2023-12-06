@@ -1,0 +1,1154 @@
+2023-12-04 09:35:57.258 INFO  [com.main.ArchiveApplication] - Starting ArchiveApplication using Java 17.0.9 with PID 16584 (C:\Users\kcs\eclipse\workspace\Archive\bin\main started by kcs in C:\Users\kcs\eclipse\workspace\Archive)
+2023-12-04 09:35:57.263 INFO  [com.main.ArchiveApplication] - The following 1 profile is active: "local"
+2023-12-04 09:35:57.302 INFO  [o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor] - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-12-04 09:35:57.302 INFO  [o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor] - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-12-04 09:35:58.158 INFO  [o.s.b.w.embedded.tomcat.TomcatWebServer] - Tomcat initialized with port 8080 (http)
+2023-12-04 09:35:58.166 INFO  [o.apache.coyote.http11.Http11NioProtocol] - Initializing ProtocolHandler ["http-nio-8080"]
+2023-12-04 09:35:58.167 INFO  [o.apache.catalina.core.StandardService] - Starting service [Tomcat]
+2023-12-04 09:35:58.168 INFO  [org.apache.catalina.core.StandardEngine] - Starting Servlet engine: [Apache Tomcat/10.1.16]
+2023-12-04 09:35:58.294 INFO  [org.apache.jasper.servlet.TldScanner] - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2023-12-04 09:35:58.300 INFO  [o.a.c.c.C.[Tomcat].[localhost].[/]] - Initializing Spring embedded WebApplicationContext
+2023-12-04 09:35:58.300 INFO  [o.s.b.w.s.c.ServletWebServerApplicationContext] - Root WebApplicationContext: initialization completed in 997 ms
+2023-12-04 09:35:58.372 INFO  [com.zaxxer.hikari.HikariDataSource] - HikariCP - Starting...
+2023-12-04 09:35:58.439 INFO  [com.zaxxer.hikari.pool.HikariPool] - HikariCP - Added connection net.sf.log4jdbc.sql.jdbcapi.ConnectionSpy@5ca58388
+2023-12-04 09:35:58.441 INFO  [com.zaxxer.hikari.HikariDataSource] - HikariCP - Start completed.
+2023-12-04 09:35:58.617 INFO  [o.s.b.a.w.s.WelcomePageHandlerMapping] - Adding welcome page template: index
+2023-12-04 09:35:58.836 INFO  [o.s.b.d.a.OptionalLiveReloadServer] - LiveReload server is running on port 35729
+2023-12-04 09:35:58.851 INFO  [o.apache.coyote.http11.Http11NioProtocol] - Starting ProtocolHandler ["http-nio-8080"]
+2023-12-04 09:35:58.878 INFO  [o.s.b.w.embedded.tomcat.TomcatWebServer] - Tomcat started on port 8080 (http) with context path ''
+2023-12-04 09:35:58.885 INFO  [com.main.ArchiveApplication] - Started ArchiveApplication in 2.018 seconds (process running for 2.699)
+2023-12-04 09:36:30.498 INFO  [o.a.c.c.C.[Tomcat].[localhost].[/]] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-04 09:36:30.499 INFO  [o.s.web.servlet.DispatcherServlet] - Initializing Servlet 'dispatcherServlet'
+2023-12-04 09:36:30.499 INFO  [o.s.web.servlet.DispatcherServlet] - Completed initialization in 0 ms
+2023-12-04 10:36:11.278 INFO  [o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener] - Restarting due to 1 class path change (1 addition, 0 deletions, 0 modifications)
+2023-12-04 10:36:11.283 INFO  [o.apache.coyote.http11.Http11NioProtocol] - Stopping ProtocolHandler ["http-nio-8080"]
+2023-12-04 10:36:11.298 INFO  [com.zaxxer.hikari.HikariDataSource] - HikariCP - Shutdown initiated...
+2023-12-04 10:36:11.300 INFO  [com.zaxxer.hikari.HikariDataSource] - HikariCP - Shutdown completed.
+2023-12-04 10:36:11.379 INFO  [com.main.ArchiveApplication] - Starting ArchiveApplication using Java 17.0.9 with PID 16584 (C:\Users\kcs\eclipse\workspace\Archive\bin\main started by kcs in C:\Users\kcs\eclipse\workspace\Archive)
+2023-12-04 10:36:11.379 INFO  [com.main.ArchiveApplication] - The following 1 profile is active: "local"
+2023-12-04 10:36:11.589 INFO  [o.s.b.w.embedded.tomcat.TomcatWebServer] - Tomcat initialized with port 8080 (http)
+2023-12-04 10:36:11.590 INFO  [o.apache.coyote.http11.Http11NioProtocol] - Initializing ProtocolHandler ["http-nio-8080"]
+2023-12-04 10:36:11.590 INFO  [o.apache.catalina.core.StandardService] - Starting service [Tomcat]
+2023-12-04 10:36:11.590 INFO  [org.apache.catalina.core.StandardEngine] - Starting Servlet engine: [Apache Tomcat/10.1.16]
+2023-12-04 10:36:11.646 INFO  [org.apache.jasper.servlet.TldScanner] - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2023-12-04 10:36:11.649 INFO  [o.a.c.c.C.[Tomcat].[localhost].[/]] - Initializing Spring embedded WebApplicationContext
+2023-12-04 10:36:11.649 INFO  [o.s.b.w.s.c.ServletWebServerApplicationContext] - Root WebApplicationContext: initialization completed in 267 ms
+2023-12-04 10:36:11.662 INFO  [com.zaxxer.hikari.HikariDataSource] - HikariCP - Starting...
+2023-12-04 10:36:11.666 INFO  [com.zaxxer.hikari.pool.HikariPool] - HikariCP - Added connection net.sf.log4jdbc.sql.jdbcapi.ConnectionSpy@4a2a795b
+2023-12-04 10:36:11.666 INFO  [com.zaxxer.hikari.HikariDataSource] - HikariCP - Start completed.
+2023-12-04 10:36:11.690 INFO  [o.s.b.a.w.s.WelcomePageHandlerMapping] - Adding welcome page template: index
+2023-12-04 10:36:11.739 INFO  [o.s.b.d.a.OptionalLiveReloadServer] - LiveReload server is running on port 35729
+2023-12-04 10:36:11.745 INFO  [o.apache.coyote.http11.Http11NioProtocol] - Starting ProtocolHandler ["http-nio-8080"]
+2023-12-04 10:36:11.753 INFO  [o.s.b.w.embedded.tomcat.TomcatWebServer] - Tomcat started on port 8080 (http) with context path ''
+2023-12-04 10:36:11.756 INFO  [com.main.ArchiveApplication] - Started ArchiveApplication in 0.407 seconds (process running for 3615.569)
+2023-12-04 10:36:11.758 INFO  [o.s.b.d.a.ConditionEvaluationDeltaLoggingListener] - Condition evaluation unchanged
+2023-12-04 10:36:56.069 INFO  [o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener] - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-12-04 10:36:56.071 INFO  [o.apache.coyote.http11.Http11NioProtocol] - Stopping ProtocolHandler ["http-nio-8080"]
+2023-12-04 10:36:56.086 INFO  [com.zaxxer.hikari.HikariDataSource] - HikariCP - Shutdown initiated...
+2023-12-04 10:36:56.088 INFO  [com.zaxxer.hikari.HikariDataSource] - HikariCP - Shutdown completed.
+2023-12-04 10:36:56.172 INFO  [com.main.ArchiveApplication] - Starting ArchiveApplication using Java 17.0.9 with PID 16584 (C:\Users\kcs\eclipse\workspace\Archive\bin\main started by kcs in C:\Users\kcs\eclipse\workspace\Archive)
+2023-12-04 10:36:56.173 INFO  [com.main.ArchiveApplication] - The following 1 profile is active: "local"
+2023-12-04 10:36:56.817 INFO  [o.s.b.w.embedded.tomcat.TomcatWebServer] - Tomcat initialized with port 8080 (http)
+2023-12-04 10:36:56.817 INFO  [o.apache.coyote.http11.Http11NioProtocol] - Initializing ProtocolHandler ["http-nio-8080"]
+2023-12-04 10:36:56.817 INFO  [o.apache.catalina.core.StandardService] - Starting service [Tomcat]
+2023-12-04 10:36:56.817 INFO  [org.apache.catalina.core.StandardEngine] - Starting Servlet engine: [Apache Tomcat/10.1.16]
+2023-12-04 10:36:56.868 INFO  [org.apache.jasper.servlet.TldScanner] - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2023-12-04 10:36:56.870 INFO  [o.a.c.c.C.[Tomcat].[localhost].[/]] - Initializing Spring embedded WebApplicationContext
+2023-12-04 10:36:56.871 INFO  [o.s.b.w.s.c.ServletWebServerApplicationContext] - Root WebApplicationContext: initialization completed in 696 ms
+2023-12-04 10:36:56.886 INFO  [com.zaxxer.hikari.HikariDataSource] - HikariCP - Starting...
+2023-12-04 10:36:56.889 INFO  [com.zaxxer.hikari.pool.HikariPool] - HikariCP - Added connection net.sf.log4jdbc.sql.jdbcapi.ConnectionSpy@28c0aa8
+2023-12-04 10:36:56.889 INFO  [com.zaxxer.hikari.HikariDataSource] - HikariCP - Start completed.
+2023-12-04 10:36:56.909 INFO  [o.s.b.a.w.s.WelcomePageHandlerMapping] - Adding welcome page template: index
+2023-12-04 10:36:56.954 INFO  [o.s.b.d.a.OptionalLiveReloadServer] - LiveReload server is running on port 35729
+2023-12-04 10:36:56.958 INFO  [o.apache.coyote.http11.Http11NioProtocol] - Starting ProtocolHandler ["http-nio-8080"]
+2023-12-04 10:36:56.963 INFO  [o.s.b.w.embedded.tomcat.TomcatWebServer] - Tomcat started on port 8080 (http) with context path ''
+2023-12-04 10:36:56.966 INFO  [com.main.ArchiveApplication] - Started ArchiveApplication in 0.819 seconds (process running for 3660.778)
+2023-12-04 10:36:56.967 INFO  [o.s.b.d.a.ConditionEvaluationDeltaLoggingListener] - Condition evaluation unchanged
+2023-12-04 10:36:58.404 INFO  [o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener] - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-12-04 10:36:58.406 INFO  [o.apache.coyote.http11.Http11NioProtocol] - Stopping ProtocolHandler ["http-nio-8080"]
+2023-12-04 10:36:58.420 INFO  [com.zaxxer.hikari.HikariDataSource] - HikariCP - Shutdown initiated...
+2023-12-04 10:36:58.422 INFO  [com.zaxxer.hikari.HikariDataSource] - HikariCP - Shutdown completed.
+2023-12-04 10:36:58.495 INFO  [com.main.ArchiveApplication] - Starting ArchiveApplication using Java 17.0.9 with PID 16584 (C:\Users\kcs\eclipse\workspace\Archive\bin\main started by kcs in C:\Users\kcs\eclipse\workspace\Archive)
+2023-12-04 10:36:58.495 INFO  [com.main.ArchiveApplication] - The following 1 profile is active: "local"
+2023-12-04 10:36:58.675 INFO  [o.s.b.w.embedded.tomcat.TomcatWebServer] - Tomcat initialized with port 8080 (http)
+2023-12-04 10:36:58.675 INFO  [o.apache.coyote.http11.Http11NioProtocol] - Initializing ProtocolHandler ["http-nio-8080"]
+2023-12-04 10:36:58.675 INFO  [o.apache.catalina.core.StandardService] - Starting service [Tomcat]
+2023-12-04 10:36:58.676 INFO  [org.apache.catalina.core.StandardEngine] - Starting Servlet engine: [Apache Tomcat/10.1.16]
+2023-12-04 10:36:58.723 INFO  [org.apache.jasper.servlet.TldScanner] - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2023-12-04 10:36:58.726 INFO  [o.a.c.c.C.[Tomcat].[localhost].[/]] - Initializing Spring embedded WebApplicationContext
+2023-12-04 10:36:58.726 INFO  [o.s.b.w.s.c.ServletWebServerApplicationContext] - Root WebApplicationContext: initialization completed in 229 ms
+2023-12-04 10:36:58.740 INFO  [com.zaxxer.hikari.HikariDataSource] - HikariCP - Starting...
+2023-12-04 10:36:58.742 INFO  [com.zaxxer.hikari.pool.HikariPool] - HikariCP - Added connection net.sf.log4jdbc.sql.jdbcapi.ConnectionSpy@44d7a700
+2023-12-04 10:36:58.742 INFO  [com.zaxxer.hikari.HikariDataSource] - HikariCP - Start completed.
+2023-12-04 10:36:58.763 INFO  [o.s.b.a.w.s.WelcomePageHandlerMapping] - Adding welcome page template: index
+2023-12-04 10:36:58.804 INFO  [o.s.b.d.a.OptionalLiveReloadServer] - LiveReload server is running on port 35729
+2023-12-04 10:36:58.809 INFO  [o.apache.coyote.http11.Http11NioProtocol] - Starting ProtocolHandler ["http-nio-8080"]
+2023-12-04 10:36:58.815 INFO  [o.s.b.w.embedded.tomcat.TomcatWebServer] - Tomcat started on port 8080 (http) with context path ''
+2023-12-04 10:36:58.819 INFO  [com.main.ArchiveApplication] - Started ArchiveApplication in 0.347 seconds (process running for 3662.631)
+2023-12-04 10:36:58.819 INFO  [o.s.b.d.a.ConditionEvaluationDeltaLoggingListener] - Condition evaluation unchanged
+2023-12-04 10:37:12.517 INFO  [o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener] - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-12-04 10:37:12.519 INFO  [o.apache.coyote.http11.Http11NioProtocol] - Stopping ProtocolHandler ["http-nio-8080"]
+2023-12-04 10:37:12.535 INFO  [com.zaxxer.hikari.HikariDataSource] - HikariCP - Shutdown initiated...
+2023-12-04 10:37:12.547 INFO  [com.zaxxer.hikari.HikariDataSource] - HikariCP - Shutdown completed.
+2023-12-04 10:37:12.620 INFO  [com.main.ArchiveApplication] - Starting ArchiveApplication using Java 17.0.9 with PID 16584 (C:\Users\kcs\eclipse\workspace\Archive\bin\main started by kcs in C:\Users\kcs\eclipse\workspace\Archive)
+2023-12-04 10:37:12.620 INFO  [com.main.ArchiveApplication] - The following 1 profile is active: "local"
+2023-12-04 10:37:12.793 INFO  [o.s.b.w.embedded.tomcat.TomcatWebServer] - Tomcat initialized with port 8080 (http)
+2023-12-04 10:37:12.794 INFO  [o.apache.coyote.http11.Http11NioProtocol] - Initializing ProtocolHandler ["http-nio-8080"]
+2023-12-04 10:37:12.794 INFO  [o.apache.catalina.core.StandardService] - Starting service [Tomcat]
+2023-12-04 10:37:12.794 INFO  [org.apache.catalina.core.StandardEngine] - Starting Servlet engine: [Apache Tomcat/10.1.16]
+2023-12-04 10:37:12.843 INFO  [org.apache.jasper.servlet.TldScanner] - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2023-12-04 10:37:12.845 INFO  [o.a.c.c.C.[Tomcat].[localhost].[/]] - Initializing Spring embedded WebApplicationContext
+2023-12-04 10:37:12.845 INFO  [o.s.b.w.s.c.ServletWebServerApplicationContext] - Root WebApplicationContext: initialization completed in 223 ms
+2023-12-04 10:37:12.862 INFO  [com.zaxxer.hikari.HikariDataSource] - HikariCP - Starting...
+2023-12-04 10:37:12.865 INFO  [com.zaxxer.hikari.pool.HikariPool] - HikariCP - Added connection net.sf.log4jdbc.sql.jdbcapi.ConnectionSpy@dfdbca3
+2023-12-04 10:37:12.865 INFO  [com.zaxxer.hikari.HikariDataSource] - HikariCP - Start completed.
+2023-12-04 10:37:12.886 INFO  [o.s.b.a.w.s.WelcomePageHandlerMapping] - Adding welcome page template: index
+2023-12-04 10:37:12.930 INFO  [o.s.b.d.a.OptionalLiveReloadServer] - LiveReload server is running on port 35729
+2023-12-04 10:37:12.935 INFO  [o.apache.coyote.http11.Http11NioProtocol] - Starting ProtocolHandler ["http-nio-8080"]
+2023-12-04 10:37:12.940 INFO  [o.s.b.w.embedded.tomcat.TomcatWebServer] - Tomcat started on port 8080 (http) with context path ''
+2023-12-04 10:37:12.944 INFO  [com.main.ArchiveApplication] - Started ArchiveApplication in 0.347 seconds (process running for 3676.756)
+2023-12-04 10:37:12.944 INFO  [o.s.b.d.a.ConditionEvaluationDeltaLoggingListener] - Condition evaluation unchanged
+2023-12-04 10:37:22.535 INFO  [o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener] - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-12-04 10:37:22.537 INFO  [o.apache.coyote.http11.Http11NioProtocol] - Stopping ProtocolHandler ["http-nio-8080"]
+2023-12-04 10:37:22.551 INFO  [com.zaxxer.hikari.HikariDataSource] - HikariCP - Shutdown initiated...
+2023-12-04 10:37:22.552 INFO  [com.zaxxer.hikari.HikariDataSource] - HikariCP - Shutdown completed.
+2023-12-04 10:37:22.627 INFO  [com.main.ArchiveApplication] - Starting ArchiveApplication using Java 17.0.9 with PID 16584 (C:\Users\kcs\eclipse\workspace\Archive\bin\main started by kcs in C:\Users\kcs\eclipse\workspace\Archive)
+2023-12-04 10:37:22.628 INFO  [com.main.ArchiveApplication] - The following 1 profile is active: "local"
+2023-12-04 10:37:22.801 INFO  [o.s.b.w.embedded.tomcat.TomcatWebServer] - Tomcat initialized with port 8080 (http)
+2023-12-04 10:37:22.801 INFO  [o.apache.coyote.http11.Http11NioProtocol] - Initializing ProtocolHandler ["http-nio-8080"]
+2023-12-04 10:37:22.801 INFO  [o.apache.catalina.core.StandardService] - Starting service [Tomcat]
+2023-12-04 10:37:22.801 INFO  [org.apache.catalina.core.StandardEngine] - Starting Servlet engine: [Apache Tomcat/10.1.16]
+2023-12-04 10:37:22.849 INFO  [org.apache.jasper.servlet.TldScanner] - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2023-12-04 10:37:22.851 INFO  [o.a.c.c.C.[Tomcat].[localhost].[/]] - Initializing Spring embedded WebApplicationContext
+2023-12-04 10:37:22.851 INFO  [o.s.b.w.s.c.ServletWebServerApplicationContext] - Root WebApplicationContext: initialization completed in 222 ms
+2023-12-04 10:37:22.864 INFO  [com.zaxxer.hikari.HikariDataSource] - HikariCP - Starting...
+2023-12-04 10:37:22.867 INFO  [com.zaxxer.hikari.pool.HikariPool] - HikariCP - Added connection net.sf.log4jdbc.sql.jdbcapi.ConnectionSpy@268f4249
+2023-12-04 10:37:22.867 INFO  [com.zaxxer.hikari.HikariDataSource] - HikariCP - Start completed.
+2023-12-04 10:37:22.886 INFO  [o.s.b.a.w.s.WelcomePageHandlerMapping] - Adding welcome page template: index
+2023-12-04 10:37:22.934 INFO  [o.s.b.d.a.OptionalLiveReloadServer] - LiveReload server is running on port 35729
+2023-12-04 10:37:22.938 INFO  [o.apache.coyote.http11.Http11NioProtocol] - Starting ProtocolHandler ["http-nio-8080"]
+2023-12-04 10:37:22.943 INFO  [o.s.b.w.embedded.tomcat.TomcatWebServer] - Tomcat started on port 8080 (http) with context path ''
+2023-12-04 10:37:22.947 INFO  [com.main.ArchiveApplication] - Started ArchiveApplication in 0.343 seconds (process running for 3686.759)
+2023-12-04 10:37:22.947 INFO  [o.s.b.d.a.ConditionEvaluationDeltaLoggingListener] - Condition evaluation unchanged
+2023-12-04 10:37:32.262 INFO  [com.main.ArchiveApplication] - Starting ArchiveApplication using Java 17.0.9 with PID 1628 (C:\Users\kcs\eclipse\workspace\Archive\bin\main started by kcs in C:\Users\kcs\eclipse\workspace\Archive)
+2023-12-04 10:37:32.264 INFO  [com.main.ArchiveApplication] - The following 1 profile is active: "local"
+2023-12-04 10:37:32.297 INFO  [o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor] - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-12-04 10:37:32.297 INFO  [o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor] - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-12-04 10:37:33.127 INFO  [o.s.b.w.embedded.tomcat.TomcatWebServer] - Tomcat initialized with port 8080 (http)
+2023-12-04 10:37:33.133 INFO  [o.apache.coyote.http11.Http11NioProtocol] - Initializing ProtocolHandler ["http-nio-8080"]
+2023-12-04 10:37:33.135 INFO  [o.apache.catalina.core.StandardService] - Starting service [Tomcat]
+2023-12-04 10:37:33.135 INFO  [org.apache.catalina.core.StandardEngine] - Starting Servlet engine: [Apache Tomcat/10.1.16]
+2023-12-04 10:37:33.264 INFO  [org.apache.jasper.servlet.TldScanner] - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2023-12-04 10:37:33.269 INFO  [o.a.c.c.C.[Tomcat].[localhost].[/]] - Initializing Spring embedded WebApplicationContext
+2023-12-04 10:37:33.269 INFO  [o.s.b.w.s.c.ServletWebServerApplicationContext] - Root WebApplicationContext: initialization completed in 971 ms
+2023-12-04 10:37:33.328 INFO  [com.zaxxer.hikari.HikariDataSource] - HikariCP - Starting...
+2023-12-04 10:37:33.391 INFO  [com.zaxxer.hikari.pool.HikariPool] - HikariCP - Added connection net.sf.log4jdbc.sql.jdbcapi.ConnectionSpy@60174cc5
+2023-12-04 10:37:33.393 INFO  [com.zaxxer.hikari.HikariDataSource] - HikariCP - Start completed.
+2023-12-04 10:37:33.542 INFO  [o.s.b.a.w.s.WelcomePageHandlerMapping] - Adding welcome page template: index
+2023-12-04 10:37:33.748 INFO  [o.s.b.d.a.OptionalLiveReloadServer] - LiveReload server is running on port 35729
+2023-12-04 10:37:33.764 INFO  [o.apache.coyote.http11.Http11NioProtocol] - Starting ProtocolHandler ["http-nio-8080"]
+2023-12-04 10:37:33.787 INFO  [o.s.b.w.embedded.tomcat.TomcatWebServer] - Tomcat started on port 8080 (http) with context path ''
+2023-12-04 10:37:33.795 INFO  [com.main.ArchiveApplication] - Started ArchiveApplication in 1.93 seconds (process running for 2.49)
+2023-12-04 10:37:43.252 INFO  [o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener] - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-12-04 10:37:43.256 INFO  [o.apache.coyote.http11.Http11NioProtocol] - Stopping ProtocolHandler ["http-nio-8080"]
+2023-12-04 10:37:43.271 INFO  [com.zaxxer.hikari.HikariDataSource] - HikariCP - Shutdown initiated...
+2023-12-04 10:37:43.274 INFO  [com.zaxxer.hikari.HikariDataSource] - HikariCP - Shutdown completed.
+2023-12-04 10:37:43.351 INFO  [com.main.ArchiveApplication] - Starting ArchiveApplication using Java 17.0.9 with PID 1628 (C:\Users\kcs\eclipse\workspace\Archive\bin\main started by kcs in C:\Users\kcs\eclipse\workspace\Archive)
+2023-12-04 10:37:43.351 INFO  [com.main.ArchiveApplication] - The following 1 profile is active: "local"
+2023-12-04 10:37:43.552 INFO  [o.s.b.w.embedded.tomcat.TomcatWebServer] - Tomcat initialized with port 8080 (http)
+2023-12-04 10:37:43.553 INFO  [o.apache.coyote.http11.Http11NioProtocol] - Initializing ProtocolHandler ["http-nio-8080"]
+2023-12-04 10:37:43.553 INFO  [o.apache.catalina.core.StandardService] - Starting service [Tomcat]
+2023-12-04 10:37:43.553 INFO  [org.apache.catalina.core.StandardEngine] - Starting Servlet engine: [Apache Tomcat/10.1.16]
+2023-12-04 10:37:43.609 INFO  [org.apache.jasper.servlet.TldScanner] - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2023-12-04 10:37:43.612 INFO  [o.a.c.c.C.[Tomcat].[localhost].[/]] - Initializing Spring embedded WebApplicationContext
+2023-12-04 10:37:43.613 INFO  [o.s.b.w.s.c.ServletWebServerApplicationContext] - Root WebApplicationContext: initialization completed in 260 ms
+2023-12-04 10:37:43.627 INFO  [com.zaxxer.hikari.HikariDataSource] - HikariCP - Starting...
+2023-12-04 10:37:43.630 INFO  [com.zaxxer.hikari.pool.HikariPool] - HikariCP - Added connection net.sf.log4jdbc.sql.jdbcapi.ConnectionSpy@66ceb89e
+2023-12-04 10:37:43.630 INFO  [com.zaxxer.hikari.HikariDataSource] - HikariCP - Start completed.
+2023-12-04 10:37:43.653 INFO  [o.s.b.a.w.s.WelcomePageHandlerMapping] - Adding welcome page template: index
+2023-12-04 10:37:43.700 INFO  [o.s.b.d.a.OptionalLiveReloadServer] - LiveReload server is running on port 35729
+2023-12-04 10:37:43.705 INFO  [o.apache.coyote.http11.Http11NioProtocol] - Starting ProtocolHandler ["http-nio-8080"]
+2023-12-04 10:37:43.710 INFO  [o.s.b.w.embedded.tomcat.TomcatWebServer] - Tomcat started on port 8080 (http) with context path ''
+2023-12-04 10:37:43.714 INFO  [com.main.ArchiveApplication] - Started ArchiveApplication in 0.389 seconds (process running for 12.409)
+2023-12-04 10:37:43.715 INFO  [o.s.b.d.a.ConditionEvaluationDeltaLoggingListener] - Condition evaluation unchanged
+2023-12-04 10:38:06.027 INFO  [o.a.c.c.C.[Tomcat].[localhost].[/]] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-04 10:38:06.027 INFO  [o.s.web.servlet.DispatcherServlet] - Initializing Servlet 'dispatcherServlet'
+2023-12-04 10:38:06.027 INFO  [o.s.web.servlet.DispatcherServlet] - Completed initialization in 0 ms
+2023-12-04 10:38:27.906 INFO  [o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener] - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-12-04 10:38:27.908 INFO  [o.apache.coyote.http11.Http11NioProtocol] - Stopping ProtocolHandler ["http-nio-8080"]
+2023-12-04 10:38:27.921 INFO  [com.zaxxer.hikari.HikariDataSource] - HikariCP - Shutdown initiated...
+2023-12-04 10:38:27.924 INFO  [com.zaxxer.hikari.HikariDataSource] - HikariCP - Shutdown completed.
+2023-12-04 10:38:28.014 INFO  [com.main.ArchiveApplication] - Starting ArchiveApplication using Java 17.0.9 with PID 1628 (C:\Users\kcs\eclipse\workspace\Archive\bin\main started by kcs in C:\Users\kcs\eclipse\workspace\Archive)
+2023-12-04 10:38:28.015 INFO  [com.main.ArchiveApplication] - The following 1 profile is active: "local"
+2023-12-04 10:38:28.212 INFO  [o.s.b.w.embedded.tomcat.TomcatWebServer] - Tomcat initialized with port 8080 (http)
+2023-12-04 10:38:28.212 INFO  [o.apache.coyote.http11.Http11NioProtocol] - Initializing ProtocolHandler ["http-nio-8080"]
+2023-12-04 10:38:28.213 INFO  [o.apache.catalina.core.StandardService] - Starting service [Tomcat]
+2023-12-04 10:38:28.213 INFO  [org.apache.catalina.core.StandardEngine] - Starting Servlet engine: [Apache Tomcat/10.1.16]
+2023-12-04 10:38:28.269 INFO  [org.apache.jasper.servlet.TldScanner] - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2023-12-04 10:38:28.273 INFO  [o.a.c.c.C.[Tomcat].[localhost].[/]] - Initializing Spring embedded WebApplicationContext
+2023-12-04 10:38:28.273 INFO  [o.s.b.w.s.c.ServletWebServerApplicationContext] - Root WebApplicationContext: initialization completed in 256 ms
+2023-12-04 10:38:28.287 INFO  [com.zaxxer.hikari.HikariDataSource] - HikariCP - Starting...
+2023-12-04 10:38:28.290 INFO  [com.zaxxer.hikari.pool.HikariPool] - HikariCP - Added connection net.sf.log4jdbc.sql.jdbcapi.ConnectionSpy@ab0d1c9
+2023-12-04 10:38:28.290 INFO  [com.zaxxer.hikari.HikariDataSource] - HikariCP - Start completed.
+2023-12-04 10:38:28.313 INFO  [o.s.b.a.w.s.WelcomePageHandlerMapping] - Adding welcome page template: index
+2023-12-04 10:38:28.368 INFO  [o.s.b.d.a.OptionalLiveReloadServer] - LiveReload server is running on port 35729
+2023-12-04 10:38:28.373 INFO  [o.apache.coyote.http11.Http11NioProtocol] - Starting ProtocolHandler ["http-nio-8080"]
+2023-12-04 10:38:28.378 INFO  [o.s.b.w.embedded.tomcat.TomcatWebServer] - Tomcat started on port 8080 (http) with context path ''
+2023-12-04 10:38:28.381 INFO  [com.main.ArchiveApplication] - Started ArchiveApplication in 0.395 seconds (process running for 57.077)
+2023-12-04 10:38:28.382 INFO  [o.s.b.d.a.ConditionEvaluationDeltaLoggingListener] - Condition evaluation unchanged
+2023-12-04 10:38:34.680 INFO  [o.a.c.c.C.[Tomcat].[localhost].[/]] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-04 10:38:34.680 INFO  [o.s.web.servlet.DispatcherServlet] - Initializing Servlet 'dispatcherServlet'
+2023-12-04 10:38:34.681 INFO  [o.s.web.servlet.DispatcherServlet] - Completed initialization in 1 ms
+2023-12-04 10:38:36.267 INFO  [com.main.controller.BoardController] - board
+2023-12-04 13:29:29.036 INFO  [com.main.ArchiveApplication] - Starting ArchiveApplication using Java 17.0.9 with PID 5860 (C:\Users\kcs\eclipse\workspace\Archive\bin\main started by kcs in C:\Users\kcs\eclipse\workspace\Archive)
+2023-12-04 13:29:29.038 INFO  [com.main.ArchiveApplication] - The following 1 profile is active: "local"
+2023-12-04 13:29:29.074 INFO  [o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor] - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-12-04 13:29:29.074 INFO  [o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor] - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-12-04 13:29:29.920 INFO  [o.s.b.w.embedded.tomcat.TomcatWebServer] - Tomcat initialized with port 8080 (http)
+2023-12-04 13:29:29.927 INFO  [o.apache.coyote.http11.Http11NioProtocol] - Initializing ProtocolHandler ["http-nio-8080"]
+2023-12-04 13:29:29.929 INFO  [o.apache.catalina.core.StandardService] - Starting service [Tomcat]
+2023-12-04 13:29:29.929 INFO  [org.apache.catalina.core.StandardEngine] - Starting Servlet engine: [Apache Tomcat/10.1.16]
+2023-12-04 13:29:30.068 INFO  [org.apache.jasper.servlet.TldScanner] - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2023-12-04 13:29:30.076 INFO  [o.a.c.c.C.[Tomcat].[localhost].[/]] - Initializing Spring embedded WebApplicationContext
+2023-12-04 13:29:30.076 INFO  [o.s.b.w.s.c.ServletWebServerApplicationContext] - Root WebApplicationContext: initialization completed in 1001 ms
+2023-12-04 13:29:30.151 INFO  [com.zaxxer.hikari.HikariDataSource] - HikariCP - Starting...
+2023-12-04 13:29:30.225 INFO  [com.zaxxer.hikari.pool.HikariPool] - HikariCP - Added connection net.sf.log4jdbc.sql.jdbcapi.ConnectionSpy@d8ef79
+2023-12-04 13:29:30.227 INFO  [com.zaxxer.hikari.HikariDataSource] - HikariCP - Start completed.
+2023-12-04 13:29:30.392 INFO  [o.s.b.a.w.s.WelcomePageHandlerMapping] - Adding welcome page template: index
+2023-12-04 13:29:30.628 INFO  [o.s.b.d.a.OptionalLiveReloadServer] - LiveReload server is running on port 35729
+2023-12-04 13:29:30.645 INFO  [o.apache.coyote.http11.Http11NioProtocol] - Starting ProtocolHandler ["http-nio-8080"]
+2023-12-04 13:29:30.670 INFO  [o.s.b.w.embedded.tomcat.TomcatWebServer] - Tomcat started on port 8080 (http) with context path ''
+2023-12-04 13:29:30.679 INFO  [com.main.ArchiveApplication] - Started ArchiveApplication in 2.049 seconds (process running for 2.785)
+2023-12-04 13:29:34.557 INFO  [o.a.c.c.C.[Tomcat].[localhost].[/]] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-04 13:29:34.563 INFO  [o.s.web.servlet.DispatcherServlet] - Initializing Servlet 'dispatcherServlet'
+2023-12-04 13:29:34.564 INFO  [o.s.web.servlet.DispatcherServlet] - Completed initialization in 0 ms
+2023-12-04 13:29:34.591 INFO  [com.main.controller.BoardController] - board
+2023-12-04 13:30:48.868 INFO  [o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener] - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-12-04 13:30:48.873 INFO  [o.apache.coyote.http11.Http11NioProtocol] - Stopping ProtocolHandler ["http-nio-8080"]
+2023-12-04 13:30:48.887 INFO  [com.zaxxer.hikari.HikariDataSource] - HikariCP - Shutdown initiated...
+2023-12-04 13:30:48.890 INFO  [com.zaxxer.hikari.HikariDataSource] - HikariCP - Shutdown completed.
+2023-12-04 13:30:48.990 INFO  [com.main.ArchiveApplication] - Starting ArchiveApplication using Java 17.0.9 with PID 5860 (C:\Users\kcs\eclipse\workspace\Archive\bin\main started by kcs in C:\Users\kcs\eclipse\workspace\Archive)
+2023-12-04 13:30:48.990 INFO  [com.main.ArchiveApplication] - The following 1 profile is active: "local"
+2023-12-04 13:30:49.224 INFO  [o.s.b.w.embedded.tomcat.TomcatWebServer] - Tomcat initialized with port 8080 (http)
+2023-12-04 13:30:49.224 INFO  [o.apache.coyote.http11.Http11NioProtocol] - Initializing ProtocolHandler ["http-nio-8080"]
+2023-12-04 13:30:49.224 INFO  [o.apache.catalina.core.StandardService] - Starting service [Tomcat]
+2023-12-04 13:30:49.225 INFO  [org.apache.catalina.core.StandardEngine] - Starting Servlet engine: [Apache Tomcat/10.1.16]
+2023-12-04 13:30:49.289 INFO  [org.apache.jasper.servlet.TldScanner] - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2023-12-04 13:30:49.292 INFO  [o.a.c.c.C.[Tomcat].[localhost].[/]] - Initializing Spring embedded WebApplicationContext
+2023-12-04 13:30:49.292 INFO  [o.s.b.w.s.c.ServletWebServerApplicationContext] - Root WebApplicationContext: initialization completed in 300 ms
+2023-12-04 13:30:49.314 INFO  [com.zaxxer.hikari.HikariDataSource] - HikariCP - Starting...
+2023-12-04 13:30:49.318 INFO  [com.zaxxer.hikari.pool.HikariPool] - HikariCP - Added connection net.sf.log4jdbc.sql.jdbcapi.ConnectionSpy@1fcdf643
+2023-12-04 13:30:49.318 INFO  [com.zaxxer.hikari.HikariDataSource] - HikariCP - Start completed.
+2023-12-04 13:30:49.340 INFO  [o.s.b.a.w.s.WelcomePageHandlerMapping] - Adding welcome page template: index
+2023-12-04 13:30:49.390 INFO  [o.s.b.d.a.OptionalLiveReloadServer] - LiveReload server is running on port 35729
+2023-12-04 13:30:49.396 INFO  [o.apache.coyote.http11.Http11NioProtocol] - Starting ProtocolHandler ["http-nio-8080"]
+2023-12-04 13:30:49.400 INFO  [o.s.b.w.embedded.tomcat.TomcatWebServer] - Tomcat started on port 8080 (http) with context path ''
+2023-12-04 13:30:49.403 INFO  [com.main.ArchiveApplication] - Started ArchiveApplication in 0.446 seconds (process running for 81.51)
+2023-12-04 13:30:49.405 INFO  [o.s.b.d.a.ConditionEvaluationDeltaLoggingListener] - Condition evaluation unchanged
+2023-12-04 13:30:51.521 INFO  [o.a.c.c.C.[Tomcat].[localhost].[/]] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-04 13:30:51.521 INFO  [o.s.web.servlet.DispatcherServlet] - Initializing Servlet 'dispatcherServlet'
+2023-12-04 13:30:51.522 INFO  [o.s.web.servlet.DispatcherServlet] - Completed initialization in 1 ms
+2023-12-04 13:31:16.342 INFO  [o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener] - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-12-04 13:31:16.344 INFO  [o.apache.coyote.http11.Http11NioProtocol] - Stopping ProtocolHandler ["http-nio-8080"]
+2023-12-04 13:31:16.359 INFO  [com.zaxxer.hikari.HikariDataSource] - HikariCP - Shutdown initiated...
+2023-12-04 13:31:16.361 INFO  [com.zaxxer.hikari.HikariDataSource] - HikariCP - Shutdown completed.
+2023-12-04 13:31:16.453 INFO  [com.main.ArchiveApplication] - Starting ArchiveApplication using Java 17.0.9 with PID 5860 (C:\Users\kcs\eclipse\workspace\Archive\bin\main started by kcs in C:\Users\kcs\eclipse\workspace\Archive)
+2023-12-04 13:31:16.454 INFO  [com.main.ArchiveApplication] - The following 1 profile is active: "local"
+2023-12-04 13:31:17.112 INFO  [o.s.b.w.embedded.tomcat.TomcatWebServer] - Tomcat initialized with port 8080 (http)
+2023-12-04 13:31:17.112 INFO  [o.apache.coyote.http11.Http11NioProtocol] - Initializing ProtocolHandler ["http-nio-8080"]
+2023-12-04 13:31:17.113 INFO  [o.apache.catalina.core.StandardService] - Starting service [Tomcat]
+2023-12-04 13:31:17.113 INFO  [org.apache.catalina.core.StandardEngine] - Starting Servlet engine: [Apache Tomcat/10.1.16]
+2023-12-04 13:31:17.167 INFO  [org.apache.jasper.servlet.TldScanner] - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2023-12-04 13:31:17.170 INFO  [o.a.c.c.C.[Tomcat].[localhost].[/]] - Initializing Spring embedded WebApplicationContext
+2023-12-04 13:31:17.170 INFO  [o.s.b.w.s.c.ServletWebServerApplicationContext] - Root WebApplicationContext: initialization completed in 714 ms
+2023-12-04 13:31:17.187 INFO  [com.zaxxer.hikari.HikariDataSource] - HikariCP - Starting...
+2023-12-04 13:31:17.190 INFO  [com.zaxxer.hikari.pool.HikariPool] - HikariCP - Added connection net.sf.log4jdbc.sql.jdbcapi.ConnectionSpy@5ca069a3
+2023-12-04 13:31:17.190 INFO  [com.zaxxer.hikari.HikariDataSource] - HikariCP - Start completed.
+2023-12-04 13:31:17.211 INFO  [o.s.b.a.w.s.WelcomePageHandlerMapping] - Adding welcome page template: index
+2023-12-04 13:31:17.265 INFO  [o.s.b.d.a.OptionalLiveReloadServer] - LiveReload server is running on port 35729
+2023-12-04 13:31:17.270 INFO  [o.apache.coyote.http11.Http11NioProtocol] - Starting ProtocolHandler ["http-nio-8080"]
+2023-12-04 13:31:17.275 INFO  [o.s.b.w.embedded.tomcat.TomcatWebServer] - Tomcat started on port 8080 (http) with context path ''
+2023-12-04 13:31:17.277 INFO  [com.main.ArchiveApplication] - Started ArchiveApplication in 0.852 seconds (process running for 109.384)
+2023-12-04 13:31:17.278 INFO  [o.s.b.d.a.ConditionEvaluationDeltaLoggingListener] - Condition evaluation unchanged
+2023-12-04 13:31:18.924 INFO  [o.a.c.c.C.[Tomcat].[localhost].[/]] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-04 13:31:18.924 INFO  [o.s.web.servlet.DispatcherServlet] - Initializing Servlet 'dispatcherServlet'
+2023-12-04 13:31:18.924 INFO  [o.s.web.servlet.DispatcherServlet] - Completed initialization in 0 ms
+2023-12-04 13:31:28.941 INFO  [o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener] - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-12-04 13:31:28.943 INFO  [o.apache.coyote.http11.Http11NioProtocol] - Stopping ProtocolHandler ["http-nio-8080"]
+2023-12-04 13:31:28.958 INFO  [com.zaxxer.hikari.HikariDataSource] - HikariCP - Shutdown initiated...
+2023-12-04 13:31:28.961 INFO  [com.zaxxer.hikari.HikariDataSource] - HikariCP - Shutdown completed.
+2023-12-04 13:31:29.041 INFO  [com.main.ArchiveApplication] - Starting ArchiveApplication using Java 17.0.9 with PID 5860 (C:\Users\kcs\eclipse\workspace\Archive\bin\main started by kcs in C:\Users\kcs\eclipse\workspace\Archive)
+2023-12-04 13:31:29.041 INFO  [com.main.ArchiveApplication] - The following 1 profile is active: "local"
+2023-12-04 13:31:29.232 INFO  [o.s.b.w.embedded.tomcat.TomcatWebServer] - Tomcat initialized with port 8080 (http)
+2023-12-04 13:31:29.232 INFO  [o.apache.coyote.http11.Http11NioProtocol] - Initializing ProtocolHandler ["http-nio-8080"]
+2023-12-04 13:31:29.233 INFO  [o.apache.catalina.core.StandardService] - Starting service [Tomcat]
+2023-12-04 13:31:29.233 INFO  [org.apache.catalina.core.StandardEngine] - Starting Servlet engine: [Apache Tomcat/10.1.16]
+2023-12-04 13:31:29.287 INFO  [org.apache.jasper.servlet.TldScanner] - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2023-12-04 13:31:29.289 INFO  [o.a.c.c.C.[Tomcat].[localhost].[/]] - Initializing Spring embedded WebApplicationContext
+2023-12-04 13:31:29.289 INFO  [o.s.b.w.s.c.ServletWebServerApplicationContext] - Root WebApplicationContext: initialization completed in 245 ms
+2023-12-04 13:31:29.304 INFO  [com.zaxxer.hikari.HikariDataSource] - HikariCP - Starting...
+2023-12-04 13:31:29.307 INFO  [com.zaxxer.hikari.pool.HikariPool] - HikariCP - Added connection net.sf.log4jdbc.sql.jdbcapi.ConnectionSpy@2531c225
+2023-12-04 13:31:29.308 INFO  [com.zaxxer.hikari.HikariDataSource] - HikariCP - Start completed.
+2023-12-04 13:31:29.330 INFO  [o.s.b.a.w.s.WelcomePageHandlerMapping] - Adding welcome page template: index
+2023-12-04 13:31:29.375 INFO  [o.s.b.d.a.OptionalLiveReloadServer] - LiveReload server is running on port 35729
+2023-12-04 13:31:29.381 INFO  [o.apache.coyote.http11.Http11NioProtocol] - Starting ProtocolHandler ["http-nio-8080"]
+2023-12-04 13:31:29.384 INFO  [o.s.b.w.embedded.tomcat.TomcatWebServer] - Tomcat started on port 8080 (http) with context path ''
+2023-12-04 13:31:29.388 INFO  [com.main.ArchiveApplication] - Started ArchiveApplication in 0.373 seconds (process running for 121.494)
+2023-12-04 13:31:29.389 INFO  [o.s.b.d.a.ConditionEvaluationDeltaLoggingListener] - Condition evaluation unchanged
+2023-12-04 13:31:32.050 INFO  [o.a.c.c.C.[Tomcat].[localhost].[/]] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-04 13:31:32.050 INFO  [o.s.web.servlet.DispatcherServlet] - Initializing Servlet 'dispatcherServlet'
+2023-12-04 13:31:32.051 INFO  [o.s.web.servlet.DispatcherServlet] - Completed initialization in 1 ms
+2023-12-04 13:31:56.321 INFO  [o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener] - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-12-04 13:31:56.322 INFO  [o.apache.coyote.http11.Http11NioProtocol] - Stopping ProtocolHandler ["http-nio-8080"]
+2023-12-04 13:31:56.337 INFO  [com.zaxxer.hikari.HikariDataSource] - HikariCP - Shutdown initiated...
+2023-12-04 13:31:56.339 INFO  [com.zaxxer.hikari.HikariDataSource] - HikariCP - Shutdown completed.
+2023-12-04 13:31:56.432 INFO  [com.main.ArchiveApplication] - Starting ArchiveApplication using Java 17.0.9 with PID 5860 (C:\Users\kcs\eclipse\workspace\Archive\bin\main started by kcs in C:\Users\kcs\eclipse\workspace\Archive)
+2023-12-04 13:31:56.432 INFO  [com.main.ArchiveApplication] - The following 1 profile is active: "local"
+2023-12-04 13:31:56.647 INFO  [o.s.b.w.embedded.tomcat.TomcatWebServer] - Tomcat initialized with port 8080 (http)
+2023-12-04 13:31:56.647 INFO  [o.apache.coyote.http11.Http11NioProtocol] - Initializing ProtocolHandler ["http-nio-8080"]
+2023-12-04 13:31:56.647 INFO  [o.apache.catalina.core.StandardService] - Starting service [Tomcat]
+2023-12-04 13:31:56.648 INFO  [org.apache.catalina.core.StandardEngine] - Starting Servlet engine: [Apache Tomcat/10.1.16]
+2023-12-04 13:31:56.716 INFO  [org.apache.jasper.servlet.TldScanner] - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2023-12-04 13:31:56.718 INFO  [o.a.c.c.C.[Tomcat].[localhost].[/]] - Initializing Spring embedded WebApplicationContext
+2023-12-04 13:31:56.719 INFO  [o.s.b.w.s.c.ServletWebServerApplicationContext] - Root WebApplicationContext: initialization completed in 283 ms
+2023-12-04 13:31:56.736 INFO  [com.zaxxer.hikari.HikariDataSource] - HikariCP - Starting...
+2023-12-04 13:31:56.739 INFO  [com.zaxxer.hikari.pool.HikariPool] - HikariCP - Added connection net.sf.log4jdbc.sql.jdbcapi.ConnectionSpy@6c83df83
+2023-12-04 13:31:56.740 INFO  [com.zaxxer.hikari.HikariDataSource] - HikariCP - Start completed.
+2023-12-04 13:31:56.764 INFO  [o.s.b.a.w.s.WelcomePageHandlerMapping] - Adding welcome page template: index
+2023-12-04 13:31:56.835 INFO  [o.s.b.d.a.OptionalLiveReloadServer] - LiveReload server is running on port 35729
+2023-12-04 13:31:56.842 INFO  [o.apache.coyote.http11.Http11NioProtocol] - Starting ProtocolHandler ["http-nio-8080"]
+2023-12-04 13:31:56.847 INFO  [o.s.b.w.embedded.tomcat.TomcatWebServer] - Tomcat started on port 8080 (http) with context path ''
+2023-12-04 13:31:56.853 INFO  [com.main.ArchiveApplication] - Started ArchiveApplication in 0.451 seconds (process running for 148.959)
+2023-12-04 13:31:56.853 INFO  [o.s.b.d.a.ConditionEvaluationDeltaLoggingListener] - Condition evaluation unchanged
+2023-12-04 13:31:57.693 INFO  [o.a.c.c.C.[Tomcat].[localhost].[/]] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-04 13:31:57.694 INFO  [o.s.web.servlet.DispatcherServlet] - Initializing Servlet 'dispatcherServlet'
+2023-12-04 13:31:57.694 INFO  [o.s.web.servlet.DispatcherServlet] - Completed initialization in 0 ms
+2023-12-04 13:32:54.504 INFO  [o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener] - Restarting due to 3 class path changes (1 addition, 1 deletion, 1 modification)
+2023-12-04 13:32:54.506 INFO  [o.apache.coyote.http11.Http11NioProtocol] - Stopping ProtocolHandler ["http-nio-8080"]
+2023-12-04 13:32:54.520 INFO  [com.zaxxer.hikari.HikariDataSource] - HikariCP - Shutdown initiated...
+2023-12-04 13:32:54.522 INFO  [com.zaxxer.hikari.HikariDataSource] - HikariCP - Shutdown completed.
+2023-12-04 13:32:54.598 INFO  [com.main.ArchiveApplication] - Starting ArchiveApplication using Java 17.0.9 with PID 5860 (C:\Users\kcs\eclipse\workspace\Archive\bin\main started by kcs in C:\Users\kcs\eclipse\workspace\Archive)
+2023-12-04 13:32:54.598 INFO  [com.main.ArchiveApplication] - The following 1 profile is active: "local"
+2023-12-04 13:32:54.782 INFO  [o.s.b.w.embedded.tomcat.TomcatWebServer] - Tomcat initialized with port 8080 (http)
+2023-12-04 13:32:54.782 INFO  [o.apache.coyote.http11.Http11NioProtocol] - Initializing ProtocolHandler ["http-nio-8080"]
+2023-12-04 13:32:54.782 INFO  [o.apache.catalina.core.StandardService] - Starting service [Tomcat]
+2023-12-04 13:32:54.782 INFO  [org.apache.catalina.core.StandardEngine] - Starting Servlet engine: [Apache Tomcat/10.1.16]
+2023-12-04 13:32:54.833 INFO  [org.apache.jasper.servlet.TldScanner] - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2023-12-04 13:32:54.835 INFO  [o.a.c.c.C.[Tomcat].[localhost].[/]] - Initializing Spring embedded WebApplicationContext
+2023-12-04 13:32:54.835 INFO  [o.s.b.w.s.c.ServletWebServerApplicationContext] - Root WebApplicationContext: initialization completed in 234 ms
+2023-12-04 13:32:54.851 INFO  [com.zaxxer.hikari.HikariDataSource] - HikariCP - Starting...
+2023-12-04 13:32:54.853 INFO  [com.zaxxer.hikari.pool.HikariPool] - HikariCP - Added connection net.sf.log4jdbc.sql.jdbcapi.ConnectionSpy@7b439ef6
+2023-12-04 13:32:54.854 INFO  [com.zaxxer.hikari.HikariDataSource] - HikariCP - Start completed.
+2023-12-04 13:32:54.873 INFO  [o.s.b.a.w.s.WelcomePageHandlerMapping] - Adding welcome page template: index
+2023-12-04 13:32:54.916 INFO  [o.s.b.d.a.OptionalLiveReloadServer] - LiveReload server is running on port 35729
+2023-12-04 13:32:54.924 INFO  [o.apache.coyote.http11.Http11NioProtocol] - Starting ProtocolHandler ["http-nio-8080"]
+2023-12-04 13:32:54.929 INFO  [o.s.b.w.embedded.tomcat.TomcatWebServer] - Tomcat started on port 8080 (http) with context path ''
+2023-12-04 13:32:54.932 INFO  [com.main.ArchiveApplication] - Started ArchiveApplication in 0.359 seconds (process running for 207.038)
+2023-12-04 13:32:54.932 INFO  [o.s.b.d.a.ConditionEvaluationDeltaLoggingListener] - Condition evaluation unchanged
+2023-12-04 13:32:57.859 INFO  [o.a.c.c.C.[Tomcat].[localhost].[/]] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-04 13:32:57.859 INFO  [o.s.web.servlet.DispatcherServlet] - Initializing Servlet 'dispatcherServlet'
+2023-12-04 13:32:57.859 INFO  [o.s.web.servlet.DispatcherServlet] - Completed initialization in 0 ms
+2023-12-04 13:33:02.693 INFO  [o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin] - Application shutdown requested.
+2023-12-04 13:33:02.693 INFO  [o.apache.coyote.http11.Http11NioProtocol] - Stopping ProtocolHandler ["http-nio-8080"]
+2023-12-04 13:33:02.707 INFO  [com.zaxxer.hikari.HikariDataSource] - HikariCP - Shutdown initiated...
+2023-12-04 13:33:02.710 INFO  [com.zaxxer.hikari.HikariDataSource] - HikariCP - Shutdown completed.
+2023-12-04 13:33:06.771 INFO  [com.main.ArchiveApplication] - Starting ArchiveApplication using Java 17.0.9 with PID 10108 (C:\Users\kcs\eclipse\workspace\Archive\bin\main started by kcs in C:\Users\kcs\eclipse\workspace\Archive)
+2023-12-04 13:33:06.773 INFO  [com.main.ArchiveApplication] - The following 1 profile is active: "local"
+2023-12-04 13:33:06.806 INFO  [o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor] - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-12-04 13:33:06.807 INFO  [o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor] - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-12-04 13:33:07.643 INFO  [o.s.b.w.embedded.tomcat.TomcatWebServer] - Tomcat initialized with port 8080 (http)
+2023-12-04 13:33:07.649 INFO  [o.apache.coyote.http11.Http11NioProtocol] - Initializing ProtocolHandler ["http-nio-8080"]
+2023-12-04 13:33:07.650 INFO  [o.apache.catalina.core.StandardService] - Starting service [Tomcat]
+2023-12-04 13:33:07.650 INFO  [org.apache.catalina.core.StandardEngine] - Starting Servlet engine: [Apache Tomcat/10.1.16]
+2023-12-04 13:33:07.782 INFO  [org.apache.jasper.servlet.TldScanner] - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2023-12-04 13:33:07.788 INFO  [o.a.c.c.C.[Tomcat].[localhost].[/]] - Initializing Spring embedded WebApplicationContext
+2023-12-04 13:33:07.788 INFO  [o.s.b.w.s.c.ServletWebServerApplicationContext] - Root WebApplicationContext: initialization completed in 981 ms
+2023-12-04 13:33:07.866 INFO  [com.zaxxer.hikari.HikariDataSource] - HikariCP - Starting...
+2023-12-04 13:33:07.931 INFO  [com.zaxxer.hikari.pool.HikariPool] - HikariCP - Added connection net.sf.log4jdbc.sql.jdbcapi.ConnectionSpy@21a3917a
+2023-12-04 13:33:07.934 INFO  [com.zaxxer.hikari.HikariDataSource] - HikariCP - Start completed.
+2023-12-04 13:33:08.082 INFO  [o.s.b.a.w.s.WelcomePageHandlerMapping] - Adding welcome page template: index
+2023-12-04 13:33:08.297 INFO  [o.s.b.d.a.OptionalLiveReloadServer] - LiveReload server is running on port 35729
+2023-12-04 13:33:08.315 INFO  [o.apache.coyote.http11.Http11NioProtocol] - Starting ProtocolHandler ["http-nio-8080"]
+2023-12-04 13:33:08.337 INFO  [o.s.b.w.embedded.tomcat.TomcatWebServer] - Tomcat started on port 8080 (http) with context path ''
+2023-12-04 13:33:08.344 INFO  [com.main.ArchiveApplication] - Started ArchiveApplication in 1.971 seconds (process running for 2.643)
+2023-12-04 13:33:09.229 INFO  [o.a.c.c.C.[Tomcat].[localhost].[/]] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-04 13:33:09.229 INFO  [o.s.web.servlet.DispatcherServlet] - Initializing Servlet 'dispatcherServlet'
+2023-12-04 13:33:09.230 INFO  [o.s.web.servlet.DispatcherServlet] - Completed initialization in 1 ms
+2023-12-04 13:33:22.008 INFO  [o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener] - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-12-04 13:33:22.013 INFO  [o.apache.coyote.http11.Http11NioProtocol] - Stopping ProtocolHandler ["http-nio-8080"]
+2023-12-04 13:33:22.031 INFO  [com.zaxxer.hikari.HikariDataSource] - HikariCP - Shutdown initiated...
+2023-12-04 13:33:22.034 INFO  [com.zaxxer.hikari.HikariDataSource] - HikariCP - Shutdown completed.
+2023-12-04 13:33:22.137 INFO  [com.main.ArchiveApplication] - Starting ArchiveApplication using Java 17.0.9 with PID 10108 (C:\Users\kcs\eclipse\workspace\Archive\bin\main started by kcs in C:\Users\kcs\eclipse\workspace\Archive)
+2023-12-04 13:33:22.137 INFO  [com.main.ArchiveApplication] - The following 1 profile is active: "local"
+2023-12-04 13:33:22.377 INFO  [o.s.b.w.embedded.tomcat.TomcatWebServer] - Tomcat initialized with port 8080 (http)
+2023-12-04 13:33:22.378 INFO  [o.apache.coyote.http11.Http11NioProtocol] - Initializing ProtocolHandler ["http-nio-8080"]
+2023-12-04 13:33:22.378 INFO  [o.apache.catalina.core.StandardService] - Starting service [Tomcat]
+2023-12-04 13:33:22.378 INFO  [org.apache.catalina.core.StandardEngine] - Starting Servlet engine: [Apache Tomcat/10.1.16]
+2023-12-04 13:33:22.438 INFO  [org.apache.jasper.servlet.TldScanner] - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2023-12-04 13:33:22.440 INFO  [o.a.c.c.C.[Tomcat].[localhost].[/]] - Initializing Spring embedded WebApplicationContext
+2023-12-04 13:33:22.440 INFO  [o.s.b.w.s.c.ServletWebServerApplicationContext] - Root WebApplicationContext: initialization completed in 301 ms
+2023-12-04 13:33:22.466 INFO  [com.zaxxer.hikari.HikariDataSource] - HikariCP - Starting...
+2023-12-04 13:33:22.470 INFO  [com.zaxxer.hikari.pool.HikariPool] - HikariCP - Added connection net.sf.log4jdbc.sql.jdbcapi.ConnectionSpy@45a700b5
+2023-12-04 13:33:22.470 INFO  [com.zaxxer.hikari.HikariDataSource] - HikariCP - Start completed.
+2023-12-04 13:33:22.495 INFO  [o.s.b.a.w.s.WelcomePageHandlerMapping] - Adding welcome page template: index
+2023-12-04 13:33:22.548 INFO  [o.s.b.d.a.OptionalLiveReloadServer] - LiveReload server is running on port 35729
+2023-12-04 13:33:22.554 INFO  [o.apache.coyote.http11.Http11NioProtocol] - Starting ProtocolHandler ["http-nio-8080"]
+2023-12-04 13:33:22.559 INFO  [o.s.b.w.embedded.tomcat.TomcatWebServer] - Tomcat started on port 8080 (http) with context path ''
+2023-12-04 13:33:22.562 INFO  [com.main.ArchiveApplication] - Started ArchiveApplication in 0.463 seconds (process running for 16.862)
+2023-12-04 13:33:22.564 INFO  [o.s.b.d.a.ConditionEvaluationDeltaLoggingListener] - Condition evaluation unchanged
+2023-12-04 13:33:23.796 INFO  [o.a.c.c.C.[Tomcat].[localhost].[/]] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-04 13:33:23.796 INFO  [o.s.web.servlet.DispatcherServlet] - Initializing Servlet 'dispatcherServlet'
+2023-12-04 13:33:23.797 INFO  [o.s.web.servlet.DispatcherServlet] - Completed initialization in 1 ms
+2023-12-04 13:36:41.018 INFO  [o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener] - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-12-04 13:36:41.020 INFO  [o.apache.coyote.http11.Http11NioProtocol] - Stopping ProtocolHandler ["http-nio-8080"]
+2023-12-04 13:36:41.035 INFO  [com.zaxxer.hikari.HikariDataSource] - HikariCP - Shutdown initiated...
+2023-12-04 13:36:41.037 INFO  [com.zaxxer.hikari.HikariDataSource] - HikariCP - Shutdown completed.
+2023-12-04 13:36:41.126 INFO  [com.main.ArchiveApplication] - Starting ArchiveApplication using Java 17.0.9 with PID 10108 (C:\Users\kcs\eclipse\workspace\Archive\bin\main started by kcs in C:\Users\kcs\eclipse\workspace\Archive)
+2023-12-04 13:36:41.126 INFO  [com.main.ArchiveApplication] - The following 1 profile is active: "local"
+2023-12-04 13:36:41.343 INFO  [o.s.b.w.embedded.tomcat.TomcatWebServer] - Tomcat initialized with port 8080 (http)
+2023-12-04 13:36:41.343 INFO  [o.apache.coyote.http11.Http11NioProtocol] - Initializing ProtocolHandler ["http-nio-8080"]
+2023-12-04 13:36:41.343 INFO  [o.apache.catalina.core.StandardService] - Starting service [Tomcat]
+2023-12-04 13:36:41.344 INFO  [org.apache.catalina.core.StandardEngine] - Starting Servlet engine: [Apache Tomcat/10.1.16]
+2023-12-04 13:36:41.411 INFO  [org.apache.jasper.servlet.TldScanner] - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2023-12-04 13:36:41.414 INFO  [o.a.c.c.C.[Tomcat].[localhost].[/]] - Initializing Spring embedded WebApplicationContext
+2023-12-04 13:36:41.414 INFO  [o.s.b.w.s.c.ServletWebServerApplicationContext] - Root WebApplicationContext: initialization completed in 286 ms
+2023-12-04 13:36:41.436 INFO  [com.zaxxer.hikari.HikariDataSource] - HikariCP - Starting...
+2023-12-04 13:36:41.439 INFO  [com.zaxxer.hikari.pool.HikariPool] - HikariCP - Added connection net.sf.log4jdbc.sql.jdbcapi.ConnectionSpy@148684a9
+2023-12-04 13:36:41.439 INFO  [com.zaxxer.hikari.HikariDataSource] - HikariCP - Start completed.
+2023-12-04 13:36:41.466 INFO  [o.s.b.a.w.s.WelcomePageHandlerMapping] - Adding welcome page template: index
+2023-12-04 13:36:41.519 INFO  [o.s.b.d.a.OptionalLiveReloadServer] - LiveReload server is running on port 35729
+2023-12-04 13:36:41.524 INFO  [o.apache.coyote.http11.Http11NioProtocol] - Starting ProtocolHandler ["http-nio-8080"]
+2023-12-04 13:36:41.529 INFO  [o.s.b.w.embedded.tomcat.TomcatWebServer] - Tomcat started on port 8080 (http) with context path ''
+2023-12-04 13:36:41.535 INFO  [com.main.ArchiveApplication] - Started ArchiveApplication in 0.437 seconds (process running for 215.834)
+2023-12-04 13:36:41.535 INFO  [o.s.b.d.a.ConditionEvaluationDeltaLoggingListener] - Condition evaluation unchanged
+2023-12-04 13:36:43.525 INFO  [o.a.c.c.C.[Tomcat].[localhost].[/]] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-04 13:36:43.525 INFO  [o.s.web.servlet.DispatcherServlet] - Initializing Servlet 'dispatcherServlet'
+2023-12-04 13:36:43.526 INFO  [o.s.web.servlet.DispatcherServlet] - Completed initialization in 1 ms
+2023-12-04 13:37:03.344 INFO  [o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener] - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-12-04 13:37:03.346 INFO  [o.apache.coyote.http11.Http11NioProtocol] - Stopping ProtocolHandler ["http-nio-8080"]
+2023-12-04 13:37:03.360 INFO  [com.zaxxer.hikari.HikariDataSource] - HikariCP - Shutdown initiated...
+2023-12-04 13:37:03.363 INFO  [com.zaxxer.hikari.HikariDataSource] - HikariCP - Shutdown completed.
+2023-12-04 13:37:03.446 INFO  [com.main.ArchiveApplication] - Starting ArchiveApplication using Java 17.0.9 with PID 10108 (C:\Users\kcs\eclipse\workspace\Archive\bin\main started by kcs in C:\Users\kcs\eclipse\workspace\Archive)
+2023-12-04 13:37:03.446 INFO  [com.main.ArchiveApplication] - The following 1 profile is active: "local"
+2023-12-04 13:37:04.076 INFO  [o.s.b.w.embedded.tomcat.TomcatWebServer] - Tomcat initialized with port 8080 (http)
+2023-12-04 13:37:04.076 INFO  [o.apache.coyote.http11.Http11NioProtocol] - Initializing ProtocolHandler ["http-nio-8080"]
+2023-12-04 13:37:04.076 INFO  [o.apache.catalina.core.StandardService] - Starting service [Tomcat]
+2023-12-04 13:37:04.076 INFO  [org.apache.catalina.core.StandardEngine] - Starting Servlet engine: [Apache Tomcat/10.1.16]
+2023-12-04 13:37:04.127 INFO  [org.apache.jasper.servlet.TldScanner] - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2023-12-04 13:37:04.129 INFO  [o.a.c.c.C.[Tomcat].[localhost].[/]] - Initializing Spring embedded WebApplicationContext
+2023-12-04 13:37:04.129 INFO  [o.s.b.w.s.c.ServletWebServerApplicationContext] - Root WebApplicationContext: initialization completed in 681 ms
+2023-12-04 13:37:04.146 INFO  [com.zaxxer.hikari.HikariDataSource] - HikariCP - Starting...
+2023-12-04 13:37:04.149 INFO  [com.zaxxer.hikari.pool.HikariPool] - HikariCP - Added connection net.sf.log4jdbc.sql.jdbcapi.ConnectionSpy@61d7933
+2023-12-04 13:37:04.149 INFO  [com.zaxxer.hikari.HikariDataSource] - HikariCP - Start completed.
+2023-12-04 13:37:04.169 INFO  [o.s.b.a.w.s.WelcomePageHandlerMapping] - Adding welcome page template: index
+2023-12-04 13:37:04.215 INFO  [o.s.b.d.a.OptionalLiveReloadServer] - LiveReload server is running on port 35729
+2023-12-04 13:37:04.221 INFO  [o.apache.coyote.http11.Http11NioProtocol] - Starting ProtocolHandler ["http-nio-8080"]
+2023-12-04 13:37:04.225 INFO  [o.s.b.w.embedded.tomcat.TomcatWebServer] - Tomcat started on port 8080 (http) with context path ''
+2023-12-04 13:37:04.228 INFO  [com.main.ArchiveApplication] - Started ArchiveApplication in 0.806 seconds (process running for 238.527)
+2023-12-04 13:37:04.229 INFO  [o.s.b.d.a.ConditionEvaluationDeltaLoggingListener] - Condition evaluation unchanged
+2023-12-04 13:37:12.591 INFO  [o.a.c.c.C.[Tomcat].[localhost].[/]] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-04 13:37:12.591 INFO  [o.s.web.servlet.DispatcherServlet] - Initializing Servlet 'dispatcherServlet'
+2023-12-04 13:37:12.593 INFO  [o.s.web.servlet.DispatcherServlet] - Completed initialization in 2 ms
+2023-12-04 13:38:10.028 INFO  [o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener] - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-12-04 13:38:10.030 INFO  [o.apache.coyote.http11.Http11NioProtocol] - Stopping ProtocolHandler ["http-nio-8080"]
+2023-12-04 13:38:10.045 INFO  [com.zaxxer.hikari.HikariDataSource] - HikariCP - Shutdown initiated...
+2023-12-04 13:38:10.047 INFO  [com.zaxxer.hikari.HikariDataSource] - HikariCP - Shutdown completed.
+2023-12-04 13:38:10.120 INFO  [com.main.ArchiveApplication] - Starting ArchiveApplication using Java 17.0.9 with PID 10108 (C:\Users\kcs\eclipse\workspace\Archive\bin\main started by kcs in C:\Users\kcs\eclipse\workspace\Archive)
+2023-12-04 13:38:10.121 INFO  [com.main.ArchiveApplication] - The following 1 profile is active: "local"
+2023-12-04 13:38:10.299 INFO  [o.s.b.w.embedded.tomcat.TomcatWebServer] - Tomcat initialized with port 8080 (http)
+2023-12-04 13:38:10.299 INFO  [o.apache.coyote.http11.Http11NioProtocol] - Initializing ProtocolHandler ["http-nio-8080"]
+2023-12-04 13:38:10.299 INFO  [o.apache.catalina.core.StandardService] - Starting service [Tomcat]
+2023-12-04 13:38:10.299 INFO  [org.apache.catalina.core.StandardEngine] - Starting Servlet engine: [Apache Tomcat/10.1.16]
+2023-12-04 13:38:10.353 INFO  [org.apache.jasper.servlet.TldScanner] - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2023-12-04 13:38:10.355 INFO  [o.a.c.c.C.[Tomcat].[localhost].[/]] - Initializing Spring embedded WebApplicationContext
+2023-12-04 13:38:10.355 INFO  [o.s.b.w.s.c.ServletWebServerApplicationContext] - Root WebApplicationContext: initialization completed in 232 ms
+2023-12-04 13:38:10.370 INFO  [com.zaxxer.hikari.HikariDataSource] - HikariCP - Starting...
+2023-12-04 13:38:10.374 INFO  [com.zaxxer.hikari.pool.HikariPool] - HikariCP - Added connection net.sf.log4jdbc.sql.jdbcapi.ConnectionSpy@6a7d6f9e
+2023-12-04 13:38:10.374 INFO  [com.zaxxer.hikari.HikariDataSource] - HikariCP - Start completed.
+2023-12-04 13:38:10.393 INFO  [o.s.b.a.w.s.WelcomePageHandlerMapping] - Adding welcome page template: index
+2023-12-04 13:38:10.438 INFO  [o.s.b.d.a.OptionalLiveReloadServer] - LiveReload server is running on port 35729
+2023-12-04 13:38:10.442 INFO  [o.apache.coyote.http11.Http11NioProtocol] - Starting ProtocolHandler ["http-nio-8080"]
+2023-12-04 13:38:10.446 INFO  [o.s.b.w.embedded.tomcat.TomcatWebServer] - Tomcat started on port 8080 (http) with context path ''
+2023-12-04 13:38:10.450 INFO  [com.main.ArchiveApplication] - Started ArchiveApplication in 0.353 seconds (process running for 304.749)
+2023-12-04 13:38:10.450 INFO  [o.s.b.d.a.ConditionEvaluationDeltaLoggingListener] - Condition evaluation unchanged
+2023-12-04 13:38:12.784 INFO  [o.a.c.c.C.[Tomcat].[localhost].[/]] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-04 13:38:12.785 INFO  [o.s.web.servlet.DispatcherServlet] - Initializing Servlet 'dispatcherServlet'
+2023-12-04 13:38:12.785 INFO  [o.s.web.servlet.DispatcherServlet] - Completed initialization in 0 ms
+2023-12-04 13:38:22.091 INFO  [o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener] - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-12-04 13:38:22.093 INFO  [o.apache.coyote.http11.Http11NioProtocol] - Stopping ProtocolHandler ["http-nio-8080"]
+2023-12-04 13:38:22.105 INFO  [com.zaxxer.hikari.HikariDataSource] - HikariCP - Shutdown initiated...
+2023-12-04 13:38:22.108 INFO  [com.zaxxer.hikari.HikariDataSource] - HikariCP - Shutdown completed.
+2023-12-04 13:38:22.189 INFO  [com.main.ArchiveApplication] - Starting ArchiveApplication using Java 17.0.9 with PID 10108 (C:\Users\kcs\eclipse\workspace\Archive\bin\main started by kcs in C:\Users\kcs\eclipse\workspace\Archive)
+2023-12-04 13:38:22.189 INFO  [com.main.ArchiveApplication] - The following 1 profile is active: "local"
+2023-12-04 13:38:22.369 INFO  [o.s.b.w.embedded.tomcat.TomcatWebServer] - Tomcat initialized with port 8080 (http)
+2023-12-04 13:38:22.369 INFO  [o.apache.coyote.http11.Http11NioProtocol] - Initializing ProtocolHandler ["http-nio-8080"]
+2023-12-04 13:38:22.369 INFO  [o.apache.catalina.core.StandardService] - Starting service [Tomcat]
+2023-12-04 13:38:22.369 INFO  [org.apache.catalina.core.StandardEngine] - Starting Servlet engine: [Apache Tomcat/10.1.16]
+2023-12-04 13:38:22.434 INFO  [org.apache.jasper.servlet.TldScanner] - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2023-12-04 13:38:22.439 INFO  [o.a.c.c.C.[Tomcat].[localhost].[/]] - Initializing Spring embedded WebApplicationContext
+2023-12-04 13:38:22.439 INFO  [o.s.b.w.s.c.ServletWebServerApplicationContext] - Root WebApplicationContext: initialization completed in 248 ms
+2023-12-04 13:38:22.460 INFO  [com.zaxxer.hikari.HikariDataSource] - HikariCP - Starting...
+2023-12-04 13:38:22.462 INFO  [com.zaxxer.hikari.pool.HikariPool] - HikariCP - Added connection net.sf.log4jdbc.sql.jdbcapi.ConnectionSpy@62689af5
+2023-12-04 13:38:22.462 INFO  [com.zaxxer.hikari.HikariDataSource] - HikariCP - Start completed.
+2023-12-04 13:38:22.485 INFO  [o.s.b.a.w.s.WelcomePageHandlerMapping] - Adding welcome page template: index
+2023-12-04 13:38:22.532 INFO  [o.s.b.d.a.OptionalLiveReloadServer] - LiveReload server is running on port 35729
+2023-12-04 13:38:22.537 INFO  [o.apache.coyote.http11.Http11NioProtocol] - Starting ProtocolHandler ["http-nio-8080"]
+2023-12-04 13:38:22.542 INFO  [o.s.b.w.embedded.tomcat.TomcatWebServer] - Tomcat started on port 8080 (http) with context path ''
+2023-12-04 13:38:22.546 INFO  [com.main.ArchiveApplication] - Started ArchiveApplication in 0.383 seconds (process running for 316.845)
+2023-12-04 13:38:22.547 INFO  [o.s.b.d.a.ConditionEvaluationDeltaLoggingListener] - Condition evaluation unchanged
+2023-12-04 13:38:26.102 INFO  [o.a.c.c.C.[Tomcat].[localhost].[/]] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-04 13:38:26.102 INFO  [o.s.web.servlet.DispatcherServlet] - Initializing Servlet 'dispatcherServlet'
+2023-12-04 13:38:26.102 INFO  [o.s.web.servlet.DispatcherServlet] - Completed initialization in 0 ms
+2023-12-04 13:50:25.911 INFO  [com.main.controller.BoardController] - board
+2023-12-04 13:50:30.615 INFO  [com.main.controller.BoardController] - board
+2023-12-04 13:50:33.290 INFO  [com.main.controller.BoardController] - board
+2023-12-04 13:50:33.769 INFO  [com.main.controller.BoardController] - board
+2023-12-04 13:50:34.068 INFO  [com.main.controller.BoardController] - board
+2023-12-04 13:50:34.369 INFO  [com.main.controller.BoardController] - board
+2023-12-04 13:50:37.865 INFO  [com.main.controller.BoardController] - board
+2023-12-04 13:50:38.668 INFO  [com.main.controller.BoardController] - board
+2023-12-04 13:50:39.010 INFO  [com.main.controller.BoardController] - board
+2023-12-04 13:51:05.855 INFO  [com.main.controller.BoardController] - board
+2023-12-04 13:51:34.859 INFO  [com.main.controller.BoardController] - board
+2023-12-04 13:52:12.685 INFO  [com.main.controller.BoardController] - board
+2023-12-04 13:54:39.489 INFO  [com.main.controller.BoardController] - board
+2023-12-04 13:54:56.528 INFO  [com.main.controller.BoardController] - board
+2023-12-04 14:01:56.305 INFO  [com.main.controller.BoardController] - board
+2023-12-04 14:03:37.873 INFO  [com.main.controller.BoardController] - board
+2023-12-04 14:51:58.030 INFO  [com.main.controller.BoardController] - board
+2023-12-04 14:58:13.767 INFO  [com.main.controller.BoardController] - board
+2023-12-04 14:58:25.677 INFO  [com.main.controller.BoardController] - board
+2023-12-04 15:00:36.876 INFO  [com.main.controller.BoardController] - board
+2023-12-04 15:00:39.195 INFO  [com.main.controller.BoardController] - board
+2023-12-04 15:01:05.864 INFO  [com.main.controller.BoardController] - board
+2023-12-04 15:01:19.101 INFO  [com.main.controller.BoardController] - board
+2023-12-04 15:01:37.003 INFO  [com.main.controller.BoardController] - board
+2023-12-04 15:02:25.122 INFO  [com.main.controller.BoardController] - board
+2023-12-04 15:02:26.413 INFO  [com.main.controller.BoardController] - board
+2023-12-04 15:02:32.872 INFO  [com.main.controller.BoardController] - board
+2023-12-04 15:12:18.001 INFO  [com.main.controller.BoardController] - board
+2023-12-04 15:18:33.943 INFO  [com.main.controller.BoardController] - board
+2023-12-04 15:19:11.227 INFO  [com.main.controller.BoardController] - board
+2023-12-04 15:19:24.392 INFO  [com.main.controller.BoardController] - board
+2023-12-04 15:20:05.235 INFO  [com.main.controller.BoardController] - board
+2023-12-04 15:27:16.096 INFO  [com.main.controller.BoardController] - board
+2023-12-04 15:27:16.967 INFO  [com.main.controller.BoardController] - board
+2023-12-04 15:27:17.286 INFO  [com.main.controller.BoardController] - board
+2023-12-04 15:27:17.556 INFO  [com.main.controller.BoardController] - board
+2023-12-04 15:27:17.758 INFO  [com.main.controller.BoardController] - board
+2023-12-04 15:27:17.938 INFO  [com.main.controller.BoardController] - board
+2023-12-04 15:27:36.799 INFO  [com.main.controller.BoardController] - board
+2023-12-04 15:27:37.522 INFO  [com.main.controller.BoardController] - board
+2023-12-04 16:08:51.752 INFO  [com.main.controller.BoardController] - board
+2023-12-04 17:19:22.635 ERROR [o.a.c.c.C.[Tomcat].[localhost].[/].[jsp]] - Servlet.service() for servlet [jsp] threw exception
+org.springframework.beans.factory.NoSuchBeanDefinitionException: No bean named 'enviroment' available
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeanDefinition(DefaultListableBeanFactory.java:893)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getMergedLocalBeanDefinition(AbstractBeanFactory.java:1319)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:299)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1173)
+	at org.springframework.context.expression.BeanFactoryResolver.resolve(BeanFactoryResolver.java:51)
+	at org.springframework.expression.spel.ast.BeanReference.getValueInternal(BeanReference.java:55)
+	at org.springframework.expression.spel.ast.CompoundExpression.getValueRef(CompoundExpression.java:61)
+	at org.springframework.expression.spel.ast.CompoundExpression.getValueInternal(CompoundExpression.java:97)
+	at org.springframework.expression.spel.ast.SpelNodeImpl.getValue(SpelNodeImpl.java:114)
+	at org.springframework.expression.spel.standard.SpelExpression.getValue(SpelExpression.java:273)
+	at org.springframework.web.servlet.tags.EvalTag.doEndTag(EvalTag.java:171)
+	at org.apache.jsp.WEB_002dINF.decorators.layout_jsp._jspx_meth_spring_005feval_005f0(layout_jsp.java:234)
+	at org.apache.jsp.WEB_002dINF.decorators.layout_jsp._jspService(layout_jsp.java:189)
+	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:614)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:456)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:380)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:328)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:614)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:110)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:110)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:110)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:642)
+	at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:408)
+	at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:340)
+	at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:277)
+	at org.sitemesh.webapp.WebAppContext.dispatch(WebAppContext.java:182)
+	at org.sitemesh.webapp.WebAppContext.decorate(WebAppContext.java:157)
+	at org.sitemesh.BaseSiteMeshContext.decorate(BaseSiteMeshContext.java:39)
+	at org.sitemesh.webapp.SiteMeshFilter.postProcess(SiteMeshFilter.java:83)
+	at org.sitemesh.webapp.contentfilter.ContentBufferingFilter.processInternally(ContentBufferingFilter.java:211)
+	at org.sitemesh.webapp.contentfilter.ContentBufferingFilter.bufferAndPostProcess(ContentBufferingFilter.java:200)
+	at org.sitemesh.webapp.contentfilter.ContentBufferingFilter.doFilter(ContentBufferingFilter.java:126)
+	at org.sitemesh.webapp.SiteMeshFilter.doFilter(SiteMeshFilter.java:126)
+	at org.sitemesh.config.ConfigurableSiteMeshFilter.doFilter(ConfigurableSiteMeshFilter.java:171)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:340)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1744)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+2023-12-04 17:19:22.637 ERROR [o.a.c.c.C.[.[.[/].[dispatcherServlet]] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception
+java.io.IOException: Could not dispatch to decorator
+	at org.sitemesh.webapp.WebAppContext.decorate(WebAppContext.java:164)
+	at org.sitemesh.BaseSiteMeshContext.decorate(BaseSiteMeshContext.java:39)
+	at org.sitemesh.webapp.SiteMeshFilter.postProcess(SiteMeshFilter.java:83)
+	at org.sitemesh.webapp.contentfilter.ContentBufferingFilter.processInternally(ContentBufferingFilter.java:211)
+	at org.sitemesh.webapp.contentfilter.ContentBufferingFilter.bufferAndPostProcess(ContentBufferingFilter.java:200)
+	at org.sitemesh.webapp.contentfilter.ContentBufferingFilter.doFilter(ContentBufferingFilter.java:126)
+	at org.sitemesh.webapp.SiteMeshFilter.doFilter(SiteMeshFilter.java:126)
+	at org.sitemesh.config.ConfigurableSiteMeshFilter.doFilter(ConfigurableSiteMeshFilter.java:171)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:340)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1744)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+Caused by: org.apache.jasper.JasperException: An exception occurred processing [/WEB-INF/decorators/layout.jsp] at line [46]
+
+43:         <script src="js/jquery-3.3.1.min.js"></script>
+44:         <script src="js/scripts.js"></script>
+45:         <spring:eval var="activeProfile" expression="@enviroment.getProperty('spring.profiles.active')" />
+46:         <c:choose>
+47:         	<c:when test="${activeProfile eq 'local' }">
+48:         		<script src="js/vue.js"></script>
+49:         	</c:when>
+
+
+Stacktrace:
+	at org.apache.jasper.servlet.JspServletWrapper.handleJspException(JspServletWrapper.java:599)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:488)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:380)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:328)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:614)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:110)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:110)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:110)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:642)
+	at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:408)
+	at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:340)
+	at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:277)
+	at org.sitemesh.webapp.WebAppContext.dispatch(WebAppContext.java:182)
+	at org.sitemesh.webapp.WebAppContext.decorate(WebAppContext.java:157)
+	... 37 common frames omitted
+Caused by: org.springframework.expression.spel.SpelEvaluationException: EL1058E: A problem occurred when trying to resolve bean 'enviroment':'Could not resolve bean reference against BeanFactory'
+	at org.springframework.expression.spel.ast.BeanReference.getValueInternal(BeanReference.java:59)
+	at org.springframework.expression.spel.ast.CompoundExpression.getValueRef(CompoundExpression.java:61)
+	at org.springframework.expression.spel.ast.CompoundExpression.getValueInternal(CompoundExpression.java:97)
+	at org.springframework.expression.spel.ast.SpelNodeImpl.getValue(SpelNodeImpl.java:114)
+	at org.springframework.expression.spel.standard.SpelExpression.getValue(SpelExpression.java:273)
+	at org.springframework.web.servlet.tags.EvalTag.doEndTag(EvalTag.java:171)
+	at org.apache.jsp.WEB_002dINF.decorators.layout_jsp._jspx_meth_spring_005feval_005f0(layout_jsp.java:234)
+	at org.apache.jsp.WEB_002dINF.decorators.layout_jsp._jspService(layout_jsp.java:189)
+	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:614)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:456)
+	... 60 common frames omitted
+Caused by: org.springframework.expression.AccessException: Could not resolve bean reference against BeanFactory
+	at org.springframework.context.expression.BeanFactoryResolver.resolve(BeanFactoryResolver.java:54)
+	at org.springframework.expression.spel.ast.BeanReference.getValueInternal(BeanReference.java:55)
+	... 70 common frames omitted
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No bean named 'enviroment' available
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeanDefinition(DefaultListableBeanFactory.java:893)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getMergedLocalBeanDefinition(AbstractBeanFactory.java:1319)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:299)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1173)
+	at org.springframework.context.expression.BeanFactoryResolver.resolve(BeanFactoryResolver.java:51)
+	... 71 common frames omitted
+2023-12-04 17:19:30.663 INFO  [o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin] - Application shutdown requested.
+2023-12-04 17:19:30.664 INFO  [o.apache.coyote.http11.Http11NioProtocol] - Stopping ProtocolHandler ["http-nio-8080"]
+2023-12-04 17:19:30.678 INFO  [com.zaxxer.hikari.HikariDataSource] - HikariCP - Shutdown initiated...
+2023-12-04 17:19:30.680 INFO  [com.zaxxer.hikari.HikariDataSource] - HikariCP - Shutdown completed.
+2023-12-04 17:19:34.937 INFO  [com.main.ArchiveApplication] - Starting ArchiveApplication using Java 17.0.9 with PID 14532 (C:\Users\kcs\eclipse\workspace\Archive\bin\main started by kcs in C:\Users\kcs\eclipse\workspace\Archive)
+2023-12-04 17:19:34.938 INFO  [com.main.ArchiveApplication] - The following 1 profile is active: "local"
+2023-12-04 17:19:34.971 INFO  [o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor] - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-12-04 17:19:34.972 INFO  [o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor] - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-12-04 17:19:35.804 INFO  [o.s.b.w.embedded.tomcat.TomcatWebServer] - Tomcat initialized with port 8080 (http)
+2023-12-04 17:19:35.810 INFO  [o.apache.coyote.http11.Http11NioProtocol] - Initializing ProtocolHandler ["http-nio-8080"]
+2023-12-04 17:19:35.812 INFO  [o.apache.catalina.core.StandardService] - Starting service [Tomcat]
+2023-12-04 17:19:35.812 INFO  [org.apache.catalina.core.StandardEngine] - Starting Servlet engine: [Apache Tomcat/10.1.16]
+2023-12-04 17:19:35.945 INFO  [org.apache.jasper.servlet.TldScanner] - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2023-12-04 17:19:35.950 INFO  [o.a.c.c.C.[Tomcat].[localhost].[/]] - Initializing Spring embedded WebApplicationContext
+2023-12-04 17:19:35.950 INFO  [o.s.b.w.s.c.ServletWebServerApplicationContext] - Root WebApplicationContext: initialization completed in 978 ms
+2023-12-04 17:19:36.027 INFO  [com.zaxxer.hikari.HikariDataSource] - HikariCP - Starting...
+2023-12-04 17:19:36.103 INFO  [com.zaxxer.hikari.pool.HikariPool] - HikariCP - Added connection net.sf.log4jdbc.sql.jdbcapi.ConnectionSpy@73420c78
+2023-12-04 17:19:36.105 INFO  [com.zaxxer.hikari.HikariDataSource] - HikariCP - Start completed.
+2023-12-04 17:19:36.273 INFO  [o.s.b.a.w.s.WelcomePageHandlerMapping] - Adding welcome page template: index
+2023-12-04 17:19:36.496 INFO  [o.s.b.d.a.OptionalLiveReloadServer] - LiveReload server is running on port 35729
+2023-12-04 17:19:36.509 INFO  [o.apache.coyote.http11.Http11NioProtocol] - Starting ProtocolHandler ["http-nio-8080"]
+2023-12-04 17:19:36.533 INFO  [o.s.b.w.embedded.tomcat.TomcatWebServer] - Tomcat started on port 8080 (http) with context path ''
+2023-12-04 17:19:36.540 INFO  [com.main.ArchiveApplication] - Started ArchiveApplication in 2.044 seconds (process running for 2.708)
+2023-12-04 17:19:38.633 INFO  [o.a.c.c.C.[Tomcat].[localhost].[/]] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-04 17:19:38.634 INFO  [o.s.web.servlet.DispatcherServlet] - Initializing Servlet 'dispatcherServlet'
+2023-12-04 17:19:38.635 INFO  [o.s.web.servlet.DispatcherServlet] - Completed initialization in 1 ms
+2023-12-04 17:19:39.596 ERROR [o.a.c.c.C.[Tomcat].[localhost].[/].[jsp]] - Servlet.service() for servlet [jsp] threw exception
+org.springframework.beans.factory.NoSuchBeanDefinitionException: No bean named 'enviroment' available
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeanDefinition(DefaultListableBeanFactory.java:893)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getMergedLocalBeanDefinition(AbstractBeanFactory.java:1319)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:299)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1173)
+	at org.springframework.context.expression.BeanFactoryResolver.resolve(BeanFactoryResolver.java:51)
+	at org.springframework.expression.spel.ast.BeanReference.getValueInternal(BeanReference.java:55)
+	at org.springframework.expression.spel.ast.CompoundExpression.getValueRef(CompoundExpression.java:61)
+	at org.springframework.expression.spel.ast.CompoundExpression.getValueInternal(CompoundExpression.java:97)
+	at org.springframework.expression.spel.ast.SpelNodeImpl.getValue(SpelNodeImpl.java:114)
+	at org.springframework.expression.spel.standard.SpelExpression.getValue(SpelExpression.java:273)
+	at org.springframework.web.servlet.tags.EvalTag.doEndTag(EvalTag.java:171)
+	at org.apache.jsp.WEB_002dINF.decorators.layout_jsp._jspx_meth_spring_005feval_005f0(layout_jsp.java:234)
+	at org.apache.jsp.WEB_002dINF.decorators.layout_jsp._jspService(layout_jsp.java:189)
+	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:614)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:456)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:380)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:328)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:614)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:110)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:110)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:110)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:642)
+	at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:408)
+	at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:340)
+	at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:277)
+	at org.sitemesh.webapp.WebAppContext.dispatch(WebAppContext.java:182)
+	at org.sitemesh.webapp.WebAppContext.decorate(WebAppContext.java:157)
+	at org.sitemesh.BaseSiteMeshContext.decorate(BaseSiteMeshContext.java:39)
+	at org.sitemesh.webapp.SiteMeshFilter.postProcess(SiteMeshFilter.java:83)
+	at org.sitemesh.webapp.contentfilter.ContentBufferingFilter.processInternally(ContentBufferingFilter.java:211)
+	at org.sitemesh.webapp.contentfilter.ContentBufferingFilter.bufferAndPostProcess(ContentBufferingFilter.java:200)
+	at org.sitemesh.webapp.contentfilter.ContentBufferingFilter.doFilter(ContentBufferingFilter.java:126)
+	at org.sitemesh.webapp.SiteMeshFilter.doFilter(SiteMeshFilter.java:126)
+	at org.sitemesh.config.ConfigurableSiteMeshFilter.doFilter(ConfigurableSiteMeshFilter.java:171)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:340)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1744)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+2023-12-04 17:19:39.598 ERROR [o.a.c.c.C.[.[.[/].[dispatcherServlet]] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception
+java.io.IOException: Could not dispatch to decorator
+	at org.sitemesh.webapp.WebAppContext.decorate(WebAppContext.java:164)
+	at org.sitemesh.BaseSiteMeshContext.decorate(BaseSiteMeshContext.java:39)
+	at org.sitemesh.webapp.SiteMeshFilter.postProcess(SiteMeshFilter.java:83)
+	at org.sitemesh.webapp.contentfilter.ContentBufferingFilter.processInternally(ContentBufferingFilter.java:211)
+	at org.sitemesh.webapp.contentfilter.ContentBufferingFilter.bufferAndPostProcess(ContentBufferingFilter.java:200)
+	at org.sitemesh.webapp.contentfilter.ContentBufferingFilter.doFilter(ContentBufferingFilter.java:126)
+	at org.sitemesh.webapp.SiteMeshFilter.doFilter(SiteMeshFilter.java:126)
+	at org.sitemesh.config.ConfigurableSiteMeshFilter.doFilter(ConfigurableSiteMeshFilter.java:171)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:340)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1744)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+Caused by: org.apache.jasper.JasperException: An exception occurred processing [/WEB-INF/decorators/layout.jsp] at line [46]
+
+43:         <script src="js/jquery-3.3.1.min.js"></script>
+44:         <script src="js/scripts.js"></script>
+45:         <spring:eval var="activeProfile" expression="@enviroment.getProperty('spring.profiles.active')" />
+46:         <c:choose>
+47:         	<c:when test="${activeProfile eq 'local' }">
+48:         		<script src="js/vue.js"></script>
+49:         	</c:when>
+
+
+Stacktrace:
+	at org.apache.jasper.servlet.JspServletWrapper.handleJspException(JspServletWrapper.java:599)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:488)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:380)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:328)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:614)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:110)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:110)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:110)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:642)
+	at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:408)
+	at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:340)
+	at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:277)
+	at org.sitemesh.webapp.WebAppContext.dispatch(WebAppContext.java:182)
+	at org.sitemesh.webapp.WebAppContext.decorate(WebAppContext.java:157)
+	... 37 common frames omitted
+Caused by: org.springframework.expression.spel.SpelEvaluationException: EL1058E: A problem occurred when trying to resolve bean 'enviroment':'Could not resolve bean reference against BeanFactory'
+	at org.springframework.expression.spel.ast.BeanReference.getValueInternal(BeanReference.java:59)
+	at org.springframework.expression.spel.ast.CompoundExpression.getValueRef(CompoundExpression.java:61)
+	at org.springframework.expression.spel.ast.CompoundExpression.getValueInternal(CompoundExpression.java:97)
+	at org.springframework.expression.spel.ast.SpelNodeImpl.getValue(SpelNodeImpl.java:114)
+	at org.springframework.expression.spel.standard.SpelExpression.getValue(SpelExpression.java:273)
+	at org.springframework.web.servlet.tags.EvalTag.doEndTag(EvalTag.java:171)
+	at org.apache.jsp.WEB_002dINF.decorators.layout_jsp._jspx_meth_spring_005feval_005f0(layout_jsp.java:234)
+	at org.apache.jsp.WEB_002dINF.decorators.layout_jsp._jspService(layout_jsp.java:189)
+	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:614)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:456)
+	... 60 common frames omitted
+Caused by: org.springframework.expression.AccessException: Could not resolve bean reference against BeanFactory
+	at org.springframework.context.expression.BeanFactoryResolver.resolve(BeanFactoryResolver.java:54)
+	at org.springframework.expression.spel.ast.BeanReference.getValueInternal(BeanReference.java:55)
+	... 70 common frames omitted
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No bean named 'enviroment' available
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeanDefinition(DefaultListableBeanFactory.java:893)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getMergedLocalBeanDefinition(AbstractBeanFactory.java:1319)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:299)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1173)
+	at org.springframework.context.expression.BeanFactoryResolver.resolve(BeanFactoryResolver.java:51)
+	... 71 common frames omitted
+2023-12-04 17:20:51.910 INFO  [o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin] - Application shutdown requested.
+2023-12-04 17:20:51.913 INFO  [o.apache.coyote.http11.Http11NioProtocol] - Stopping ProtocolHandler ["http-nio-8080"]
+2023-12-04 17:20:51.927 INFO  [com.zaxxer.hikari.HikariDataSource] - HikariCP - Shutdown initiated...
+2023-12-04 17:20:51.931 INFO  [com.zaxxer.hikari.HikariDataSource] - HikariCP - Shutdown completed.
+2023-12-04 17:21:47.769 INFO  [com.main.ArchiveApplication] - Starting ArchiveApplication using Java 17.0.9 with PID 7420 (C:\Users\kcs\eclipse\workspace\Archive\bin\main started by kcs in C:\Users\kcs\eclipse\workspace\Archive)
+2023-12-04 17:21:47.771 INFO  [com.main.ArchiveApplication] - The following 1 profile is active: "local"
+2023-12-04 17:21:47.805 INFO  [o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor] - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-12-04 17:21:47.805 INFO  [o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor] - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-12-04 17:21:48.670 INFO  [o.s.b.w.embedded.tomcat.TomcatWebServer] - Tomcat initialized with port 8080 (http)
+2023-12-04 17:21:48.676 INFO  [o.apache.coyote.http11.Http11NioProtocol] - Initializing ProtocolHandler ["http-nio-8080"]
+2023-12-04 17:21:48.678 INFO  [o.apache.catalina.core.StandardService] - Starting service [Tomcat]
+2023-12-04 17:21:48.678 INFO  [org.apache.catalina.core.StandardEngine] - Starting Servlet engine: [Apache Tomcat/10.1.16]
+2023-12-04 17:21:48.807 INFO  [org.apache.jasper.servlet.TldScanner] - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2023-12-04 17:21:48.814 INFO  [o.a.c.c.C.[Tomcat].[localhost].[/]] - Initializing Spring embedded WebApplicationContext
+2023-12-04 17:21:48.814 INFO  [o.s.b.w.s.c.ServletWebServerApplicationContext] - Root WebApplicationContext: initialization completed in 1009 ms
+2023-12-04 17:21:48.892 INFO  [com.zaxxer.hikari.HikariDataSource] - HikariCP - Starting...
+2023-12-04 17:21:48.958 INFO  [com.zaxxer.hikari.pool.HikariPool] - HikariCP - Added connection net.sf.log4jdbc.sql.jdbcapi.ConnectionSpy@59f29e4
+2023-12-04 17:21:48.960 INFO  [com.zaxxer.hikari.HikariDataSource] - HikariCP - Start completed.
+2023-12-04 17:21:49.109 INFO  [o.s.b.a.w.s.WelcomePageHandlerMapping] - Adding welcome page template: index
+2023-12-04 17:21:49.332 INFO  [o.s.b.d.a.OptionalLiveReloadServer] - LiveReload server is running on port 35729
+2023-12-04 17:21:49.348 INFO  [o.apache.coyote.http11.Http11NioProtocol] - Starting ProtocolHandler ["http-nio-8080"]
+2023-12-04 17:21:49.372 INFO  [o.s.b.w.embedded.tomcat.TomcatWebServer] - Tomcat started on port 8080 (http) with context path ''
+2023-12-04 17:21:49.380 INFO  [com.main.ArchiveApplication] - Started ArchiveApplication in 2.021 seconds (process running for 2.594)
+2023-12-04 17:21:52.809 INFO  [o.a.c.c.C.[Tomcat].[localhost].[/]] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-04 17:21:52.809 INFO  [o.s.web.servlet.DispatcherServlet] - Initializing Servlet 'dispatcherServlet'
+2023-12-04 17:21:52.810 INFO  [o.s.web.servlet.DispatcherServlet] - Completed initialization in 1 ms
+2023-12-04 17:21:53.732 ERROR [o.a.c.c.C.[Tomcat].[localhost].[/].[jsp]] - Servlet.service() for servlet [jsp] threw exception
+org.springframework.beans.factory.NoSuchBeanDefinitionException: No bean named 'enviroment' available
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeanDefinition(DefaultListableBeanFactory.java:893)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getMergedLocalBeanDefinition(AbstractBeanFactory.java:1319)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:299)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1173)
+	at org.springframework.context.expression.BeanFactoryResolver.resolve(BeanFactoryResolver.java:51)
+	at org.springframework.expression.spel.ast.BeanReference.getValueInternal(BeanReference.java:55)
+	at org.springframework.expression.spel.ast.CompoundExpression.getValueRef(CompoundExpression.java:61)
+	at org.springframework.expression.spel.ast.CompoundExpression.getValueInternal(CompoundExpression.java:97)
+	at org.springframework.expression.spel.ast.SpelNodeImpl.getValue(SpelNodeImpl.java:114)
+	at org.springframework.expression.spel.standard.SpelExpression.getValue(SpelExpression.java:273)
+	at org.springframework.web.servlet.tags.EvalTag.doEndTag(EvalTag.java:171)
+	at org.apache.jsp.WEB_002dINF.decorators.layout_jsp._jspx_meth_spring_005feval_005f0(layout_jsp.java:234)
+	at org.apache.jsp.WEB_002dINF.decorators.layout_jsp._jspService(layout_jsp.java:189)
+	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:614)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:456)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:380)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:328)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:614)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:110)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:110)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:110)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:642)
+	at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:408)
+	at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:340)
+	at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:277)
+	at org.sitemesh.webapp.WebAppContext.dispatch(WebAppContext.java:182)
+	at org.sitemesh.webapp.WebAppContext.decorate(WebAppContext.java:157)
+	at org.sitemesh.BaseSiteMeshContext.decorate(BaseSiteMeshContext.java:39)
+	at org.sitemesh.webapp.SiteMeshFilter.postProcess(SiteMeshFilter.java:83)
+	at org.sitemesh.webapp.contentfilter.ContentBufferingFilter.processInternally(ContentBufferingFilter.java:211)
+	at org.sitemesh.webapp.contentfilter.ContentBufferingFilter.bufferAndPostProcess(ContentBufferingFilter.java:200)
+	at org.sitemesh.webapp.contentfilter.ContentBufferingFilter.doFilter(ContentBufferingFilter.java:126)
+	at org.sitemesh.webapp.SiteMeshFilter.doFilter(SiteMeshFilter.java:126)
+	at org.sitemesh.config.ConfigurableSiteMeshFilter.doFilter(ConfigurableSiteMeshFilter.java:171)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:340)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1744)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+2023-12-04 17:21:53.733 ERROR [o.a.c.c.C.[.[.[/].[dispatcherServlet]] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception
+java.io.IOException: Could not dispatch to decorator
+	at org.sitemesh.webapp.WebAppContext.decorate(WebAppContext.java:164)
+	at org.sitemesh.BaseSiteMeshContext.decorate(BaseSiteMeshContext.java:39)
+	at org.sitemesh.webapp.SiteMeshFilter.postProcess(SiteMeshFilter.java:83)
+	at org.sitemesh.webapp.contentfilter.ContentBufferingFilter.processInternally(ContentBufferingFilter.java:211)
+	at org.sitemesh.webapp.contentfilter.ContentBufferingFilter.bufferAndPostProcess(ContentBufferingFilter.java:200)
+	at org.sitemesh.webapp.contentfilter.ContentBufferingFilter.doFilter(ContentBufferingFilter.java:126)
+	at org.sitemesh.webapp.SiteMeshFilter.doFilter(SiteMeshFilter.java:126)
+	at org.sitemesh.config.ConfigurableSiteMeshFilter.doFilter(ConfigurableSiteMeshFilter.java:171)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:340)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1744)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+Caused by: org.apache.jasper.JasperException: An exception occurred processing [/WEB-INF/decorators/layout.jsp] at line [46]
+
+43:         <script src="js/jquery-3.3.1.min.js"></script>
+44:         <script src="js/scripts.js"></script>
+45:         <spring:eval var="activeProfile" expression="@enviroment.getProperty('spring.profiles.active')" />
+46:         <c:choose>
+47:         	<c:when test="${activeProfile eq 'local' }">
+48:         		<script src="js/vue.js"></script>
+49:         	</c:when>
+
+
+Stacktrace:
+	at org.apache.jasper.servlet.JspServletWrapper.handleJspException(JspServletWrapper.java:599)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:488)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:380)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:328)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:614)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:110)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:110)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:110)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:642)
+	at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:408)
+	at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:340)
+	at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:277)
+	at org.sitemesh.webapp.WebAppContext.dispatch(WebAppContext.java:182)
+	at org.sitemesh.webapp.WebAppContext.decorate(WebAppContext.java:157)
+	... 37 common frames omitted
+Caused by: org.springframework.expression.spel.SpelEvaluationException: EL1058E: A problem occurred when trying to resolve bean 'enviroment':'Could not resolve bean reference against BeanFactory'
+	at org.springframework.expression.spel.ast.BeanReference.getValueInternal(BeanReference.java:59)
+	at org.springframework.expression.spel.ast.CompoundExpression.getValueRef(CompoundExpression.java:61)
+	at org.springframework.expression.spel.ast.CompoundExpression.getValueInternal(CompoundExpression.java:97)
+	at org.springframework.expression.spel.ast.SpelNodeImpl.getValue(SpelNodeImpl.java:114)
+	at org.springframework.expression.spel.standard.SpelExpression.getValue(SpelExpression.java:273)
+	at org.springframework.web.servlet.tags.EvalTag.doEndTag(EvalTag.java:171)
+	at org.apache.jsp.WEB_002dINF.decorators.layout_jsp._jspx_meth_spring_005feval_005f0(layout_jsp.java:234)
+	at org.apache.jsp.WEB_002dINF.decorators.layout_jsp._jspService(layout_jsp.java:189)
+	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:614)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:456)
+	... 60 common frames omitted
+Caused by: org.springframework.expression.AccessException: Could not resolve bean reference against BeanFactory
+	at org.springframework.context.expression.BeanFactoryResolver.resolve(BeanFactoryResolver.java:54)
+	at org.springframework.expression.spel.ast.BeanReference.getValueInternal(BeanReference.java:55)
+	... 70 common frames omitted
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No bean named 'enviroment' available
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeanDefinition(DefaultListableBeanFactory.java:893)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getMergedLocalBeanDefinition(AbstractBeanFactory.java:1319)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:299)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1173)
+	at org.springframework.context.expression.BeanFactoryResolver.resolve(BeanFactoryResolver.java:51)
+	... 71 common frames omitted
+2023-12-04 17:22:53.601 INFO  [com.main.controller.BoardController] - board
+2023-12-04 17:26:49.989 INFO  [com.main.controller.BoardController] - board
+2023-12-04 17:27:40.197 INFO  [com.main.controller.BoardController] - board
+2023-12-04 17:27:41.019 INFO  [com.main.controller.BoardController] - board
+2023-12-04 17:32:47.494 INFO  [com.main.controller.BoardController] - board
+2023-12-04 17:34:04.928 INFO  [com.main.ArchiveApplicationTests] - Starting ArchiveApplicationTests using Java 17.0.9 with PID 15456 (started by kcs in C:\Users\kcs\eclipse\workspace\Archive)
+2023-12-04 17:34:04.929 INFO  [com.main.ArchiveApplicationTests] - The following 1 profile is active: "local"
+2023-12-04 17:34:05.775 INFO  [com.zaxxer.hikari.HikariDataSource] - HikariCP - Starting...
+2023-12-04 17:34:05.868 INFO  [com.zaxxer.hikari.pool.HikariPool] - HikariCP - Added connection net.sf.log4jdbc.sql.jdbcapi.ConnectionSpy@10f477e2
+2023-12-04 17:34:05.870 INFO  [com.zaxxer.hikari.HikariDataSource] - HikariCP - Start completed.
+2023-12-04 17:34:06.153 INFO  [o.s.b.a.w.s.WelcomePageHandlerMapping] - Adding welcome page template: index
+2023-12-04 17:34:06.434 INFO  [com.main.ArchiveApplicationTests] - Started ArchiveApplicationTests in 1.858 seconds (process running for 2.911)
+2023-12-04 17:34:07.301 INFO  [com.zaxxer.hikari.HikariDataSource] - HikariCP - Shutdown initiated...
+2023-12-04 17:34:07.305 INFO  [com.zaxxer.hikari.HikariDataSource] - HikariCP - Shutdown completed.

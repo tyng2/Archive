@@ -9,6 +9,7 @@ import com.main.SitemeshFilter;
 @Configuration
 public class ServletFilterConfig {
 
+	@SuppressWarnings({ "rawtypes", "unchecked" })
 	@Bean
 	public FilterRegistrationBean siteMeshFilter() {
 		FilterRegistrationBean filter = new FilterRegistrationBean();

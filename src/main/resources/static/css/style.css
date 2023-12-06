@@ -1,0 +1,23 @@
+#intro {
+	/* Margin to fix overlapping fixed navbar */
+	margin-top: 58px;
+}
+
+@media (max-width: 991px) {
+	#intro {
+		/* Margin to fix overlapping fixed navbar */
+		margin-top: 45px;
+	}
+}
+.table-divider-color {
+	border-top-color: #494949;
+}
+.table-group-divider {
+    border-top: 2px solid;
+}
+
+@media (max-width: 768px) {
+	.xs_none {
+		display: none;
+	}
+}

@@ -1,0 +1,27 @@
+2023-12-05 10:28:12.529 INFO  [com.main.ArchiveApplication] - Starting ArchiveApplication using Java 17.0.9 with PID 14144 (C:\Users\kcs\eclipse\workspace\Archive\bin\main started by kcs in C:\Users\kcs\eclipse\workspace\Archive)
+2023-12-05 10:28:12.535 INFO  [com.main.ArchiveApplication] - The following 1 profile is active: "local"
+2023-12-05 10:28:12.600 INFO  [o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor] - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-12-05 10:28:12.600 INFO  [o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor] - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-12-05 10:28:13.887 INFO  [o.s.b.w.embedded.tomcat.TomcatWebServer] - Tomcat initialized with port 8080 (http)
+2023-12-05 10:28:13.901 INFO  [o.apache.coyote.http11.Http11NioProtocol] - Initializing ProtocolHandler ["http-nio-8080"]
+2023-12-05 10:28:13.904 INFO  [o.apache.catalina.core.StandardService] - Starting service [Tomcat]
+2023-12-05 10:28:13.904 INFO  [org.apache.catalina.core.StandardEngine] - Starting Servlet engine: [Apache Tomcat/10.1.16]
+2023-12-05 10:28:14.109 INFO  [org.apache.jasper.servlet.TldScanner] - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2023-12-05 10:28:14.117 INFO  [o.a.c.c.C.[Tomcat].[localhost].[/]] - Initializing Spring embedded WebApplicationContext
+2023-12-05 10:28:14.118 INFO  [o.s.b.w.s.c.ServletWebServerApplicationContext] - Root WebApplicationContext: initialization completed in 1517 ms
+2023-12-05 10:28:14.232 INFO  [com.zaxxer.hikari.HikariDataSource] - HikariCP - Starting...
+2023-12-05 10:28:14.337 INFO  [com.zaxxer.hikari.pool.HikariPool] - HikariCP - Added connection net.sf.log4jdbc.sql.jdbcapi.ConnectionSpy@23d876f3
+2023-12-05 10:28:14.341 INFO  [com.zaxxer.hikari.HikariDataSource] - HikariCP - Start completed.
+2023-12-05 10:28:14.593 INFO  [o.s.b.a.w.s.WelcomePageHandlerMapping] - Adding welcome page template: index
+2023-12-05 10:28:14.881 INFO  [o.s.b.d.a.OptionalLiveReloadServer] - LiveReload server is running on port 35729
+2023-12-05 10:28:14.902 INFO  [o.apache.coyote.http11.Http11NioProtocol] - Starting ProtocolHandler ["http-nio-8080"]
+2023-12-05 10:28:14.943 INFO  [o.s.b.w.embedded.tomcat.TomcatWebServer] - Tomcat started on port 8080 (http) with context path ''
+2023-12-05 10:28:14.955 INFO  [com.main.ArchiveApplication] - Started ArchiveApplication in 3.045 seconds (process running for 4.385)
+2023-12-05 10:28:44.060 INFO  [o.a.c.c.C.[Tomcat].[localhost].[/]] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-05 10:28:44.061 INFO  [o.s.web.servlet.DispatcherServlet] - Initializing Servlet 'dispatcherServlet'
+2023-12-05 10:28:44.062 INFO  [o.s.web.servlet.DispatcherServlet] - Completed initialization in 1 ms
+2023-12-05 10:28:50.123 INFO  [com.main.controller.BoardController] - board
+2023-12-05 10:37:00.416 INFO  [o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin] - Application shutdown requested.
+2023-12-05 10:37:00.422 INFO  [o.apache.coyote.http11.Http11NioProtocol] - Stopping ProtocolHandler ["http-nio-8080"]
+2023-12-05 10:37:00.444 INFO  [com.zaxxer.hikari.HikariDataSource] - HikariCP - Shutdown initiated...
+2023-12-05 10:37:00.450 INFO  [com.zaxxer.hikari.HikariDataSource] - HikariCP - Shutdown completed.
