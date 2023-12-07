@@ -1,0 +1,277 @@
+/* custom */
+
+.left {
+	text-align: left;
+}
+
+table tr th{
+	text-align: center;
+	border: none;
+}
+
+table tr td{
+	text-align: center;
+	border: none;
+}
+
+#reply {
+	color: #BBBBBB;
+}
+
+.title1 a {
+	color: black;	
+}
+
+.title1 a:hover {
+	text-decoration: underline;
+}
+
+.custom-pagination a .pt {
+	border-radius: 0px;
+	background: white;
+}
+
+.btn-custom {
+	color: #222222;
+	background-color: white;
+	border-color: #222222;
+}
+
+.btn-custom:hover {
+	color: #222222;
+	background-color: #EEEEEE;
+	border-color: #222222;
+}
+
+.btn-custom1 {
+	color: #CCC;
+	background-color: rgba(18, 69, 171, 0);
+/* 	border-color: #1245AB; */
+	border-color: #CCC;
+}
+
+.btn-custom1:hover {
+	color: #FFF;
+	background-color: rgba(0, 51, 153, 0);
+	border-color: #FFF;
+}
+
+.searchSwitch {
+	float: right; 
+	cursor: pointer; 
+	color: #CCC;
+}
+
+.searchSwitch:hover{
+	color: #FFF;
+}
+
+.log {
+	background-color: white;
+	font-size: 12px;
+    color: #444;
+    border: 1px solid #e5e8ef;
+    padding: 0 5px;
+    height: 22px;
+    line-height: 23px;
+    text-decoration: none!important;
+}
+.log:hover {
+	border: 1px solid #BDC0C7;
+	background-color: #F3F3F3;
+}
+
+.category a {
+	color: #8C8C8C;
+}
+
+.category a:hover {
+	text-decoration: underline;
+}
+
+.btn-none {
+	border-radius: 0px;
+	background: white;
+}
+
+a.smallBtn {
+	color: #444;
+	font-size: 12px;
+	cursor: pointer;
+}
+
+span.smallFont {
+	font-size: 12px;
+}
+
+
+.themeBtn4 {
+    background: #006eff;
+    color: #ffffff !important;
+    display: inline-block;
+    font-size: 15px;
+    font-weight: 500;
+    height: 50px;
+    line-height: 0.8;
+    padding: 18px 30px;
+    text-transform: capitalize;
+    border-radius: 1px;
+    letter-spacing: 0.5px;
+	border:0px !important;
+	cursor:pointer;
+	border-radius:100px;
+
+}
+.themeBtn4:hover {
+    background: rgb(0, 110, 255);
+    color: #ffffff;
+    box-shadow: 0 10px 25px -2px rgba(0, 110, 255, 0.6);
+}
+
+
+textarea {
+	resize: none;
+}
+
+.noticeList{
+	padding-left: 7rem;	
+}
+
+
+/* Checkbox */
+
+
+.btnCk {
+	display: inline-block;
+	padding: 6px 12px;
+	margin-bottom: 0;
+	font-size: 14px;
+	font-weight: normal;
+	line-height: 1.428571429;
+	text-align: center;
+	white-space: nowrap;
+	vertical-align: middle;
+	cursor: pointer;
+	background-image: none;
+	border: 1px solid transparent;
+	border-radius: 4px;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	-o-user-select: none;
+	user-select: none
+}
+
+.btnCk:focus {
+	outline: thin dotted;
+	outline: 5px auto -webkit-focus-ring-color;
+	outline-offset: -2px
+}
+
+.btnCk:hover, .btnCk:focus {
+	color: #333;
+	text-decoration: none
+}
+
+.btnCk:active, .btnCk.active {
+	background-image: none;
+	outline: 0;
+	-webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+	box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125)
+}
+
+.btnCk.disabled, .btnCk[disabled], fieldset[disabled] .btnCk {
+	pointer-events: none;
+	cursor: not-allowed;
+	opacity: .65;
+	filter: alpha(opacity = 65);
+	-webkit-box-shadow: none;
+	box-shadow: none
+}
+
+.btnCk-default {
+	color: #333;
+	background-color: #fff;
+	border-color: #ccc
+}
+
+.btnCk-default:hover, .btnCk-default:focus, .btnCk-default:active,
+	.btnCk-default.active, .open .dropdown-toggle.btnCk-default {
+	color: #333;
+	background-color: #ebebeb;
+	border-color: #adadad
+}
+
+.btnCk-default:active, .btnCk-default.active, .open .dropdown-toggle.btnCk-default
+	{
+	background-image: none
+}
+
+.btnCk-default.disabled, .btnCk-default[disabled], fieldset[disabled] .btnCk-default,
+	.btnCk-default.disabled:hover, .btnCk-default[disabled]:hover, fieldset[disabled] .btnCk-default:hover,
+	.btnCk-default.disabled:focus, .btnCk-default[disabled]:focus, fieldset[disabled] .btnCk-default:focus,
+	.btnCk-default.disabled:active, .btnCk-default[disabled]:active, fieldset[disabled] .btnCk-default:active,
+	.btnCk-default.disabled.active, .btnCk-default[disabled].active, fieldset[disabled] .btnCk-default.active
+	{
+	background-color: #fff;
+	border-color: #ccc
+}
+
+.btnCk-default .badge {
+	color: #fff;
+	background-color: #fff
+}
+
+.btnCk-primary {
+	color: #fff;
+	background-color: #428bca;
+	border-color: #357ebd
+}
+
+.btnCk-primary:hover, .btnCk-primary:focus, .btnCk-primary:active,
+	.btnCk-primary.active, .open .dropdown-toggle.btnCk-primary {
+	color: #fff;
+	background-color: #3276b1;
+	border-color: #285e8e
+}
+
+.btnCk-primary:active, .btnCk-primary.active, .open .dropdown-toggle.btnCk-primary
+	{
+	background-image: none
+}
+
+.btnCk-primary.disabled, .btnCk-primary[disabled], fieldset[disabled] .btnCk-primary,
+	.btnCk-primary.disabled:hover, .btnCk-primary[disabled]:hover, fieldset[disabled] .btnCk-primary:hover,
+	.btnCk-primary.disabled:focus, .btnCk-primary[disabled]:focus, fieldset[disabled] .btnCk-primary:focus,
+	.btnCk-primary.disabled:active, .btnCk-primary[disabled]:active, fieldset[disabled] .btnCk-primary:active,
+	.btnCk-primary.disabled.active, .btnCk-primary[disabled].active, fieldset[disabled] .btnCk-primary.active
+	{
+	background-color: #428bca;
+	border-color: #357ebd
+}
+
+.btnCk-primary .badge {
+	color: #428bca;
+	background-color: #fff
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

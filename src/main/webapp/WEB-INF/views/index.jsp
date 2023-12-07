@@ -1,288 +1,182 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <head>
-    <title>Material Design for Bootstrap</title>
+    <title>INDEX</title>
 </head>
 <body>
-	<header>
-		<!-- Jumbotron -->
-		<div id="intro" class="p-5 text-center bg-light">
-			<h1 class="mb-0 h4">This is a long title of the article</h1>
+<div class="site-blocks-cover overlay" style="background-image: url(images/hero_1.jpg);" data-aos="fade" data-stellar-background-ratio="0.5">
+<div class="container">
+	<div class="row align-items-center justify-content-center text-center">
+
+		<div class="col-md-12" data-aos="fade-up" data-aos-delay="400">
+
+			<div class="row justify-content-center mb-4">
+				<div class="col-md-8 text-center">
+					<h1>
+						We Are Expert in <span class="typed-words"></span>
+					</h1>
+					<p class="lead mb-5">Community - Potal</p>
+					<!-- Search form -->
+					<div id="searchNAVER">
+						<a id="google" class="searchSwitch">Google로 검색</a>
+						<form action="https://search.naver.com/search.naver" method="get" target="_blank">
+							<input class="form-control" type="text" placeholder="NAVER" aria-label="Search" name="query"><br>
+							<button class="btn btn-custom1 btn-md">Search</button>
+						</form>
+					</div>
+					<div id="searchGoogle" style="display: none;">
+						<a id="naver" class="searchSwitch">NAVER로 검색</a>
+						<form action="https://www.google.co.kr/search" method="get" target="_blank">
+							<input class="form-control" type="text" placeholder="Google" aria-label="Search" name="q"><br>
+							<button class="btn btn-custom1 btn-md">Search</button>
+						</form>
+					</div>
+			</div>
+
 		</div>
-	<!-- Jumbotron -->
-	</header>
+	</div>
+</div>
+</div>
+</div>
 
-	<!--Main layout-->
-	<main class="mt-4 mb-5">
-    <div class="container">
-      <!--Grid row-->
-      <div class="row">
-        <!--Grid column-->
-        <div class="col-md-8 mb-4">
-          <!--Section: Post data-mdb-->
-          <section class="border-bottom mb-4">
-            <img src="https://mdbootstrap.com/img/Photos/Slides/img%20(144).jpg"
-              class="img-fluid shadow-2-strong rounded mb-4" alt="" />
+<section class="section ft-feature-1">
+<div class="container">
+	<div class="row align-items-stretch">
+	<div class="col-12 bg-black w-100 ft-feature-1-content">
+		<c:if test="${sessionID == null }">
+			<br><h2 style="text-align: center;">로그인 후 사용가능합니다.</h2>
+		</c:if>
+		<div class="row align-items-center">
+			
+			<div class="col-lg-5">
+				<div class="mb-5 h-100">
+					<div class="d-flex align-items-center">
+						<div>
+<!-- 								<a href="https://vimeo.com/317571768" -->
+<!-- 									class="popup-vimeo d-block play"><span class="icon-play"></span></a> -->
+						</div>
+<!-- 							<h2>Welcome To Chimper An Awward Winning Web Agency</h2> -->
+					</div>
+					
+					<div id="siteList"></div>
+<!-- 						<img src="images/about_1.jpg" alt="Image" -->
+<!-- 							class="img-feature img-fluid"> -->
+				</div>
+			</div>
+			<div class="col-lg-3 ml-auto">
+			<c:if test="${sessionID != null }">
+			
+				<div class="mb-5">
+					<h3 class="mb-4 d-flex align-items-center">
+						<span class="icon icon-phonelink mr-2"></span><span>Insert your Favorite Site</span>
+					</h3>
+					<p><label class="text-white" for="name">Name</label>
+					<input type="text" id="name" class="form-control"><br>
+					<label class="text-white" for="url">URL</label>
+					<input type="text" id="url" class="form-control"><br>
+					</p>
+					<p>
+						<button id="addSite" style="float: right;" class="btn btn-primary btn-md">Add</button>
+					</p>
+				</div>
+			</c:if>
 
-            <div class="row align-items-center mb-4">
-              <div class="col-lg-6 text-center text-lg-start mb-3 m-lg-0">
-                <img src="https://mdbootstrap.com/img/Photos/Avatars/img (23).jpg" class="rounded shadow-1-strong me-2"
-                  height="35" alt="" loading="lazy" />
-                <span> Published <u>15.07.2020</u> by</span>
-                <a href="" class="text-dark">Anna Maria Doe</a>
-              </div>
+				<!-- <div>
+					<h3 class="d-flex align-items-center">
+						<span class="icon icon-extension mr-2"></span><span>Branding
+							&amp; Identity</span>
+					</h3>
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+						Cumque ab nihil quam nesciunt.</p>
+					<p>
+						<a href="#">Read More</a>
+					</p>
+				</div> -->
 
-              <div class="col-lg-6 text-center text-lg-end">
-                <button type="button" class="btn btn-primary px-3 me-1" style="background-color: #3b5998;">
-                  <i class="fab fa-facebook-f"></i>
-                </button>
-                <button type="button" class="btn btn-primary px-3 me-1" style="background-color: #55acee;">
-                  <i class="fab fa-twitter"></i>
-                </button>
-                <button type="button" class="btn btn-primary px-3 me-1" style="background-color: #0082ca;">
-                  <i class="fab fa-linkedin"></i>
-                </button>
-                <button type="button" class="btn btn-primary px-3 me-1">
-                  <i class="fas fa-comments"></i>
-                </button>
-              </div>
-            </div>
-          </section>
-          <!--Section: Post data-mdb-->
+			</div>
+			<!-- <div class="col-lg-3">
+				<div class="mb-5">
+					<h3 class="d-flex align-items-center">
+						<span class="icon icon-format_paint mr-2"></span><span>Art
+							Direction</span>
+					</h3>
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+						Cumque ab nihil quam nesciunt.</p>
+					<p>
+						<a href="#">Read More</a>
+					</p>
+				</div>
 
-          <!--Section: Text-->
-          <section>
-            <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio sapiente molestias
-              consectetur. Fuga nulla officia error placeat veniam, officiis rerum laboriosam
-              ullam molestiae magni velit laborum itaque minima doloribus eligendi! Lorem ipsum,
-              dolor sit amet consectetur adipisicing elit. Optio sapiente molestias consectetur.
-              Fuga nulla officia error placeat veniam, officiis rerum laboriosam ullam molestiae
-              magni velit laborum itaque minima doloribus eligendi!
-            </p>
+				<div>
+					<h3 class="d-flex align-items-center">
+						<span class="icon icon-question_answer mr-2"></span><span>Copywriting</span>
+					</h3>
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+						Cumque ab nihil quam nesciunt.</p>
+					<p>
+						<a href="#">Read More</a>
+					</p>
+				</div>
+			</div> -->
+		</div>
+	</div>
+	</div>
+</div>
+</section>
 
-            <p><strong>Optio sapiente molestias consectetur?</strong></p>
+<c:if test="${not empty noticeList }">
+	<section class="site-section noticeList">
+	<div class="container">
+		<div class="row">
+		<c:forEach items="${noticeList }" var="n">
+			<div class="col-md-6 col-lg-4" onclick="location.href='notice.do';" style="cursor: pointer;">
+				<div class="p-3 box-with-humber">
+					<div class="number-behind">${n.noti_numb }.</div>
+					<h2>${n.noti_titl }</h2>
+					<p>${n.noti_cont }</p>
+				</div>
+			</div>
+		</c:forEach>
+		</div>
+	</div>
+	</section>
+</c:if>
 
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum architecto ex ab aut
-              tempora officia libero praesentium, sint id magnam eius natus unde blanditiis. Autem
-              adipisci totam sit consequuntur eligendi.
-            </p>
+<c:if test="${not empty boardList }">
+	<section class="site-section testimonial-wrap">
+	<div class="container">
+		<div class="row justify-content-center">
+			<div class="col-md-8 text-center">
+				<h2 class="text-black h1 site-section-heading text-center">최근 게시글</h2>
+			</div>
+		</div>
+	</div>
+	
+	<div class="slide-one-item home-slider owl-carousel">
+	
+	<c:forEach items="${boardList }" var="b">
+	
+		<div style="cursor: pointer;" onclick="location.href='boardView.do?bord_numb=${b.bord_numb }&pageNum=1';">
+			<div class="testimonial">
+		
+				<blockquote class="mb-5">
+					<h3>${b.bord_titl }</h3>
+					<p>&ldquo;${b.bord_cont }&rdquo;</p>
+				</blockquote>
+		
+				<figure class="mb-4 d-flex align-items-center justify-content-center">
+					<div>
+					</div>
+					<p>${b.user_id }</p>
+				</figure>
+			</div>
+		</div>
+		
+	</c:forEach>
+	
+	</div>
+	</section>
+</c:if>
 
-            <p class="note note-light">
-              <strong>Note:</strong> Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-              Optio odit consequatur porro sequi ab distinctio modi. Rerum cum dolores sint,
-              adipisci ad veritatis laborum eaque illum saepe mollitia ut voluptatum.
-            </p>
-
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, libero repellat
-              molestiae aperiam laborum aliquid atque magni nostrum, inventore perspiciatis
-              possimus quia incidunt maiores molestias eaque nam commodi! Magnam, labore.
-            </p>
-
-            <img src="https://mdbootstrap.com/img/new/slides/041.jpg" class="img-fluid shadow-1-strong rounded mb-4"
-              alt="" />
-
-            <ul>
-              <li>Lorem</li>
-              <li>Ipsum</li>
-              <li>Dolor</li>
-              <li>Sit</li>
-              <li>Amet</li>
-            </ul>
-
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, temporibus nulla
-              voluptatibus accusantium sapiente doloremque. Doloribus ratione laboriosam culpa. Ab
-              officiis quidem, debitis nostrum in accusantium dolore veritatis eius est?
-            </p>
-          </section>
-          <!--Section: Text-->
-
-          <!--Section: Share buttons-->
-          <section class="text-center border-top border-bottom py-4 mb-4">
-            <p><strong>Share with your friends:</strong></p>
-
-            <button type="button" class="btn btn-primary me-1" style="background-color: #3b5998;">
-              <i class="fab fa-facebook-f"></i>
-            </button>
-            <button type="button" class="btn btn-primary me-1" style="background-color: #55acee;">
-              <i class="fab fa-twitter"></i>
-            </button>
-            <button type="button" class="btn btn-primary me-1" style="background-color: #0082ca;">
-              <i class="fab fa-linkedin"></i>
-            </button>
-            <button type="button" class="btn btn-primary me-1">
-              <i class="fas fa-comments me-2"></i>Add comment
-            </button>
-          </section>
-          <!--Section: Share buttons-->
-
-          <!--Section: Author-->
-          <section class="border-bottom mb-4 pb-4">
-            <div class="row">
-              <div class="col-3">
-                <img src="https://mdbootstrap.com/img/Photos/Avatars/img%20(23).jpg"
-                  class="img-fluid shadow-1-strong rounded" alt="" />
-              </div>
-
-              <div class="col-9">
-                <p class="mb-2"><strong>Anna Maria Doe</strong></p>
-                <a href="" class="text-dark"><i class="fab fa-facebook-f me-1"></i></a>
-                <a href="" class="text-dark"><i class="fab fa-twitter me-1"></i></a>
-                <a href="" class="text-dark"><i class="fab fa-linkedin me-1"></i></a>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio est ab iure
-                  inventore dolorum consectetur? Molestiae aperiam atque quasi consequatur aut?
-                  Repellendus alias dolor ad nam, soluta distinctio quis accusantium!
-                </p>
-              </div>
-            </div>
-          </section>
-          <!--Section: Author-->
-
-          <!--Section: Comments-->
-          <section class="border-bottom mb-3">
-            <p class="text-center"><strong>Comments: 3</strong></p>
-
-            <!-- Comment -->
-            <div class="row mb-4">
-              <div class="col-2">
-                <img src="https://mdbootstrap.com/img/Photos/Avatars/img%20(24).jpg"
-                  class="img-fluid shadow-1-strong rounded" alt="" />
-              </div>
-
-              <div class="col-10">
-                <p class="mb-2"><strong>Marta Dolores</strong></p>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio est ab iure
-                  inventore dolorum consectetur? Molestiae aperiam atque quasi consequatur aut?
-                  Repellendus alias dolor ad nam, soluta distinctio quis accusantium!
-                </p>
-              </div>
-            </div>
-
-            <!-- Comment -->
-            <div class="row mb-4">
-              <div class="col-2">
-                <img src="https://mdbootstrap.com/img/Photos/Avatars/img%20(25).jpg"
-                  class="img-fluid shadow-1-strong rounded" alt="" />
-              </div>
-
-              <div class="col-10">
-                <p class="mb-2"><strong>Valeria Groove</strong></p>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio est ab iure
-                  inventore dolorum consectetur? Molestiae aperiam atque quasi consequatur aut?
-                  Repellendus alias dolor ad nam, soluta distinctio quis accusantium!
-                </p>
-              </div>
-            </div>
-
-            <!-- Comment -->
-            <div class="row mb-4">
-              <div class="col-2">
-                <img src="https://mdbootstrap.com/img/Photos/Avatars/img%20(26).jpg"
-                  class="img-fluid shadow-1-strong rounded" alt="" />
-              </div>
-
-              <div class="col-10">
-                <p class="mb-2"><strong>Antonia Velez</strong></p>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio est ab iure
-                  inventore dolorum consectetur? Molestiae aperiam atque quasi consequatur aut?
-                  Repellendus alias dolor ad nam, soluta distinctio quis accusantium!
-                </p>
-              </div>
-            </div>
-          </section>
-          <!--Section: Comments-->
-
-          <!--Section: Reply-->
-          <section>
-            <p class="text-center"><strong>Leave a reply</strong></p>
-
-            <form>
-              <!-- Name input -->
-              <div class="form-outline mb-4">
-                <input type="text" id="form4Example1" class="form-control" />
-                <label class="form-label" for="form4Example1">Name</label>
-              </div>
-
-              <!-- Email input -->
-              <div class="form-outline mb-4">
-                <input type="email" id="form4Example2" class="form-control" />
-                <label class="form-label" for="form4Example2">Email address</label>
-              </div>
-
-              <!-- Message input -->
-              <div class="form-outline mb-4">
-                <textarea class="form-control" id="form4Example3" rows="4"></textarea>
-                <label class="form-label" for="form4Example3">Text</label>
-              </div>
-
-              <!-- Checkbox -->
-              <div class="form-check d-flex justify-content-center mb-4">
-                <input class="form-check-input me-2" type="checkbox" value="" id="form4Example4" checked />
-                <label class="form-check-label" for="form4Example4">
-                  Send me a copy of this comment
-                </label>
-              </div>
-
-              <!-- Submit button -->
-              <button type="submit" class="btn btn-primary btn-block mb-4">
-                Publish
-              </button>
-            </form>
-          </section>
-          <!--Section: Reply-->
-        </div>
-        <!--Grid column-->
-
-        <!--Grid column-->
-        <div class="col-md-4 mb-4">
-          <!--Section: Sidebar-->
-          <section class="sticky-top" style="top: 80px;">
-            <!--Section: Ad-->
-            <section class="text-center border-bottom pb-4 mb-4">
-              <div class="bg-image hover-overlay ripple mb-4">
-                <img
-                  src="https://mdbootstrap.com/wp-content/themes/mdbootstrap4/content/en/_mdb5/standard/about/assets/mdb5-about.webp"
-                  class="img-fluid" />
-                <a href="https://mdbootstrap.com/docs/standard/" target="_blank">
-                  <div class="mask" style="background-color: rgba(57, 192, 237, 0.2);"></div>
-                </a>
-              </div>
-              <h5>Material Design for Bootstrap 5</h5>
-
-              <p>
-                500+ components, free templates, 1-min installation, extensive tutorial, huge
-                community. MIT license - free for personal & commercial use
-              </p>
-              <a role="button" class="btn btn-primary" href="https://mdbootstrap.com/docs/standard/"
-                target="_blank">Download for free<i class="fas fa-download ms-2"></i></a>
-            </section>
-            <!--Section: Ad-->
-
-            <!--Section: Video-->
-            <section class="text-center">
-              <h5 class="mb-4">Learn the newest Bootstrap 5</h5>
-
-              <div class="embed-responsive embed-responsive-16by9 shadow-4-strong">
-                <iframe class="embed-responsive-item rounded" src="https://www.youtube.com/embed/c9B4TPnak1A"
-                  allowfullscreen></iframe>
-              </div>
-            </section>
-            <!--Section: Video-->
-          </section>
-          <!--Section: Sidebar-->
-        </div>
-        <!--Grid column-->
-      </div>
-      <!--Grid row-->
-    </div>
-  </main>
-  <!--Main layout-->
-
+<script src="/js/Archive/index.js?"></script>
 </body>

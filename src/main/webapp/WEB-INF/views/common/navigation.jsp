@@ -1,140 +1,110 @@
-<!-- Navbar -->
-<nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top">
-	<div class="container-fluid">
-		<!-- Navbar brand -->
-		<a class="navbar-brand" target="_blank" href="/">
-			INDEX
-<!-- 			<img src="https://mdbootstrap.com/img/logo/mdb-transaprent-noshadows.png" height="16" alt="" loading="lazy" style="margin-top: -3px;" /> -->
-		</a>
-		<button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarExample01"
-			aria-controls="navbarExample01" aria-expanded="false" aria-label="Toggle navigation">
-			<i class="fas fa-bars"></i>
-		</button>
-		<div class="collapse navbar-collapse" id="navbarExample01">
-			<ul class="navbar-nav me-auto mb-2 mb-lg-0">
-				<li class="nav-item active">
-					<a class="nav-link" aria-current="page" href="#intro">Home</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link board" href="javascript:void(0);" rel="nofollow">
-						Board
-					</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="javascript:void(0);">
-						Download MDB UI KIT
-					</a>
-				</li>
-			</ul>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<c:set var="currentTime" value="<%=System.currentTimeMillis() %>"/>
+<c:if test="${cookie.cookieID != null && sessionID == null }">
+<c:set var="sessionID" scope="session" value="${cookie.cookieID.value }"/>
+</c:if>
+<script>
+// $(document).ready(function() {
+// 	$('li').click(function() {
+// 		$('li').each(function() {
+// 			$(this).removeClass("active");
+// 		});
+// 		$(this).addClass('active');
+// 	});
+// });
+</script>
+<div class="site-wrap">
+	<div class="site-mobile-menu">
+		<div class="site-mobile-menu-header">
+			<div class="site-mobile-menu-close mt-3">
+				<span class="icon-close2 js-menu-toggle"></span>
+			</div>
+		</div>
+		<div class="site-mobile-menu-body"></div>
+	</div>
 
-<!-- 			<ul class="navbar-nav d-flex flex-row"> -->
-<!-- 				Icons -->
-<!-- 				<li class="nav-item me-3 me-lg-0"> -->
-<!-- 					<a class="nav-link" href="https://www.youtube.com/channel/UC5CF7mLQZhvx8O5GODZAhdA" rel="nofollow" target="_blank"> -->
-<!-- 						<i class="fab fa-youtube"></i> -->
-<!-- 					</a> -->
-<!-- 				</li> -->
-<!-- 				<li class="nav-item me-3 me-lg-0"> -->
-<!-- 					<a class="nav-link" href="https://www.facebook.com/mdbootstrap" rel="nofollow" target="_blank"> -->
-<!-- 						<i class="fab fa-facebook-f"></i> -->
-<!-- 					</a> -->
-<!-- 				</li> -->
-<!-- 				<li class="nav-item me-3 me-lg-0"> -->
-<!-- 					<a class="nav-link" href="https://twitter.com/MDBootstrap" rel="nofollow" target="_blank"> -->
-<!-- 						<i class="fab fa-twitter"></i> -->
-<!-- 					</a> -->
-<!-- 				</li> -->
-<!-- 				<li class="nav-item me-3 me-lg-0"> -->
-<!-- 					<a class="nav-link" href="https://github.com/mdbootstrap/mdb-ui-kit" rel="nofollow" target="_blank"> -->
-<!-- 						<i class="fab fa-github"></i> -->
-<!-- 					</a> -->
-<!-- 				</li> -->
-<!-- 			</ul> -->
-
-<!-- Right links -->
-			<ul class="navbar-nav ms-auto d-flex flex-row">
-				<!-- Notification dropdown -->
-<!-- 				<li class="nav-item dropdown"> -->
-<!-- 					<a class="nav-link me-3 me-lg-0 dropdown-toggle hidden-arrow" href="#" id="navbarDropdownMenuLink" role="button" data-mdb-toggle="dropdown" aria-expanded="false"> -->
-<!-- 					    <i class="fas fa-bell"></i> -->
-<!-- 					    <span class="badge rounded-pill badge-notification bg-danger">1</span> -->
-<!-- 			  		</a> -->
-<!-- 					<ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuLink"> -->
-<!-- 			    		<li><a class="dropdown-item" href="#">Some news</a></li> -->
-<!-- 			    		<li><a class="dropdown-item" href="#">Another news</a></li> -->
-<!-- 			    		<li> -->
-<!-- 			      			<a class="dropdown-item" href="#">Something else</a> -->
-<!-- 			    		</li> -->
-<!-- 			  		</ul> -->
-<!-- 				</li> -->
-
-          		<!-- Icon -->
-<!-- 				<li class="nav-item"> -->
-<!-- 					<a class="nav-link me-3 me-lg-0" href="#"> -->
-<!-- 						<i class="fas fa-fill-drip"></i> -->
-<!-- 					</a> -->
-<!-- 				</li> -->
-<!-- 				<li class="nav-item me-3 me-lg-0"> -->
-<!-- 					<a class="nav-link" href="#"> -->
-<!-- 						<i class="fab fa-github"></i> -->
-<!-- 					</a> -->
-<!-- 				</li> -->
-
-          <!-- Icon dropdown -->
-<!--           <li class="nav-item dropdown"> -->
-<!--             <a class="nav-link me-3 me-lg-0 dropdown-toggle hidden-arrow" href="#" id="navbarDropdown" role="button" -->
-<!--               data-mdb-toggle="dropdown" aria-expanded="false"> -->
-<!--               <i class="united kingdom flag m-0"></i> -->
-<!--             </a> -->
-<!--             <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown"> -->
-<!--               <li> -->
-<!--                 <a class="dropdown-item" href="#"><i class="united kingdom flag"></i>English -->
-<!--                   <i class="fa fa-check text-success ms-2"></i></a> -->
-<!--               </li> -->
-<!--               <li> -->
-<!--                 <hr class="dropdown-divider" /> -->
-<!--               </li> -->
-<!--               <li> -->
-<!--                 <a class="dropdown-item" href="#"><i class="poland flag"></i>Polski</a> -->
-<!--               </li> -->
-<!--               <li> -->
-<!--                 <a class="dropdown-item" href="#"><i class="china flag"></i>中文</a> -->
-<!--               </li> -->
-<!--               <li> -->
-<!--                 <a class="dropdown-item" href="#"><i class="japan flag"></i>日本語</a> -->
-<!--               </li> -->
-<!--               <li> -->
-<!--                 <a class="dropdown-item" href="#"><i class="germany flag"></i>Deutsch</a> -->
-<!--               </li> -->
-<!--               <li> -->
-<!--                 <a class="dropdown-item" href="#"><i class="france flag"></i>Français</a> -->
-<!--               </li> -->
-<!--               <li> -->
-<!--                 <a class="dropdown-item" href="#"><i class="spain flag"></i>Español</a> -->
-<!--               </li> -->
-<!--               <li> -->
-<!--                 <a class="dropdown-item" href="#"><i class="russia flag"></i>Русский</a> -->
-<!--               </li> -->
-<!--               <li> -->
-<!--                 <a class="dropdown-item" href="#"><i class="portugal flag"></i>Português</a> -->
-<!--               </li> -->
-<!--             </ul> -->
-<!--           </li> -->
-
-				<!-- Avatar -->
-				<li class="nav-item dropdown">
-					<a class="nav-link dropdown-toggle hidden-arrow d-flex align-items-center" href="#" id="navbarDropdownMenuLink" role="button" data-mdb-toggle="dropdown" aria-expanded="false">
-					  	<img src="https://mdbootstrap.com/img/Photos/Avatars/img (31).jpg" class="rounded-circle" height="22" alt="" loading="lazy" />
-					</a>
-					<ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuLink">
-						<li><a class="dropdown-item" href="#">My profile</a></li>
-						<li><a class="dropdown-item" href="#">Settings</a></li>
-						<li><a class="dropdown-item" href="#">Logout</a></li>
+	<div class="border-bottom top-bar py-2">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6">
+					<p align="left" class="mb-0">
+					<c:if test="${'admin' == sessionID }">
+						<img src="images/adminIcon.png" width="25px;">
+					</c:if>
+					</p>
+				</div>
+				<div class="col-md-6">
+					<p class="mb-0 social-media">
+					<c:choose>
+					<c:when test="${sessionID == null }">
+						<a href="login.do"><button class="log">로그인</button></a>
+					</c:when>
+					<c:otherwise>
+						<span class="mr-3" style=""><a href="#"><b>${sessionID }</b></a>님 로그인 중</span>
+						<a href="logout.do"><button class="log">로그아웃</button></a>
+					</c:otherwise>
+					</c:choose>
+					<!-- <span class="mr-3"><strong>Phone:</strong><a href="tel://#">+1 292 3293 4238</a></span>
+						<span><strong>Email:</strong><a href="#">info@yourdomain.com</a></span>
+					</p>
+				</div>
+				<!-- <div class="col-md-6">
+					<ul class="social-media">
+						<li><a href="#" class="p-2"><span class="icon-facebook"></span></a></li>
+						<li><a href="#" class="p-2"><span class="icon-twitter"></span></a></li>
+						<li><a href="#" class="p-2"><span class="icon-instagram"></span></a></li>
+						<li><a href="#" class="p-2"><span class="icon-linkedin"></span></a></li>
 					</ul>
-				</li>
-	        </ul>
-
+				</div> -->
+			</div>
 		</div>
 	</div>
-</nav>
-<!-- Navbar -->
+	<hr style="margin: 8px;">
+	
+	<header class="site-navbar py-4 bg-white" role="banner">
+	<div class="container">
+		<div class="row align-items-center">
+
+			<div class="col-11 col-xl-2">
+				<h1 class="mb-0 site-logo">
+					<a href="/" class="text-black h2 mb-0">Potal</a>
+				</h1>
+			</div>
+			<div class="col-12 col-md-10 d-none d-xl-block">
+			<nav class="site-navigation position-relative text-right" role="navigation">
+
+				<ul class="site-menu js-clone-nav mr-auto d-none d-lg-block">
+					<li><a href="main.do">Home</a></li>
+ 					<li><a href="notice.do">Notice</a></li>
+					<li class="has-children"><a href="board.do">Board</a>
+						<ul class="dropdown">
+<!-- 							<li><a href="board.do?bord_catg=C">C</a></li> -->
+<!-- 							<li><a href="board.do?bord_catg=Java">Java</a></li> -->
+<!-- 							<li><a href="board.do?bord_catg=Python">Python</a></li> -->
+<!-- 							<li><a href="board.do?bord_catg=SQL">SQL</a></li> -->
+<!-- 							<li><a href="board.do?bord_catg=Web">Web</a></li> -->
+							<li><a href="board.do?bord_catg=기타">기타</a></li>
+							<li><a href="board.do?bord_catg=잡담">잡담</a></li>
+						</ul></li>
+					<li><a href="boardChartForm.do">Stat</a></li>
+					<c:if test="${'admin' == sessionID }">
+					<li class="has-children"><a href="admin.do">Admin</a>
+						<ul class="dropdown">
+							<li><a href="memberList.do">Member</a></li>
+							<li><a href="adminChartForm.do">Stat</a></li>
+						</ul></li>
+					</c:if>
+				</ul>
+			</nav>
+			</div>
+
+			<div class="d-inline-block d-xl-none ml-md-0 mr-auto py-3" style="position: relative; top: 3px;">
+				<a href="#" class="site-menu-toggle js-menu-toggle text-black">
+				<span class="icon-menu h3"></span></a>
+			</div>
+		</div>
+	</div>
+	</header>
+</div>
+</div>
