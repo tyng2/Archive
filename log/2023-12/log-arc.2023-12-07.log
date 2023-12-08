@@ -1,0 +1,216 @@
+2023-12-07 09:17:34.291 INFO  [com.main.ArchiveApplication] - Starting ArchiveApplication using Java 17.0.9 with PID 9220 (C:\Users\kcs\eclipse\jee-2023-09\workspace\Archive\bin\main started by kcs in C:\Users\kcs\eclipse\jee-2023-09\workspace\Archive)
+2023-12-07 09:17:34.294 INFO  [com.main.ArchiveApplication] - The following 1 profile is active: "local"
+2023-12-07 09:17:34.334 INFO  [o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor] - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-12-07 09:17:34.334 INFO  [o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor] - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-12-07 09:17:35.200 INFO  [o.s.b.w.embedded.tomcat.TomcatWebServer] - Tomcat initialized with port 8080 (http)
+2023-12-07 09:17:35.207 INFO  [o.apache.coyote.http11.Http11NioProtocol] - Initializing ProtocolHandler ["http-nio-8080"]
+2023-12-07 09:17:35.210 INFO  [o.apache.catalina.core.StandardService] - Starting service [Tomcat]
+2023-12-07 09:17:35.210 INFO  [org.apache.catalina.core.StandardEngine] - Starting Servlet engine: [Apache Tomcat/10.1.16]
+2023-12-07 09:17:35.358 INFO  [org.apache.jasper.servlet.TldScanner] - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2023-12-07 09:17:35.364 INFO  [o.a.c.c.C.[Tomcat].[localhost].[/]] - Initializing Spring embedded WebApplicationContext
+2023-12-07 09:17:35.365 INFO  [o.s.b.w.s.c.ServletWebServerApplicationContext] - Root WebApplicationContext: initialization completed in 1030 ms
+2023-12-07 09:17:35.455 INFO  [com.zaxxer.hikari.HikariDataSource] - HikariCP - Starting...
+2023-12-07 09:17:35.526 INFO  [com.zaxxer.hikari.pool.HikariPool] - HikariCP - Added connection net.sf.log4jdbc.sql.jdbcapi.ConnectionSpy@a33edaa
+2023-12-07 09:17:35.529 INFO  [com.zaxxer.hikari.HikariDataSource] - HikariCP - Start completed.
+2023-12-07 09:17:35.699 INFO  [o.s.b.a.w.s.WelcomePageHandlerMapping] - Adding welcome page template: index
+2023-12-07 09:17:36.000 INFO  [o.s.b.d.a.OptionalLiveReloadServer] - LiveReload server is running on port 35729
+2023-12-07 09:17:36.014 INFO  [o.apache.coyote.http11.Http11NioProtocol] - Starting ProtocolHandler ["http-nio-8080"]
+2023-12-07 09:17:36.045 INFO  [o.s.b.w.embedded.tomcat.TomcatWebServer] - Tomcat started on port 8080 (http) with context path ''
+2023-12-07 09:17:36.053 INFO  [com.main.ArchiveApplication] - Started ArchiveApplication in 2.176 seconds (process running for 2.891)
+2023-12-07 09:18:12.466 INFO  [o.a.c.c.C.[Tomcat].[localhost].[/]] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-07 09:18:12.466 INFO  [o.s.web.servlet.DispatcherServlet] - Initializing Servlet 'dispatcherServlet'
+2023-12-07 09:18:12.467 INFO  [o.s.web.servlet.DispatcherServlet] - Completed initialization in 1 ms
+2023-12-07 09:21:17.890 INFO  [com.main.controller.BoardController] - board
+2023-12-07 10:11:27.505 INFO  [com.main.controller.BoardController] - board
+2023-12-07 10:11:33.490 INFO  [com.main.controller.BoardController] - board
+2023-12-07 10:11:43.798 INFO  [com.main.controller.BoardController] - board
+2023-12-07 10:15:12.594 INFO  [com.main.controller.BoardController] - board
+2023-12-07 10:15:33.019 INFO  [com.main.controller.BoardController] - board
+2023-12-07 10:16:02.340 INFO  [com.main.controller.BoardController] - board
+2023-12-07 10:16:03.180 INFO  [com.main.controller.BoardController] - board
+2023-12-07 10:16:03.347 INFO  [com.main.controller.BoardController] - board
+2023-12-07 10:16:03.567 INFO  [com.main.controller.BoardController] - board
+2023-12-07 10:16:05.806 INFO  [com.main.controller.BoardController] - board
+2023-12-07 10:19:02.022 INFO  [com.main.controller.BoardController] - board
+2023-12-07 10:19:29.891 INFO  [com.main.controller.BoardController] - board
+2023-12-07 10:19:30.760 INFO  [com.main.controller.BoardController] - board
+2023-12-07 10:26:48.432 INFO  [com.main.controller.BoardController] - board
+2023-12-07 10:27:42.518 INFO  [com.main.controller.BoardController] - board
+2023-12-07 10:47:05.274 INFO  [o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener] - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-12-07 10:47:05.279 INFO  [o.apache.coyote.http11.Http11NioProtocol] - Stopping ProtocolHandler ["http-nio-8080"]
+2023-12-07 10:47:05.294 INFO  [com.zaxxer.hikari.HikariDataSource] - HikariCP - Shutdown initiated...
+2023-12-07 10:47:05.297 INFO  [com.zaxxer.hikari.HikariDataSource] - HikariCP - Shutdown completed.
+2023-12-07 10:47:05.404 INFO  [com.main.ArchiveApplication] - Starting ArchiveApplication using Java 17.0.9 with PID 9220 (C:\Users\kcs\eclipse\jee-2023-09\workspace\Archive\bin\main started by kcs in C:\Users\kcs\eclipse\jee-2023-09\workspace\Archive)
+2023-12-07 10:47:05.404 INFO  [com.main.ArchiveApplication] - The following 1 profile is active: "local"
+2023-12-07 10:47:06.212 INFO  [o.s.b.w.embedded.tomcat.TomcatWebServer] - Tomcat initialized with port 8080 (http)
+2023-12-07 10:47:06.212 INFO  [o.apache.coyote.http11.Http11NioProtocol] - Initializing ProtocolHandler ["http-nio-8080"]
+2023-12-07 10:47:06.212 INFO  [o.apache.catalina.core.StandardService] - Starting service [Tomcat]
+2023-12-07 10:47:06.212 INFO  [org.apache.catalina.core.StandardEngine] - Starting Servlet engine: [Apache Tomcat/10.1.16]
+2023-12-07 10:47:06.281 INFO  [org.apache.jasper.servlet.TldScanner] - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2023-12-07 10:47:06.283 INFO  [o.a.c.c.C.[Tomcat].[localhost].[/]] - Initializing Spring embedded WebApplicationContext
+2023-12-07 10:47:06.283 INFO  [o.s.b.w.s.c.ServletWebServerApplicationContext] - Root WebApplicationContext: initialization completed in 876 ms
+2023-12-07 10:47:06.300 INFO  [com.zaxxer.hikari.HikariDataSource] - HikariCP - Starting...
+2023-12-07 10:47:06.303 INFO  [com.zaxxer.hikari.pool.HikariPool] - HikariCP - Added connection net.sf.log4jdbc.sql.jdbcapi.ConnectionSpy@57fb4678
+2023-12-07 10:47:06.303 INFO  [com.zaxxer.hikari.HikariDataSource] - HikariCP - Start completed.
+2023-12-07 10:47:06.329 INFO  [o.s.b.a.w.s.WelcomePageHandlerMapping] - Adding welcome page template: index
+2023-12-07 10:47:06.386 INFO  [o.s.b.d.a.OptionalLiveReloadServer] - LiveReload server is running on port 35729
+2023-12-07 10:47:06.393 INFO  [o.apache.coyote.http11.Http11NioProtocol] - Starting ProtocolHandler ["http-nio-8080"]
+2023-12-07 10:47:06.398 INFO  [o.s.b.w.embedded.tomcat.TomcatWebServer] - Tomcat started on port 8080 (http) with context path ''
+2023-12-07 10:47:06.401 INFO  [com.main.ArchiveApplication] - Started ArchiveApplication in 1.032 seconds (process running for 5373.239)
+2023-12-07 10:47:06.402 INFO  [o.s.b.d.a.ConditionEvaluationDeltaLoggingListener] - Condition evaluation unchanged
+2023-12-07 10:47:12.202 INFO  [o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener] - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-12-07 10:47:12.203 INFO  [o.apache.coyote.http11.Http11NioProtocol] - Stopping ProtocolHandler ["http-nio-8080"]
+2023-12-07 10:47:12.216 INFO  [com.zaxxer.hikari.HikariDataSource] - HikariCP - Shutdown initiated...
+2023-12-07 10:47:12.218 INFO  [com.zaxxer.hikari.HikariDataSource] - HikariCP - Shutdown completed.
+2023-12-07 10:47:12.310 INFO  [com.main.ArchiveApplication] - Starting ArchiveApplication using Java 17.0.9 with PID 9220 (C:\Users\kcs\eclipse\jee-2023-09\workspace\Archive\bin\main started by kcs in C:\Users\kcs\eclipse\jee-2023-09\workspace\Archive)
+2023-12-07 10:47:12.310 INFO  [com.main.ArchiveApplication] - The following 1 profile is active: "local"
+2023-12-07 10:47:12.540 INFO  [o.s.b.w.embedded.tomcat.TomcatWebServer] - Tomcat initialized with port 8080 (http)
+2023-12-07 10:47:12.541 INFO  [o.apache.coyote.http11.Http11NioProtocol] - Initializing ProtocolHandler ["http-nio-8080"]
+2023-12-07 10:47:12.541 INFO  [o.apache.catalina.core.StandardService] - Starting service [Tomcat]
+2023-12-07 10:47:12.541 INFO  [org.apache.catalina.core.StandardEngine] - Starting Servlet engine: [Apache Tomcat/10.1.16]
+2023-12-07 10:47:12.598 INFO  [org.apache.jasper.servlet.TldScanner] - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2023-12-07 10:47:12.601 INFO  [o.a.c.c.C.[Tomcat].[localhost].[/]] - Initializing Spring embedded WebApplicationContext
+2023-12-07 10:47:12.601 INFO  [o.s.b.w.s.c.ServletWebServerApplicationContext] - Root WebApplicationContext: initialization completed in 288 ms
+2023-12-07 10:47:12.619 INFO  [com.zaxxer.hikari.HikariDataSource] - HikariCP - Starting...
+2023-12-07 10:47:12.621 INFO  [com.zaxxer.hikari.pool.HikariPool] - HikariCP - Added connection net.sf.log4jdbc.sql.jdbcapi.ConnectionSpy@2893a9df
+2023-12-07 10:47:12.621 INFO  [com.zaxxer.hikari.HikariDataSource] - HikariCP - Start completed.
+2023-12-07 10:47:12.640 INFO  [o.s.b.a.w.s.WelcomePageHandlerMapping] - Adding welcome page template: index
+2023-12-07 10:47:12.684 INFO  [o.s.b.d.a.OptionalLiveReloadServer] - LiveReload server is running on port 35729
+2023-12-07 10:47:12.690 INFO  [o.apache.coyote.http11.Http11NioProtocol] - Starting ProtocolHandler ["http-nio-8080"]
+2023-12-07 10:47:12.694 INFO  [o.s.b.w.embedded.tomcat.TomcatWebServer] - Tomcat started on port 8080 (http) with context path ''
+2023-12-07 10:47:12.698 INFO  [com.main.ArchiveApplication] - Started ArchiveApplication in 0.414 seconds (process running for 5379.536)
+2023-12-07 10:47:12.699 INFO  [o.s.b.d.a.ConditionEvaluationDeltaLoggingListener] - Condition evaluation unchanged
+2023-12-07 10:47:15.268 INFO  [com.main.ArchiveApplication] - Starting ArchiveApplication using Java 17.0.9 with PID 12924 (C:\Users\kcs\eclipse\jee-2023-09\workspace\Archive\bin\main started by kcs in C:\Users\kcs\eclipse\jee-2023-09\workspace\Archive)
+2023-12-07 10:47:15.270 INFO  [com.main.ArchiveApplication] - The following 1 profile is active: "local"
+2023-12-07 10:47:15.302 INFO  [o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor] - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-12-07 10:47:15.302 INFO  [o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor] - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-12-07 10:47:16.117 INFO  [o.s.b.w.embedded.tomcat.TomcatWebServer] - Tomcat initialized with port 8080 (http)
+2023-12-07 10:47:16.123 INFO  [o.apache.coyote.http11.Http11NioProtocol] - Initializing ProtocolHandler ["http-nio-8080"]
+2023-12-07 10:47:16.125 INFO  [o.apache.catalina.core.StandardService] - Starting service [Tomcat]
+2023-12-07 10:47:16.125 INFO  [org.apache.catalina.core.StandardEngine] - Starting Servlet engine: [Apache Tomcat/10.1.16]
+2023-12-07 10:47:16.255 INFO  [org.apache.jasper.servlet.TldScanner] - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2023-12-07 10:47:16.261 INFO  [o.a.c.c.C.[Tomcat].[localhost].[/]] - Initializing Spring embedded WebApplicationContext
+2023-12-07 10:47:16.262 INFO  [o.s.b.w.s.c.ServletWebServerApplicationContext] - Root WebApplicationContext: initialization completed in 959 ms
+2023-12-07 10:47:16.331 INFO  [com.zaxxer.hikari.HikariDataSource] - HikariCP - Starting...
+2023-12-07 10:47:16.395 INFO  [com.zaxxer.hikari.pool.HikariPool] - HikariCP - Added connection net.sf.log4jdbc.sql.jdbcapi.ConnectionSpy@6ece3042
+2023-12-07 10:47:16.397 INFO  [com.zaxxer.hikari.HikariDataSource] - HikariCP - Start completed.
+2023-12-07 10:47:16.544 INFO  [o.s.b.a.w.s.WelcomePageHandlerMapping] - Adding welcome page template: index
+2023-12-07 10:47:16.805 INFO  [o.s.b.d.a.OptionalLiveReloadServer] - LiveReload server is running on port 35729
+2023-12-07 10:47:16.820 INFO  [o.apache.coyote.http11.Http11NioProtocol] - Starting ProtocolHandler ["http-nio-8080"]
+2023-12-07 10:47:16.847 INFO  [o.s.b.w.embedded.tomcat.TomcatWebServer] - Tomcat started on port 8080 (http) with context path ''
+2023-12-07 10:47:16.855 INFO  [com.main.ArchiveApplication] - Started ArchiveApplication in 1.966 seconds (process running for 2.627)
+2023-12-07 10:48:22.043 INFO  [o.a.c.c.C.[Tomcat].[localhost].[/]] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-07 10:48:22.043 INFO  [o.s.web.servlet.DispatcherServlet] - Initializing Servlet 'dispatcherServlet'
+2023-12-07 10:48:22.044 INFO  [o.s.web.servlet.DispatcherServlet] - Completed initialization in 1 ms
+2023-12-07 10:48:24.153 INFO  [com.main.controller.BoardController] - board
+2023-12-07 10:48:32.749 INFO  [com.main.controller.BoardController] - board
+2023-12-07 10:48:45.872 INFO  [com.main.controller.BoardController] - board
+2023-12-07 10:48:47.898 INFO  [com.main.controller.BoardController] - write
+2023-12-07 10:49:02.198 INFO  [com.main.controller.BoardController] - write
+2023-12-07 10:49:13.691 INFO  [com.main.controller.BoardController] - write
+2023-12-07 10:50:04.776 INFO  [com.main.controller.BoardController] - write
+2023-12-07 10:51:36.772 INFO  [com.main.controller.BoardController] - write
+2023-12-07 10:51:53.809 INFO  [com.main.controller.BoardController] - write
+2023-12-07 10:52:11.484 INFO  [com.main.controller.BoardController] - write
+2023-12-07 10:52:30.293 INFO  [com.main.controller.BoardController] - write
+2023-12-07 10:54:30.451 INFO  [com.main.controller.BoardController] - write
+2023-12-07 10:57:04.958 INFO  [com.main.controller.BoardController] - write
+2023-12-07 10:57:06.367 INFO  [com.main.controller.BoardController] - write
+2023-12-07 10:57:18.224 INFO  [com.main.controller.BoardController] - write
+2023-12-07 10:57:42.773 INFO  [com.main.controller.BoardController] - write
+2023-12-07 10:59:14.406 INFO  [com.main.controller.BoardController] - write
+2023-12-07 10:59:30.135 INFO  [com.main.controller.BoardController] - write
+2023-12-07 11:00:38.469 INFO  [com.main.controller.BoardController] - write
+2023-12-07 11:00:42.944 INFO  [com.main.controller.BoardController] - board
+2023-12-07 11:02:58.266 INFO  [com.main.controller.BoardController] - board
+2023-12-07 11:03:00.229 INFO  [com.main.controller.BoardController] - write
+2023-12-07 11:03:01.427 INFO  [com.main.controller.BoardController] - write
+2023-12-07 11:03:10.264 INFO  [com.main.controller.BoardController] - write
+2023-12-07 11:03:11.026 INFO  [com.main.controller.BoardController] - write
+2023-12-07 11:03:11.478 INFO  [com.main.controller.BoardController] - write
+2023-12-07 11:03:23.826 INFO  [com.main.controller.BoardController] - write
+2023-12-07 11:03:32.297 INFO  [com.main.controller.BoardController] - write
+2023-12-07 11:07:55.551 INFO  [com.main.controller.BoardController] - write
+2023-12-07 11:08:24.588 INFO  [com.main.controller.BoardController] - write
+2023-12-07 11:13:48.271 INFO  [com.main.controller.BoardController] - write
+2023-12-07 11:13:54.660 INFO  [com.main.controller.BoardController] - write
+2023-12-07 11:14:45.092 INFO  [com.main.controller.BoardController] - write
+2023-12-07 11:16:29.500 INFO  [com.main.controller.BoardController] - write
+2023-12-07 11:19:33.996 INFO  [com.main.controller.BoardController] - write
+2023-12-07 11:20:25.905 INFO  [com.main.controller.BoardController] - write
+2023-12-07 13:12:51.096 INFO  [com.main.controller.BoardController] - write
+2023-12-07 13:16:19.015 INFO  [com.main.controller.BoardController] - write
+2023-12-07 13:16:22.150 INFO  [com.main.controller.BoardController] - write
+2023-12-07 13:16:40.776 INFO  [com.main.controller.BoardController] - write
+2023-12-07 13:17:02.144 INFO  [com.main.controller.BoardController] - write
+2023-12-07 13:17:23.535 INFO  [com.main.controller.BoardController] - write
+2023-12-07 13:17:48.928 INFO  [com.main.controller.BoardController] - write
+2023-12-07 14:07:36.057 INFO  [com.main.controller.BoardController] - write
+2023-12-07 14:07:59.417 INFO  [com.main.controller.BoardController] - write
+2023-12-07 14:09:01.424 INFO  [com.main.controller.BoardController] - write
+2023-12-07 14:09:57.890 INFO  [com.main.controller.BoardController] - write
+2023-12-07 14:10:05.269 INFO  [com.main.controller.BoardController] - write
+2023-12-07 14:10:06.223 INFO  [com.main.controller.BoardController] - write
+2023-12-07 14:10:13.955 INFO  [com.main.controller.BoardController] - write
+2023-12-07 14:10:38.309 INFO  [com.main.controller.BoardController] - write
+2023-12-07 14:10:52.787 INFO  [com.main.controller.BoardController] - write
+2023-12-07 14:11:02.414 INFO  [com.main.controller.BoardController] - write
+2023-12-07 14:11:21.637 INFO  [com.main.controller.BoardController] - write
+2023-12-07 14:11:25.660 INFO  [com.main.controller.BoardController] - write
+2023-12-07 14:14:12.225 INFO  [com.main.controller.BoardController] - write
+2023-12-07 14:14:24.006 INFO  [com.main.controller.BoardController] - write
+2023-12-07 14:14:33.983 INFO  [com.main.controller.BoardController] - write
+2023-12-07 14:15:00.195 INFO  [com.main.controller.BoardController] - write
+2023-12-07 14:15:16.693 INFO  [com.main.controller.BoardController] - write
+2023-12-07 14:15:39.986 INFO  [com.main.controller.BoardController] - write
+2023-12-07 14:15:51.505 INFO  [com.main.controller.BoardController] - write
+2023-12-07 14:16:30.936 INFO  [com.main.controller.BoardController] - write
+2023-12-07 14:16:40.703 INFO  [com.main.controller.BoardController] - write
+2023-12-07 14:16:53.815 INFO  [com.main.controller.BoardController] - write
+2023-12-07 14:18:10.374 INFO  [com.main.controller.BoardController] - write
+2023-12-07 14:18:17.150 INFO  [com.main.controller.BoardController] - write
+2023-12-07 14:18:17.921 INFO  [com.main.controller.BoardController] - write
+2023-12-07 14:18:18.130 INFO  [com.main.controller.BoardController] - write
+2023-12-07 14:18:18.348 INFO  [com.main.controller.BoardController] - write
+2023-12-07 14:18:18.595 INFO  [com.main.controller.BoardController] - write
+2023-12-07 14:18:18.804 INFO  [com.main.controller.BoardController] - write
+2023-12-07 14:18:33.097 INFO  [com.main.controller.BoardController] - write
+2023-12-07 14:19:15.695 INFO  [com.main.controller.BoardController] - write
+2023-12-07 14:21:37.140 INFO  [com.main.controller.BoardController] - write
+2023-12-07 14:21:41.400 INFO  [com.main.controller.BoardController] - write
+2023-12-07 14:23:01.038 INFO  [com.main.controller.BoardController] - write
+2023-12-07 14:23:07.070 INFO  [com.main.controller.BoardController] - write
+2023-12-07 14:24:20.509 INFO  [com.main.controller.BoardController] - write
+2023-12-07 14:24:43.645 INFO  [com.main.controller.BoardController] - write
+2023-12-07 16:39:17.249 INFO  [o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin] - Application shutdown requested.
+2023-12-07 16:39:17.252 INFO  [o.apache.coyote.http11.Http11NioProtocol] - Stopping ProtocolHandler ["http-nio-8080"]
+2023-12-07 16:39:17.267 INFO  [com.zaxxer.hikari.HikariDataSource] - HikariCP - Shutdown initiated...
+2023-12-07 16:39:17.270 INFO  [com.zaxxer.hikari.HikariDataSource] - HikariCP - Shutdown completed.
+2023-12-07 17:03:05.173 INFO  [com.main.ArchiveApplication] - Starting ArchiveApplication using Java 17.0.9 with PID 8704 (C:\Users\kcs\eclipse\jee-2023-09\workspace\Archive\bin\main started by kcs in C:\Users\kcs\eclipse\jee-2023-09\workspace\Archive)
+2023-12-07 17:03:05.174 INFO  [com.main.ArchiveApplication] - The following 1 profile is active: "local"
+2023-12-07 17:03:05.205 INFO  [o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor] - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-12-07 17:03:05.205 INFO  [o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor] - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-12-07 17:03:06.014 INFO  [o.s.b.w.embedded.tomcat.TomcatWebServer] - Tomcat initialized with port 8080 (http)
+2023-12-07 17:03:06.022 INFO  [o.apache.coyote.http11.Http11NioProtocol] - Initializing ProtocolHandler ["http-nio-8080"]
+2023-12-07 17:03:06.023 INFO  [o.apache.catalina.core.StandardService] - Starting service [Tomcat]
+2023-12-07 17:03:06.024 INFO  [org.apache.catalina.core.StandardEngine] - Starting Servlet engine: [Apache Tomcat/10.1.16]
+2023-12-07 17:03:06.176 INFO  [org.apache.jasper.servlet.TldScanner] - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2023-12-07 17:03:06.183 INFO  [o.a.c.c.C.[Tomcat].[localhost].[/]] - Initializing Spring embedded WebApplicationContext
+2023-12-07 17:03:06.183 INFO  [o.s.b.w.s.c.ServletWebServerApplicationContext] - Root WebApplicationContext: initialization completed in 978 ms
+2023-12-07 17:03:06.251 INFO  [com.zaxxer.hikari.HikariDataSource] - HikariCP - Starting...
+2023-12-07 17:03:06.316 INFO  [com.zaxxer.hikari.pool.HikariPool] - HikariCP - Added connection net.sf.log4jdbc.sql.jdbcapi.ConnectionSpy@5a4c4c28
+2023-12-07 17:03:06.319 INFO  [com.zaxxer.hikari.HikariDataSource] - HikariCP - Start completed.
+2023-12-07 17:03:06.463 INFO  [o.s.b.a.w.s.WelcomePageHandlerMapping] - Adding welcome page template: index
+2023-12-07 17:03:06.689 INFO  [o.s.b.d.a.OptionalLiveReloadServer] - LiveReload server is running on port 35729
+2023-12-07 17:03:06.702 INFO  [o.apache.coyote.http11.Http11NioProtocol] - Starting ProtocolHandler ["http-nio-8080"]
+2023-12-07 17:03:06.725 INFO  [o.s.b.w.embedded.tomcat.TomcatWebServer] - Tomcat started on port 8080 (http) with context path ''
+2023-12-07 17:03:06.735 INFO  [com.main.ArchiveApplication] - Started ArchiveApplication in 1.95 seconds (process running for 2.594)
+2023-12-07 17:03:11.358 INFO  [o.a.c.c.C.[Tomcat].[localhost].[/]] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-07 17:03:11.358 INFO  [o.s.web.servlet.DispatcherServlet] - Initializing Servlet 'dispatcherServlet'
+2023-12-07 17:03:11.359 INFO  [o.s.web.servlet.DispatcherServlet] - Completed initialization in 1 ms
+2023-12-07 17:44:28.649 INFO  [o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener] - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-12-07 17:44:28.655 INFO  [o.apache.coyote.http11.Http11NioProtocol] - Stopping ProtocolHandler ["http-nio-8080"]
+2023-12-07 17:44:28.672 INFO  [com.zaxxer.hikari.HikariDataSource] - HikariCP - Shutdown initiated...
+2023-12-07 17:44:28.675 INFO  [com.zaxxer.hikari.HikariDataSource] - HikariCP - Shutdown completed.
+2023-12-07 17:44:28.770 INFO  [com.main.ArchiveApplication] - Starting ArchiveApplication using Java 17.0.9 with PID 8704 (C:\Users\kcs\eclipse\jee-2023-09\workspace\Archive\bin\main started by kcs in C:\Users\kcs\eclipse\jee-2023-09\workspace\Archive)
+2023-12-07 17:44:28.771 INFO  [com.main.ArchiveApplication] - The following 1 profile is active: "local"

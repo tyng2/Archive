@@ -30,6 +30,11 @@ server:
 logging:
   config: classpath:logback-archive.xml
 
+
+page:
+  limit : 10
+  block : 5
+
   
 ---
 

@@ -42,28 +42,30 @@
 				</thead>
 				<tbody>
 				<c:choose>
-				<c:when test="${empty list }">
+				<c:when test="${empty boardList }">
 				<tr><td colspan="5" style="text-align: center;">작성된 게시글이 없습니다.</td></tr>
 				</c:when>
 				<c:otherwise>
-				<c:forEach items="${list }" var="v">
+				<c:forEach items="${boardList }" var="v">
 					<tr>
 					<td width="10%" class="category"><a href="board.do?bord_catg=${v.bord_catg }">${v.bord_catg }</a></td>
 					<td class="title1 left">
+					<%--
 					<c:if test="${v.bord_levl > 0 }">
 						<c:forEach begin="1" end="${v.bord_levl }">
 							&nbsp;
 						</c:forEach>
 						<span id="reply">└</span>
 					</c:if>
-					<a href="boardView.do?bord_numb=${v.bord_numb }&pageNum=${pageInfoMap.pageNum }&#view">
+					--%>
+					<a href="boardView.do?bord_id=${v.bord_id }&pageNum=${pageInfo.pageNum }&#view">
 							${v.bord_titl }</a>
-					<c:if test="${v.file_cont > 0 }">
-					<img src="images/disk.png" style="width: 14px;">
-					</c:if>
-					<c:if test="${v.comm_cont > 0 }">
-					<b style="color: red;">[${v.comm_cont }]</b>
-					</c:if>
+<%-- 					<c:if test="${v.file_cont > 0 }"> --%>
+<!-- 					<img src="images/disk.png" style="width: 14px;"> -->
+<%-- 					</c:if> --%>
+<%-- 					<c:if test="${v.comm_cont > 0 }"> --%>
+<%-- 					<b style="color: red;">[${v.comm_cont }]</b> --%>
+<%-- 					</c:if> --%>
 					</td>
 					<td>${v.user_id }</td>
 					<td>
@@ -97,29 +99,30 @@
 				<div class="row">
 				<div class="col-12">
 				<div class="custom-pagination text-center">
-					<c:if test="${pageInfoMap.allRowCount > 0 }">
+					<c:if test="${pageInfo.allRowCount > 0 }">
 		
-					<c:if test="${pageInfoMap.startPage > pageInfoMap.pageBlockSize }">
+					<c:if test="${pageInfo.startPage > pageInfo.pageBlockSize }">
 					<a href="board.do?pageNum=1&search=${search }&#board">1</a><span class="more-page">...</span>
-					<a href="board.do?pageNum=${pageInfoMap.startPage - 1 }&search=${search }&#board"><span class="pt"><img src="images/left-arrow.png" width="18px" height="18px"></span></a>
+					<a href="board.do?pageNum=${pageInfo.startPage - 1 }&search=${search }&#board"><span class="pt"><img src="images/left-arrow.png" width="18px" height="18px"></span></a>
 					</c:if>
 		
-					<c:forEach begin="${pageInfoMap.startPage }" end="${pageInfoMap.endPage }" step="1" varStatus="s">
+					<c:forEach begin="${pageInfo.startPage }" end="${pageInfo.endPage }" step="1" varStatus="s">
 					
 					<c:choose>
-					<c:when test="${s.current == pageInfoMap.pageNum }">
+					<c:when test="${s.current == pageInfo.pageNum }">
 					<span>${s.current }</span>
 					</c:when>
 					<c:otherwise>
 						<a href="board.do?pageNum=${s.current }&search=${search }&#board">${s.current }</a>
 					</c:otherwise>
 					</c:choose>
+					
 					</c:forEach>
 		
-					<c:if test="${pageInfoMap.endPage < pageInfoMap.maxPage }">
-					<a href="board.do?pageNum=${pageInfoMap.endPage + 1 }&search=${search }&#board"><span class="pt"><img src="images/right-arrow.png" width="18px" height="18px"></span></a>
+					<c:if test="${pageInfo.endPage < pageInfo.maxPage }">
+					<a href="board.do?pageNum=${pageInfo.endPage + 1 }&search=${search }&#board"><span class="pt"><img src="images/right-arrow.png" width="18px" height="18px"></span></a>
 					<span class="more-page">...</span>
-					<a href="board.do?pageNum=${pageInfoMap.maxPage }&search=${search }&#board">${pageInfoMap.maxPage }</a>
+					<a href="board.do?pageNum=${pageInfo.maxPage }&search=${search }&#board">${pageInfo.maxPage }</a>
 					</c:if>
 		
 					</c:if>
@@ -128,9 +131,9 @@
 				</div>
 				
 				<p style="text-align: right;" class="mt-4">
-					<c:if test="${sessionID != null }">
-						<a href="boardWrite.do" class="btn btn-custom btn-md">글쓰기</a>
-					</c:if>
+<%-- 					<c:if test="${sessionID != null }"> --%>
+						<a href="write.do" class="btn btn-custom btn-md">글쓰기</a>
+<%-- 					</c:if> --%>
 				</p>
 				
 				<!--  boardpage -->
@@ -153,7 +156,7 @@
 						<h3 class="h5 text-black mb-3">Popular Posts</h3>
 						<ul class="list-unstyled">
 							<c:forEach items="${hitList }" var="hl">
-								<li class="mb-2"><a href="boardView.do?bord_numb=${hl.bord_numb }&#view">${hl.bord_titl }</a></li>
+								<li class="mb-2"><a href="boardView.do?bord_id=${hl.bord_id }&#view">${hl.bord_titl }</a></li>
 							</c:forEach>
 						</ul>
 					</div>
@@ -164,7 +167,7 @@
 						<h3 class="h5 text-black mb-3">Recent Comments</h3>
 						<ul class="list-unstyled">
 							<c:forEach items="${commentList }" var="cl">
-								<li class="mb-2"><a href="boardView.do?bord_numb=${cl.bord_numb }&#CommentAn">${cl.comm_cont }</a></li>
+								<li class="mb-2"><a href="boardView.do?bord_id=${cl.bord_id }&#CommentAn">${cl.comm_cont }</a></li>
 							</c:forEach>
 							<!-- <li class="mb-2"><a href="#">Joefrey</a> <em>in</em> <a
 								href="#">Lorem ipsum dolor sit amet</a></li>

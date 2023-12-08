@@ -3,72 +3,139 @@
     <title>board TEST</title>
 </head>
 <body>
-	<header>
-		<!-- Jumbotron -->
-		<div id="intro" class="p-5 text-center bg-light">
-			<h1 class="mb-0 h4">This is a long title of the article</h1>
-		</div>
-		<!-- Jumbotron -->
-	</header>
+	<div class="site-blocks-cover inner-page-cover overlay"
+	style="background-image: url(images/hero_1.jpg);" data-aos="fade"
+	data-stellar-background-ratio="0.5">
+	<div class="container">
+		<div
+			class="row align-items-center justify-content-center text-center">
 
-	<!--Main layout-->
-	<main class="mt-4 mb-5">
-		<div class="container">
-			<!--Grid row-->
-			<div class="row">
-			
-				<!--Grid column-->
-				<div class="col-md-12 mb-4">
+			<div class="col-md-12" data-aos="fade-up" data-aos-delay="400">
 
-					<!--Section: Text-->
-					<section>
-						<div class="row">
-							<div class="col-4 form-outline" >
-<!-- 								<select class="form-control"> -->
-<!-- 									<option value="1">1</option> -->
-<!-- 								</select> -->
-								<input type="text" id="catg" class="form-control">
-								<label class="form-label" for="catg">Catg</label>
-							</div>
-	
-							<div class="col-8 form-outline" >
-								<input type="text" id="title" class="form-control form-control-lg">
-								<label class="form-label" for="title">Title</label>
-							</div>
-							
-						</div>
-					
-			            <p>
-			              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio sapiente molestias
-			              consectetur. Fuga nulla officia error placeat veniam, officiis rerum laboriosam
-			              ullam molestiae magni velit laborum itaque minima doloribus eligendi! Lorem ipsum,
-			              dolor sit amet consectetur adipisicing elit. Optio sapiente molestias consectetur.
-			              Fuga nulla officia error placeat veniam, officiis rerum laboriosam ullam molestiae
-			              magni velit laborum itaque minima doloribus eligendi!
-			            </p>
-	
-	           			<p><strong>Optio sapiente molestias consectetur?</strong></p>
-	
-			            <p class="note note-light">
-			              <strong>Note:</strong> Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-			              Optio odit consequatur porro sequi ab distinctio modi. Rerum cum dolores sint,
-			              adipisci ad veritatis laborum eaque illum saepe mollitia ut voluptatum.
-			            </p>
-			
-			            <ul>
-			              <li>Lorem</li>
-			              <li>Ipsum</li>
-			              <li>Dolor</li>
-			              <li>Sit</li>
-			              <li>Amet</li>
-			            </ul>
-			
-					</section>
-					<!--Section: Text-->
+				<div class="row justify-content-center mb-4">
+					<div class="col-md-8 text-center">
+						<h1>Write</h1>
+						<p class="lead mb-5">Write your contents</p>
+					</div>
 				</div>
-				
+
 			</div>
 		</div>
-	</main>
-	<!--Main layout-->
+	</div>
+</div>
+
+<section class="site-section bg-light">
+
+<!-- content -->
+<%
+String category = (String) request.getParameter("bord_catg");
+%>
+<div class="container">
+<div class="row">
+
+	<div style="width: 100%">
+	<form action="boardWriteProcess.do" class="p-5 bg-white" method="POST" enctype="multipart/form-data">
+		<input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}">
+		
+		<h2 class="h4 text-black mb-5">게시글 작성</h2>
+
+		<input type="hidden" name="category" value="${param.category }">
+		<div class="row form-group">
+			<div class="col-md-6 mb-3 mb-md-0">
+				<label class="text-black" for="fname">Category</label><br>
+				<select class="form-control" name="categy">
+				<option <% if ("C".equals(category)) {%>selected<%} %>>C</option>
+				<option <% if ("Java".equals(category)) {%>selected<%} %>>Java</option>
+				<option <% if ("Python".equals(category)) {%>selected<%} %>>Python</option>
+				<option <% if ("SQL".equals(category)) {%>selected<%} %>>SQL</option>
+				<option <% if ("Web".equals(category)) {%>selected<%} %>>Web</option>
+				<option <% if ("기타".equals(category)) {%>selected<%} %>>기타</option>
+				<option <% if ("잡담".equals(category) || category == null) {%>selected<%} %>>잡담</option>
+				</select>
+				<!-- <input type="text" id="fname" class="form-control"> -->
+			</div>
+			<div class="col-md-6">
+				<!-- <label class="text-black" for="lname">Last Name</label> <input
+					type="text" id="lname" class="form-control"> -->
+			</div>
+		</div>
+		
+		<div class="row form-group">
+			<div class="col-md-12">
+				<label class="text-black" for="title">Title</label>
+				<input type="text" id="title" class="form-control" name="title" required>
+			</div>
+		</div>
+		
+		<div class="row form-group">
+			<div class="col-md-12">
+				<label class="text-black" for="title">File</label>
+				<input type="hidden" id="file_cnt" name="file_cnt" value="1">
+				<button type="button" class="btn btn-none" onclick="file_add(50, 'class=input_write');"><img src="images/add.png" width="22px" height="22px"></button>
+				<button type="button" class="btn btn-none" onclick="file_delete();"><img src="images/minus.png" width="22px" height="22px"></button>
+				<div>
+				
+				</div>
+				<div id="file_add_form" >
+					<input type="file" name='bbs_file' class="form-control" >
+<!-- 					<input type="file" name='bbs_file1' class="form-control" > -->
+				</div>
+			</div>
+		</div>
+
+		<div class="row form-group">
+			<div class="col-md-12">
+				<label class="text-black" for="content">Content</label>
+				<textarea name="content" id="content" cols="30" rows="8"
+					class="form-control"
+					placeholder="Write your contents here..."></textarea>
+			</div>
+		</div>
+
+		<div class="row form-group">
+			<div class="col-md-12">
+				<input type="submit" value="작성" class="btn btn-custom btn-md">
+				<a href="board.do" class="btn btn-custom btn-md" style="float: right;">목록</a>
+			</div>
+		</div>
+
+	</form>
+	</div>
+
+</div>
+</div>
+</section>
+<script>
+var uf = "";
+function file_add(size, ext) {
+	var filecountTemp = parseInt(document.getElementById("file_cnt").value);
+	var parents = document.getElementById("file_add_form");
+	var br = document.createElement("br");
+	br.setAttribute("id", "br" + (filecountTemp + 1));
+	parents.appendChild(br);
+	if (filecountTemp == 30) {
+		alert("파일 업로드는 최대 30개까지 가능합니다.");
+		return;
+	} else {
+		var obj = document.createElement("input");
+		obj.setAttribute("type", "file");
+		//obj.setAttribute("size", size);
+		obj.setAttribute("name", "bbs_file");
+		obj.setAttribute("class", "form-control");
+		obj.setAttribute("id", "file" + (filecountTemp + 1));
+		parents.appendChild(obj);
+	}
+	document.getElementById("file_cnt").value = filecountTemp + 1;
+}
+
+function file_delete() {
+	var filecountTemp = parseInt(document.getElementById("file_cnt").value);
+	var parents = document.getElementById("file_add_form");
+	var obj = document.getElementById("file" + filecountTemp);
+	var br = document.getElementById('br' + filecountTemp);
+	parents.removeChild(obj);
+	parents.removeChild(br);
+	document.getElementById("file_cnt").value = filecountTemp - 1;
+}
+</script>
 </body>
