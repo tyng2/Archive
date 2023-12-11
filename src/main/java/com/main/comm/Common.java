@@ -6,6 +6,8 @@ import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 
+import jakarta.servlet.http.HttpServletRequest;
+
 public class Common {
 
 	private static Logger log = LoggerFactory.getLogger(Common.class);
@@ -75,6 +77,29 @@ public class Common {
 		log.info(sb.toString());
 		
 		return new ResponseEntity<String>(sb.toString(), headers, HttpStatus.OK);
+	}
+	
+	
+	public static String getClientIP(HttpServletRequest request) {
+		String ip = request.getHeader("X-Forwarded-For");
+		
+		if (ip == null) {
+			ip = request.getHeader("Proxy-Client-IP");
+		}
+		if (ip == null) {
+			ip = request.getHeader("WL-Proxy-Client-IP");
+		}
+		if (ip == null) {
+			ip = request.getHeader("HTTP_CLIENT_IP");
+		}
+		if (ip == null) {
+			ip = request.getHeader("HTTP_X_FORWARDED_FOR");
+		}
+		if (ip == null) {
+			ip = request.getRemoteAddr();
+		}
+		
+		return ip;
 	}
 	
 	

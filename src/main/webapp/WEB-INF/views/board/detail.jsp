@@ -1,72 +1,102 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <head>
-    <title>board TEST</title>
+    <title>detail TEST</title>
 </head>
 <body>
-	<header>
-		<!-- Jumbotron -->
-		<div id="intro" class="p-5 text-center bg-light">
-			<h1 class="mb-0 h4">This is a long title of the article</h1>
-		</div>
-		<!-- Jumbotron -->
-	</header>
+<div id="sessionID" style="display: none;">${sessionID }</div>
+<div class="site-blocks-cover inner-page-cover overlay"
+	style="background-image: url(images/hero_1.jpg);" data-aos="fade"
+	data-stellar-background-ratio="0.5">
+	<div class="container">
+	<div class="row align-items-center justify-content-center text-center">
 
-	<!--Main layout-->
-	<main class="mt-4 mb-5">
-		<div class="container">
-			<!--Grid row-->
-			<div class="row" style="max-width: 1000px;">
-			
-				<!--Grid column-->
-				<div class="col-md-12 mb-4">
+		<div class="col-md-12" data-aos="fade-up" data-aos-delay="400">
 
-					<!--Section: Text-->
-					<section>
-						<div class="row align-items-center border-bottom mb-4">
-							<div class="col-8 text-lg-start mb-3">
-								<span>titletitletitletitletitletitletitletitletitletitletitletitle</span>
-								<div>Anna Maria Doe</div>
-							</div>
-	
-							<div class="col-4 text-end text-lg-end">
-								<div class="row">
-									<div class="col-12">2023-12-07 11:11:20</div>
-									<div class="col-12">4</div>
-								</div>
-							</div>
-						</div>
-					
-			            <p>
-			              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio sapiente molestias
-			              consectetur. Fuga nulla officia error placeat veniam, officiis rerum laboriosam
-			              ullam molestiae magni velit laborum itaque minima doloribus eligendi! Lorem ipsum,
-			              dolor sit amet consectetur adipisicing elit. Optio sapiente molestias consectetur.
-			              Fuga nulla officia error placeat veniam, officiis rerum laboriosam ullam molestiae
-			              magni velit laborum itaque minima doloribus eligendi!
-			            </p>
-	
-	           			<p><strong>Optio sapiente molestias consectetur?</strong></p>
-	
-			            <p class="note note-light">
-			              <strong>Note:</strong> Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-			              Optio odit consequatur porro sequi ab distinctio modi. Rerum cum dolores sint,
-			              adipisci ad veritatis laborum eaque illum saepe mollitia ut voluptatum.
-			            </p>
-			
-			            <ul>
-			              <li>Lorem</li>
-			              <li>Ipsum</li>
-			              <li>Dolor</li>
-			              <li>Sit</li>
-			              <li>Amet</li>
-			            </ul>
-			
-					</section>
-					<!--Section: Text-->
+			<div class="row justify-content-center mb-4">
+				<div class="col-md-8 text-center">
+					<h1>Board</h1>
+					<p class="lead mb-5">Free board for everyone</p>
 				</div>
-				
 			</div>
+
 		</div>
-	</main>
-	<!--Main layout-->
+	</div>
+	</div>
+</div>
+
+<!-- content -->
+<section class="site-section bg-light">
+<div id="view" class="container">
+	<div class="row">
+	<div style="min-width: 100%;">
+		<div class="p-4 mb-3 bg-white" style="margin: 0;">
+			<p class="mb-0 font-weight-bold h2">${board.bord_titl } <span style="font-size: 18px"><span style="color: gray;">|</span> ${board.bord_catg }</span>
+			<span style="float: right; font-size: 15px;">No. ${board.bord_id }</span></p>
+			<p class="mb-0" style="margin: 15px 0;"><b>${board.user_id }</b><span style="float: right;"><fmt:formatDate value="${board.bord_date }" pattern="yyyy.MM.dd HH:mm:ss"/></span></p>
+		</div>
+		
+		<c:if test="${files.size() != 0 }">
+			<div class="p-4 mb-3 bg-white"><p class="mb-0"><br />
+			<c:forEach items="${files }" var="item" >
+				<a href="javascript:void(0);" class="download" data-file_id="${item.file_id }">
+					<button type="button" class="file themeBtn4">${item.file_olnm }</button>
+				</a><br /><br />
+			</c:forEach>
+			</p></div>
+		</c:if>
+					
+		<div class="p-4 mb-3 bg-white">
+			<p><pre style="font-family: 'Quicksand'; font-size: 15px; margin: 20px 0; min-height: 160px;">${board.bord_cont }</pre></p>
+			<p class="mb-4" style="text-align: right;">조회 : ${board.bord_hitc }</p>
+		</div>
+		<div id="CommentAn"></div>
+		<div class="p-4 mb-3 bg-white">
+			<div id="comment"></div>
+			
+			<form action="boardComment.do" method="POST">
+				<input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}">
+				
+				<input type="hidden" name="bord_id" id="bord_id" value="${board.bord_id }">
+				<input type="hidden" name="pageNum" id="pageNum" value="${param.pageNum }">
+				<input type="hidden" name="bord_catg" id="bord_catg" value="${param.bord_catg }">
+		
+				<c:if test="${sessionID != null }">
+				<textarea name="comm_cont" id="comm_cont" cols="30" rows="4"
+					class="form-control" 
+					placeholder="Write your comment here..."></textarea><br>
+				<button type="button" id="insertComment" class="btn btn-custom btn-md" style="float: right;">등록</button>
+				</c:if>
+			</form><br><br>
+		</div>
+
+		<div class="p-4 mb-3">
+			<p style="text-align: right;" class="mb-0">
+			<c:if test="${sessionID != null }">
+				<c:if test="${sessionID.equals('admin') && !sessionID.equals(board.user_id) }">
+					<a href="boardDeleteProcess.do?bord_id=${board.bord_id }&pageNum=${param.pageNum }&category=${param.bord_catg }" class="btn btn-custom btn-md">삭제</a>
+				</c:if>
+				<c:if test="${sessionID.equals(board.user_id) }">
+					<a href="boardModify.do?bord_id=${board.bord_id }&pageNum=${param.pageNum }&category=${param.bord_catg }" class="btn btn-custom btn-md">수정</a>
+					<a href="boardDeleteProcess.do?bord_id=${board.bord_id }&pageNum=${param.pageNum }&category=${param.bord_catg }" class="btn btn-custom btn-md">삭제</a>
+				</c:if>
+<%-- 				<a href="reply.do?re_ref=${board.bord_refr }&re_lev=${board.bord_levl }&re_seq=${board.bord_seqn }&category=${board.bord_catg }&pageNum=${param.pageNum }&pcategory=${param.bord_catg }" class="btn btn-custom btn-md">답글</a> --%>
+			</c:if>
+			<c:choose>
+			<c:when test="${param.bord_catg == null }">
+				<a href="board.do?pageNum=${param.pageNum }&#board" class="btn btn-custom btn-md">목록</a>
+			</c:when>
+			<c:otherwise>
+				<a href="board.do?category=${board.bord_catg }&pageNum=${param.pageNum }&#board" class="btn btn-custom btn-md">목록</a>
+			</c:otherwise>
+			</c:choose>
+				
+			</p>
+		</div>
+	</div>
+	</div>
+</div>
+</section>
+<script src="/js/Archive/board/detail.js?"></script>
 </body>

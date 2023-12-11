@@ -12,6 +12,8 @@ import com.main.comm.Common;
 import com.main.comm.PageSet;
 import com.main.mapper.BoardMapper;
 import com.main.vo.BoardVo;
+import com.main.vo.CategoryVo;
+import com.main.vo.FileVo;
 import com.main.vo.PageInfo;
 
 @Service
@@ -32,6 +34,11 @@ public class BoardServiceImpl implements BoardService {
 	
 	@Autowired
 	private BoardMapper boardMapper;
+	
+	@Override
+	public int insertBoard(BoardVo board) {
+		return boardMapper.insertBoard(board);
+	}
 
 	@Override
 	public Map<String, Object> getBoardList(Map<String, String> paramMap) {
@@ -53,6 +60,39 @@ public class BoardServiceImpl implements BoardService {
 		result.put("boardList"	, boardList);
 		return result;
 	}
+
+	@Override
+	public List<CategoryVo> getCategoryList() {
+		return boardMapper.getCategoryList();
+	}
+
+	@Override
+	public int insertFile(FileVo file) {
+		return boardMapper.insertFile(file);
+	}
+
+	@Override
+	public FileVo getFile(String fileId) {
+		return boardMapper.getFile(fileId);
+	}
+
+	@Override
+	public Map<String, Object> getDetail(String bordId) {
+		
+		boardMapper.addHitc(bordId);
+		BoardVo board		= boardMapper.getBoard(bordId);
+		List<FileVo> files	= boardMapper.getFileList(bordId);
+		
+		Map<String, Object> res = Map.of(
+			"board"	, board,
+			"files"	, files
+		);
+		return res;
+	}
+	
+	
+	
+	
 	
 	
 }

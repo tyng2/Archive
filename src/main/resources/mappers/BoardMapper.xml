@@ -2,7 +2,7 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTO Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.main.mapper.BoardMapper">
 
-<insert id="insertBoard">
+<insert id="insertBoard" parameterType="com.main.vo.BoardVo" useGeneratedKeys="true" keyColumn="bord_id">
 	INSERT INTO board
 	(bord_catg, bord_titl, bord_cont, user_id, bord_date, bord_hitc, bord_wrip)  
 	VALUES (#{bord_catg},#{bord_titl},#{bord_cont},#{user_id},CURRENT_TIMESTAMP,0,#{bord_wrip})
@@ -19,6 +19,7 @@
 		b.bord_date, 
 		b.bord_hitc, 
 		b.bord_wrip,
+		f.file_cnt,
 		(SELECT COUNT(bord_id) FROM board 
 			WHERE 1=1
 			<if test="search != null and search != ''">
@@ -32,6 +33,14 @@
 	FROM board b
 	LEFT OUTER JOIN category c
 		ON c.catg_id = b.bord_catg
+	LEFT OUTER JOIN (
+		SELECT
+			bord_id,
+			COUNT(file_id) file_cnt
+		FROM FILE
+		GROUP BY bord_id
+	) f
+		ON f.bord_id = b.bord_id
 	WHERE 1 = 1
 	<if test="search != null and search != ''">
 		AND bord_titl LIKE CONCAT('%', #{search}, '%')
@@ -42,6 +51,65 @@
 	</if>
 	ORDER BY bord_id DESC 
 	LIMIT #{pageSize} OFFSET #{startRow} 
+</select>
+
+<update id="addHitc">
+	UPDATE board
+	SET bord_hitc = bord_hitc + 1
+	WHERE bord_id = #{bord_id}
+</update>
+
+<select id="getBoard" resultType="com.main.vo.BoardVo">
+	SELECT
+		b.bord_id,
+		b.bord_catg,
+		c.catg_name, 
+		b.bord_titl, 
+		b.bord_cont, 
+		b.user_id, 
+		b.bord_date, 
+		b.bord_hitc, 
+		b.bord_wrip
+	FROM board b
+	JOIN category c
+		ON b.bord_catg = c.catg_id
+	WHERE b.bord_id = #{bord_id}
+</select>
+
+<select id="getCategoryList" resultType="com.main.vo.CategoryVo">
+	SELECT
+		catg_id,
+		catg_name,
+		catg_crdt
+	FROM category
+	ORDER BY catg_name
+</select>
+
+<insert id="insertFile" parameterType="com.main.vo.FileVo">
+	INSERT INTO file
+	(bord_id, file_olnm, file_svnm)  
+	VALUES (#{bord_id},#{file_olnm},#{file_svnm})
+</insert>
+
+<select id="getFileList" resultType="com.main.vo.FileVo">
+	SELECT
+		file_id,
+		bord_id,
+		file_olnm,
+		file_svnm,
+		file_date
+	FROM file
+	WHERE bord_id = #{bord_id}
+</select>
+
+<select id="getFile" resultType="com.main.vo.FileVo">
+	SELECT
+		bord_id,
+		file_olnm,
+		file_svnm,
+		file_date
+	FROM file
+	WHERE file_id = #{file_id}
 </select>
 
 </mapper>

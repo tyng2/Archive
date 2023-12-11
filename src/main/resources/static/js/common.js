@@ -58,7 +58,11 @@ function ajaxAction(paramData){
 			paramData.success(res);
 		},
 		error		: function(xhr, status, error) {
-			paramData.error(xhr, status, error);
+			if ($.type(paramData.error) == 'function') {
+				paramData.error(xhr, status, error);
+			} else {
+				console.log(xhr, status, error);
+			}
 		},
 		beforeSend	: paramData.beforeSend,
 		complete	: paramData.complete

@@ -48,7 +48,7 @@
 				<c:otherwise>
 				<c:forEach items="${boardList }" var="v">
 					<tr>
-					<td width="10%" class="category"><a href="board.do?bord_catg=${v.bord_catg }">${v.bord_catg }</a></td>
+					<td width="60px" class="category"><a href="board.do?bord_catg=${v.bord_catg }">${v.catg_name }</a></td>
 					<td class="title1 left">
 					<%--
 					<c:if test="${v.bord_levl > 0 }">
@@ -58,7 +58,7 @@
 						<span id="reply">└</span>
 					</c:if>
 					--%>
-					<a href="boardView.do?bord_id=${v.bord_id }&pageNum=${pageInfo.pageNum }&#view">
+					<a href="detail.do?bord_id=${v.bord_id }&pageNum=${pageInfo.pageNum }&#view">
 							${v.bord_titl }</a>
 <%-- 					<c:if test="${v.file_cont > 0 }"> --%>
 <!-- 					<img src="images/disk.png" style="width: 14px;"> -->
@@ -78,7 +78,7 @@
 					<fmt:formatDate value="${v.bord_date }" pattern="HH:mm:ss"/>
 					</c:when>
 					<c:otherwise>
-					<fmt:formatDate value="${v.bord_date }" pattern="yyyy.MM.dd"/>
+					<fmt:formatDate value="${v.bord_date }" pattern="yy.MM.dd"/>
 					</c:otherwise>
 					</c:choose>
 					</td>
@@ -132,7 +132,7 @@
 				
 				<p style="text-align: right;" class="mt-4">
 <%-- 					<c:if test="${sessionID != null }"> --%>
-						<a href="write.do" class="btn btn-custom btn-md">글쓰기</a>
+						<a href="write.do" class="btn btn-primary btn-md">글쓰기</a>
 <%-- 					</c:if> --%>
 				</p>
 				
@@ -156,7 +156,7 @@
 						<h3 class="h5 text-black mb-3">Popular Posts</h3>
 						<ul class="list-unstyled">
 							<c:forEach items="${hitList }" var="hl">
-								<li class="mb-2"><a href="boardView.do?bord_id=${hl.bord_id }&#view">${hl.bord_titl }</a></li>
+								<li class="mb-2"><a href="detail.do?bord_id=${hl.bord_id }&#view">${hl.bord_titl }</a></li>
 							</c:forEach>
 						</ul>
 					</div>
@@ -167,7 +167,7 @@
 						<h3 class="h5 text-black mb-3">Recent Comments</h3>
 						<ul class="list-unstyled">
 							<c:forEach items="${commentList }" var="cl">
-								<li class="mb-2"><a href="boardView.do?bord_id=${cl.bord_id }&#CommentAn">${cl.comm_cont }</a></li>
+								<li class="mb-2"><a href="detail.do?bord_id=${cl.bord_id }&#CommentAn">${cl.comm_cont }</a></li>
 							</c:forEach>
 							<!-- <li class="mb-2"><a href="#">Joefrey</a> <em>in</em> <a
 								href="#">Lorem ipsum dolor sit amet</a></li>

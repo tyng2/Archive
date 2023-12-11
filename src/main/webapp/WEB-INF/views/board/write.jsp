@@ -1,4 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <head>
     <title>board TEST</title>
 </head>
@@ -28,29 +29,35 @@
 
 <!-- content -->
 <%
-String category = (String) request.getParameter("bord_catg");
+// String category = (String) request.getParameter("bord_catg");
 %>
 <div class="container">
 <div class="row">
 
 	<div style="width: 100%">
-	<form action="boardWriteProcess.do" class="p-5 bg-white" method="POST" enctype="multipart/form-data">
+	<form action="write.do" class="p-5 bg-white" method="POST" enctype="multipart/form-data">
 		<input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}">
 		
-		<h2 class="h4 text-black mb-5">게시글 작성</h2>
+		<h2 class="h4 text-black mb-5">Write</h2>
 
 		<input type="hidden" name="category" value="${param.category }">
 		<div class="row form-group">
 			<div class="col-md-6 mb-3 mb-md-0">
 				<label class="text-black" for="fname">Category</label><br>
 				<select class="form-control" name="categy">
-				<option <% if ("C".equals(category)) {%>selected<%} %>>C</option>
-				<option <% if ("Java".equals(category)) {%>selected<%} %>>Java</option>
-				<option <% if ("Python".equals(category)) {%>selected<%} %>>Python</option>
-				<option <% if ("SQL".equals(category)) {%>selected<%} %>>SQL</option>
-				<option <% if ("Web".equals(category)) {%>selected<%} %>>Web</option>
-				<option <% if ("기타".equals(category)) {%>selected<%} %>>기타</option>
-				<option <% if ("잡담".equals(category) || category == null) {%>selected<%} %>>잡담</option>
+				<c:if test="${not empty categoryList }">
+				<c:forEach var="c" items="${categoryList }">
+					<c:choose>
+					<c:when test="${not empty category }">
+<%-- 						<option value="${c.catg_id }" <% if ("".equals(category)) {%>selected<%} %>>${c.catg_name }</option> --%>
+						<option value="${c.catg_id }" <c:if test="${category eq c.catg_id }">selected</c:if> >${c.catg_name }</option>
+					</c:when>
+					<c:otherwise>
+						<option value="${c.catg_id }">${c.catg_name }</option>
+					</c:otherwise>
+					</c:choose>
+				</c:forEach>
+				</c:if>
 				</select>
 				<!-- <input type="text" id="fname" class="form-control"> -->
 			</div>
@@ -77,7 +84,7 @@ String category = (String) request.getParameter("bord_catg");
 				
 				</div>
 				<div id="file_add_form" >
-					<input type="file" name='bbs_file' class="form-control" >
+					<input type="file" name='mFile' class="form-control" id="file1">
 <!-- 					<input type="file" name='bbs_file1' class="form-control" > -->
 				</div>
 			</div>
@@ -86,15 +93,14 @@ String category = (String) request.getParameter("bord_catg");
 		<div class="row form-group">
 			<div class="col-md-12">
 				<label class="text-black" for="content">Content</label>
-				<textarea name="content" id="content" cols="30" rows="8"
-					class="form-control"
+				<textarea name="content" id="content" cols="30" rows="8" class="form-control"
 					placeholder="Write your contents here..."></textarea>
 			</div>
 		</div>
 
 		<div class="row form-group">
 			<div class="col-md-12">
-				<input type="submit" value="작성" class="btn btn-custom btn-md">
+				<input type="submit" value="작성" class="btn btn-primary btn-md" >
 				<a href="board.do" class="btn btn-custom btn-md" style="float: right;">목록</a>
 			</div>
 		</div>
@@ -113,14 +119,14 @@ function file_add(size, ext) {
 	var br = document.createElement("br");
 	br.setAttribute("id", "br" + (filecountTemp + 1));
 	parents.appendChild(br);
-	if (filecountTemp == 30) {
-		alert("파일 업로드는 최대 30개까지 가능합니다.");
+	if (filecountTemp == 10) {
+		alert("파일 업로드는 최대 10개까지 가능합니다.");
 		return;
 	} else {
 		var obj = document.createElement("input");
 		obj.setAttribute("type", "file");
 		//obj.setAttribute("size", size);
-		obj.setAttribute("name", "bbs_file");
+		obj.setAttribute("name", "mFile");
 		obj.setAttribute("class", "form-control");
 		obj.setAttribute("id", "file" + (filecountTemp + 1));
 		parents.appendChild(obj);
@@ -130,12 +136,14 @@ function file_add(size, ext) {
 
 function file_delete() {
 	var filecountTemp = parseInt(document.getElementById("file_cnt").value);
-	var parents = document.getElementById("file_add_form");
-	var obj = document.getElementById("file" + filecountTemp);
-	var br = document.getElementById('br' + filecountTemp);
-	parents.removeChild(obj);
-	parents.removeChild(br);
-	document.getElementById("file_cnt").value = filecountTemp - 1;
+	if (filecountTemp > 1) {
+		var parents = document.getElementById("file_add_form");
+		var obj = document.getElementById("file" + filecountTemp);
+		var br = document.getElementById('br' + filecountTemp);
+		parents.removeChild(obj);
+		parents.removeChild(br);
+		document.getElementById("file_cnt").value = filecountTemp - 1;
+	}
 }
 </script>
 </body>
