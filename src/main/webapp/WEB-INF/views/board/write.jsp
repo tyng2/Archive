@@ -35,7 +35,7 @@
 <div class="row">
 
 	<div style="width: 100%">
-	<form action="write.do" class="p-5 bg-white" method="POST" enctype="multipart/form-data">
+	<form action="write" class="p-5 bg-white" method="POST" enctype="multipart/form-data">
 		<input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}">
 		
 		<h2 class="h4 text-black mb-5">Write</h2>
@@ -101,7 +101,7 @@
 		<div class="row form-group">
 			<div class="col-md-12">
 				<input type="submit" value="작성" class="btn btn-primary btn-md" >
-				<a href="board.do" class="btn btn-custom btn-md" style="float: right;">목록</a>
+				<a href="board" class="btn btn-custom btn-md" style="float: right;">목록</a>
 			</div>
 		</div>
 

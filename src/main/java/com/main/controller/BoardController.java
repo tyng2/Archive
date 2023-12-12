@@ -1,7 +1,10 @@
 package com.main.controller;
 
 import java.net.URLEncoder;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 import java.util.Map;
 
@@ -10,6 +13,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.util.ObjectUtils;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -26,6 +30,7 @@ import com.main.vo.PageInfo;
 
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpSession;
 
 @Controller
 public class BoardController {
@@ -35,7 +40,7 @@ public class BoardController {
 	@Autowired
 	private BoardService boardService;
 	
-	@GetMapping("/board.do")
+	@GetMapping("/board")
 	public String board(@RequestParam Map<String, String> paramMap, Model model) {
 		log.info("board");
 		
@@ -53,7 +58,7 @@ public class BoardController {
 		return "board/board";
 	}
 	
-	@GetMapping("/write.do")
+	@GetMapping("/write")
 	public String write(@RequestParam Map<String, String> paramMap, Model model) {
 		log.info("write");
 		
@@ -64,7 +69,7 @@ public class BoardController {
 		return "board/write";
 	}
 	
-	@PostMapping("/write.do")
+	@PostMapping("/write")
 	public String writeProcess(HttpServletRequest request, @RequestParam Map<String, String> paramMap, @RequestParam(required = false, name = "mFile") MultipartFile[] mFile, Model model) {
 		log.info("write POST");
 		
@@ -96,10 +101,10 @@ public class BoardController {
 		}
 		log.info("FILE : {}", cntFile);
 		
-		return "redirect:/board.do";
+		return "redirect:/board";
 	}
 	
-	@GetMapping("/detail.do")
+	@GetMapping("/detail")
 	public String detail(@RequestParam Map<String, String> paramMap, Model model) {
 		log.info("detail");
 		
@@ -113,30 +118,82 @@ public class BoardController {
 	}
 	
 	@ResponseBody
-	@PostMapping("/download.do")
-	public void fileDownload(@RequestParam Map<String, String> paramMap, HttpServletResponse response) {
+	@PostMapping("/download")
+	public String fileDownloadLink(@RequestParam Map<String, String> paramMap, HttpServletRequest request) {
 		log.info("download");
-		
 		String fileId	= Common.nvl(paramMap.get("fileId"));
 		FileVo file		= boardService.getFile(fileId);
-		log.info("sdfsd {}", file.toString());
-		if (file != null) {
-			try {
-				byte[] fileBytes	= cmmFile.fileDownload(file.getFile_svnm());
-				String fileName		= URLEncoder.encode(file.getFile_olnm(), "UTF-8");
-				
-				response.setContentType("application/octet-stream");
-				response.setHeader("Content-Disposition", "attachment; fileName=\"" + fileName +"\";");
-				response.setHeader("Content-Transfer-Encoding", "binary");
-				
-				response.getOutputStream().write(fileBytes);
-				response.getOutputStream().flush();
-				response.getOutputStream().close();
-				
-			} catch (Exception e) {
-				e.printStackTrace();
-			}
+		String msg		= "";
+		
+		if (!ObjectUtils.isEmpty(file)) {
+			DateFormat df 		= new SimpleDateFormat("yyyyMMddHmsS");
+			String dateStr		= df.format(new Date());
+			
+			HttpSession session = request.getSession();
+			session.setAttribute("fileDownloadChk", dateStr + "/" + fileId);
+			msg = dateStr;
 		}
+		
+		return msg;
+	}
+	
+	@GetMapping("/download")
+	public void fileDownload(@RequestParam Map<String, String> paramMap, HttpServletRequest request, HttpServletResponse response) {
+		log.info("download");
+		
+		String dateStr	= Common.nvl(paramMap.get("dateStr"));
+		String fileId	= Common.nvl(paramMap.get("fileId"));
+		
+		HttpSession session = request.getSession();
+		String chkVal		= (String) session.getAttribute("fileDownloadChk");
+		session.removeAttribute("fileDownloadChk");
+		
+		log.info("chkVal : {}", chkVal);
+		try {
+			if (chkVal != null) {
+				String[] chk		= chkVal.split("/");
+				
+				if (chk.length > 1 && chk[0].equals(dateStr) && chk[1].equals(fileId)) {
+					FileVo file		= boardService.getFile(fileId);
+					
+					log.info("sdfsd {}", file.toString());
+					
+					if (!ObjectUtils.isEmpty(file)) {
+						byte[] fileBytes	= cmmFile.fileDownload(file.getFile_svnm());
+						String fileName		= URLEncoder.encode(file.getFile_olnm(), "UTF-8");
+						log.info("fileName {}", fileName);
+						
+						response.setContentType("application/octet-stream");
+						response.setHeader("Content-Disposition", "attachment; fileName=\"" + fileName +"\";");
+						response.setHeader("Content-Transfer-Encoding", "binary");
+						
+						response.getOutputStream().write(fileBytes);
+						response.getOutputStream().flush();
+						response.getOutputStream().close();
+							
+					} else {
+						throw new Exception("file not found");
+					}
+					
+				} else {
+					throw new Exception("check value is not correct");
+				}
+				
+			} else {
+				throw new Exception("check value is not correct");
+			}
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+	}
+	
+	@ResponseBody
+	@GetMapping("/comment")
+	public String comment() {
+		
+		return "";
 	}
 	
 	

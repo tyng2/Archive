@@ -24,14 +24,16 @@ spring:
       max-file-size   : 100MB
       max-request-size: 100MB
       
-
 mybatis:
   mapper-locations: classpath:mappers/*.xml
   type-aliases-package: com.main.vo
 
 server:
   port: 8080
-        
+  servlet:
+    session:
+      timeout: 600
+      
 logging:
   config: classpath:logback-archive.xml
 
@@ -41,6 +43,11 @@ file:
 page:
   limit : 10
   block : 5
+  
+naver:
+  client-id: MUmUiuEZ0YXq5NezC1Ky
+  secret: U2ITnhnahA
+  
 
   
 ---

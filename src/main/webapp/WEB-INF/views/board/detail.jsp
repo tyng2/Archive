@@ -38,21 +38,26 @@
 		</div>
 		
 		<c:if test="${files.size() != 0 }">
-			<div class="p-4 mb-3 bg-white"><p class="mb-0"><br />
-			<c:forEach items="${files }" var="item" >
-				<a href="javascript:void(0);" class="download" data-file_id="${item.file_id }">
-					<button type="button" class="file themeBtn4">${item.file_olnm }</button>
-				</a><br /><br />
-			</c:forEach>
-			</p></div>
+			<div class="p-4 mb-3 bg-white">
+				<p class="mb-0">
+				<c:forEach items="${files }" var="item" varStatus="status">
+					<c:if test="${status.index > 0 }">
+						<br><br>
+					</c:if>
+					<a href="javascript:void(0);" class="download" data-file_id="${item.file_id }">
+						<button type="button" class="file themeBtn4">${item.file_olnm }</button>
+					</a>
+				</c:forEach>
+				</p>
+			</div>
 		</c:if>
 					
 		<div class="p-4 mb-3 bg-white">
 			<p><pre style="font-family: 'Quicksand'; font-size: 15px; margin: 20px 0; min-height: 160px;">${board.bord_cont }</pre></p>
 			<p class="mb-4" style="text-align: right;">조회 : ${board.bord_hitc }</p>
 		</div>
-		<div id="CommentAn"></div>
-		<div class="p-4 mb-3 bg-white">
+<!-- 		<div id="CommentAn"></div> -->
+		<div class="p-4 mb-3 bg-white" id="commentArea">
 			<div id="comment"></div>
 			
 			<form action="boardComment.do" method="POST">
@@ -85,10 +90,10 @@
 			</c:if>
 			<c:choose>
 			<c:when test="${param.bord_catg == null }">
-				<a href="board.do?pageNum=${param.pageNum }&#board" class="btn btn-custom btn-md">목록</a>
+				<a href="board?pageNum=${param.pageNum }&#board" class="btn btn-custom btn-md">목록</a>
 			</c:when>
 			<c:otherwise>
-				<a href="board.do?category=${board.bord_catg }&pageNum=${param.pageNum }&#board" class="btn btn-custom btn-md">목록</a>
+				<a href="board?category=${board.bord_catg }&pageNum=${param.pageNum }&#board" class="btn btn-custom btn-md">목록</a>
 			</c:otherwise>
 			</c:choose>
 				

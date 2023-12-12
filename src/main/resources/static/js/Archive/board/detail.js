@@ -5,13 +5,13 @@ $(function() {
 		let fileId = $(this).data('file_id');
 		
 		ajaxAction({
-			url: 'download.do',
+			url: 'download',
 			type: 'POST',
 			data: {
 				fileId : fileId
 			},
 			success: function(data){
-//				console.log(data);
+				fileDownload(data, fileId);
 			}
 		});
 	});
@@ -39,6 +39,11 @@ $(function() {
 		$insertComment = $('#insertComment').removeAttr('disabled');
 	});
 	
+	
+	function fileDownload(dateStr, fileId){
+		location.href = 'download?dateStr='+dateStr+'&fileId='+fileId;
+	}
+	
 });
 
 function delComment(i){
@@ -60,7 +65,7 @@ function listComment(){
 	let bord_id = $('#bord_id').val();
 	
 	ajaxAction({
-		url: 'comment.do?bord_id='+bord_id,
+		url: 'comment?bord_id='+bord_id,
 		success: function(result) {
 			let $comment 	= $('#comment').empty();
 			let $p			= $('<p>');

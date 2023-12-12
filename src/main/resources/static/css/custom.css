@@ -112,7 +112,7 @@ span.smallFont {
     font-size: 15px;
     font-weight: 500;
     height: 50px;
-/*    line-height: 0.8; */
+    line-height: 0.8; 
     padding: 18px 30px;
     text-transform: capitalize;
     border-radius: 1px;

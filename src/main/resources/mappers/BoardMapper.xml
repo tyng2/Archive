@@ -37,7 +37,7 @@
 		SELECT
 			bord_id,
 			COUNT(file_id) file_cnt
-		FROM FILE
+		FROM board_file
 		GROUP BY bord_id
 	) f
 		ON f.bord_id = b.bord_id
@@ -85,8 +85,11 @@
 	ORDER BY catg_name
 </select>
 
+
+<!-- File -->
+
 <insert id="insertFile" parameterType="com.main.vo.FileVo">
-	INSERT INTO file
+	INSERT INTO board_file
 	(bord_id, file_olnm, file_svnm)  
 	VALUES (#{bord_id},#{file_olnm},#{file_svnm})
 </insert>
@@ -98,7 +101,7 @@
 		file_olnm,
 		file_svnm,
 		file_date
-	FROM file
+	FROM board_file
 	WHERE bord_id = #{bord_id}
 </select>
 
@@ -108,8 +111,10 @@
 		file_olnm,
 		file_svnm,
 		file_date
-	FROM file
+	FROM board_file
 	WHERE file_id = #{file_id}
 </select>
+
+<!-- File -->
 
 </mapper>

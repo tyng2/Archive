@@ -9,7 +9,6 @@ import java.nio.file.StandardCopyOption;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
-import java.util.Map;
 
 import org.apache.commons.io.FileUtils;
 import org.slf4j.Logger;
@@ -95,7 +94,6 @@ public class cmmFile {
 	
 	
 	public static byte[] fileDownload(String fileSvnm) throws Exception {
-		
 		File file		= new File(filePath + fileSvnm);
 		byte fileByte[] = FileUtils.readFileToByteArray(file);
 		
