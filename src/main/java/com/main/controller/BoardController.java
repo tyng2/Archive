@@ -76,11 +76,11 @@ public class BoardController {
 //		ResponseEntity<String> res = null;
 		
 		BoardVo board = new BoardVo();
-		board.setUser_id("");
-		board.setBord_catg(Common.str2Int(paramMap.get("categy")));
-		board.setBord_titl(Common.nvl(paramMap.get("title")));
-		board.setBord_cont(Common.nvl(paramMap.get("content")));
-		board.setBord_wrip(Common.getClientIP(request));
+		board.setUserId("");
+		board.setBordCatg(Common.str2Int(paramMap.get("categy")));
+		board.setBordTitl(Common.nvl(paramMap.get("title")));
+		board.setBordCont(Common.nvl(paramMap.get("content")));
+		board.setBordWrip(Common.getClientIP(request));
 		
 		int bordId = boardService.insertBoard(board);
 		log.info("BOARD INSERT : {}", bordId);
@@ -92,9 +92,9 @@ public class BoardController {
 				continue;
 			} else {
 				FileVo file = cmmFile.fileUpload(f);
-				mFileList.add(file.getFile_svnm());
+				mFileList.add(file.getFileSvnm());
 
-				file.setBord_id(bordId);
+				file.setBordId(bordId);
 				boardService.insertFile(file);
 				cntFile++;
 			}
@@ -108,7 +108,7 @@ public class BoardController {
 	public String detail(@RequestParam Map<String, String> paramMap, Model model) {
 		log.info("detail");
 		
-		String bordId = Common.nvl(paramMap.get("bord_id"));
+		String bordId = Common.nvl(paramMap.get("bordId"));
 		
 		Map<String, Object> detail = boardService.getDetail(bordId);
 		
@@ -159,8 +159,8 @@ public class BoardController {
 					log.info("sdfsd {}", file.toString());
 					
 					if (!ObjectUtils.isEmpty(file)) {
-						byte[] fileBytes	= cmmFile.fileDownload(file.getFile_svnm());
-						String fileName		= URLEncoder.encode(file.getFile_olnm(), "UTF-8");
+						byte[] fileBytes	= cmmFile.fileDownload(file.getFileSvnm());
+						String fileName		= URLEncoder.encode(file.getFileOlnm(), "UTF-8");
 						log.info("fileName {}", fileName);
 						
 						response.setContentType("application/octet-stream");

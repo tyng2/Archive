@@ -7,10 +7,10 @@ import lombok.Data;
 @Data
 public class FileVo {
 	
-	private int file_id, bord_id;
+	private int fileId, bordId;
 	
-	private String file_olnm, file_svnm;
+	private String fileOlnm, fileSvnm;
 	
-	private Timestamp file_date;
+	private Timestamp fileDate;
 
 }

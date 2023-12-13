@@ -48,7 +48,7 @@
 				<c:otherwise>
 				<c:forEach items="${boardList }" var="v">
 					<tr>
-					<td width="60px" class="category"><a href="board?bord_catg=${v.bord_catg }">${v.catg_name }</a></td>
+					<td width="60px" class="category"><a href="board?bord_catg=${v.bordCatg }">${v.catgName }</a></td>
 					<td class="title1 left">
 					<%--
 					<c:if test="${v.bord_levl > 0 }">
@@ -58,31 +58,31 @@
 						<span id="reply">└</span>
 					</c:if>
 					--%>
-					<a href="detail?bord_id=${v.bord_id }&pageNum=${pageInfo.pageNum }&#view">
-							${v.bord_titl }</a>
-<%-- 					<c:if test="${v.file_cont > 0 }"> --%>
-<!-- 					<img src="images/disk.png" style="width: 14px;"> -->
-<%-- 					</c:if> --%>
-<%-- 					<c:if test="${v.comm_cont > 0 }"> --%>
-<%-- 					<b style="color: red;">[${v.comm_cont }]</b> --%>
-<%-- 					</c:if> --%>
+					<a href="detail?bordId=${v.bordId }&pageNum=${pageInfo.pageNum }&#view">
+							${v.bordTitl }</a>
+					<c:if test="${v.fileCnt > 0 }">
+						<img src="images/disk.png" style="width: 14px;">
+					</c:if>
+					<c:if test="${v.commentCnt > 0 }">
+						<b style="color: red;">[${v.commentCnt }]</b>
+					</c:if>
 					</td>
-					<td>${v.user_id }</td>
+					<td>${v.userId }</td>
 					<td>
 					<jsp:useBean id="today" class="java.util.Date"></jsp:useBean>
 					<fmt:parseNumber value="${today.time / (1000 * 60 * 60 * 24)}" var="nowDays" integerOnly="true" />
-					<fmt:parseNumber value="${v.bord_date.time / (1000 * 60 * 60 * 24)}" var="regDays" integerOnly="true" />
+					<fmt:parseNumber value="${v.bordDate.time / (1000 * 60 * 60 * 24)}" var="regDays" integerOnly="true" />
 					<c:set value="${nowDays - regDays }" var="dayDiff" />
 					<c:choose>
 					<c:when test="${dayDiff == 0 }">
-					<fmt:formatDate value="${v.bord_date }" pattern="HH:mm:ss"/>
+					<fmt:formatDate value="${v.bordDate }" pattern="HH:mm:ss"/>
 					</c:when>
 					<c:otherwise>
-					<fmt:formatDate value="${v.bord_date }" pattern="yy.MM.dd"/>
+					<fmt:formatDate value="${v.bordDate }" pattern="yy.MM.dd"/>
 					</c:otherwise>
 					</c:choose>
 					</td>
-					<td>${v.bord_hitc }</td>
+					<td>${v.bordHitc }</td>
 					</tr>
 				</c:forEach>
 				</c:otherwise>
@@ -156,7 +156,7 @@
 						<h3 class="h5 text-black mb-3">Popular Posts</h3>
 						<ul class="list-unstyled">
 							<c:forEach items="${hitList }" var="hl">
-								<li class="mb-2"><a href="detail?bord_id=${hl.bord_id }&#view">${hl.bord_titl }</a></li>
+								<li class="mb-2"><a href="detail?bordId=${hl.bordId }&#view">${hl.bordTitl }</a></li>
 							</c:forEach>
 						</ul>
 					</div>
@@ -167,7 +167,7 @@
 						<h3 class="h5 text-black mb-3">Recent Comments</h3>
 						<ul class="list-unstyled">
 							<c:forEach items="${commentList }" var="cl">
-								<li class="mb-2"><a href="detail?bord_id=${cl.bord_id }&#CommentAn">${cl.comm_cont }</a></li>
+								<li class="mb-2"><a href="detail?bordId=${cl.bordId }&#CommentAn">${cl.commCont }</a></li>
 							</c:forEach>
 							<!-- <li class="mb-2"><a href="#">Joefrey</a> <em>in</em> <a
 								href="#">Lorem ipsum dolor sit amet</a></li>

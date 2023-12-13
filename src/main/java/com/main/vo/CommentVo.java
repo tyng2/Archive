@@ -7,10 +7,10 @@ import lombok.Data;
 @Data
 public class CommentVo {
 	
-	private int comm_id, bord_id;
+	private int commId, bordId;
 	
-	private String user_id, comm_cont;
+	private String userId, commCont;
 	
-	private Timestamp comm_date;
+	private Timestamp commDate;
 
 }

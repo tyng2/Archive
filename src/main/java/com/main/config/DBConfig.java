@@ -6,6 +6,7 @@ import javax.sql.DataSource;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.mybatis.spring.SqlSessionFactoryBean;
 import org.mybatis.spring.SqlSessionTemplate;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -25,6 +26,12 @@ public class DBConfig {
 //		this.appContext = ap;
 //	}
 	
+	@Value("${mybatis.mapper-locations}")
+	private String mybatisMapperPath;
+	
+	@Value("${mybatis.config-location}")
+	private String mybatisConfigPath;
+	
 	@Bean
 	@ConfigurationProperties(prefix = "spring.datasource.hikari")
 	public HikariConfig hikariConfig() {
@@ -41,9 +48,9 @@ public class DBConfig {
         SqlSessionFactoryBean session = new SqlSessionFactoryBean();
         session.setDataSource(dataSource);
         PathMatchingResourcePatternResolver resolver = new PathMatchingResourcePatternResolver();
-        session.setMapperLocations(resolver.getResources("classpath:mappers/*.xml"));
+        session.setMapperLocations(resolver.getResources(mybatisMapperPath));
 //        session.setTypeAliasesPackage("com.");
-//        session.setConfigLocation(resolver.getResource("classpath:mybatis/mybatis-config.xml"));
+        session.setConfigLocation(resolver.getResource(mybatisConfigPath));
         return session.getObject();
     }
 	

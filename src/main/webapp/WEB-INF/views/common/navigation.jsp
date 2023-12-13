@@ -38,7 +38,7 @@
 					<p class="mb-0 social-media">
 					<c:choose>
 					<c:when test="${sessionID == null }">
-						<a href="login.do"><button class="log">로그인</button></a>
+						<a href="login"><button class="log">로그인</button></a>
 					</c:when>
 					<c:otherwise>
 						<span class="mr-3" style=""><a href="#"><b>${sessionID }</b></a>님 로그인 중</span>

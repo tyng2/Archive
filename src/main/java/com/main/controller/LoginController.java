@@ -13,6 +13,11 @@ public class LoginController {
 	
 	private Logger log = LoggerFactory.getLogger(this.getClass());
 	
+	@GetMapping("/login")
+	public String login() {
+		return "user/login";
+	}
+	
 	@GetMapping("/oauth")
 	public String naverLogin(@RequestParam Map<String, String> paramMap) {
 		
@@ -20,7 +25,7 @@ public class LoginController {
 	}
 	
 	@GetMapping("/oauth/login")
-	public String naverLoginCallback() {
+	public String naverLoginCallback(@RequestParam Map<String, String> paramMap) {
 		log.info("|| NAVER LOGIN ||");
 		
 		return "";

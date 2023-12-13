@@ -7,8 +7,8 @@ import lombok.Data;
 @Data
 public class CategoryVo {
 	
-	private int catg_id;
-	private String catg_name;
-	private Timestamp catg_crdt;
+	private int catgId;
+	private String catgName;
+	private Timestamp catgCrdt;
 
 }

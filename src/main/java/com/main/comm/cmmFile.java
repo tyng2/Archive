@@ -86,8 +86,8 @@ public class cmmFile {
 		}
 		
 		FileVo fileVo = new FileVo();
-		fileVo.setFile_olnm(fileOlnm);
-		fileVo.setFile_svnm(fileName);
+		fileVo.setFileOlnm(fileOlnm);
+		fileVo.setFileSvnm(fileName);
 //		return file_name;
 		return fileVo;
 	}

@@ -50,10 +50,10 @@
 					<c:choose>
 					<c:when test="${not empty category }">
 <%-- 						<option value="${c.catg_id }" <% if ("".equals(category)) {%>selected<%} %>>${c.catg_name }</option> --%>
-						<option value="${c.catg_id }" <c:if test="${category eq c.catg_id }">selected</c:if> >${c.catg_name }</option>
+						<option value="${c.catgId }" <c:if test="${category eq c.catgId }">selected</c:if> >${c.catgName }</option>
 					</c:when>
 					<c:otherwise>
-						<option value="${c.catg_id }">${c.catg_name }</option>
+						<option value="${c.catgId }">${c.catgName }</option>
 					</c:otherwise>
 					</c:choose>
 				</c:forEach>
