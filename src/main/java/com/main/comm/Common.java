@@ -1,5 +1,12 @@
 package com.main.comm;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
+import java.net.URL;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpHeaders;
@@ -100,6 +107,60 @@ public class Common {
 		}
 		
 		return ip;
+	}
+	
+	
+	private static HttpURLConnection connect(String apiUrl){
+        try {
+            URL url = new URL(apiUrl);
+            return (HttpURLConnection) url.openConnection();
+        } catch (MalformedURLException e) {
+            throw new RuntimeException("API URL이 잘못되었습니다. : " + apiUrl, e);
+        } catch (IOException e) {
+            throw new RuntimeException("연결이 실패했습니다. : " + apiUrl, e);
+        }
+	}
+	
+	public static String callAPI(String apiURL, String method, String header) {
+		log.info("apiURL: {}, method: {}, header: {}", apiURL, method, header);
+		
+		String res = "";
+		HttpURLConnection con = connect(apiURL);
+		
+		try {
+//			URL url = new URL(apiURL);
+//			HttpURLConnection con = (HttpURLConnection) url.openConnection();
+			con.setRequestMethod(method);
+			if (header != null) {
+				if (!header.isBlank()) {
+					con.setRequestProperty("Authorization", header);
+				}
+			}
+			int responseCode	= con.getResponseCode();
+			BufferedReader br	= null;
+			
+			if (responseCode == HttpURLConnection.HTTP_OK) {
+				br = new BufferedReader(new InputStreamReader(con.getInputStream()));
+			} else {
+				br = new BufferedReader(new InputStreamReader(con.getErrorStream()));
+			}
+			
+			String inputLine = "";
+			StringBuffer response = new StringBuffer();
+			while((inputLine = br.readLine()) != null) {
+				response.append(inputLine);
+			}
+			br.close();
+			res = response.toString();
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			con.disconnect();
+		}
+
+		log.info("RESULT :: {}", res);
+		return res;
 	}
 	
 	

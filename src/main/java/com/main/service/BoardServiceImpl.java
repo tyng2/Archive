@@ -48,10 +48,14 @@ public class BoardServiceImpl implements BoardService {
 		String category	= paramMap.get("category");
 		int pageNum		= Common.str2Int(pageNow);
 		
-		int startRow = (pageNum - 1) * PAGE_BLOCK_SIZE;
+		int startRow = (pageNum - 1) * LIMIT_SIZE;
 		
 		List<BoardVo> boardList = boardMapper.getBoardList(search, category, LIMIT_SIZE, startRow);
-		int allRowCount = (boardList.get(0) != null) ? boardList.get(0).getCnt() : 0;
+		
+		int allRowCount = 0;
+		if (boardList.size() > 0) {
+			allRowCount = (boardList.get(0) != null) ? boardList.get(0).getCnt() : 0;
+		}
 		
 		PageInfo pageInfo = PageSet.getPageData(pageNum, allRowCount);
 		

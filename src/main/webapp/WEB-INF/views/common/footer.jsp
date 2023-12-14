@@ -1,3 +1,4 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!-- Footer-->
 <footer class="site-footer">
 	<div class="container">
@@ -12,6 +13,7 @@
 						<i class="icon-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
 						<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
 					</p>
+					<a href="https://www.flaticon.com/kr/free-icons/-a" title="편지 a 아이콘">편지 a 아이콘  제작자: Arafat Uddin - Flaticon</a>
 				</div>
 			</div>
 

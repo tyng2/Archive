@@ -59,6 +59,7 @@ history.back();
 			
 			<div class="row form-group">
 				<div class="col-md-12"><br>
+				<a href="/naver-login" class="btn btn-custom btn-lg">NAVER LOGIN</a>
 				<!-- 
 				<span class="button-checkbox">
       					<button type="button" class="btn btn-lg" data-color="primary">로그인 상태 유지</button>

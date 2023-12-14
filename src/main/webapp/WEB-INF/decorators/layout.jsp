@@ -10,7 +10,7 @@
 	<title><sitemesh:write property="title" /></title>
 	<!-- Favicon-->
 <!-- 	<link rel="icon" type="image/x-icon" href="assets/favicon.ico" /> -->
-	<link rel="shortcut icon" href="/images/p.png">
+	<link rel="shortcut icon" href="/images/a.png">
 	
 	<jsp:include page="/WEB-INF/views/common/commonCSS.jsp" />
 </head>

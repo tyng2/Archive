@@ -1,10 +1,16 @@
 package com.main.service;
 
+import java.util.Map;
+
+import jakarta.servlet.http.HttpServletRequest;
+
 public interface LoginService {
 	
+	public String naverAuthorizeURL(HttpServletRequest request);
 	
-	public String naverAuthorize();
+	public String getNaverTokenAuth(Map<String, String> paramMap);
 	
-	public String naverToken();
+	public String getNaverProfile(Map<String, String> tokenMap);
+	
 
 }

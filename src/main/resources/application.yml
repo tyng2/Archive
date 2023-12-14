@@ -45,9 +45,11 @@ page:
   limit : 10
   block : 5
   
+domain: http://localhost:8080
+  
 naver:
   client-id: MUmUiuEZ0YXq5NezC1Ky
-  secret: U2ITnhnahA
+  client-secret: U2ITnhnahA
   
 
   
@@ -58,5 +60,5 @@ spring:
     activate:
       on-profile: dev
 
-
+domain: http://131.186.25.11:8080
 
