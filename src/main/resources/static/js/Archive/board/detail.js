@@ -75,8 +75,9 @@ function listComment(){
 			
 			let $pClone, $spanClone;	// 일반적으로 close
 			
-			let adminId 	= 'admin';
-			let sessionID 	= document.querySelector('#sessionID').innerHTML.trim();
+//			let adminId 	= 'admin';
+//			let sessionID 	= document.querySelector('#sessionID').innerHTML.trim();
+			let boardAuth 	= document.querySelector('#boardAuth').innerHTML;
 			
 			$p.clone().addClass('mb-4').html('댓글 : ' + result.length).appendTo($comment);
 			
@@ -86,12 +87,12 @@ function listComment(){
 				$('<b></b>').html(obj.user_id+'&nbsp;&nbsp;&nbsp;&nbsp;').appendTo($pClone);	
 				$span.clone().addClass('smallFont').html(dateFormatter(obj.comm_date)).appendTo($pClone);
 				
-				if (obj.user_id === sessionID || adminId === sessionID){
+//				if (obj.user_id === sessionID || adminId === sessionID){
+				if (boardAuth){
 					$spanClone = $span.clone().attr('style', 'float: right;').appendTo($pClone);
 					
 					$inp.clone().attr('id', 'comm_id'+i).val(obj.comm_id).appendTo($spanClone);
 					$a.clone().addClass('smallBtn').attr('onclick', 'delComment('+i+')').html('삭제').appendTo($spanClone);
-					
 				}
 					
 				$p.clone().addClass('mb-0').html(obj.comm_cont).appendTo($comment);

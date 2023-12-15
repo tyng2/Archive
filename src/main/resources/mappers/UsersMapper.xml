@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTO Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.main.mapper.UsersMapper">
+
+<select id="getUsersBySnsId" resultType="com.main.vo.UsersVo">
+	SELECT
+		u.user_id,
+		u.user_txid,
+		u.user_name,
+		u.email,
+		u.nickname,
+		u.mobile,
+		u.create_date,
+		u.modify_date,
+		u.sns_id,
+		u.sns_type,
+		u.sns_profile,
+		u.sns_connect_date,
+		a.auth_name
+	FROM users u
+	LEFT OUTER JOIN user_auth a
+		ON u.auth_id = a.auth_id
+	WHERE u.sns_id = #{snsId}
+</select>
+
+<insert id="insertUsers" parameterType="com.main.vo.UsersVo" useGeneratedKeys="true" keyProperty="userId">
+	INSERT INTO users
+	(user_id, user_name, user_pswd, email, nickname, mobile, sns_id, sns_type, sns_profile, sns_connect_date)
+	VALUES (#{userId}, #{userName}, #{userPswd}, #{email}, #{nickname}, #{mobile}, #{snsId}, #{snsType}, #{snsProfile}, 
+	<choose>
+	<when test="snsId != null and snsId != ''">
+		CURRENT_TIMESTAMP
+	</when>
+	<otherwise>
+		NULL
+	</otherwise>
+	</choose>
+	)
+</insert>
+
+<update id="updateExistUsers" parameterType="com.main.vo.UsersVo">
+	UPDATE users
+	<trim prefix="SET">
+	<if test="userName != null">
+		user_name = #{userName}, 
+	</if>
+	<if test="email != null">
+		email = #{email},
+	</if>
+	<if test="nickname != null">
+		nickname = #{nickname},
+	</if>
+	<if test="mobile != null">
+		mobile = #{mobile},
+	</if>
+	<if test="snsId != null">
+		sns_id = #{snsId},
+	</if>
+	<if test="snsType != null">
+		sns_type = #{snsType},
+	</if>
+	<if test="snsProfile != null">
+		sns_profile = #{snsProfile},
+	</if>
+		modify_date = CURRENT_TIMESTAMP
+	</trim>
+	WHERE user_id = #{userId}
+</update>
+
+
+<insert id="insertUserLog" parameterType="java.util.HashMap">
+	INSERT INTO user_log
+	(user_id, login_status, login_type)
+	VALUES (#{userId}, #{loginStatus}, #{loginType})
+</insert>
+
+</mapper>

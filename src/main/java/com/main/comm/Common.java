@@ -12,13 +12,15 @@ import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.context.request.RequestContextHolder;
+import org.springframework.web.context.request.ServletRequestAttributes;
 
 import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpSession;
 
 public class Common {
 
 	private static Logger log = LoggerFactory.getLogger(Common.class);
-	
 	
 	public static String nvl(String st) {
 		return nvl(st, null);
@@ -86,8 +88,8 @@ public class Common {
 		return new ResponseEntity<String>(sb.toString(), headers, HttpStatus.OK);
 	}
 	
-	
-	public static String getClientIP(HttpServletRequest request) {
+	public static String getClientIP() {
+		HttpServletRequest request	= ((ServletRequestAttributes) RequestContextHolder.getRequestAttributes()).getRequest();
 		String ip = request.getHeader("X-Forwarded-For");
 		
 		if (ip == null) {
@@ -105,10 +107,8 @@ public class Common {
 		if (ip == null) {
 			ip = request.getRemoteAddr();
 		}
-		
 		return ip;
 	}
-	
 	
 	private static HttpURLConnection connect(String apiUrl){
         try {

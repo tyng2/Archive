@@ -13,6 +13,10 @@
 	<link rel="shortcut icon" href="/images/a.png">
 	
 	<jsp:include page="/WEB-INF/views/common/commonCSS.jsp" />
+	<c:set var="isLogin" scope="session" value="${(not empty sessionScope.loginSession) ? true : false }" />
+	<c:if test="${isLogin }">
+		<c:set var="loginSessionVo" scope="session" value="${sessionScope.loginSession }" />
+	</c:if>
 </head>
 <body>
     <jsp:include page="/WEB-INF/views/common/commonJS.jsp" />

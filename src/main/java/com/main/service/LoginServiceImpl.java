@@ -7,10 +7,17 @@ import java.util.Map;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
+import org.springframework.util.ObjectUtils;
+import org.springframework.web.context.request.RequestContextHolder;
+import org.springframework.web.context.request.ServletRequestAttributes;
 
 import com.main.comm.Common;
+import com.main.mapper.UsersMapper;
+import com.main.vo.LoginSessionVo;
+import com.main.vo.UsersVo;
 
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpSession;
@@ -36,9 +43,14 @@ public class LoginServiceImpl implements LoginService {
 	private void setDomain(String domain) {
 		DOMAIN = domain;
 	}
+	
+	@Autowired
+	private UsersMapper usersMapper;
 
+	
+/* s:NAVER */
 	@Override
-	public String naverAuthorizeURL(HttpServletRequest request) {
+	public String naverAuthorizeURL() {
 		log.info("naver oauth2.0/authorize");
 		
 		String redirectURL = URLEncoder.encode(DOMAIN + "/oauth/login");
@@ -48,6 +60,8 @@ public class LoginServiceImpl implements LoginService {
 		apiURL += "&client_id=" + CLIENT_ID_NAVER;
 	    apiURL += "&redirect_uri=" + redirectURL;
 	    apiURL += "&state=" + state;
+	    
+	    HttpServletRequest request	= ((ServletRequestAttributes) RequestContextHolder.getRequestAttributes()).getRequest();
 		HttpSession session = request.getSession();
 		session.setAttribute("state", state);
 	    
@@ -87,6 +101,76 @@ public class LoginServiceImpl implements LoginService {
 		return respProfile;
 	}
 
+	@Override
+	public String connNaverUserBySnsId(String snsId, Map<String, String> profileMap) {
+		UsersVo user	= usersMapper.getUsersBySnsId(snsId);
+		String msg		= "";
+		
+		// user 이미 존재
+		if (!ObjectUtils.isEmpty(user)) {
+			// 프로필 최신화 (UPDATE users)
+			user.setNickname(profileMap.get("nickname"));
+			user.setUserName(profileMap.get("name"));
+			user.setEmail(profileMap.get("email"));
+			user.setSnsProfile(profileMap.get("profile_image"));
+			user.setMobile(profileMap.get("mobile"));
+			
+			int cnt = usersMapper.updateExistUsers(user);
+			log.info("UPDATE :: {}", cnt);
+			msg = "update";
+			
+		} else {
+			user = new UsersVo();
+			user.setNickname(profileMap.get("nickname"));
+			user.setUserName(profileMap.get("name"));
+			user.setEmail(profileMap.get("email"));
+			user.setSnsProfile(profileMap.get("profile_image"));
+			user.setMobile(profileMap.get("mobile"));
+			user.setSnsId(snsId);
+			user.setSnsType("naver");
+			user.setAuthId(2);
+			
+			int userId = usersMapper.insertUsers(user);
+			log.info("INSERT :: {}", userId);
+			msg = "insert";
+			
+			user.setUserId(userId);
+		}
+		loginProcess(user);
+		
+		return msg;
+	}
+/* e:NAVER */
+
+	@Override
+	public void loginProcess(UsersVo user) {
+		HttpServletRequest request	= ((ServletRequestAttributes) RequestContextHolder.getRequestAttributes()).getRequest();
+		HttpSession session			= request.getSession();
+		LoginSessionVo login = new LoginSessionVo(user.getUserId(), user.getUserName(), user.getEmail(), user.getNickname(), user.getMobile(), user.getSnsType(), user.getAuthName());
+		session.setAttribute("loginSession", login);
+		Map<String, String> input = Map.of(
+			"userId"	, user.getUserId() + "",
+			"loginType"	, user.getSnsType()
+		);
+		usersMapper.insertUserLog(input);
+	}
+
+	@Override
+	public void logout() {
+		HttpServletRequest request	= ((ServletRequestAttributes) RequestContextHolder.getRequestAttributes()).getRequest();
+		HttpSession session			= request.getSession();
+		session.invalidate();
+	}
+
+	@Override
+	public boolean isLogin() {
+		HttpServletRequest request	= ((ServletRequestAttributes) RequestContextHolder.getRequestAttributes()).getRequest();
+		HttpSession session			= request.getSession();
+		LoginSessionVo login		= (LoginSessionVo) session.getAttribute("loginSession");
+		return !ObjectUtils.isEmpty(login);
+	}
+
+	
 	
 
 }

@@ -1,9 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<c:set var="currentTime" value="<%=System.currentTimeMillis() %>"/>
-<c:if test="${cookie.cookieID != null && sessionID == null }">
-<c:set var="sessionID" scope="session" value="${cookie.cookieID.value }"/>
-</c:if>
+<%-- <c:set var="currentTime" value="<%=System.currentTimeMillis() %>"/> --%>
+<%-- <c:if test="${cookie.cookieID != null && sessionID == null }"> --%>
+<%-- <c:set var="sessionID" scope="session" value="${cookie.cookieID.value }"/> --%>
+<%-- </c:if> --%>
 <script>
 // $(document).ready(function() {
 // 	$('li').click(function() {
@@ -29,7 +29,7 @@
 			<div class="row">
 				<div class="col-md-6">
 					<p align="left" class="mb-0">
-					<c:if test="${'admin' == sessionID }">
+					<c:if test="${loginSessionVo.userAuth == 'admin' }">
 						<img src="images/adminIcon.png" width="25px;">
 					</c:if>
 					</p>
@@ -37,12 +37,12 @@
 				<div class="col-md-6">
 					<p class="mb-0 social-media">
 					<c:choose>
-					<c:when test="${sessionID == null }">
+					<c:when test="${!isLogin }">
 						<a href="login"><button class="log">로그인</button></a>
 					</c:when>
 					<c:otherwise>
-						<span class="mr-3" style=""><a href="#"><b>${sessionID }</b></a>님 로그인 중</span>
-						<a href="logout.do"><button class="log">로그아웃</button></a>
+						<span class="mr-3" style=""><a href="#"><b>${loginSessionVo.nickname }</b></a>님 로그인 중</span>
+						<a href="logout"><button class="log">로그아웃</button></a>
 					</c:otherwise>
 					</c:choose>
 					<!-- <span class="mr-3"><strong>Phone:</strong><a href="tel://#">+1 292 3293 4238</a></span>
@@ -88,7 +88,7 @@
 							<li><a href="board?bord_catg=잡담">잡담</a></li>
 						</ul></li>
 					<li><a href="boardChartForm.do">Stat</a></li>
-					<c:if test="${'admin' == sessionID }">
+					<c:if test="${loginSessionVo.userAuth == 'admin' }">
 					<li class="has-children"><a href="admin.do">Admin</a>
 						<ul class="dropdown">
 							<li><a href="memberList.do">Member</a></li>

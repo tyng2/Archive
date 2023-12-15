@@ -8,12 +8,14 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.util.ObjectUtils;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.main.comm.Common;
 import com.main.service.LoginService;
+import com.main.vo.UsersVo;
 
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
@@ -38,7 +40,7 @@ public class LoginController {
 	@GetMapping("/naver-login")
 	public void naverLogin(HttpServletRequest request, HttpServletResponse response) {
 		log.info("naverLogin");
-		String apiURL = loginService.naverAuthorizeURL(request);
+		String apiURL = loginService.naverAuthorizeURL();
 		try {
 			response.sendRedirect(apiURL);
 		} catch (IOException e) {
@@ -71,8 +73,10 @@ public class LoginController {
 			HttpSession session = request.getSession();
 			session.setAttribute("naver_profile", respMap);
 			
-			String nickname = respMap.get("nickname");
-			log.info(nickname);
+			String id = Common.nvl(respMap.get("id"));
+			
+			String msg = loginService.connNaverUserBySnsId(id, respMap);
+			log.info(msg);
 			
 		} catch (Exception e) {
 			e.printStackTrace();

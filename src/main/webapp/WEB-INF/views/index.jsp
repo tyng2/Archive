@@ -43,7 +43,7 @@
 <div class="container">
 	<div class="row align-items-stretch">
 	<div class="col-12 bg-black w-100 ft-feature-1-content">
-		<c:if test="${sessionID == null }">
+		<c:if test="${!isLogin }">
 			<br><h2 style="text-align: center;">로그인 후 사용가능합니다.</h2>
 		</c:if>
 		<div class="row align-items-center">
@@ -64,8 +64,7 @@
 				</div>
 			</div>
 			<div class="col-lg-3 ml-auto">
-			<c:if test="${sessionID != null }">
-			
+			<c:if test="${isLogin }">
 				<div class="mb-5">
 					<h3 class="mb-4 d-flex align-items-center">
 						<span class="icon icon-phonelink mr-2"></span><span>Insert your Favorite Site</span>

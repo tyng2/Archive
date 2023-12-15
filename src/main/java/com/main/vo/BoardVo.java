@@ -13,8 +13,8 @@ public class BoardVo {
 	
 	private int bordId, bordCatg;
 	private String catgName;
-	private String bordTitl, bordCont, userId, bordWrip;
+	private String bordTitl, bordCont, bordWrip;
 	private Timestamp bordDate;
-	private int bordHitc, cnt, fileCnt, commentCnt;
+	private int userId, bordHitc, cnt, fileCnt, commentCnt;
 
 }

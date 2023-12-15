@@ -5,7 +5,7 @@
     <title>detail TEST</title>
 </head>
 <body>
-<div id="sessionID" style="display: none;">${sessionID }</div>
+<div id="boardAuth" style="display: none;">${loginSessionVo.userId == board.userId || loginSessionVo.userAuth == 'admin' }</div>
 <div class="site-blocks-cover inner-page-cover overlay"
 	style="background-image: url(images/hero_1.jpg);" data-aos="fade"
 	data-stellar-background-ratio="0.5">
@@ -64,7 +64,7 @@
 				<input type="hidden" name="pageNum" id="pageNum" value="${param.pageNum }">
 				<input type="hidden" name="bord_catg" id="bord_catg" value="${param.bord_catg }">
 		
-				<c:if test="${sessionID != null }">
+				<c:if test="${isLogin }">
 				<textarea name="comm_cont" id="comm_cont" cols="30" rows="4"
 					class="form-control" 
 					placeholder="Write your comment here..."></textarea><br>
@@ -75,11 +75,13 @@
 
 		<div class="p-4 mb-3">
 			<p style="text-align: right;" class="mb-0">
-			<c:if test="${sessionID != null }">
-				<c:if test="${sessionID.equals('admin') && !sessionID.equals(board.userId) }">
+			<c:if test="${isLogin }">
+<%-- 				<c:if test="${sessionID.equals('admin') && !sessionID.equals(board.userId) }"> --%>
+				<c:if test="${loginSessionVo.userAuth == 'admin' && loginSessionVo.userId != board.userId }">
 					<a href="boardDeleteProcess.do?bord_id=${board.bordId }&pageNum=${param.pageNum }&category=${param.bord_catg }" class="btn btn-custom btn-md">삭제</a>
 				</c:if>
-				<c:if test="${sessionID.equals(board.userId) }">
+<%-- 				<c:if test="${sessionID.equals(board.userId) }"> --%>
+				<c:if test="${loginSessionVo.userId == board.userId }">
 					<a href="boardModify.do?bord_id=${board.bordId }&pageNum=${param.pageNum }&category=${param.bord_catg }" class="btn btn-custom btn-md">수정</a>
 					<a href="boardDeleteProcess.do?bord_id=${board.bordId }&pageNum=${param.pageNum }&category=${param.bord_catg }" class="btn btn-custom btn-md">삭제</a>
 				</c:if>

@@ -70,17 +70,17 @@ public class BoardController {
 	}
 	
 	@PostMapping("/write")
-	public String writeProcess(HttpServletRequest request, @RequestParam Map<String, String> paramMap, @RequestParam(required = false, name = "mFile") MultipartFile[] mFile, Model model) {
+	public String writeProcess(@RequestParam Map<String, String> paramMap, @RequestParam(required = false, name = "mFile") MultipartFile[] mFile, Model model) {
 		log.info("write POST");
 		
 //		ResponseEntity<String> res = null;
 		
 		BoardVo board = new BoardVo();
-		board.setUserId("");
+		board.setUserId(Common.str2Int(paramMap.get("user_id")));
 		board.setBordCatg(Common.str2Int(paramMap.get("categy")));
 		board.setBordTitl(Common.nvl(paramMap.get("title")));
 		board.setBordCont(Common.nvl(paramMap.get("content")));
-		board.setBordWrip(Common.getClientIP(request));
+		board.setBordWrip(Common.getClientIP());
 		
 		int bordId = boardService.insertBoard(board);
 		log.info("BOARD INSERT : {}", bordId);

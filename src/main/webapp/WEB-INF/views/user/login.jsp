@@ -8,7 +8,7 @@
 
 </head>
 <body>
-<c:if test="${sessionID != null }">
+<c:if test="${isLogin }">
 <script>
 alert('이미 로그인 중입니다.');
 history.back();

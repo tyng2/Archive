@@ -3,8 +3,6 @@ package com.main.service;
 import java.util.List;
 import java.util.Map;
 
-import org.apache.ibatis.annotations.Param;
-
 import com.main.vo.BoardVo;
 import com.main.vo.CategoryVo;
 import com.main.vo.FileVo;

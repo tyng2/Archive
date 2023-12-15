@@ -7,13 +7,15 @@ import lombok.Data;
 @Data
 public class UsersVo {
 	
-	private int userId;
+	private int userId, authId;
 	
-	private String userName, userPswd, email, nickname;
+	private String userTxid, userName, userPswd, email, nickname, mobile;
 	
 	private Timestamp createDate, modifyDate, snsConnectDate;
 	
 	private String snsType, snsId, snsProfile;
 	
+	
+	private String authName;
 
 }
