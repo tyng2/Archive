@@ -3,6 +3,7 @@
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <head>
     <title>detail TEST</title>
+    <jsp:include page="/WEB-INF/views/common/commonHeader.jsp" />
 </head>
 <body>
 <div id="boardAuth" style="display: none;">${loginSessionVo.userId == board.userId || loginSessionVo.userAuth == 'admin' }</div>

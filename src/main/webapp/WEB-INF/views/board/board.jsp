@@ -3,6 +3,7 @@
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <head>
     <title>board Archive</title>
+    <jsp:include page="/WEB-INF/views/common/commonHeader.jsp" />
 </head>
 <body>
 	<div class="site-blocks-cover inner-page-cover overlay" style="background-image: url(images/hero_1.jpg);" 

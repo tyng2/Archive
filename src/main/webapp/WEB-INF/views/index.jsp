@@ -2,6 +2,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <head>
     <title>INDEX</title>
+    <jsp:include page="/WEB-INF/views/common/commonHeader.jsp" />
 </head>
 <body>
 <div class="site-blocks-cover overlay" style="background-image: url(images/hero_1.jpg);" data-aos="fade" data-stellar-background-ratio="0.5">
@@ -43,8 +44,6 @@
 <div class="container">
 	<div class="row align-items-stretch">
 	<div class="col-12 bg-black w-100 ft-feature-1-content">
-	${sessionScope.loginSession } |
-	${loginSessionVo }
 		<c:if test="${!isLogin }">
 			<br><h2 style="text-align: center;">로그인 후 사용가능합니다.</h2>
 		</c:if>

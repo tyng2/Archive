@@ -2,6 +2,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <head>
     <title>board TEST</title>
+    <jsp:include page="/WEB-INF/views/common/commonHeader.jsp" />
 </head>
 <body>
 	<div class="site-blocks-cover inner-page-cover overlay"

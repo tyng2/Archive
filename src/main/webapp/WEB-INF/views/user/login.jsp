@@ -1,7 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <head>
-<title>Login / Potal &mdash; Web Community</title>
+	<title>Login / Potal &mdash; Web Community</title>
+	<jsp:include page="/WEB-INF/views/common/commonHeader.jsp" />
 </head>
 <body>
 <c:if test="${isLogin }">
