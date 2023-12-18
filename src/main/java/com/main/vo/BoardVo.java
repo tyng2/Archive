@@ -16,5 +16,7 @@ public class BoardVo {
 	private String bordTitl, bordCont, bordWrip;
 	private Timestamp bordDate;
 	private int userId, bordHitc, cnt, fileCnt, commentCnt;
+	
+	private String nickname;
 
 }

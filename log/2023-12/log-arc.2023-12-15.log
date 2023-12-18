@@ -1,0 +1,733 @@
+2023-12-15 11:16:25.383 INFO  [com.main.ArchiveApplication] - Starting ArchiveApplication using Java 17.0.9 with PID 15284 (C:\Users\kcs\eclipse\jee-2023-09\workspace\Archive\bin\main started by kcs in C:\Users\kcs\eclipse\jee-2023-09\workspace\Archive)
+2023-12-15 11:16:25.387 INFO  [com.main.ArchiveApplication] - The following 1 profile is active: "local"
+2023-12-15 11:16:25.432 INFO  [o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor] - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-12-15 11:16:25.433 INFO  [o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor] - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-12-15 11:16:26.389 INFO  [o.s.b.w.embedded.tomcat.TomcatWebServer] - Tomcat initialized with port 8080 (http)
+2023-12-15 11:16:26.399 INFO  [o.apache.coyote.http11.Http11NioProtocol] - Initializing ProtocolHandler ["http-nio-8080"]
+2023-12-15 11:16:26.400 INFO  [o.apache.catalina.core.StandardService] - Starting service [Tomcat]
+2023-12-15 11:16:26.400 INFO  [org.apache.catalina.core.StandardEngine] - Starting Servlet engine: [Apache Tomcat/10.1.16]
+2023-12-15 11:16:26.539 INFO  [org.apache.jasper.servlet.TldScanner] - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2023-12-15 11:16:26.544 INFO  [o.a.c.c.C.[Tomcat].[localhost].[/]] - Initializing Spring embedded WebApplicationContext
+2023-12-15 11:16:26.544 INFO  [o.s.b.w.s.c.ServletWebServerApplicationContext] - Root WebApplicationContext: initialization completed in 1111 ms
+2023-12-15 11:16:26.627 INFO  [com.zaxxer.hikari.HikariDataSource] - HikariCP - Starting...
+2023-12-15 11:16:26.692 INFO  [com.zaxxer.hikari.pool.HikariPool] - HikariCP - Added connection net.sf.log4jdbc.sql.jdbcapi.ConnectionSpy@11e945e2
+2023-12-15 11:16:26.694 INFO  [com.zaxxer.hikari.HikariDataSource] - HikariCP - Start completed.
+2023-12-15 11:16:26.898 INFO  [o.s.b.a.w.s.WelcomePageHandlerMapping] - Adding welcome page template: index
+2023-12-15 11:16:27.148 INFO  [o.s.b.d.a.OptionalLiveReloadServer] - LiveReload server is running on port 35729
+2023-12-15 11:16:27.161 INFO  [o.apache.coyote.http11.Http11NioProtocol] - Starting ProtocolHandler ["http-nio-8080"]
+2023-12-15 11:16:27.187 INFO  [o.s.b.w.embedded.tomcat.TomcatWebServer] - Tomcat started on port 8080 (http) with context path ''
+2023-12-15 11:16:27.193 INFO  [com.main.ArchiveApplication] - Started ArchiveApplication in 2.263 seconds (process running for 3.064)
+2023-12-15 11:16:30.442 INFO  [o.a.c.c.C.[Tomcat].[localhost].[/]] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-15 11:16:30.443 INFO  [o.s.web.servlet.DispatcherServlet] - Initializing Servlet 'dispatcherServlet'
+2023-12-15 11:16:30.444 INFO  [o.s.web.servlet.DispatcherServlet] - Completed initialization in 1 ms
+2023-12-15 14:01:41.526 INFO  [o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener] - Restarting due to 2 class path changes (0 additions, 0 deletions, 2 modifications)
+2023-12-15 14:01:41.530 INFO  [o.apache.coyote.http11.Http11NioProtocol] - Stopping ProtocolHandler ["http-nio-8080"]
+2023-12-15 14:01:41.546 INFO  [com.zaxxer.hikari.HikariDataSource] - HikariCP - Shutdown initiated...
+2023-12-15 14:01:41.548 INFO  [com.zaxxer.hikari.HikariDataSource] - HikariCP - Shutdown completed.
+2023-12-15 14:01:41.653 INFO  [com.main.ArchiveApplication] - Starting ArchiveApplication using Java 17.0.9 with PID 15284 (C:\Users\kcs\eclipse\jee-2023-09\workspace\Archive\bin\main started by kcs in C:\Users\kcs\eclipse\jee-2023-09\workspace\Archive)
+2023-12-15 14:01:41.654 INFO  [com.main.ArchiveApplication] - The following 1 profile is active: "local"
+2023-12-15 14:17:37.557 INFO  [com.main.ArchiveApplication] - Starting ArchiveApplication using Java 17.0.9 with PID 12144 (C:\Users\kcs\eclipse\jee-2023-09\workspace\Archive\bin\main started by kcs in C:\Users\kcs\eclipse\jee-2023-09\workspace\Archive)
+2023-12-15 14:17:37.558 INFO  [com.main.ArchiveApplication] - The following 1 profile is active: "local"
+2023-12-15 14:17:37.593 INFO  [o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor] - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-12-15 14:17:37.593 INFO  [o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor] - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-12-15 14:17:38.437 INFO  [o.s.b.w.embedded.tomcat.TomcatWebServer] - Tomcat initialized with port 8080 (http)
+2023-12-15 14:17:38.444 INFO  [o.apache.coyote.http11.Http11NioProtocol] - Initializing ProtocolHandler ["http-nio-8080"]
+2023-12-15 14:17:38.446 INFO  [o.apache.catalina.core.StandardService] - Starting service [Tomcat]
+2023-12-15 14:17:38.446 INFO  [org.apache.catalina.core.StandardEngine] - Starting Servlet engine: [Apache Tomcat/10.1.16]
+2023-12-15 14:17:38.587 INFO  [org.apache.jasper.servlet.TldScanner] - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2023-12-15 14:17:38.593 INFO  [o.a.c.c.C.[Tomcat].[localhost].[/]] - Initializing Spring embedded WebApplicationContext
+2023-12-15 14:17:38.593 INFO  [o.s.b.w.s.c.ServletWebServerApplicationContext] - Root WebApplicationContext: initialization completed in 1000 ms
+2023-12-15 14:17:38.672 INFO  [com.zaxxer.hikari.HikariDataSource] - HikariCP - Starting...
+2023-12-15 14:17:38.738 INFO  [com.zaxxer.hikari.pool.HikariPool] - HikariCP - Added connection net.sf.log4jdbc.sql.jdbcapi.ConnectionSpy@608310fe
+2023-12-15 14:17:38.740 INFO  [com.zaxxer.hikari.HikariDataSource] - HikariCP - Start completed.
+2023-12-15 14:17:38.939 INFO  [o.s.b.a.w.s.WelcomePageHandlerMapping] - Adding welcome page template: index
+2023-12-15 14:17:39.195 INFO  [o.s.b.d.a.OptionalLiveReloadServer] - LiveReload server is running on port 35729
+2023-12-15 14:17:39.212 INFO  [o.apache.coyote.http11.Http11NioProtocol] - Starting ProtocolHandler ["http-nio-8080"]
+2023-12-15 14:17:39.235 INFO  [o.s.b.w.embedded.tomcat.TomcatWebServer] - Tomcat started on port 8080 (http) with context path ''
+2023-12-15 14:17:39.243 INFO  [com.main.ArchiveApplication] - Started ArchiveApplication in 2.09 seconds (process running for 2.763)
+2023-12-15 14:17:43.562 INFO  [o.a.c.c.C.[Tomcat].[localhost].[/]] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-15 14:17:43.563 INFO  [o.s.web.servlet.DispatcherServlet] - Initializing Servlet 'dispatcherServlet'
+2023-12-15 14:17:43.564 INFO  [o.s.web.servlet.DispatcherServlet] - Completed initialization in 1 ms
+2023-12-15 14:17:43.635 INFO  [com.main.controller.HomeController] - ISLOGIN :: false
+2023-12-15 14:17:43.635 INFO  [com.main.controller.HomeController] - B
+2023-12-15 14:17:50.042 INFO  [o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin] - Application shutdown requested.
+2023-12-15 14:17:50.046 INFO  [o.apache.coyote.http11.Http11NioProtocol] - Stopping ProtocolHandler ["http-nio-8080"]
+2023-12-15 14:17:50.061 INFO  [com.zaxxer.hikari.HikariDataSource] - HikariCP - Shutdown initiated...
+2023-12-15 14:17:50.064 INFO  [com.zaxxer.hikari.HikariDataSource] - HikariCP - Shutdown completed.
+2023-12-15 15:38:50.327 INFO  [com.main.ArchiveApplication] - Starting ArchiveApplication using Java 17.0.9 with PID 13520 (C:\Users\kcs\eclipse\jee-2023-09\workspace\Archive\bin\main started by kcs in C:\Users\kcs\eclipse\jee-2023-09\workspace\Archive)
+2023-12-15 15:38:50.329 INFO  [com.main.ArchiveApplication] - The following 1 profile is active: "local"
+2023-12-15 15:38:50.362 INFO  [o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor] - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-12-15 15:38:50.363 INFO  [o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor] - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-12-15 15:38:51.233 INFO  [o.s.b.w.embedded.tomcat.TomcatWebServer] - Tomcat initialized with port 8080 (http)
+2023-12-15 15:38:51.239 INFO  [o.apache.coyote.http11.Http11NioProtocol] - Initializing ProtocolHandler ["http-nio-8080"]
+2023-12-15 15:38:51.241 INFO  [o.apache.catalina.core.StandardService] - Starting service [Tomcat]
+2023-12-15 15:38:51.241 INFO  [org.apache.catalina.core.StandardEngine] - Starting Servlet engine: [Apache Tomcat/10.1.16]
+2023-12-15 15:38:51.374 INFO  [org.apache.jasper.servlet.TldScanner] - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2023-12-15 15:38:51.380 INFO  [o.a.c.c.C.[Tomcat].[localhost].[/]] - Initializing Spring embedded WebApplicationContext
+2023-12-15 15:38:51.380 INFO  [o.s.b.w.s.c.ServletWebServerApplicationContext] - Root WebApplicationContext: initialization completed in 1017 ms
+2023-12-15 15:38:51.462 INFO  [com.zaxxer.hikari.HikariDataSource] - HikariCP - Starting...
+2023-12-15 15:38:51.524 INFO  [com.zaxxer.hikari.pool.HikariPool] - HikariCP - Added connection net.sf.log4jdbc.sql.jdbcapi.ConnectionSpy@49b15e7f
+2023-12-15 15:38:51.527 INFO  [com.zaxxer.hikari.HikariDataSource] - HikariCP - Start completed.
+2023-12-15 15:38:51.716 INFO  [o.s.b.a.w.s.WelcomePageHandlerMapping] - Adding welcome page template: index
+2023-12-15 15:38:51.958 INFO  [o.s.b.d.a.OptionalLiveReloadServer] - LiveReload server is running on port 35729
+2023-12-15 15:38:51.974 INFO  [o.apache.coyote.http11.Http11NioProtocol] - Starting ProtocolHandler ["http-nio-8080"]
+2023-12-15 15:38:52.006 INFO  [o.s.b.w.embedded.tomcat.TomcatWebServer] - Tomcat started on port 8080 (http) with context path ''
+2023-12-15 15:38:52.013 INFO  [com.main.ArchiveApplication] - Started ArchiveApplication in 2.091 seconds (process running for 2.764)
+2023-12-15 15:38:57.179 INFO  [o.a.c.c.C.[Tomcat].[localhost].[/]] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-15 15:38:57.179 INFO  [o.s.web.servlet.DispatcherServlet] - Initializing Servlet 'dispatcherServlet'
+2023-12-15 15:38:57.181 INFO  [o.s.web.servlet.DispatcherServlet] - Completed initialization in 2 ms
+2023-12-15 15:39:03.113 INFO  [com.main.controller.LoginController] - naverLogin
+2023-12-15 15:39:03.113 INFO  [com.main.service.LoginServiceImpl] - naver oauth2.0/authorize
+2023-12-15 15:39:03.405 INFO  [com.main.controller.LoginController] - naverLoginCallback
+2023-12-15 15:39:03.406 INFO  [com.main.service.LoginServiceImpl] - naver oauth2.0/token
+2023-12-15 15:39:03.407 INFO  [com.main.comm.Common] - apiURL: https://nid.naver.com/oauth2.0/token?grant_type=authorization_code&client_id=MUmUiuEZ0YXq5NezC1Ky&client_secret=U2ITnhnahA&code=4eaX75sgvwJ7N7Tn7v&state=1223052384868551055826411115166616715045, method: GET, header: null
+2023-12-15 15:39:03.719 INFO  [com.main.comm.Common] - RESULT :: {"access_token":"AAAAOCTZqwKFbWNzdh6mKYFtwZjkpu-tbpPkcjhj8JyzG4LX4aUU23GGiFo7WjHYH_1oNsMirGo_5g0REP44W4bvJt4","refresh_token":"GfmrzAjGDJ42miilisisoMm84Zbx78b2qb0UlKjisChkbByGj3jjmkLclS0l6pdGcx85l7PiiJGAm445GHisC3DOk0hlX074xVvIeV4JN1BLPBCdZY4URT5KKG6LhFtHFEduyO","token_type":"bearer","expires_in":"3600"}
+2023-12-15 15:39:03.733 INFO  [com.main.service.LoginServiceImpl] - naver profile
+2023-12-15 15:39:03.734 INFO  [com.main.comm.Common] - apiURL: https://openapi.naver.com/v1/nid/me, method: GET, header: bearer AAAAOCTZqwKFbWNzdh6mKYFtwZjkpu-tbpPkcjhj8JyzG4LX4aUU23GGiFo7WjHYH_1oNsMirGo_5g0REP44W4bvJt4
+2023-12-15 15:39:03.818 INFO  [com.main.comm.Common] - RESULT :: {"resultcode":"00","message":"success","response":{"id":"yhJLjCsCKlYzEwj4jdkj2-u6O_dWl-Zfc3QvFroczgY","nickname":"TY","profile_image":"https:\/\/phinf.pstatic.net\/contact\/20200304_3\/1583292923097gVHC7_PNG\/__.png","mobile":"010-3794-2618","mobile_e164":"+821037942618"}}
+2023-12-15 15:39:03.819 INFO  [com.main.controller.LoginController] - 00
+2023-12-15 15:39:03.819 INFO  [com.main.controller.LoginController] - success
+2023-12-15 15:41:52.500 INFO  [o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin] - Application shutdown requested.
+2023-12-15 15:41:52.503 INFO  [o.apache.coyote.http11.Http11NioProtocol] - Stopping ProtocolHandler ["http-nio-8080"]
+2023-12-15 15:41:52.518 INFO  [com.zaxxer.hikari.HikariDataSource] - HikariCP - Shutdown initiated...
+2023-12-15 15:41:52.522 INFO  [com.zaxxer.hikari.HikariDataSource] - HikariCP - Shutdown completed.
+2023-12-15 15:42:00.105 INFO  [com.main.ArchiveApplication] - Starting ArchiveApplication using Java 17.0.9 with PID 4112 (C:\Users\kcs\eclipse\jee-2023-09\workspace\Archive\bin\main started by kcs in C:\Users\kcs\eclipse\jee-2023-09\workspace\Archive)
+2023-12-15 15:42:00.107 INFO  [com.main.ArchiveApplication] - The following 1 profile is active: "local"
+2023-12-15 15:42:00.141 INFO  [o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor] - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-12-15 15:42:00.141 INFO  [o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor] - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-12-15 15:42:01.060 INFO  [o.s.b.w.embedded.tomcat.TomcatWebServer] - Tomcat initialized with port 8080 (http)
+2023-12-15 15:42:01.068 INFO  [o.apache.coyote.http11.Http11NioProtocol] - Initializing ProtocolHandler ["http-nio-8080"]
+2023-12-15 15:42:01.069 INFO  [o.apache.catalina.core.StandardService] - Starting service [Tomcat]
+2023-12-15 15:42:01.069 INFO  [org.apache.catalina.core.StandardEngine] - Starting Servlet engine: [Apache Tomcat/10.1.16]
+2023-12-15 15:42:01.211 INFO  [org.apache.jasper.servlet.TldScanner] - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2023-12-15 15:42:01.218 INFO  [o.a.c.c.C.[Tomcat].[localhost].[/]] - Initializing Spring embedded WebApplicationContext
+2023-12-15 15:42:01.218 INFO  [o.s.b.w.s.c.ServletWebServerApplicationContext] - Root WebApplicationContext: initialization completed in 1077 ms
+2023-12-15 15:42:01.305 INFO  [com.zaxxer.hikari.HikariDataSource] - HikariCP - Starting...
+2023-12-15 15:42:01.383 INFO  [com.zaxxer.hikari.pool.HikariPool] - HikariCP - Added connection net.sf.log4jdbc.sql.jdbcapi.ConnectionSpy@39bfd281
+2023-12-15 15:42:01.386 INFO  [com.zaxxer.hikari.HikariDataSource] - HikariCP - Start completed.
+2023-12-15 15:42:01.594 INFO  [o.s.b.a.w.s.WelcomePageHandlerMapping] - Adding welcome page template: index
+2023-12-15 15:42:01.849 INFO  [o.s.b.d.a.OptionalLiveReloadServer] - LiveReload server is running on port 35729
+2023-12-15 15:42:01.863 INFO  [o.apache.coyote.http11.Http11NioProtocol] - Starting ProtocolHandler ["http-nio-8080"]
+2023-12-15 15:42:01.886 INFO  [o.s.b.w.embedded.tomcat.TomcatWebServer] - Tomcat started on port 8080 (http) with context path ''
+2023-12-15 15:42:01.893 INFO  [com.main.ArchiveApplication] - Started ArchiveApplication in 2.205 seconds (process running for 2.874)
+2023-12-15 15:42:04.905 INFO  [o.a.c.c.C.[Tomcat].[localhost].[/]] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-15 15:42:04.906 INFO  [o.s.web.servlet.DispatcherServlet] - Initializing Servlet 'dispatcherServlet'
+2023-12-15 15:42:04.906 INFO  [o.s.web.servlet.DispatcherServlet] - Completed initialization in 0 ms
+2023-12-15 15:42:09.530 INFO  [com.main.controller.LoginController] - naverLogin
+2023-12-15 15:42:09.530 INFO  [com.main.service.LoginServiceImpl] - naver oauth2.0/authorize
+2023-12-15 15:42:09.842 INFO  [com.main.controller.LoginController] - naverLoginCallback
+2023-12-15 15:42:09.843 INFO  [com.main.service.LoginServiceImpl] - naver oauth2.0/token
+2023-12-15 15:42:09.845 INFO  [com.main.comm.Common] - apiURL: https://nid.naver.com/oauth2.0/token?grant_type=authorization_code&client_id=MUmUiuEZ0YXq5NezC1Ky&client_secret=U2ITnhnahA&code=BrNgnua6zk2GWFEj4L&state=73299215481113424574824023499234558443, method: GET, header: null
+2023-12-15 15:42:10.069 INFO  [com.main.comm.Common] - RESULT :: {"access_token":"AAAAOCTZqwKFbWNzdh6mKYFtwZjkpu-tbpPkcjhj8JyzG4LX4aUU23GGiFo7WjHYH_1oNsMirGo_5g0REP44W4bvJt4","refresh_token":"GfmrzAjGDJ42miilisisoMm84Zbx78b2qb0UlKjisChkbByGj3jjmkLclS0l6pdGcx85l7PiiJGAm445GHisC3DOk0hlX074xVvIeV4JN1BLPBCdZY4URT5KKG6LhFtHFEduyO","token_type":"bearer","expires_in":"3600"}
+2023-12-15 15:42:10.084 INFO  [com.main.service.LoginServiceImpl] - naver profile
+2023-12-15 15:42:10.085 INFO  [com.main.comm.Common] - apiURL: https://openapi.naver.com/v1/nid/me, method: GET, header: bearer AAAAOCTZqwKFbWNzdh6mKYFtwZjkpu-tbpPkcjhj8JyzG4LX4aUU23GGiFo7WjHYH_1oNsMirGo_5g0REP44W4bvJt4
+2023-12-15 15:42:10.159 INFO  [com.main.comm.Common] - RESULT :: {"resultcode":"00","message":"success","response":{"id":"yhJLjCsCKlYzEwj4jdkj2-u6O_dWl-Zfc3QvFroczgY","nickname":"TY","profile_image":"https:\/\/phinf.pstatic.net\/contact\/20200304_3\/1583292923097gVHC7_PNG\/__.png","mobile":"010-3794-2618","mobile_e164":"+821037942618"}}
+2023-12-15 15:42:10.160 INFO  [com.main.controller.LoginController] - 00
+2023-12-15 15:42:10.160 INFO  [com.main.controller.LoginController] - success
+2023-12-15 15:42:43.146 INFO  [o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin] - Application shutdown requested.
+2023-12-15 15:42:43.149 INFO  [o.apache.coyote.http11.Http11NioProtocol] - Stopping ProtocolHandler ["http-nio-8080"]
+2023-12-15 15:42:43.164 INFO  [com.zaxxer.hikari.HikariDataSource] - HikariCP - Shutdown initiated...
+2023-12-15 15:42:43.168 INFO  [com.zaxxer.hikari.HikariDataSource] - HikariCP - Shutdown completed.
+2023-12-15 15:43:36.115 INFO  [com.main.ArchiveApplication] - Starting ArchiveApplication using Java 17.0.9 with PID 13020 (C:\Users\kcs\eclipse\jee-2023-09\workspace\Archive\bin\main started by kcs in C:\Users\kcs\eclipse\jee-2023-09\workspace\Archive)
+2023-12-15 15:43:36.117 INFO  [com.main.ArchiveApplication] - The following 1 profile is active: "local"
+2023-12-15 15:43:36.150 INFO  [o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor] - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-12-15 15:43:36.150 INFO  [o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor] - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-12-15 15:43:36.980 INFO  [o.s.b.w.embedded.tomcat.TomcatWebServer] - Tomcat initialized with port 8080 (http)
+2023-12-15 15:43:36.986 INFO  [o.apache.coyote.http11.Http11NioProtocol] - Initializing ProtocolHandler ["http-nio-8080"]
+2023-12-15 15:43:36.988 INFO  [o.apache.catalina.core.StandardService] - Starting service [Tomcat]
+2023-12-15 15:43:36.988 INFO  [org.apache.catalina.core.StandardEngine] - Starting Servlet engine: [Apache Tomcat/10.1.16]
+2023-12-15 15:43:37.128 INFO  [org.apache.jasper.servlet.TldScanner] - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2023-12-15 15:43:37.134 INFO  [o.a.c.c.C.[Tomcat].[localhost].[/]] - Initializing Spring embedded WebApplicationContext
+2023-12-15 15:43:37.134 INFO  [o.s.b.w.s.c.ServletWebServerApplicationContext] - Root WebApplicationContext: initialization completed in 983 ms
+2023-12-15 15:43:37.220 INFO  [com.zaxxer.hikari.HikariDataSource] - HikariCP - Starting...
+2023-12-15 15:43:37.285 INFO  [com.zaxxer.hikari.pool.HikariPool] - HikariCP - Added connection net.sf.log4jdbc.sql.jdbcapi.ConnectionSpy@59252225
+2023-12-15 15:43:37.287 INFO  [com.zaxxer.hikari.HikariDataSource] - HikariCP - Start completed.
+2023-12-15 15:43:37.470 INFO  [o.s.b.a.w.s.WelcomePageHandlerMapping] - Adding welcome page template: index
+2023-12-15 15:43:37.718 INFO  [o.s.b.d.a.OptionalLiveReloadServer] - LiveReload server is running on port 35729
+2023-12-15 15:43:37.735 INFO  [o.apache.coyote.http11.Http11NioProtocol] - Starting ProtocolHandler ["http-nio-8080"]
+2023-12-15 15:43:37.756 INFO  [o.s.b.w.embedded.tomcat.TomcatWebServer] - Tomcat started on port 8080 (http) with context path ''
+2023-12-15 15:43:37.763 INFO  [com.main.ArchiveApplication] - Started ArchiveApplication in 2.041 seconds (process running for 2.584)
+2023-12-15 15:43:41.275 INFO  [o.a.c.c.C.[Tomcat].[localhost].[/]] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-15 15:43:41.275 INFO  [o.s.web.servlet.DispatcherServlet] - Initializing Servlet 'dispatcherServlet'
+2023-12-15 15:43:41.277 INFO  [o.s.web.servlet.DispatcherServlet] - Completed initialization in 2 ms
+2023-12-15 15:43:46.338 INFO  [com.main.controller.LoginController] - naverLogin
+2023-12-15 15:43:46.338 INFO  [com.main.service.LoginServiceImpl] - naver oauth2.0/authorize
+2023-12-15 15:43:46.552 INFO  [com.main.controller.LoginController] - naverLoginCallback
+2023-12-15 15:43:46.552 INFO  [com.main.service.LoginServiceImpl] - naver oauth2.0/token
+2023-12-15 15:43:46.554 INFO  [com.main.comm.Common] - apiURL: https://nid.naver.com/oauth2.0/token?grant_type=authorization_code&client_id=MUmUiuEZ0YXq5NezC1Ky&client_secret=U2ITnhnahA&code=BLkYnEE8okyMZvEzrL&state=132686727714468227223257494161998441360, method: GET, header: null
+2023-12-15 15:43:46.769 INFO  [com.main.comm.Common] - RESULT :: {"access_token":"AAAAOCTZqwKFbWNzdh6mKYFtwZjkpu-tbpPkcjhj8JyzG4LX4aUU23GGiFo7WjHYH_1oNsMirGo_5g0REP44W4bvJt4","refresh_token":"GfmrzAjGDJ42miilisisoMm84Zbx78b2qb0UlKjisChkbByGj3jjmkLclS0l6pdGcx85l7PiiJGAm445GHisC3DOk0hlX074xVvIeV4JN1BLPBCdZY4URT5KKG6LhFtHFEduyO","token_type":"bearer","expires_in":"3600"}
+2023-12-15 15:43:46.781 INFO  [com.main.service.LoginServiceImpl] - naver profile
+2023-12-15 15:43:46.782 INFO  [com.main.comm.Common] - apiURL: https://openapi.naver.com/v1/nid/me, method: GET, header: bearer AAAAOCTZqwKFbWNzdh6mKYFtwZjkpu-tbpPkcjhj8JyzG4LX4aUU23GGiFo7WjHYH_1oNsMirGo_5g0REP44W4bvJt4
+2023-12-15 15:43:46.855 INFO  [com.main.comm.Common] - RESULT :: {"resultcode":"00","message":"success","response":{"id":"yhJLjCsCKlYzEwj4jdkj2-u6O_dWl-Zfc3QvFroczgY","nickname":"TY","profile_image":"https:\/\/phinf.pstatic.net\/contact\/20200304_3\/1583292923097gVHC7_PNG\/__.png","mobile":"010-3794-2618","mobile_e164":"+821037942618"}}
+2023-12-15 15:43:46.856 INFO  [com.main.controller.LoginController] - 00
+2023-12-15 15:43:46.856 INFO  [com.main.controller.LoginController] - success
+2023-12-15 15:44:29.740 INFO  [o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener] - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-12-15 15:44:29.744 INFO  [o.apache.coyote.http11.Http11NioProtocol] - Stopping ProtocolHandler ["http-nio-8080"]
+2023-12-15 15:44:29.760 INFO  [com.zaxxer.hikari.HikariDataSource] - HikariCP - Shutdown initiated...
+2023-12-15 15:44:29.764 INFO  [com.zaxxer.hikari.HikariDataSource] - HikariCP - Shutdown completed.
+2023-12-15 15:44:29.864 INFO  [com.main.ArchiveApplication] - Starting ArchiveApplication using Java 17.0.9 with PID 13020 (C:\Users\kcs\eclipse\jee-2023-09\workspace\Archive\bin\main started by kcs in C:\Users\kcs\eclipse\jee-2023-09\workspace\Archive)
+2023-12-15 15:44:29.864 INFO  [com.main.ArchiveApplication] - The following 1 profile is active: "local"
+2023-12-15 15:44:30.084 INFO  [o.s.b.w.embedded.tomcat.TomcatWebServer] - Tomcat initialized with port 8080 (http)
+2023-12-15 15:44:30.085 INFO  [o.apache.coyote.http11.Http11NioProtocol] - Initializing ProtocolHandler ["http-nio-8080"]
+2023-12-15 15:44:30.085 INFO  [o.apache.catalina.core.StandardService] - Starting service [Tomcat]
+2023-12-15 15:44:30.085 INFO  [org.apache.catalina.core.StandardEngine] - Starting Servlet engine: [Apache Tomcat/10.1.16]
+2023-12-15 15:44:30.148 INFO  [org.apache.jasper.servlet.TldScanner] - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2023-12-15 15:44:30.150 INFO  [o.a.c.c.C.[Tomcat].[localhost].[/]] - Initializing Spring embedded WebApplicationContext
+2023-12-15 15:44:30.150 INFO  [o.s.b.w.s.c.ServletWebServerApplicationContext] - Root WebApplicationContext: initialization completed in 284 ms
+2023-12-15 15:44:30.173 INFO  [com.zaxxer.hikari.HikariDataSource] - HikariCP - Starting...
+2023-12-15 15:44:30.176 INFO  [com.zaxxer.hikari.pool.HikariPool] - HikariCP - Added connection net.sf.log4jdbc.sql.jdbcapi.ConnectionSpy@70b3f001
+2023-12-15 15:44:30.176 INFO  [com.zaxxer.hikari.HikariDataSource] - HikariCP - Start completed.
+2023-12-15 15:44:30.217 INFO  [o.s.b.a.w.s.WelcomePageHandlerMapping] - Adding welcome page template: index
+2023-12-15 15:44:30.265 INFO  [o.s.b.d.a.OptionalLiveReloadServer] - LiveReload server is running on port 35729
+2023-12-15 15:44:30.270 INFO  [o.apache.coyote.http11.Http11NioProtocol] - Starting ProtocolHandler ["http-nio-8080"]
+2023-12-15 15:44:30.277 INFO  [o.s.b.w.embedded.tomcat.TomcatWebServer] - Tomcat started on port 8080 (http) with context path ''
+2023-12-15 15:44:30.281 INFO  [com.main.ArchiveApplication] - Started ArchiveApplication in 0.442 seconds (process running for 55.101)
+2023-12-15 15:44:30.283 INFO  [o.s.b.d.a.ConditionEvaluationDeltaLoggingListener] - Condition evaluation unchanged
+2023-12-15 15:44:32.814 INFO  [o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener] - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-12-15 15:44:32.815 INFO  [o.apache.coyote.http11.Http11NioProtocol] - Stopping ProtocolHandler ["http-nio-8080"]
+2023-12-15 15:44:32.828 INFO  [com.zaxxer.hikari.HikariDataSource] - HikariCP - Shutdown initiated...
+2023-12-15 15:44:32.832 INFO  [com.zaxxer.hikari.HikariDataSource] - HikariCP - Shutdown completed.
+2023-12-15 15:45:06.070 INFO  [com.main.ArchiveApplication] - Starting ArchiveApplication using Java 17.0.9 with PID 4660 (C:\Users\kcs\eclipse\jee-2023-09\workspace\Archive\bin\main started by kcs in C:\Users\kcs\eclipse\jee-2023-09\workspace\Archive)
+2023-12-15 15:45:06.072 INFO  [com.main.ArchiveApplication] - The following 1 profile is active: "local"
+2023-12-15 15:45:06.109 INFO  [o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor] - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-12-15 15:45:06.109 INFO  [o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor] - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-12-15 15:45:07.047 INFO  [o.s.b.w.embedded.tomcat.TomcatWebServer] - Tomcat initialized with port 8080 (http)
+2023-12-15 15:45:07.059 INFO  [o.apache.coyote.http11.Http11NioProtocol] - Initializing ProtocolHandler ["http-nio-8080"]
+2023-12-15 15:45:07.062 INFO  [o.apache.catalina.core.StandardService] - Starting service [Tomcat]
+2023-12-15 15:45:07.062 INFO  [org.apache.catalina.core.StandardEngine] - Starting Servlet engine: [Apache Tomcat/10.1.16]
+2023-12-15 15:45:07.280 INFO  [org.apache.jasper.servlet.TldScanner] - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2023-12-15 15:45:07.289 INFO  [o.a.c.c.C.[Tomcat].[localhost].[/]] - Initializing Spring embedded WebApplicationContext
+2023-12-15 15:45:07.289 INFO  [o.s.b.w.s.c.ServletWebServerApplicationContext] - Root WebApplicationContext: initialization completed in 1180 ms
+2023-12-15 15:45:07.399 INFO  [com.zaxxer.hikari.HikariDataSource] - HikariCP - Starting...
+2023-12-15 15:45:07.467 INFO  [com.zaxxer.hikari.pool.HikariPool] - HikariCP - Added connection net.sf.log4jdbc.sql.jdbcapi.ConnectionSpy@7be86c6c
+2023-12-15 15:45:07.469 INFO  [com.zaxxer.hikari.HikariDataSource] - HikariCP - Start completed.
+2023-12-15 15:45:07.671 INFO  [o.s.b.a.w.s.WelcomePageHandlerMapping] - Adding welcome page template: index
+2023-12-15 15:45:07.918 INFO  [o.s.b.d.a.OptionalLiveReloadServer] - LiveReload server is running on port 35729
+2023-12-15 15:45:07.933 INFO  [o.apache.coyote.http11.Http11NioProtocol] - Starting ProtocolHandler ["http-nio-8080"]
+2023-12-15 15:45:07.955 INFO  [o.s.b.w.embedded.tomcat.TomcatWebServer] - Tomcat started on port 8080 (http) with context path ''
+2023-12-15 15:45:07.963 INFO  [com.main.ArchiveApplication] - Started ArchiveApplication in 2.312 seconds (process running for 2.87)
+2023-12-15 15:45:12.900 INFO  [o.a.c.c.C.[Tomcat].[localhost].[/]] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-15 15:45:12.900 INFO  [o.s.web.servlet.DispatcherServlet] - Initializing Servlet 'dispatcherServlet'
+2023-12-15 15:45:12.900 INFO  [o.s.web.servlet.DispatcherServlet] - Completed initialization in 0 ms
+2023-12-15 15:45:16.379 INFO  [com.main.controller.LoginController] - naverLogin
+2023-12-15 15:45:16.379 INFO  [com.main.service.LoginServiceImpl] - naver oauth2.0/authorize
+2023-12-15 15:45:16.632 INFO  [com.main.controller.LoginController] - naverLoginCallback
+2023-12-15 15:45:16.632 INFO  [com.main.service.LoginServiceImpl] - naver oauth2.0/token
+2023-12-15 15:45:16.634 INFO  [com.main.comm.Common] - apiURL: https://nid.naver.com/oauth2.0/token?grant_type=authorization_code&client_id=MUmUiuEZ0YXq5NezC1Ky&client_secret=U2ITnhnahA&code=WlZuYxg28dfY4kgNzp&state=456053259337235541112545710839800991132, method: GET, header: null
+2023-12-15 15:45:16.857 INFO  [com.main.comm.Common] - RESULT :: {"access_token":"AAAAOCTZqwKFbWNzdh6mKYFtwZjkpu-tbpPkcjhj8JyzG4LX4aUU23GGiFo7WjHYH_1oNsMirGo_5g0REP44W4bvJt4","refresh_token":"GfmrzAjGDJ42miilisisoMm84Zbx78b2qb0UlKjisChkbByGj3jjmkLclS0l6pdGcx85l7PiiJGAm445GHisC3DOk0hlX074xVvIeV4JN1BLPBCdZY4URT5KKG6LhFtHFEduyO","token_type":"bearer","expires_in":"3600"}
+2023-12-15 15:45:16.870 INFO  [com.main.service.LoginServiceImpl] - naver profile
+2023-12-15 15:45:16.871 INFO  [com.main.comm.Common] - apiURL: https://openapi.naver.com/v1/nid/me, method: GET, header: bearer AAAAOCTZqwKFbWNzdh6mKYFtwZjkpu-tbpPkcjhj8JyzG4LX4aUU23GGiFo7WjHYH_1oNsMirGo_5g0REP44W4bvJt4
+2023-12-15 15:45:16.941 INFO  [com.main.comm.Common] - RESULT :: {"resultcode":"00","message":"success","response":{"id":"yhJLjCsCKlYzEwj4jdkj2-u6O_dWl-Zfc3QvFroczgY","nickname":"TY","profile_image":"https:\/\/phinf.pstatic.net\/contact\/20200304_3\/1583292923097gVHC7_PNG\/__.png","mobile":"010-3794-2618","mobile_e164":"+821037942618"}}
+2023-12-15 15:45:16.942 INFO  [com.main.controller.LoginController] - 00
+2023-12-15 15:45:16.942 INFO  [com.main.controller.LoginController] - success
+2023-12-15 15:45:16.975 INFO  [jdbc.sqltiming] - SELECT
+		u.user_id,
+		u.user_txid,
+		u.user_name,
+		u.email,
+		u.nickname,
+		u.mobile,
+		u.create_date,
+		u.modify_date,
+		u.sns_id,
+		u.sns_type,
+		u.sns_profile,
+		u.sns_connect_date,
+		a.auth_name
+	FROM users u
+	LEFT OUTER JOIN user_auth a
+		ON u.auth_id = a.auth_id
+	WHERE u.sns_id = 'yhJLjCsCKlYzEwj4jdkj2-u6O_dWl-Zfc3QvFroczgY'
+ {executed in 1 msec}
+2023-12-15 15:45:16.985 INFO  [jdbc.resultsettable] - 
+|--------|----------|----------|------|---------|-------|------------|------------|-------|---------|------------|-----------------|----------|
+|user_id |user_txid |user_name |email |nickname |mobile |create_date |modify_date |sns_id |sns_type |sns_profile |sns_connect_date |auth_name |
+|--------|----------|----------|------|---------|-------|------------|------------|-------|---------|------------|-----------------|----------|
+|--------|----------|----------|------|---------|-------|------------|------------|-------|---------|------------|-----------------|----------|
+
+2023-12-15 15:45:17.010 INFO  [jdbc.sqltiming] - INSERT INTO users
+	(user_id, user_name, user_pswd, email, nickname, mobile, sns_id, sns_type, sns_profile, sns_connect_date)
+	VALUES (0, NULL, NULL, NULL, 'TY', '010-3794-2618', NULL, 'naver', 'https://phinf.pstatic.net/contact/20200304_3/1583292923097gVHC7_PNG/__.png', 
+
+		NULL
+
+	)
+ {executed in 2 msec}
+2023-12-15 15:45:17.010 INFO  [com.main.service.LoginServiceImpl] - INSERT :: 1
+2023-12-15 15:45:17.011 INFO  [jdbc.sqltiming] - SELECT
+		u.user_id,
+		u.user_txid,
+		u.user_name,
+		u.email,
+		u.nickname,
+		u.mobile,
+		u.create_date,
+		u.modify_date,
+		u.sns_id,
+		u.sns_type,
+		u.sns_profile,
+		u.sns_connect_date,
+		a.auth_name
+	FROM users u
+	LEFT OUTER JOIN user_auth a
+		ON u.auth_id = a.auth_id
+	WHERE u.sns_id = 'yhJLjCsCKlYzEwj4jdkj2-u6O_dWl-Zfc3QvFroczgY'
+ {executed in 1 msec}
+2023-12-15 15:45:17.012 INFO  [jdbc.resultsettable] - 
+|--------|----------|----------|------|---------|-------|------------|------------|-------|---------|------------|-----------------|----------|
+|user_id |user_txid |user_name |email |nickname |mobile |create_date |modify_date |sns_id |sns_type |sns_profile |sns_connect_date |auth_name |
+|--------|----------|----------|------|---------|-------|------------|------------|-------|---------|------------|-----------------|----------|
+|--------|----------|----------|------|---------|-------|------------|------------|-------|---------|------------|-----------------|----------|
+
+2023-12-15 15:56:42.585 INFO  [com.main.ArchiveApplication] - Starting ArchiveApplication using Java 17.0.9 with PID 14680 (C:\Users\kcs\eclipse\jee-2023-09\workspace\Archive\bin\main started by kcs in C:\Users\kcs\eclipse\jee-2023-09\workspace\Archive)
+2023-12-15 15:56:42.586 INFO  [com.main.ArchiveApplication] - The following 1 profile is active: "local"
+2023-12-15 15:56:42.620 INFO  [o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor] - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-12-15 15:56:42.620 INFO  [o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor] - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-12-15 15:56:43.483 INFO  [o.s.b.w.embedded.tomcat.TomcatWebServer] - Tomcat initialized with port 8080 (http)
+2023-12-15 15:56:43.489 INFO  [o.apache.coyote.http11.Http11NioProtocol] - Initializing ProtocolHandler ["http-nio-8080"]
+2023-12-15 15:56:43.491 INFO  [o.apache.catalina.core.StandardService] - Starting service [Tomcat]
+2023-12-15 15:56:43.491 INFO  [org.apache.catalina.core.StandardEngine] - Starting Servlet engine: [Apache Tomcat/10.1.16]
+2023-12-15 15:56:43.629 INFO  [org.apache.jasper.servlet.TldScanner] - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2023-12-15 15:56:43.636 INFO  [o.a.c.c.C.[Tomcat].[localhost].[/]] - Initializing Spring embedded WebApplicationContext
+2023-12-15 15:56:43.636 INFO  [o.s.b.w.s.c.ServletWebServerApplicationContext] - Root WebApplicationContext: initialization completed in 1015 ms
+2023-12-15 15:56:43.709 INFO  [com.zaxxer.hikari.HikariDataSource] - HikariCP - Starting...
+2023-12-15 15:56:43.777 INFO  [com.zaxxer.hikari.pool.HikariPool] - HikariCP - Added connection net.sf.log4jdbc.sql.jdbcapi.ConnectionSpy@1be1cd78
+2023-12-15 15:56:43.779 INFO  [com.zaxxer.hikari.HikariDataSource] - HikariCP - Start completed.
+2023-12-15 15:56:43.973 INFO  [o.s.b.a.w.s.WelcomePageHandlerMapping] - Adding welcome page template: index
+2023-12-15 15:56:44.230 INFO  [o.s.b.d.a.OptionalLiveReloadServer] - LiveReload server is running on port 35729
+2023-12-15 15:56:44.245 INFO  [o.apache.coyote.http11.Http11NioProtocol] - Starting ProtocolHandler ["http-nio-8080"]
+2023-12-15 15:56:44.265 INFO  [o.s.b.w.embedded.tomcat.TomcatWebServer] - Tomcat started on port 8080 (http) with context path ''
+2023-12-15 15:56:44.273 INFO  [com.main.ArchiveApplication] - Started ArchiveApplication in 2.094 seconds (process running for 2.753)
+2023-12-15 15:57:01.263 INFO  [o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin] - Application shutdown requested.
+2023-12-15 15:57:01.266 INFO  [o.apache.coyote.http11.Http11NioProtocol] - Stopping ProtocolHandler ["http-nio-8080"]
+2023-12-15 15:57:01.282 INFO  [com.zaxxer.hikari.HikariDataSource] - HikariCP - Shutdown initiated...
+2023-12-15 15:57:01.286 INFO  [com.zaxxer.hikari.HikariDataSource] - HikariCP - Shutdown completed.
+2023-12-15 17:10:15.741 INFO  [com.main.ArchiveApplication] - Starting ArchiveApplication using Java 17.0.9 with PID 2020 (C:\Users\kcs\eclipse\jee-2023-09\workspace\Archive\bin\main started by kcs in C:\Users\kcs\eclipse\jee-2023-09\workspace\Archive)
+2023-12-15 17:10:15.743 INFO  [com.main.ArchiveApplication] - The following 1 profile is active: "local"
+2023-12-15 17:10:15.778 INFO  [o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor] - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-12-15 17:10:15.778 INFO  [o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor] - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-12-15 17:10:16.613 INFO  [o.s.b.w.embedded.tomcat.TomcatWebServer] - Tomcat initialized with port 8080 (http)
+2023-12-15 17:10:16.620 INFO  [o.apache.coyote.http11.Http11NioProtocol] - Initializing ProtocolHandler ["http-nio-8080"]
+2023-12-15 17:10:16.621 INFO  [o.apache.catalina.core.StandardService] - Starting service [Tomcat]
+2023-12-15 17:10:16.622 INFO  [org.apache.catalina.core.StandardEngine] - Starting Servlet engine: [Apache Tomcat/10.1.16]
+2023-12-15 17:10:16.762 INFO  [org.apache.jasper.servlet.TldScanner] - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2023-12-15 17:10:16.769 INFO  [o.a.c.c.C.[Tomcat].[localhost].[/]] - Initializing Spring embedded WebApplicationContext
+2023-12-15 17:10:16.769 INFO  [o.s.b.w.s.c.ServletWebServerApplicationContext] - Root WebApplicationContext: initialization completed in 991 ms
+2023-12-15 17:10:16.845 INFO  [com.zaxxer.hikari.HikariDataSource] - HikariCP - Starting...
+2023-12-15 17:10:16.909 INFO  [com.zaxxer.hikari.pool.HikariPool] - HikariCP - Added connection net.sf.log4jdbc.sql.jdbcapi.ConnectionSpy@1b4068da
+2023-12-15 17:10:16.911 INFO  [com.zaxxer.hikari.HikariDataSource] - HikariCP - Start completed.
+2023-12-15 17:10:17.092 INFO  [o.s.b.a.w.s.WelcomePageHandlerMapping] - Adding welcome page template: index
+2023-12-15 17:10:17.332 INFO  [o.s.b.d.a.OptionalLiveReloadServer] - LiveReload server is running on port 35729
+2023-12-15 17:10:17.347 INFO  [o.apache.coyote.http11.Http11NioProtocol] - Starting ProtocolHandler ["http-nio-8080"]
+2023-12-15 17:10:17.370 INFO  [o.s.b.w.embedded.tomcat.TomcatWebServer] - Tomcat started on port 8080 (http) with context path ''
+2023-12-15 17:10:17.378 INFO  [com.main.ArchiveApplication] - Started ArchiveApplication in 2.026 seconds (process running for 2.674)
+2023-12-15 17:10:22.113 INFO  [o.a.c.c.C.[Tomcat].[localhost].[/]] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-15 17:10:22.114 INFO  [o.s.web.servlet.DispatcherServlet] - Initializing Servlet 'dispatcherServlet'
+2023-12-15 17:10:22.114 INFO  [o.s.web.servlet.DispatcherServlet] - Completed initialization in 0 ms
+2023-12-15 17:10:27.714 INFO  [com.main.controller.LoginController] - naverLogin
+2023-12-15 17:10:27.714 INFO  [com.main.service.LoginServiceImpl] - naver oauth2.0/authorize
+2023-12-15 17:10:28.082 INFO  [com.main.controller.LoginController] - naverLoginCallback
+2023-12-15 17:10:28.083 INFO  [com.main.service.LoginServiceImpl] - naver oauth2.0/token
+2023-12-15 17:10:28.085 INFO  [com.main.comm.Common] - apiURL: https://nid.naver.com/oauth2.0/token?grant_type=authorization_code&client_id=MUmUiuEZ0YXq5NezC1Ky&client_secret=U2ITnhnahA&code=rZlkD5W1v6AkMoON10&state=1353082206541275294856418833568666400912, method: GET, header: null
+2023-12-15 17:10:28.308 INFO  [com.main.comm.Common] - RESULT :: {"access_token":"AAAAOG2dTp5f1u_IQ_ayfZ7hilS_rhoOr6gvzBt4rc3bEjHN7nuNzrPTh7jN1JhfcwPfAkc1Z6n7Ve0HG33deHexO1Y","refresh_token":"GfmrzAjGDJ42miilisisoMm84Zbx78b2qb0UlKjisChkbByGj3jjmkLclS0l6pdGcx85l7PiiJGAm445GHisC3DOk0hlX074xVvIeV4JN1BLPBCdZY4URT5KKG6LhFtHFEduyO","token_type":"bearer","expires_in":"3600"}
+2023-12-15 17:10:28.322 INFO  [com.main.service.LoginServiceImpl] - naver profile
+2023-12-15 17:10:28.322 INFO  [com.main.comm.Common] - apiURL: https://openapi.naver.com/v1/nid/me, method: GET, header: bearer AAAAOG2dTp5f1u_IQ_ayfZ7hilS_rhoOr6gvzBt4rc3bEjHN7nuNzrPTh7jN1JhfcwPfAkc1Z6n7Ve0HG33deHexO1Y
+2023-12-15 17:10:28.405 INFO  [com.main.comm.Common] - RESULT :: {"resultcode":"00","message":"success","response":{"id":"yhJLjCsCKlYzEwj4jdkj2-u6O_dWl-Zfc3QvFroczgY","nickname":"TY","profile_image":"https:\/\/phinf.pstatic.net\/contact\/20200304_3\/1583292923097gVHC7_PNG\/__.png","mobile":"010-3794-2618","mobile_e164":"+821037942618"}}
+2023-12-15 17:10:28.406 INFO  [com.main.controller.LoginController] - 00
+2023-12-15 17:10:28.406 INFO  [com.main.controller.LoginController] - success
+2023-12-15 17:10:28.432 INFO  [jdbc.sqltiming] - SELECT
+		u.user_id,
+		u.user_txid,
+		u.user_name,
+		u.email,
+		u.nickname,
+		u.mobile,
+		u.create_date,
+		u.modify_date,
+		u.sns_id,
+		u.sns_type,
+		u.sns_profile,
+		u.sns_connect_date,
+		a.auth_name
+	FROM users u
+	LEFT OUTER JOIN user_auth a
+		ON u.auth_id = a.auth_id
+	WHERE u.sns_id = 'yhJLjCsCKlYzEwj4jdkj2-u6O_dWl-Zfc3QvFroczgY'
+ {executed in 1 msec}
+2023-12-15 17:10:28.441 INFO  [jdbc.resultsettable] - 
+|--------|----------|----------|------|---------|-------|------------|------------|-------|---------|------------|-----------------|----------|
+|user_id |user_txid |user_name |email |nickname |mobile |create_date |modify_date |sns_id |sns_type |sns_profile |sns_connect_date |auth_name |
+|--------|----------|----------|------|---------|-------|------------|------------|-------|---------|------------|-----------------|----------|
+|--------|----------|----------|------|---------|-------|------------|------------|-------|---------|------------|-----------------|----------|
+
+2023-12-15 17:10:28.467 INFO  [jdbc.sqltiming] - INSERT INTO users
+	(user_id, user_name, user_pswd, email, nickname, mobile, sns_id, sns_type, sns_profile, sns_connect_date)
+	VALUES (0, NULL, NULL, NULL, 'TY', '010-3794-2618', 'yhJLjCsCKlYzEwj4jdkj2-u6O_dWl-Zfc3QvFroczgY', 'naver', 'https://phinf.pstatic.net/contact/20200304_3/1583292923097gVHC7_PNG/__.png', 
+
+		CURRENT_TIMESTAMP
+
+	)
+ {executed in 7 msec}
+2023-12-15 17:10:28.469 INFO  [jdbc.sqltiming] - getGeneratedKeys on query: INSERT INTO users
+	(user_id, user_name, user_pswd, email, nickname, mobile, sns_id, sns_type, sns_profile, sns_connect_date)
+	VALUES (0, NULL, NULL, NULL, 'TY', '010-3794-2618', 'yhJLjCsCKlYzEwj4jdkj2-u6O_dWl-Zfc3QvFroczgY', 'naver', 'https://phinf.pstatic.net/contact/20200304_3/1583292923097gVHC7_PNG/__.png', 
+
+		CURRENT_TIMESTAMP
+
+	)
+ {executed in 1 msec}
+2023-12-15 17:10:28.470 INFO  [jdbc.resultsettable] - 
+|----------|
+|insert_id |
+|----------|
+|2         |
+|----------|
+
+2023-12-15 17:10:28.470 INFO  [com.main.service.LoginServiceImpl] - INSERT :: 1
+2023-12-15 17:10:28.471 WARN  [o.m.jdbc.message.server.ErrorPacket] - Error: 1048-23000: Column 'user_id' cannot be null
+2023-12-15 17:10:28.473 ERROR [jdbc.sqltiming] - 1. PreparedStatement.execute() FAILED! INSERT INTO user_log
+	(user_id, login_status, login_type)
+	VALUES (NULL, NULL, NULL)
+ {FAILED after 0 msec}
+java.sql.SQLIntegrityConstraintViolationException: (conn=139) Column 'user_id' cannot be null
+	at org.mariadb.jdbc.export.ExceptionFactory.createException(ExceptionFactory.java:290)
+	at org.mariadb.jdbc.export.ExceptionFactory.create(ExceptionFactory.java:370)
+	at org.mariadb.jdbc.message.ClientMessage.readPacket(ClientMessage.java:134)
+	at org.mariadb.jdbc.client.impl.StandardClient.readPacket(StandardClient.java:872)
+	at org.mariadb.jdbc.client.impl.StandardClient.readResults(StandardClient.java:811)
+	at org.mariadb.jdbc.client.impl.StandardClient.readResponse(StandardClient.java:730)
+	at org.mariadb.jdbc.client.impl.StandardClient.execute(StandardClient.java:654)
+	at org.mariadb.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:95)
+	at org.mariadb.jdbc.ClientPreparedStatement.execute(ClientPreparedStatement.java:268)
+	at net.sf.log4jdbc.sql.jdbcapi.PreparedStatementSpy.execute(PreparedStatementSpy.java:443)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.execute(HikariProxyPreparedStatement.java)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.update(PreparedStatementHandler.java:48)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.update(RoutingStatementHandler.java:75)
+	at org.apache.ibatis.executor.SimpleExecutor.doUpdate(SimpleExecutor.java:50)
+	at org.apache.ibatis.executor.BaseExecutor.update(BaseExecutor.java:117)
+	at org.apache.ibatis.executor.CachingExecutor.update(CachingExecutor.java:76)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.update(DefaultSqlSession.java:197)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.insert(DefaultSqlSession.java:184)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:425)
+	at jdk.proxy2/jdk.proxy2.$Proxy67.insert(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.insert(SqlSessionTemplate.java:272)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:62)
+	at org.apache.ibatis.binding.MapperProxy$PlainMethodInvoker.invoke(MapperProxy.java:141)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:86)
+	at jdk.proxy3/jdk.proxy3.$Proxy70.insertUserLog(Unknown Source)
+	at com.main.service.LoginServiceImpl.loginProcess(LoginServiceImpl.java:155)
+	at com.main.service.LoginServiceImpl.connNaverUserBySnsId(LoginServiceImpl.java:139)
+	at com.main.controller.LoginController.naverLoginCallback(LoginController.java:78)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:254)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:182)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:917)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:829)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:527)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:614)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.sitemesh.webapp.contentfilter.ContentBufferingFilter.bufferAndPostProcess(ContentBufferingFilter.java:169)
+	at org.sitemesh.webapp.contentfilter.ContentBufferingFilter.doFilter(ContentBufferingFilter.java:126)
+	at org.sitemesh.webapp.SiteMeshFilter.doFilter(SiteMeshFilter.java:126)
+	at org.sitemesh.config.ConfigurableSiteMeshFilter.doFilter(ConfigurableSiteMeshFilter.java:171)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:340)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1744)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+2023-12-15 17:12:33.590 INFO  [o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener] - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-12-15 17:12:33.593 INFO  [o.apache.coyote.http11.Http11NioProtocol] - Stopping ProtocolHandler ["http-nio-8080"]
+2023-12-15 17:12:33.608 INFO  [com.zaxxer.hikari.HikariDataSource] - HikariCP - Shutdown initiated...
+2023-12-15 17:12:33.611 INFO  [com.zaxxer.hikari.HikariDataSource] - HikariCP - Shutdown completed.
+2023-12-15 17:12:33.710 INFO  [com.main.ArchiveApplication] - Starting ArchiveApplication using Java 17.0.9 with PID 2020 (C:\Users\kcs\eclipse\jee-2023-09\workspace\Archive\bin\main started by kcs in C:\Users\kcs\eclipse\jee-2023-09\workspace\Archive)
+2023-12-15 17:12:33.711 INFO  [com.main.ArchiveApplication] - The following 1 profile is active: "local"
+2023-12-15 17:12:33.927 INFO  [o.s.b.w.embedded.tomcat.TomcatWebServer] - Tomcat initialized with port 8080 (http)
+2023-12-15 17:12:33.928 INFO  [o.apache.coyote.http11.Http11NioProtocol] - Initializing ProtocolHandler ["http-nio-8080"]
+2023-12-15 17:12:33.928 INFO  [o.apache.catalina.core.StandardService] - Starting service [Tomcat]
+2023-12-15 17:12:33.928 INFO  [org.apache.catalina.core.StandardEngine] - Starting Servlet engine: [Apache Tomcat/10.1.16]
+2023-12-15 17:12:33.994 INFO  [org.apache.jasper.servlet.TldScanner] - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2023-12-15 17:12:33.997 INFO  [o.a.c.c.C.[Tomcat].[localhost].[/]] - Initializing Spring embedded WebApplicationContext
+2023-12-15 17:12:33.997 INFO  [o.s.b.w.s.c.ServletWebServerApplicationContext] - Root WebApplicationContext: initialization completed in 284 ms
+2023-12-15 17:12:34.021 INFO  [com.zaxxer.hikari.HikariDataSource] - HikariCP - Starting...
+2023-12-15 17:12:34.024 INFO  [com.zaxxer.hikari.pool.HikariPool] - HikariCP - Added connection net.sf.log4jdbc.sql.jdbcapi.ConnectionSpy@43683321
+2023-12-15 17:12:34.024 INFO  [com.zaxxer.hikari.HikariDataSource] - HikariCP - Start completed.
+2023-12-15 17:12:34.064 INFO  [o.s.b.a.w.s.WelcomePageHandlerMapping] - Adding welcome page template: index
+2023-12-15 17:12:34.114 INFO  [o.s.b.d.a.OptionalLiveReloadServer] - LiveReload server is running on port 35729
+2023-12-15 17:12:34.119 INFO  [o.apache.coyote.http11.Http11NioProtocol] - Starting ProtocolHandler ["http-nio-8080"]
+2023-12-15 17:12:34.125 INFO  [o.s.b.w.embedded.tomcat.TomcatWebServer] - Tomcat started on port 8080 (http) with context path ''
+2023-12-15 17:12:34.128 INFO  [com.main.ArchiveApplication] - Started ArchiveApplication in 0.444 seconds (process running for 139.425)
+2023-12-15 17:12:34.130 INFO  [o.s.b.d.a.ConditionEvaluationDeltaLoggingListener] - Condition evaluation unchanged
+2023-12-15 17:12:45.495 INFO  [o.a.c.c.C.[Tomcat].[localhost].[/]] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-15 17:12:45.495 INFO  [o.s.web.servlet.DispatcherServlet] - Initializing Servlet 'dispatcherServlet'
+2023-12-15 17:12:45.495 INFO  [o.s.web.servlet.DispatcherServlet] - Completed initialization in 0 ms
+2023-12-15 17:12:51.608 INFO  [com.main.controller.LoginController] - naverLogin
+2023-12-15 17:12:51.609 INFO  [com.main.service.LoginServiceImpl] - naver oauth2.0/authorize
+2023-12-15 17:12:51.901 INFO  [com.main.controller.LoginController] - naverLoginCallback
+2023-12-15 17:12:51.902 INFO  [com.main.service.LoginServiceImpl] - naver oauth2.0/token
+2023-12-15 17:12:51.904 INFO  [com.main.comm.Common] - apiURL: https://nid.naver.com/oauth2.0/token?grant_type=authorization_code&client_id=MUmUiuEZ0YXq5NezC1Ky&client_secret=U2ITnhnahA&code=HJV0qnhJvE3cZGZ6Ua&state=520117574179235350080799149271207832241, method: GET, header: null
+2023-12-15 17:12:52.011 INFO  [com.main.comm.Common] - RESULT :: {"access_token":"AAAAOG2dTp5f1u_IQ_ayfZ7hilS_rhoOr6gvzBt4rc3bEjHN7nuNzrPTh7jN1JhfcwPfAkc1Z6n7Ve0HG33deHexO1Y","refresh_token":"GfmrzAjGDJ42miilisisoMm84Zbx78b2qb0UlKjisChkbByGj3jjmkLclS0l6pdGcx85l7PiiJGAm445GHisC3DOk0hlX074xVvIeV4JN1BLPBCdZY4URT5KKG6LhFtHFEduyO","token_type":"bearer","expires_in":"3600"}
+2023-12-15 17:12:52.012 INFO  [com.main.service.LoginServiceImpl] - naver profile
+2023-12-15 17:12:52.012 INFO  [com.main.comm.Common] - apiURL: https://openapi.naver.com/v1/nid/me, method: GET, header: bearer AAAAOG2dTp5f1u_IQ_ayfZ7hilS_rhoOr6gvzBt4rc3bEjHN7nuNzrPTh7jN1JhfcwPfAkc1Z6n7Ve0HG33deHexO1Y
+2023-12-15 17:12:52.066 INFO  [com.main.comm.Common] - RESULT :: {"resultcode":"00","message":"success","response":{"id":"yhJLjCsCKlYzEwj4jdkj2-u6O_dWl-Zfc3QvFroczgY","nickname":"TY","profile_image":"https:\/\/phinf.pstatic.net\/contact\/20200304_3\/1583292923097gVHC7_PNG\/__.png","mobile":"010-3794-2618","mobile_e164":"+821037942618"}}
+2023-12-15 17:12:52.066 INFO  [com.main.controller.LoginController] - 00
+2023-12-15 17:12:52.067 INFO  [com.main.controller.LoginController] - success
+2023-12-15 17:12:52.069 INFO  [jdbc.sqltiming] - SELECT
+		u.user_id,
+		u.user_txid,
+		u.user_name,
+		u.email,
+		u.nickname,
+		u.mobile,
+		u.create_date,
+		u.modify_date,
+		u.sns_id,
+		u.sns_type,
+		u.sns_profile,
+		u.sns_connect_date,
+		a.auth_name
+	FROM users u
+	LEFT OUTER JOIN user_auth a
+		ON u.auth_id = a.auth_id
+	WHERE u.sns_id = 'yhJLjCsCKlYzEwj4jdkj2-u6O_dWl-Zfc3QvFroczgY'
+ {executed in 1 msec}
+2023-12-15 17:12:52.072 INFO  [jdbc.resultsettable] - 
+|--------|----------|----------|------|---------|--------------|----------------------|----------------------|--------------------------------------------|---------|---------------------------------------------------------------------------|----------------------|----------|
+|user_id |user_txid |user_name |email |nickname |mobile        |create_date           |modify_date           |sns_id                                      |sns_type |sns_profile                                                                |sns_connect_date      |auth_name |
+|--------|----------|----------|------|---------|--------------|----------------------|----------------------|--------------------------------------------|---------|---------------------------------------------------------------------------|----------------------|----------|
+|2       |null      |null      |null  |TY       |010-3794-2618 |2023-12-15 17:10:28.0 |2023-12-15 17:10:28.0 |yhJLjCsCKlYzEwj4jdkj2-u6O_dWl-Zfc3QvFroczgY |naver    |https://phinf.pstatic.net/contact/20200304_3/1583292923097gVHC7_PNG/__.png |2023-12-15 17:10:28.0 |null      |
+|--------|----------|----------|------|---------|--------------|----------------------|----------------------|--------------------------------------------|---------|---------------------------------------------------------------------------|----------------------|----------|
+
+2023-12-15 17:14:34.008 INFO  [o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener] - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-12-15 17:14:34.009 INFO  [o.apache.coyote.http11.Http11NioProtocol] - Stopping ProtocolHandler ["http-nio-8080"]
+2023-12-15 17:14:34.023 INFO  [com.zaxxer.hikari.HikariDataSource] - HikariCP - Shutdown initiated...
+2023-12-15 17:14:34.029 INFO  [com.zaxxer.hikari.HikariDataSource] - HikariCP - Shutdown completed.
+2023-12-15 17:14:34.101 INFO  [com.main.ArchiveApplication] - Starting ArchiveApplication using Java 17.0.9 with PID 2020 (C:\Users\kcs\eclipse\jee-2023-09\workspace\Archive\bin\main started by kcs in C:\Users\kcs\eclipse\jee-2023-09\workspace\Archive)
+2023-12-15 17:14:34.101 INFO  [com.main.ArchiveApplication] - The following 1 profile is active: "local"
+2023-12-15 17:14:34.316 INFO  [o.s.b.w.embedded.tomcat.TomcatWebServer] - Tomcat initialized with port 8080 (http)
+2023-12-15 17:14:34.316 INFO  [o.apache.coyote.http11.Http11NioProtocol] - Initializing ProtocolHandler ["http-nio-8080"]
+2023-12-15 17:14:34.316 INFO  [o.apache.catalina.core.StandardService] - Starting service [Tomcat]
+2023-12-15 17:14:34.316 INFO  [org.apache.catalina.core.StandardEngine] - Starting Servlet engine: [Apache Tomcat/10.1.16]
+2023-12-15 17:14:34.374 INFO  [org.apache.jasper.servlet.TldScanner] - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2023-12-15 17:14:34.377 INFO  [o.a.c.c.C.[Tomcat].[localhost].[/]] - Initializing Spring embedded WebApplicationContext
+2023-12-15 17:14:34.377 INFO  [o.s.b.w.s.c.ServletWebServerApplicationContext] - Root WebApplicationContext: initialization completed in 274 ms
+2023-12-15 17:14:34.399 INFO  [com.zaxxer.hikari.HikariDataSource] - HikariCP - Starting...
+2023-12-15 17:14:34.403 INFO  [com.zaxxer.hikari.pool.HikariPool] - HikariCP - Added connection net.sf.log4jdbc.sql.jdbcapi.ConnectionSpy@7a5a2e0d
+2023-12-15 17:14:34.403 INFO  [com.zaxxer.hikari.HikariDataSource] - HikariCP - Start completed.
+2023-12-15 17:14:34.442 INFO  [o.s.b.a.w.s.WelcomePageHandlerMapping] - Adding welcome page template: index
+2023-12-15 17:14:34.488 INFO  [o.s.b.d.a.OptionalLiveReloadServer] - LiveReload server is running on port 35729
+2023-12-15 17:14:34.494 INFO  [o.apache.coyote.http11.Http11NioProtocol] - Starting ProtocolHandler ["http-nio-8080"]
+2023-12-15 17:14:34.498 INFO  [o.s.b.w.embedded.tomcat.TomcatWebServer] - Tomcat started on port 8080 (http) with context path ''
+2023-12-15 17:14:34.502 INFO  [com.main.ArchiveApplication] - Started ArchiveApplication in 0.431 seconds (process running for 259.799)
+2023-12-15 17:14:34.503 INFO  [o.s.b.d.a.ConditionEvaluationDeltaLoggingListener] - Condition evaluation unchanged
+2023-12-15 17:14:35.494 INFO  [o.a.c.c.C.[Tomcat].[localhost].[/]] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-15 17:14:35.495 INFO  [o.s.web.servlet.DispatcherServlet] - Initializing Servlet 'dispatcherServlet'
+2023-12-15 17:14:35.495 INFO  [o.s.web.servlet.DispatcherServlet] - Completed initialization in 0 ms
+2023-12-15 17:14:39.864 INFO  [com.main.controller.LoginController] - naverLogin
+2023-12-15 17:14:39.864 INFO  [com.main.service.LoginServiceImpl] - naver oauth2.0/authorize
+2023-12-15 17:14:40.089 INFO  [com.main.controller.LoginController] - naverLoginCallback
+2023-12-15 17:14:40.089 INFO  [com.main.service.LoginServiceImpl] - naver oauth2.0/token
+2023-12-15 17:14:40.091 INFO  [com.main.comm.Common] - apiURL: https://nid.naver.com/oauth2.0/token?grant_type=authorization_code&client_id=MUmUiuEZ0YXq5NezC1Ky&client_secret=U2ITnhnahA&code=IS9G7N02WFWkyHbEql&state=705372284927480347451820589065699040154, method: GET, header: null
+2023-12-15 17:14:40.204 INFO  [com.main.comm.Common] - RESULT :: {"access_token":"AAAAOG2dTp5f1u_IQ_ayfZ7hilS_rhoOr6gvzBt4rc3bEjHN7nuNzrPTh7jN1JhfcwPfAkc1Z6n7Ve0HG33deHexO1Y","refresh_token":"GfmrzAjGDJ42miilisisoMm84Zbx78b2qb0UlKjisChkbByGj3jjmkLclS0l6pdGcx85l7PiiJGAm445GHisC3DOk0hlX074xVvIeV4JN1BLPBCdZY4URT5KKG6LhFtHFEduyO","token_type":"bearer","expires_in":"3600"}
+2023-12-15 17:14:40.206 INFO  [com.main.service.LoginServiceImpl] - naver profile
+2023-12-15 17:14:40.206 INFO  [com.main.comm.Common] - apiURL: https://openapi.naver.com/v1/nid/me, method: GET, header: bearer AAAAOG2dTp5f1u_IQ_ayfZ7hilS_rhoOr6gvzBt4rc3bEjHN7nuNzrPTh7jN1JhfcwPfAkc1Z6n7Ve0HG33deHexO1Y
+2023-12-15 17:14:40.278 INFO  [com.main.comm.Common] - RESULT :: {"resultcode":"00","message":"success","response":{"id":"yhJLjCsCKlYzEwj4jdkj2-u6O_dWl-Zfc3QvFroczgY","nickname":"TY","profile_image":"https:\/\/phinf.pstatic.net\/contact\/20200304_3\/1583292923097gVHC7_PNG\/__.png","mobile":"010-3794-2618","mobile_e164":"+821037942618"}}
+2023-12-15 17:14:40.278 INFO  [com.main.controller.LoginController] - 00
+2023-12-15 17:14:40.278 INFO  [com.main.controller.LoginController] - success
+2023-12-15 17:14:40.280 INFO  [jdbc.sqltiming] - SELECT
+		u.user_id,
+		u.user_txid,
+		u.user_name,
+		u.email,
+		u.nickname,
+		u.mobile,
+		u.create_date,
+		u.modify_date,
+		u.sns_id,
+		u.sns_type,
+		u.sns_profile,
+		u.sns_connect_date,
+		a.auth_name
+	FROM users u
+	LEFT OUTER JOIN user_auth a
+		ON u.auth_id = a.auth_id
+	WHERE u.sns_id = 'yhJLjCsCKlYzEwj4jdkj2-u6O_dWl-Zfc3QvFroczgY'
+ {executed in 0 msec}
+2023-12-15 17:14:40.284 INFO  [jdbc.resultsettable] - 
+|--------|----------|----------|------|---------|--------------|----------------------|----------------------|--------------------------------------------|---------|---------------------------------------------------------------------------|----------------------|----------|
+|user_id |user_txid |user_name |email |nickname |mobile        |create_date           |modify_date           |sns_id                                      |sns_type |sns_profile                                                                |sns_connect_date      |auth_name |
+|--------|----------|----------|------|---------|--------------|----------------------|----------------------|--------------------------------------------|---------|---------------------------------------------------------------------------|----------------------|----------|
+|2       |null      |null      |null  |TY       |010-3794-2618 |2023-12-15 17:10:28.0 |2023-12-15 17:10:28.0 |yhJLjCsCKlYzEwj4jdkj2-u6O_dWl-Zfc3QvFroczgY |naver    |https://phinf.pstatic.net/contact/20200304_3/1583292923097gVHC7_PNG/__.png |2023-12-15 17:10:28.0 |null      |
+|--------|----------|----------|------|---------|--------------|----------------------|----------------------|--------------------------------------------|---------|---------------------------------------------------------------------------|----------------------|----------|
+
+2023-12-15 17:14:40.286 INFO  [jdbc.sqltiming] - UPDATE users
+	 SET nickname = 'TY',
+
+		mobile = '010-3794-2618',
+
+		sns_id = 'yhJLjCsCKlYzEwj4jdkj2-u6O_dWl-Zfc3QvFroczgY',
+
+		sns_type = 'naver',
+
+		sns_profile = 'https://phinf.pstatic.net/contact/20200304_3/1583292923097gVHC7_PNG/__.png',
+
+		modify_date = CURRENT_TIMESTAMP 
+	WHERE user_id = 2
+ {executed in 2 msec}
+2023-12-15 17:14:40.286 INFO  [com.main.service.LoginServiceImpl] - UPDATE :: 1
+2023-12-15 17:14:40.289 INFO  [jdbc.sqltiming] - INSERT INTO user_log
+	(user_id, login_status, login_type)
+	VALUES ('2', NULL, 'naver')
+ {executed in 2 msec}
+2023-12-15 17:14:40.290 INFO  [com.main.controller.LoginController] - update
+2023-12-15 17:18:07.824 INFO  [o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener] - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-12-15 17:18:07.825 INFO  [o.apache.coyote.http11.Http11NioProtocol] - Stopping ProtocolHandler ["http-nio-8080"]
+2023-12-15 17:18:07.841 INFO  [com.zaxxer.hikari.HikariDataSource] - HikariCP - Shutdown initiated...
+2023-12-15 17:18:07.843 INFO  [com.zaxxer.hikari.HikariDataSource] - HikariCP - Shutdown completed.
+2023-12-15 17:18:07.946 INFO  [com.main.ArchiveApplication] - Starting ArchiveApplication using Java 17.0.9 with PID 2020 (C:\Users\kcs\eclipse\jee-2023-09\workspace\Archive\bin\main started by kcs in C:\Users\kcs\eclipse\jee-2023-09\workspace\Archive)
+2023-12-15 17:18:07.947 INFO  [com.main.ArchiveApplication] - The following 1 profile is active: "local"
+2023-12-15 17:19:09.182 INFO  [com.main.ArchiveApplication] - Starting ArchiveApplication using Java 17.0.9 with PID 7828 (C:\Users\kcs\eclipse\jee-2023-09\workspace\Archive\bin\main started by kcs in C:\Users\kcs\eclipse\jee-2023-09\workspace\Archive)
+2023-12-15 17:19:09.184 INFO  [com.main.ArchiveApplication] - The following 1 profile is active: "local"
+2023-12-15 17:19:09.215 INFO  [o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor] - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-12-15 17:19:09.215 INFO  [o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor] - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-12-15 17:19:10.048 INFO  [o.s.b.w.embedded.tomcat.TomcatWebServer] - Tomcat initialized with port 8080 (http)
+2023-12-15 17:19:10.054 INFO  [o.apache.coyote.http11.Http11NioProtocol] - Initializing ProtocolHandler ["http-nio-8080"]
+2023-12-15 17:19:10.055 INFO  [o.apache.catalina.core.StandardService] - Starting service [Tomcat]
+2023-12-15 17:19:10.056 INFO  [org.apache.catalina.core.StandardEngine] - Starting Servlet engine: [Apache Tomcat/10.1.16]
+2023-12-15 17:19:10.190 INFO  [org.apache.jasper.servlet.TldScanner] - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2023-12-15 17:19:10.196 INFO  [o.a.c.c.C.[Tomcat].[localhost].[/]] - Initializing Spring embedded WebApplicationContext
+2023-12-15 17:19:10.196 INFO  [o.s.b.w.s.c.ServletWebServerApplicationContext] - Root WebApplicationContext: initialization completed in 981 ms
+2023-12-15 17:19:10.276 INFO  [com.zaxxer.hikari.HikariDataSource] - HikariCP - Starting...
+2023-12-15 17:19:10.342 INFO  [com.zaxxer.hikari.pool.HikariPool] - HikariCP - Added connection net.sf.log4jdbc.sql.jdbcapi.ConnectionSpy@5cf5243d
+2023-12-15 17:19:10.343 INFO  [com.zaxxer.hikari.HikariDataSource] - HikariCP - Start completed.
+2023-12-15 17:19:10.528 INFO  [o.s.b.a.w.s.WelcomePageHandlerMapping] - Adding welcome page template: index
+2023-12-15 17:19:10.766 INFO  [o.s.b.d.a.OptionalLiveReloadServer] - LiveReload server is running on port 35729
+2023-12-15 17:19:10.780 INFO  [o.apache.coyote.http11.Http11NioProtocol] - Starting ProtocolHandler ["http-nio-8080"]
+2023-12-15 17:19:10.802 INFO  [o.s.b.w.embedded.tomcat.TomcatWebServer] - Tomcat started on port 8080 (http) with context path ''
+2023-12-15 17:19:10.809 INFO  [com.main.ArchiveApplication] - Started ArchiveApplication in 2.024 seconds (process running for 2.683)
+2023-12-15 17:19:12.947 INFO  [o.a.c.c.C.[Tomcat].[localhost].[/]] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-15 17:19:12.949 INFO  [o.s.web.servlet.DispatcherServlet] - Initializing Servlet 'dispatcherServlet'
+2023-12-15 17:19:12.950 INFO  [o.s.web.servlet.DispatcherServlet] - Completed initialization in 1 ms
+2023-12-15 17:19:12.977 INFO  [com.main.controller.HomeController] - false
+2023-12-15 17:19:15.220 INFO  [com.main.controller.HomeController] - false
+2023-12-15 17:19:20.016 INFO  [com.main.controller.LoginController] - naverLogin
+2023-12-15 17:19:20.016 INFO  [com.main.service.LoginServiceImpl] - naver oauth2.0/authorize
+2023-12-15 17:19:20.284 INFO  [com.main.controller.LoginController] - naverLoginCallback
+2023-12-15 17:19:20.284 INFO  [com.main.service.LoginServiceImpl] - naver oauth2.0/token
+2023-12-15 17:19:20.286 INFO  [com.main.comm.Common] - apiURL: https://nid.naver.com/oauth2.0/token?grant_type=authorization_code&client_id=MUmUiuEZ0YXq5NezC1Ky&client_secret=U2ITnhnahA&code=is6RQj05uwNzYYf5Vi&state=1045342799139169870137748970156903243894, method: GET, header: null
+2023-12-15 17:19:20.506 INFO  [com.main.comm.Common] - RESULT :: {"access_token":"AAAAOG2dTp5f1u_IQ_ayfZ7hilS_rhoOr6gvzBt4rc3bEjHN7nuNzrPTh7jN1JhfcwPfAkc1Z6n7Ve0HG33deHexO1Y","refresh_token":"GfmrzAjGDJ42miilisisoMm84Zbx78b2qb0UlKjisChkbByGj3jjmkLclS0l6pdGcx85l7PiiJGAm445GHisC3DOk0hlX074xVvIeV4JN1BLPBCdZY4URT5KKG6LhFtHFEduyO","token_type":"bearer","expires_in":"3600"}
+2023-12-15 17:19:20.520 INFO  [com.main.service.LoginServiceImpl] - naver profile
+2023-12-15 17:19:20.520 INFO  [com.main.comm.Common] - apiURL: https://openapi.naver.com/v1/nid/me, method: GET, header: bearer AAAAOG2dTp5f1u_IQ_ayfZ7hilS_rhoOr6gvzBt4rc3bEjHN7nuNzrPTh7jN1JhfcwPfAkc1Z6n7Ve0HG33deHexO1Y
+2023-12-15 17:19:20.595 INFO  [com.main.comm.Common] - RESULT :: {"resultcode":"00","message":"success","response":{"id":"yhJLjCsCKlYzEwj4jdkj2-u6O_dWl-Zfc3QvFroczgY","nickname":"TY","profile_image":"https:\/\/phinf.pstatic.net\/contact\/20200304_3\/1583292923097gVHC7_PNG\/__.png","mobile":"010-3794-2618","mobile_e164":"+821037942618"}}
+2023-12-15 17:19:20.595 INFO  [com.main.controller.LoginController] - 00
+2023-12-15 17:19:20.595 INFO  [com.main.controller.LoginController] - success
+2023-12-15 17:19:20.622 INFO  [jdbc.sqltiming] - SELECT
+		u.user_id,
+		u.user_txid,
+		u.user_name,
+		u.email,
+		u.nickname,
+		u.mobile,
+		u.create_date,
+		u.modify_date,
+		u.sns_id,
+		u.sns_type,
+		u.sns_profile,
+		u.sns_connect_date,
+		a.auth_name
+	FROM users u
+	LEFT OUTER JOIN user_auth a
+		ON u.auth_id = a.auth_id
+	WHERE u.sns_id = 'yhJLjCsCKlYzEwj4jdkj2-u6O_dWl-Zfc3QvFroczgY'
+ {executed in 1 msec}
+2023-12-15 17:19:20.633 INFO  [jdbc.resultsettable] - 
+|--------|----------|----------|------|---------|--------------|----------------------|----------------------|--------------------------------------------|---------|---------------------------------------------------------------------------|----------------------|----------|
+|user_id |user_txid |user_name |email |nickname |mobile        |create_date           |modify_date           |sns_id                                      |sns_type |sns_profile                                                                |sns_connect_date      |auth_name |
+|--------|----------|----------|------|---------|--------------|----------------------|----------------------|--------------------------------------------|---------|---------------------------------------------------------------------------|----------------------|----------|
+|2       |null      |null      |null  |TY       |010-3794-2618 |2023-12-15 17:10:28.0 |2023-12-15 17:14:40.0 |yhJLjCsCKlYzEwj4jdkj2-u6O_dWl-Zfc3QvFroczgY |naver    |https://phinf.pstatic.net/contact/20200304_3/1583292923097gVHC7_PNG/__.png |2023-12-15 17:10:28.0 |null      |
+|--------|----------|----------|------|---------|--------------|----------------------|----------------------|--------------------------------------------|---------|---------------------------------------------------------------------------|----------------------|----------|
+
+2023-12-15 17:19:20.662 INFO  [jdbc.sqltiming] - UPDATE users
+	 SET nickname = 'TY',
+
+		mobile = '010-3794-2618',
+
+		sns_id = 'yhJLjCsCKlYzEwj4jdkj2-u6O_dWl-Zfc3QvFroczgY',
+
+		sns_type = 'naver',
+
+		sns_profile = 'https://phinf.pstatic.net/contact/20200304_3/1583292923097gVHC7_PNG/__.png',
+
+		modify_date = CURRENT_TIMESTAMP 
+	WHERE user_id = 2
+ {executed in 7 msec}
+2023-12-15 17:19:20.662 INFO  [com.main.service.LoginServiceImpl] - UPDATE :: 1
+2023-12-15 17:19:20.665 INFO  [jdbc.sqltiming] - INSERT INTO user_log
+	(user_id, login_status, login_type)
+	VALUES ('2', NULL, 'naver')
+ {executed in 2 msec}
+2023-12-15 17:19:20.666 INFO  [com.main.controller.LoginController] - update
+2023-12-15 17:19:20.671 INFO  [com.main.controller.HomeController] - true
+2023-12-15 17:20:21.975 INFO  [com.main.controller.HomeController] - true
+2023-12-15 17:23:14.470 INFO  [com.main.controller.HomeController] - true
+2023-12-15 17:23:16.852 INFO  [com.main.controller.HomeController] - true
+2023-12-15 17:25:43.030 INFO  [com.main.controller.HomeController] - true
+2023-12-15 17:25:45.301 INFO  [com.main.controller.HomeController] - true
+2023-12-15 17:27:39.827 INFO  [com.main.controller.HomeController] - true
+2023-12-15 17:29:46.293 INFO  [com.main.controller.HomeController] - true
+2023-12-15 17:29:51.305 INFO  [o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin] - Application shutdown requested.
+2023-12-15 17:29:51.308 INFO  [o.apache.coyote.http11.Http11NioProtocol] - Stopping ProtocolHandler ["http-nio-8080"]
+2023-12-15 17:29:51.324 INFO  [com.zaxxer.hikari.HikariDataSource] - HikariCP - Shutdown initiated...
+2023-12-15 17:29:51.327 INFO  [com.zaxxer.hikari.HikariDataSource] - HikariCP - Shutdown completed.
+2023-12-15 17:34:56.688 INFO  [com.main.ArchiveApplicationTests] - Starting ArchiveApplicationTests using Java 17.0.9 with PID 2920 (started by kcs in C:\Users\kcs\eclipse\jee-2023-09\workspace\Archive)
+2023-12-15 17:34:56.689 INFO  [com.main.ArchiveApplicationTests] - The following 1 profile is active: "local"
+2023-12-15 17:34:57.569 INFO  [com.zaxxer.hikari.HikariDataSource] - HikariCP - Starting...
+2023-12-15 17:34:57.664 INFO  [com.zaxxer.hikari.pool.HikariPool] - HikariCP - Added connection net.sf.log4jdbc.sql.jdbcapi.ConnectionSpy@4f363abd
+2023-12-15 17:34:57.666 INFO  [com.zaxxer.hikari.HikariDataSource] - HikariCP - Start completed.
+2023-12-15 17:34:58.007 INFO  [o.s.b.a.w.s.WelcomePageHandlerMapping] - Adding welcome page template: index
+2023-12-15 17:34:58.287 INFO  [com.main.ArchiveApplicationTests] - Started ArchiveApplicationTests in 1.928 seconds (process running for 2.928)
+2023-12-15 17:34:59.294 INFO  [com.zaxxer.hikari.HikariDataSource] - HikariCP - Shutdown initiated...
+2023-12-15 17:34:59.299 INFO  [com.zaxxer.hikari.HikariDataSource] - HikariCP - Shutdown completed.

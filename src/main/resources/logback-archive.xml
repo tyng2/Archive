@@ -32,15 +32,14 @@
 	<logger name="jdbc.sqltiming" level="INFO" />
 	<logger name="jdbc.resultsettable" level="INFO" />
 	 
-<!--     <springProfile name="local"> -->
-<!-- 	    <root level="debug"> -->
-<!-- 	        <appender-ref ref="CONSOLE"/> -->
-<!-- 	    </root> -->
-<!--     </springProfile> -->
-    
     <root level="${LOG_LEVEL}">
-        <appender-ref ref="CONSOLE"/>
-        <appender-ref ref="FILE"/>
+   	    <springProfile name="local">
+	        <appender-ref ref="CONSOLE"/>
+   	    </springProfile>
+   	    <springProfile name="dev">
+   	    	<appender-ref ref="CONSOLE"/>
+	        <appender-ref ref="FILE"/>
+   	    </springProfile>
     </root>
     
 </configuration>

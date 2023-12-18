@@ -1,11 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<!DOCTYPE html>
 <head>
 <title>Login / Potal &mdash; Web Community</title>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
 </head>
 <body>
 <c:if test="${isLogin }">
@@ -59,7 +55,9 @@ history.back();
 			
 			<div class="row form-group">
 				<div class="col-md-12"><br>
-				<a href="/naver-login" class="btn btn-custom btn-lg">NAVER LOGIN</a>
+				<a href="/naver-login" class="">
+					<img src="images/btnW_compl.png" width="50%" height="" alt="네이버 로그인" >
+				</a>
 				<!-- 
 				<span class="button-checkbox">
       					<button type="button" class="btn btn-lg" data-color="primary">로그인 상태 유지</button>

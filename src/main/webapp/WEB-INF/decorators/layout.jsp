@@ -9,21 +9,25 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
 	<title><sitemesh:write property="title" /></title>
 	<!-- Favicon-->
+	
 <!-- 	<link rel="icon" type="image/x-icon" href="assets/favicon.ico" /> -->
 	<link rel="shortcut icon" href="/images/a.png">
 	
+	<sitemesh:write property="head" />
+	
 	<jsp:include page="/WEB-INF/views/common/commonCSS.jsp" />
-	<c:set var="isLogin" scope="session" value="${(not empty sessionScope.loginSession) ? true : false }" />
-	<c:if test="${isLogin }">
-		<c:set var="loginSessionVo" scope="session" value="${sessionScope.loginSession }" />
-	</c:if>
 </head>
 <body>
+	<c:set var="isLogin" scope="request" value="${(not empty sessionScope.loginSession) ? true : false }" />
+	<c:if test="${isLogin }">
+		<c:set var="loginSessionVo" scope="request" value="${sessionScope.loginSession }" />
+	</c:if>
     <jsp:include page="/WEB-INF/views/common/commonJS.jsp" />
 	<jsp:include page="/WEB-INF/views/common/navigation.jsp" />
    	
 	<sitemesh:write property="body" />
     
 	<jsp:include page="/WEB-INF/views/common/footer.jsp" />
+	
 </body>
 </html>

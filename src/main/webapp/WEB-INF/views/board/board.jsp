@@ -67,7 +67,7 @@
 						<b style="color: red;">[${v.commentCnt }]</b>
 					</c:if>
 					</td>
-					<td>${v.userId }</td>
+					<td>${v.nickname }</td>
 					<td>
 					<jsp:useBean id="today" class="java.util.Date"></jsp:useBean>
 					<fmt:parseNumber value="${today.time / (1000 * 60 * 60 * 24)}" var="nowDays" integerOnly="true" />
@@ -93,8 +93,6 @@
 				</div>
 		
 				<!-- bootstrapBoard -->
-				
-				<!--  boardpage -->
 				
 				<div class="row">
 				<div class="col-12">
@@ -131,12 +129,10 @@
 				</div>
 				
 				<p style="text-align: right;" class="mt-4">
-<%-- 					<c:if test="${sessionID != null }"> --%>
+					<c:if test="${isLogin }">
 						<a href="write" class="btn btn-primary btn-md">글쓰기</a>
-<%-- 					</c:if> --%>
+					</c:if>
 				</p>
-				
-				<!--  boardpage -->
 			</div>
 		
 		

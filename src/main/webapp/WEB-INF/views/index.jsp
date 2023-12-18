@@ -43,6 +43,8 @@
 <div class="container">
 	<div class="row align-items-stretch">
 	<div class="col-12 bg-black w-100 ft-feature-1-content">
+	${sessionScope.loginSession } |
+	${loginSessionVo }
 		<c:if test="${!isLogin }">
 			<br><h2 style="text-align: center;">로그인 후 사용가능합니다.</h2>
 		</c:if>
@@ -75,7 +77,7 @@
 					<input type="text" id="url" class="form-control"><br>
 					</p>
 					<p>
-						<button id="addSite" style="float: right;" class="btn btn-primary btn-md">Add</button>
+						<button type="button" id="addSite" style="float: right;" class="btn btn-primary btn-md">Add</button>
 					</p>
 				</div>
 			</c:if>

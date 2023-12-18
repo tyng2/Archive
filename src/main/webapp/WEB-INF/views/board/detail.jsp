@@ -34,7 +34,7 @@
 		<div class="p-4 mb-3 bg-white" style="margin: 0;">
 			<p class="mb-0 font-weight-bold h2">${board.bordTitl } <span style="font-size: 18px"><span style="color: gray;">|</span> ${board.catgName }</span>
 			<span style="float: right; font-size: 15px;">No. ${board.bordId }</span></p>
-			<p class="mb-0" style="margin: 15px 0;"><b>${board.userId }</b><span style="float: right;"><fmt:formatDate value="${board.bordDate }" pattern="yyyy.MM.dd HH:mm:ss"/></span></p>
+			<p class="mb-0" style="margin: 15px 0;"><b>${board.nickname }</b><span style="float: right;"><fmt:formatDate value="${board.bordDate }" pattern="yyyy.MM.dd HH:mm:ss"/></span></p>
 		</div>
 		
 		<c:if test="${files.size() != 0 }">
