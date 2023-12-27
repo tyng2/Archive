@@ -61,13 +61,12 @@
 			<form action="boardComment.do" method="POST">
 				<input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}">
 				
-				<input type="hidden" name="bord_id" id="bord_id" value="${board.bordId }">
+				<input type="hidden" name="bordId" id="bordId" value="${board.bordId }">
 				<input type="hidden" name="pageNum" id="pageNum" value="${param.pageNum }">
-				<input type="hidden" name="bord_catg" id="bord_catg" value="${param.bord_catg }">
+<%-- 				<input type="hidden" name="bordCatg" id="bordCatg" value="${param.bordCatg }"> --%>
 		
 				<c:if test="${isLogin }">
-				<textarea name="comm_cont" id="comm_cont" cols="30" rows="4"
-					class="form-control" 
+				<textarea name="commCont" id="commCont" cols="30" rows="4" class="form-control" 
 					placeholder="Write your comment here..."></textarea><br>
 				<button type="button" id="insertComment" class="btn btn-custom btn-md" style="float: right;">등록</button>
 				</c:if>
@@ -79,17 +78,17 @@
 			<c:if test="${isLogin }">
 <%-- 				<c:if test="${sessionID.equals('admin') && !sessionID.equals(board.userId) }"> --%>
 				<c:if test="${loginSessionVo.userAuth == 'admin' && loginSessionVo.userId != board.userId }">
-					<a href="boardDeleteProcess.do?bord_id=${board.bordId }&pageNum=${param.pageNum }&category=${param.bord_catg }" class="btn btn-custom btn-md">삭제</a>
+					<a href="boardDeleteProcess.do?bordId=${board.bordId }&pageNum=${param.pageNum }&category=${param.bordCatg }" class="btn btn-custom btn-md">삭제</a>
 				</c:if>
 <%-- 				<c:if test="${sessionID.equals(board.userId) }"> --%>
 				<c:if test="${loginSessionVo.userId == board.userId }">
-					<a href="boardModify.do?bord_id=${board.bordId }&pageNum=${param.pageNum }&category=${param.bord_catg }" class="btn btn-custom btn-md">수정</a>
-					<a href="boardDeleteProcess.do?bord_id=${board.bordId }&pageNum=${param.pageNum }&category=${param.bord_catg }" class="btn btn-custom btn-md">삭제</a>
+					<a href="boardModify.do?bordId=${board.bordId }&pageNum=${param.pageNum }&category=${param.bordCatg }" class="btn btn-custom btn-md">수정</a>
+					<a href="boardDeleteProcess.do?bordId=${board.bordId }&pageNum=${param.pageNum }&category=${param.bordCatg }" class="btn btn-custom btn-md">삭제</a>
 				</c:if>
-<%-- 				<a href="reply.do?re_ref=${board.bord_refr }&re_lev=${board.bord_levl }&re_seq=${board.bord_seqn }&category=${board.bord_catg }&pageNum=${param.pageNum }&pcategory=${param.bord_catg }" class="btn btn-custom btn-md">답글</a> --%>
+<%-- 				<a href="reply.do?re_ref=${board.bord_refr }&re_lev=${board.bord_levl }&re_seq=${board.bord_seqn }&category=${board.bordCatg }&pageNum=${param.pageNum }&pcategory=${param.bordCatg }" class="btn btn-custom btn-md">답글</a> --%>
 			</c:if>
 			<c:choose>
-			<c:when test="${param.bord_catg == null }">
+			<c:when test="${param.bordCatg == null }">
 				<a href="board?pageNum=${param.pageNum }&#board" class="btn btn-custom btn-md">목록</a>
 			</c:when>
 			<c:otherwise>

@@ -5,12 +5,6 @@
 	<jsp:include page="/WEB-INF/views/common/commonHeader.jsp" />
 </head>
 <body>
-<c:if test="${isLogin }">
-<script>
-alert('이미 로그인 중입니다.');
-history.back();
-</script>
-</c:if>
 <div class="site-blocks-cover inner-page-cover overlay"
 	style="background-image: url(images/hero_1.jpg);" data-aos="fade"
 	data-stellar-background-ratio="0.5">

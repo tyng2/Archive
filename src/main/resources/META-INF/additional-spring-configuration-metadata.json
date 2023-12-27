@@ -1,17 +1,42 @@
 {"properties": [
   {
-    "name": "page.limit",
-    "type": "java.lang.String",
-    "description": "A description for 'page.limit'"
-  },
-  {
-    "name": "page.block",
-    "type": "java.lang.String",
-    "description": "A description for 'page.block'"
-  },
-  {
     "name": "file.path",
     "type": "java.lang.String",
     "description": "A description for 'file.path'"
+  },
+  {
+    "name": "board.limit",
+    "type": "java.lang.String",
+    "description": "A description for 'board.limit'"
+  },
+  {
+    "name": "board.block",
+    "type": "java.lang.String",
+    "description": "A description for 'board.block'"
+  },
+  {
+    "name": "domain",
+    "type": "java.lang.String",
+    "description": "A description for 'domain'"
+  },
+  {
+    "name": "naver.client-id",
+    "type": "java.lang.String",
+    "description": "A description for 'naver.client-id'"
+  },
+  {
+    "name": "naver.client-secret",
+    "type": "java.lang.String",
+    "description": "A description for 'naver.client-secret'"
+  },
+  {
+    "name": "comment.limit",
+    "type": "java.lang.String",
+    "description": "A description for 'comment.limit'"
+  },
+  {
+    "name": "comment.block",
+    "type": "java.lang.String",
+    "description": "A description for 'comment.block'"
   }
 ]}

@@ -2,10 +2,10 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTO Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.main.mapper.BoardMapper">
 
-<insert id="insertBoard" parameterType="com.main.vo.BoardVo" useGeneratedKeys="true" keyColumn="bord_id">
+<insert id="insertBoard" parameterType="com.main.vo.BoardVo" useGeneratedKeys="true" keyColumn="bord_id" keyProperty="bordId">
 	INSERT INTO board
 	(bord_catg, bord_titl, bord_cont, user_id, bord_date, bord_hitc, bord_wrip)  
-	VALUES (#{bord_catg},#{bord_titl},#{bord_cont},#{user_id},CURRENT_TIMESTAMP,0,#{bord_wrip})
+	VALUES (#{bordCatg},#{bordTitl},#{bordCont},#{userId},CURRENT_TIMESTAMP,0,#{bordWrip})
 </insert>
 
 <select id="getBoardList" resultType="com.main.vo.BoardVo">
@@ -59,7 +59,7 @@
 <update id="addHitc">
 	UPDATE board
 	SET bord_hitc = bord_hitc + 1
-	WHERE bord_id = #{bord_id}
+	WHERE bord_id = #{bordId}
 </update>
 
 <select id="getBoard" resultType="com.main.vo.BoardVo">
@@ -79,7 +79,7 @@
 		ON b.bord_catg = c.catg_id
 	LEFT OUTER JOIN users u
 		ON b.user_id = u.user_id
-	WHERE b.bord_id = #{bord_id}
+	WHERE b.bord_id = #{bordId}
 </select>
 
 <select id="getCategoryList" resultType="com.main.vo.CategoryVo">
@@ -97,7 +97,7 @@
 <insert id="insertFile" parameterType="com.main.vo.FileVo">
 	INSERT INTO board_file
 	(bord_id, file_olnm, file_svnm)  
-	VALUES (#{bord_id},#{file_olnm},#{file_svnm})
+	VALUES (#{bordId},#{fileOlnm},#{fileSvnm})
 </insert>
 
 <select id="getFileList" resultType="com.main.vo.FileVo">
@@ -108,7 +108,7 @@
 		file_svnm,
 		file_date
 	FROM board_file
-	WHERE bord_id = #{bord_id}
+	WHERE bord_id = #{bordId}
 </select>
 
 <select id="getFile" resultType="com.main.vo.FileVo">
@@ -118,9 +118,44 @@
 		file_svnm,
 		file_date
 	FROM board_file
-	WHERE file_id = #{file_id}
+	WHERE file_id = #{fileId}
 </select>
 
 <!-- File -->
+
+
+<!-- Comment -->
+
+<select id="getCommentList" resultType="com.main.vo.CommentVo">
+	SELECT
+		c.comm_id,
+		c.bord_id,
+		c.user_id,
+		u.nickname,
+		c.comm_cont,
+		c.comm_date,
+		(SELECT COUNT(comm_id) 
+			FROM board_comment
+			WHERE bord_id = #{bordId} 
+		) cnt
+	FROM board_comment c
+	LEFT OUTER JOIN users u
+		ON c.user_id = u.user_id
+	WHERE c.bord_id = #{bordId}
+	ORDER BY c.comm_date
+	LIMIT #{pageSize} OFFSET #{startRow} 
+</select>
+
+<insert id="insertComment" parameterType="com.main.vo.CommentVo">
+	INSERT INTO board_comment
+	(bord_id, user_id, comm_cont)  
+	VALUES (#{bordId},#{userId},#{commCont})
+</insert>
+
+<delete id="deleteComment">
+	DELETE FROM board_comment WHERE comm_id = #{commId}
+</delete>
+
+<!-- Comment -->
 
 </mapper>

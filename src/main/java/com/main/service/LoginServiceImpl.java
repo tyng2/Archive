@@ -146,7 +146,11 @@ public class LoginServiceImpl implements LoginService {
 	public void loginProcess(UsersVo user) {
 		HttpServletRequest request	= ((ServletRequestAttributes) RequestContextHolder.getRequestAttributes()).getRequest();
 		HttpSession session			= request.getSession();
-		LoginSessionVo login = new LoginSessionVo(user.getUserId(), user.getUserName(), user.getEmail(), user.getNickname(), user.getMobile(), user.getSnsType(), user.getAuthName());
+		LoginSessionVo login		= new LoginSessionVo(user.getUserId(), user.getUserName(), user.getEmail(), user.getNickname(), user.getMobile(), user.getSnsType(), user.getAuthName());
+		
+		if (session.getAttribute("loginSession") != null) {
+			session.invalidate();
+		}
 		session.setAttribute("loginSession", login);
 		Map<String, String> input = Map.of(
 			"userId"	, user.getUserId() + "",
@@ -164,11 +168,19 @@ public class LoginServiceImpl implements LoginService {
 
 	@Override
 	public boolean isLogin() {
+		LoginSessionVo login = getLoginData();
+		return !ObjectUtils.isEmpty(login);
+	}
+
+	@Override
+	public LoginSessionVo getLoginData() {
 		HttpServletRequest request	= ((ServletRequestAttributes) RequestContextHolder.getRequestAttributes()).getRequest();
 		HttpSession session			= request.getSession();
 		LoginSessionVo login		= (LoginSessionVo) session.getAttribute("loginSession");
-		return !ObjectUtils.isEmpty(login);
+		return login;
 	}
+	
+	
 
 	
 	

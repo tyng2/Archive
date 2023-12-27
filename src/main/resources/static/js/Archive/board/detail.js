@@ -1,103 +1,151 @@
-$(function() {
-	listComment();
+var detail = (function() {
 	
-	$('.download').on('click', function(){
-		let fileId = $(this).data('file_id');
+	var _init = function(){
 		
-		ajaxAction({
-			url: 'download',
-			type: 'POST',
-			data: {
-				fileId : fileId
-			},
-			success: function(data){
-				fileDownload(data, fileId);
-			}
-		});
-	});
+		listComment();
 	
-	$('#insertComment').click(function() {
-		$insertComment 	= $('#insertComment').attr('disabled', 'disabled');
-		let $comm_cont 	= $('#comm_cont');
-		let bord_id 	= $('#bord_id').val();
-		let comm_cont 	= $comm_cont.val();
-		
-		let param 		= {
-			'bord_id'	: bord_id,
-			'comm_cont'	: comm_cont
-		};
-		
-		ajaxAction({
-			url		: 'insertComment.do',
-			type	: 'post',
-			data	: param,
-			success	: function() {
-				$comm_cont.val('');
-				listComment();
-			}
-		});
-		$insertComment = $('#insertComment').removeAttr('disabled');
-	});
-	
-	
-	function fileDownload(dateStr, fileId){
-		location.href = 'download?dateStr='+dateStr+'&fileId='+fileId;
-	}
-	
-});
-
-function delComment(i){
-	let comm_id 	= $('#comm_id'+i).val();
-	let param 		= {
-		'comm_id': comm_id
-	};
-	ajaxAction({
-		url		: 'deleteComment.do',
-		data	: param,
-		success	: function() {
-			listComment();
-		}
-	});
-	return false;
-}
-
-function listComment(){
-	let bord_id = $('#bord_id').val();
-	
-	ajaxAction({
-		url: 'comment?bord_id='+bord_id,
-		success: function(result) {
-			let $comment 	= $('#comment').empty();
-			let $p			= $('<p>');
-			let $span		= $('<span>');
-			let $inp		= $('<input>').attr('type', 'hidden');
-			let $a			= $('<a>');
+		$('.download').on('click', function(){
+			let fileId = $(this).data('file_id');
 			
-			let $pClone, $spanClone;	// 일반적으로 close
-			
-//			let adminId 	= 'admin';
-//			let sessionID 	= document.querySelector('#sessionID').innerHTML.trim();
-			let boardAuth 	= document.querySelector('#boardAuth').innerHTML;
-			
-			$p.clone().addClass('mb-4').html('댓글 : ' + result.length).appendTo($comment);
-			
-			$.each(result, function(i, obj){
-			
-				$pClone = $p.clone().addClass('em').appendTo($comment);
-				$('<b></b>').html(obj.user_id+'&nbsp;&nbsp;&nbsp;&nbsp;').appendTo($pClone);	
-				$span.clone().addClass('smallFont').html(dateFormatter(obj.comm_date)).appendTo($pClone);
-				
-//				if (obj.user_id === sessionID || adminId === sessionID){
-				if (boardAuth){
-					$spanClone = $span.clone().attr('style', 'float: right;').appendTo($pClone);
-					
-					$inp.clone().attr('id', 'comm_id'+i).val(obj.comm_id).appendTo($spanClone);
-					$a.clone().addClass('smallBtn').attr('onclick', 'delComment('+i+')').html('삭제').appendTo($spanClone);
+			ajaxAction({
+				url: 'download',
+				type: 'POST',
+				data: {
+					fileId : fileId
+				},
+				success: function(data){
+					fileDownload(data, fileId);
 				}
-					
-				$p.clone().addClass('mb-0').html(obj.comm_cont).appendTo($comment);
-				$('<hr>').appendTo($comment);
 			});
+		});
+		
+		$('#insertComment').click(function() {
+			$insertComment 	= $('#insertComment').attr('disabled', 'disabled');
+			let $commCont 	= $('#commCont');
+			let bordId		= $('#bordId').val();
+			let commCont	= $commCont.val();
+			let pageNum		= $('#pageNum').val();
+			
+			if (!commCont) {
+				alert('No content!');
+				return false;
+			}
+			
+			let param 		= {
+				'bordId'	: bordId,
+				'commCont'	: commCont,
+				'pageNum'	: pageNum
+			};
+			
+			ajaxAction({
+				url		: '/insertComment',
+				type	: 'post',
+				data	: param,
+				success	: function(data) {
+					if (data > 0) {
+						$commCont.val('');
+						listComment();
+					} else {
+						alert('something wrong');
+					}
+				}
+			});
+			$insertComment = $('#insertComment').removeAttr('disabled');
+		});
+		
+		function fileDownload(dateStr, fileId){
+			location.href = 'download?dateStr='+dateStr+'&fileId='+fileId;
 		}
-	});
-}
+		
+		
+		$('.delComment').on('click', function(){
+			var commId = $(this).data('comm_id');
+			let param 		= {
+				'commId': commId
+			};
+			ajaxAction({
+				url		: '/deleteComment',
+				data	: param,
+				success	: function(data) {
+					if (data > 0) {
+						listComment();
+					} else {
+						alert('something wrong');
+					}
+				}
+			});
+			return false;
+		});
+	};
+	
+//	function delComment(i){
+//		let commId 	= $('#commId'+i).val();
+//		let param 		= {
+//			'commId': commId
+//		};
+//		ajaxAction({
+//			url		: '/deleteComment',
+//			data	: param,
+//			success	: function(data) {
+//				if (data > 0) {
+//					listComment();
+//				} else {
+//					alert('something wrong');
+//				}
+//			}
+//		});
+//		return false;
+//	}
+	
+	function listComment(){
+		let bordId = $('#bordId').val();
+		
+		ajaxAction({
+			url: '/comment?bordId='+bordId,
+			success: function(result) {
+				drawComment(result.commentList);
+				drawCommentPageBlock(result.pageInfo);
+			}
+		});
+	};
+	
+	function drawComment(result){
+		let $comment 	= $('#comment').empty();
+		let $p			= $('<p>');
+		let $span		= $('<span>');
+		let $inp		= $('<input>').attr('type', 'hidden');
+		let $a			= $('<a>');
+		
+		let $pClone, $spanClone;	// 일반적으로 close
+		
+		let boardAuth 	= document.querySelector('#boardAuth').innerHTML;
+		
+		$p.clone().addClass('mb-4').html('댓글 : ' + result.length).appendTo($comment);
+		
+		$.each(result, function(i, obj){
+		
+			$pClone = $p.clone().addClass('em').appendTo($comment);
+			$('<b></b>').html(obj.nickname+'&nbsp;&nbsp;&nbsp;&nbsp;').appendTo($pClone);	
+			$span.clone().addClass('smallFont').html(dateFormatter(obj.commDate)).appendTo($pClone);
+			
+			if (boardAuth){
+				$spanClone = $span.clone().attr('style', 'float: right;').appendTo($pClone);
+				
+				$inp.clone().attr('id', 'commId'+i).val(obj.commId).appendTo($spanClone);
+				$a.clone().addClass('smallBtn delComment').data('comm_id', i).html('삭제').appendTo($spanClone);
+			}
+				
+			$p.clone().addClass('mb-0').html(obj.commCont).appendTo($comment);
+			$('<hr>').appendTo($comment);
+		});
+	};
+	
+	function drawCommentPageBlock(result){
+		
+	};
+	
+	return {
+		init : _init
+	};
+}());
+detail.init();

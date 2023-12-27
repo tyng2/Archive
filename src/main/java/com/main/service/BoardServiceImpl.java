@@ -13,7 +13,9 @@ import com.main.comm.PageSet;
 import com.main.mapper.BoardMapper;
 import com.main.vo.BoardVo;
 import com.main.vo.CategoryVo;
+import com.main.vo.CommentVo;
 import com.main.vo.FileVo;
+import com.main.vo.LoginSessionVo;
 import com.main.vo.PageInfo;
 
 @Service
@@ -22,18 +24,34 @@ public class BoardServiceImpl implements BoardService {
 	private int LIMIT_SIZE, PAGE_BLOCK_SIZE;
 	// 한 페이지당 글 개수, 페이지 블록 개수
 	
-	@Value("${page.limit}")
+	private int COMM_LIMIT_SIZE, COMM_PAGE_BLOCK_SIZE;
+	// 한 페이지당 댓글 개수, 댓글 페이지 블록 개수
+	
+	@Value("${board.limit}")
 	private void setLimit(int page_limit) {
 		LIMIT_SIZE = page_limit;
 	}
 	
-	@Value("${page.block}")
+	@Value("${board.block}")
 	private void setBlockSize(int page_block) {
 		PAGE_BLOCK_SIZE = page_block;
 	}
 	
+	@Value("${comment.limit}")
+	private void setCommLimit(int comment_limit) {
+		COMM_LIMIT_SIZE = comment_limit;
+	}
+	
+	@Value("${comment.block}")
+	private void setCommBlockSize(int comment_block) {
+		COMM_PAGE_BLOCK_SIZE = comment_block;
+	}
+	
 	@Autowired
 	private BoardMapper boardMapper;
+	
+	@Autowired
+	private LoginService loginService;
 	
 	@Override
 	public int insertBoard(BoardVo board) {
@@ -48,7 +66,8 @@ public class BoardServiceImpl implements BoardService {
 		String category	= paramMap.get("category");
 		int pageNum		= Common.str2Int(pageNow);
 		
-		int startRow = (pageNum - 1) * LIMIT_SIZE;
+		pageNum			= (pageNum > 0) ? pageNum : 1;
+		int startRow	= (pageNum - 1) * LIMIT_SIZE;
 		
 		List<BoardVo> boardList = boardMapper.getBoardList(search, category, LIMIT_SIZE, startRow);
 		
@@ -57,7 +76,7 @@ public class BoardServiceImpl implements BoardService {
 			allRowCount = (boardList.get(0) != null) ? boardList.get(0).getCnt() : 0;
 		}
 		
-		PageInfo pageInfo = PageSet.getPageData(pageNum, allRowCount);
+		PageInfo pageInfo = PageSet.getPageData(pageNum, allRowCount, LIMIT_SIZE, PAGE_BLOCK_SIZE);
 		
 		Map<String, Object> result = new HashMap<String, Object>();
 		result.put("pageInfo"	, pageInfo);
@@ -93,6 +112,49 @@ public class BoardServiceImpl implements BoardService {
 		);
 		return res;
 	}
+
+	@Override
+	public Map<String, Object> getCommentList(String bordId, String pageNow) {
+		
+		int pageNum		= Common.str2Int(pageNow);
+		pageNum			= (pageNum > 0) ? pageNum : 1;
+		int startRow	= (pageNum - 1) * COMM_LIMIT_SIZE;
+		
+		List<CommentVo> commentList = boardMapper.getCommentList(bordId, COMM_PAGE_BLOCK_SIZE, startRow);
+		
+		int allRowCount = 0;
+		if (commentList.size() > 0) {
+			allRowCount = (commentList.get(0) != null) ? commentList.get(0).getCnt() : 0;
+		}
+		
+		PageInfo pageInfo = PageSet.getPageData(pageNum, allRowCount, COMM_LIMIT_SIZE, COMM_PAGE_BLOCK_SIZE);
+		Map<String, Object> result = new HashMap<String, Object>();
+		result.put("pageInfo"	, pageInfo);
+		result.put("commentList", commentList);
+		return result;
+	}
+
+	@Override
+	public int insertComment(Map<String, String> paramMap) {
+		
+		LoginSessionVo login = loginService.getLoginData();
+		
+		int bordId		= Common.str2Int(paramMap.get("bordId"));
+		String commCont	= Common.nvl(paramMap.get("commCont"));
+		
+		CommentVo comment = new CommentVo();
+		comment.setBordId(bordId);
+		comment.setCommCont(commCont); 
+		comment.setUserId(login.getUserId());
+		
+		return boardMapper.insertComment(comment);
+	}
+
+	@Override
+	public int deleteComment(String commId) {
+		return boardMapper.deleteComment(commId);
+	}
+	
 	
 	
 	

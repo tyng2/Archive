@@ -2,6 +2,7 @@ package com.main.service;
 
 import java.util.Map;
 
+import com.main.vo.LoginSessionVo;
 import com.main.vo.UsersVo;
 
 public interface LoginService {
@@ -21,5 +22,7 @@ public interface LoginService {
 	public void logout();
 	
 	public boolean isLogin();
+	
+	public LoginSessionVo getLoginData();
 	
 }

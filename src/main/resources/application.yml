@@ -41,7 +41,11 @@ logging:
 file:
   path: file/
 
-page:
+board:
+  limit : 10
+  block : 5
+  
+comment:
   limit : 10
   block : 5
   

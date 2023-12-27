@@ -5,6 +5,7 @@ import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -23,9 +24,12 @@ import org.springframework.web.multipart.MultipartFile;
 import com.main.comm.Common;
 import com.main.comm.cmmFile;
 import com.main.service.BoardService;
+import com.main.service.LoginService;
 import com.main.vo.BoardVo;
 import com.main.vo.CategoryVo;
+import com.main.vo.CommentVo;
 import com.main.vo.FileVo;
+import com.main.vo.LoginSessionVo;
 import com.main.vo.PageInfo;
 
 import jakarta.servlet.http.HttpServletRequest;
@@ -39,6 +43,9 @@ public class BoardController {
 	
 	@Autowired
 	private BoardService boardService;
+	
+	@Autowired
+	private LoginService loginService;
 	
 	@GetMapping("/board")
 	public String board(@RequestParam Map<String, String> paramMap, Model model) {
@@ -75,15 +82,19 @@ public class BoardController {
 		
 //		ResponseEntity<String> res = null;
 		
+		LoginSessionVo login = loginService.getLoginData();
+		
+		int userId = (loginService.isLogin()) ? login.getUserId() : 0;
+		
 		BoardVo board = new BoardVo();
-		board.setUserId(Common.str2Int(paramMap.get("user_id")));
+		board.setUserId(userId);
 		board.setBordCatg(Common.str2Int(paramMap.get("categy")));
 		board.setBordTitl(Common.nvl(paramMap.get("title")));
 		board.setBordCont(Common.nvl(paramMap.get("content")));
 		board.setBordWrip(Common.getClientIP());
 		
-		int bordId = boardService.insertBoard(board);
-		log.info("BOARD INSERT : {}", bordId);
+		boardService.insertBoard(board);
+		log.info("INSERT ID : {}", board.getBordId());
 		
 		int cntFile = 0;
 		List<String> mFileList = new ArrayList<String>();
@@ -94,7 +105,7 @@ public class BoardController {
 				FileVo file = cmmFile.fileUpload(f);
 				mFileList.add(file.getFileSvnm());
 
-				file.setBordId(bordId);
+				file.setBordId(board.getBordId());
 				boardService.insertFile(file);
 				cntFile++;
 			}
@@ -191,9 +202,39 @@ public class BoardController {
 	
 	@ResponseBody
 	@GetMapping("/comment")
-	public String comment() {
+	public Map<String, Object> comment(@RequestParam Map<String, String> paramMap) {
+		log.info("comment");
+		String bordId	= Common.nvl(paramMap.get("bordId"));
+		String pageNum	= Common.nvl(paramMap.get("pageNum"));
 		
-		return "";
+		Map<String, Object> commentMap = boardService.getCommentList(bordId, pageNum);
+		
+		return commentMap;
+	}
+	
+	@ResponseBody
+	@PostMapping("/insertComment")
+	public int insertComment(@RequestParam Map<String, String> paramMap) {
+		log.info("insert Comment");
+		int cnt = 0;
+		cnt = boardService.insertComment(paramMap);
+		
+		return cnt;
+	}
+	
+	@ResponseBody
+	@PostMapping("/deleteComment")
+	public int deleteComment(@RequestParam Map<String, String> paramMap) {
+		log.info("delete Comment");
+		
+		String commId = Common.nvl(paramMap.get("commId"));
+		int cnt = 0;
+		
+		if (!commId.isEmpty()) {
+			cnt = boardService.deleteComment(commId);
+		}
+		
+		return cnt;
 	}
 	
 	

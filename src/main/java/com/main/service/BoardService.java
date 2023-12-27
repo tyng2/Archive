@@ -20,4 +20,10 @@ public interface BoardService {
 	public FileVo getFile(String fileId);
 
 	public Map<String, Object> getDetail(String bordId);
+	
+	public Map<String, Object> getCommentList(String bordId, String pageNow);
+	
+	public int insertComment(Map<String, String> paramMap);
+	
+	public int deleteComment(String commId);
 }
