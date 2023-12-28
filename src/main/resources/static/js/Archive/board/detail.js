@@ -39,7 +39,7 @@ var detail = (function() {
 			
 			ajaxAction({
 				url		: '/insertComment',
-				type	: 'post',
+				type	: 'POST',
 				data	: param,
 				success	: function(data) {
 					if (data > 0) {
@@ -58,13 +58,15 @@ var detail = (function() {
 		}
 		
 		
-		$('.delComment').on('click', function(){
+		$('#comment').on('click', '.delComment', function(){
 			var commId = $(this).data('comm_id');
+			console.log(commId);
 			let param 		= {
 				'commId': commId
 			};
 			ajaxAction({
 				url		: '/deleteComment',
+				type	: 'POST',
 				data	: param,
 				success	: function(data) {
 					if (data > 0) {
@@ -76,40 +78,35 @@ var detail = (function() {
 			});
 			return false;
 		});
+		
+		$('#commentPageBlock .custom-pagination').on('click', '.pageBtn', function(){
+			var pageNum = $(this).data('page_num');
+			listComment(pageNum);
+		});
+		
 	};
 	
-//	function delComment(i){
-//		let commId 	= $('#commId'+i).val();
-//		let param 		= {
-//			'commId': commId
-//		};
-//		ajaxAction({
-//			url		: '/deleteComment',
-//			data	: param,
-//			success	: function(data) {
-//				if (data > 0) {
-//					listComment();
-//				} else {
-//					alert('something wrong');
-//				}
-//			}
-//		});
-//		return false;
-//	}
-	
-	function listComment(){
-		let bordId = $('#bordId').val();
+	function listComment(page){
+		let bordId	= $('#bordId').val();
+		let pageNum	= (page) ? page : $('#pageNum').val();
+		
+		var param	= {
+			'bordId'	: bordId,
+			'pageNum'	: pageNum
+		};
 		
 		ajaxAction({
-			url: '/comment?bordId='+bordId,
-			success: function(result) {
-				drawComment(result.commentList);
+			url		: '/comment',
+			type	: 'GET',
+			data	: param,
+			success	: function(result) {
+				drawComment(result.commentList, result.pageInfo.allRowCount);
 				drawCommentPageBlock(result.pageInfo);
 			}
 		});
 	};
 	
-	function drawComment(result){
+	function drawComment(result, allRowCount){
 		let $comment 	= $('#comment').empty();
 		let $p			= $('<p>');
 		let $span		= $('<span>');
@@ -120,7 +117,7 @@ var detail = (function() {
 		
 		let boardAuth 	= document.querySelector('#boardAuth').innerHTML;
 		
-		$p.clone().addClass('mb-4').html('댓글 : ' + result.length).appendTo($comment);
+		$p.clone().addClass('mb-4').html('댓글 : ' + allRowCount).appendTo($comment);
 		
 		$.each(result, function(i, obj){
 		
@@ -128,11 +125,11 @@ var detail = (function() {
 			$('<b></b>').html(obj.nickname+'&nbsp;&nbsp;&nbsp;&nbsp;').appendTo($pClone);	
 			$span.clone().addClass('smallFont').html(dateFormatter(obj.commDate)).appendTo($pClone);
 			
-			if (boardAuth){
+			if (boardAuth == 'true'){
 				$spanClone = $span.clone().attr('style', 'float: right;').appendTo($pClone);
 				
 				$inp.clone().attr('id', 'commId'+i).val(obj.commId).appendTo($spanClone);
-				$a.clone().addClass('smallBtn delComment').data('comm_id', i).html('삭제').appendTo($spanClone);
+				$a.clone().addClass('smallBtn delComment').data('comm_id', obj.commId).html('삭제').appendTo($spanClone);
 			}
 				
 			$p.clone().addClass('mb-0').html(obj.commCont).appendTo($comment);
@@ -140,7 +137,32 @@ var detail = (function() {
 		});
 	};
 	
-	function drawCommentPageBlock(result){
+	function drawCommentPageBlock(pageInfo){
+		let $pageBlock	= $('#commentPageBlock .custom-pagination').empty();
+		let $span		= $('<span>');
+		let $img		= $('<img>').attr({'width':'18px','height':'18px'});
+		let $a			= $('<a>').attr('href','javascript:void(0);');
+		let $imgClone;
+	console.log(pageInfo);
+	
+		if (pageInfo.allRowCount > 0) {
+			
+			if (pageInfo.startPage > pageInfo.pageBlockSize) {
+				$imgClone = $img.clone().attr('src','images/left-arrow.png');
+				$pageBlock.append($a.clone().addClass('pageBtn').data('page_num',pageInfo.startPage-1).html($span.clone().addClass('pt').html($imgClone)));
+			}
+			for(var i = pageInfo.startPage; i <= pageInfo.endPage; i++){
+				if (i == pageInfo.pageNum) {
+					$pageBlock.append($span.clone().html(i));
+				} else {
+					$pageBlock.append($a.clone().addClass('pageBtn').data('page_num',i).html(i));
+				}
+			}
+			if (pageInfo.endPage < pageInfo.maxPage) {
+				$imgClone = $img.clone().attr('src','images/right-arrow.png');
+				$pageBlock.append($a.clone().addClass('pageBtn').data('page_num',pageInfo.endPage+1).html($span.clone().addClass('pt').html($imgClone)));
+			}
+		}
 		
 	};
 	
@@ -148,4 +170,3 @@ var detail = (function() {
 		init : _init
 	};
 }());
-detail.init();

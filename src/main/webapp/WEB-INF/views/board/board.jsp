@@ -41,7 +41,7 @@
 					<th width="60px">조회</th>
 					</tr>
 				</thead>
-				<tbody>
+				<tbody id="boardContent">
 				<c:choose>
 				<c:when test="${empty boardList }">
 				<tr><td colspan="5" style="text-align: center;">작성된 게시글이 없습니다.</td></tr>
@@ -101,8 +101,9 @@
 					<c:if test="${pageInfo.allRowCount > 0 }">
 		
 					<c:if test="${pageInfo.startPage > pageInfo.pageBlockSize }">
-					<a href="board?pageNum=1&search=${search }&#board">1</a><span class="more-page">...</span>
-					<a href="board?pageNum=${pageInfo.startPage - 1 }&search=${search }&#board"><span class="pt"><img src="images/left-arrow.png" width="18px" height="18px"></span></a>
+<%-- 						<a href="board?pageNum=1&search=${search }&#board">1</a> --%>
+<!-- 						<span class="more-page">...</span> -->
+						<a href="board?pageNum=${pageInfo.startPage - 1 }&search=${search }&#board"><span class="pt"><img src="images/left-arrow.png" width="18px" height="18px"></span></a>
 					</c:if>
 		
 					<c:forEach begin="${pageInfo.startPage }" end="${pageInfo.endPage }" step="1" varStatus="s">
@@ -119,9 +120,9 @@
 					</c:forEach>
 		
 					<c:if test="${pageInfo.endPage < pageInfo.maxPage }">
-					<a href="board?pageNum=${pageInfo.endPage + 1 }&search=${search }&#board"><span class="pt"><img src="images/right-arrow.png" width="18px" height="18px"></span></a>
-					<span class="more-page">...</span>
-					<a href="board?pageNum=${pageInfo.maxPage }&search=${search }&#board">${pageInfo.maxPage }</a>
+						<a href="board?pageNum=${pageInfo.endPage + 1 }&search=${search }&#board"><span class="pt"><img src="images/right-arrow.png" width="18px" height="18px"></span></a>
+<!-- 						<span class="more-page">...</span> -->
+<%-- 						<a href="board?pageNum=${pageInfo.maxPage }&search=${search }&#board">${pageInfo.maxPage }</a> --%>
 					</c:if>
 		
 					</c:if>

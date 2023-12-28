@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <head>
-    <title>board TEST</title>
+    <title>Update TEST</title>
     <jsp:include page="/WEB-INF/views/common/commonHeader.jsp" />
 </head>
 <body>
@@ -12,8 +12,8 @@
 			<div class="col-md-12" data-aos="fade-up" data-aos-delay="400">
 				<div class="row justify-content-center mb-4">
 					<div class="col-md-8 text-center">
-						<h1>Write</h1>
-						<p class="lead mb-5">Write your contents</p>
+						<h1>Update</h1>
+						<p class="lead mb-5">Update your contents</p>
 					</div>
 				</div>
 
@@ -25,17 +25,14 @@
 <section class="site-section bg-light">
 
 <!-- content -->
-<%
-// String category = (String) request.getParameter("bord_catg");
-%>
 <div class="container">
 <div class="row">
 
 	<div style="width: 100%">
-	<form action="write" class="p-5 bg-white" method="POST" enctype="multipart/form-data">
+	<form action="update" class="p-5 bg-white" method="POST" enctype="multipart/form-data">
 		<input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}">
 		
-		<h2 class="h4 text-black mb-5">Write</h2>
+		<h2 class="h4 text-black mb-5">Update</h2>
 
 		<input type="hidden" name="category" value="${param.category }">
 		<div class="row form-group">
@@ -45,9 +42,8 @@
 				<c:if test="${not empty categoryList }">
 				<c:forEach var="c" items="${categoryList }">
 					<c:choose>
-					<c:when test="${not empty category }">
-<%-- 						<option value="${c.catg_id }" <% if ("".equals(category)) {%>selected<%} %>>${c.catg_name }</option> --%>
-						<option value="${c.catgId }" <c:if test="${category eq c.catgId }">selected</c:if> >${c.catgName }</option>
+					<c:when test="${not empty board.bordCatg }">
+						<option value="${c.catgId }" <c:if test="${board.bordCatg eq c.catgId }">selected</c:if> >${c.catgName }</option>
 					</c:when>
 					<c:otherwise>
 						<option value="${c.catgId }">${c.catgName }</option>
@@ -67,7 +63,7 @@
 		<div class="row form-group">
 			<div class="col-md-12">
 				<label class="text-black" for="title">Title</label>
-				<input type="text" id="title" class="form-control" name="title" required>
+				<input type="text" id="title" class="form-control" name="title" value="${board.bordTitl }" required>
 			</div>
 		</div>
 		
@@ -81,8 +77,10 @@
 				
 				</div>
 				<div id="file_add_form" >
-					<input type="file" name='mFile' class="form-control" id="file1">
-<!-- 					<input type="file" name='bbs_file1' class="form-control" > -->
+					<c:forEach items="${files }" var="item" varStatus="s">
+						<c:if test="${not s.first }"><br></c:if>
+						<input type="file" name='mFile' class="form-control" id="file${s.count }">
+					</c:forEach>
 				</div>
 			</div>
 		</div>
@@ -91,7 +89,7 @@
 			<div class="col-md-12">
 				<label class="text-black" for="content">Content</label>
 				<textarea name="content" id="content" cols="30" rows="8" class="form-control"
-					placeholder="Write your contents here..."></textarea>
+					placeholder="Write your contents here...">${board.bordCont }</textarea>
 			</div>
 		</div>
 
@@ -108,5 +106,5 @@
 </div>
 </div>
 </section>
-<script src="/js/Archive/board/write.js?"></script>
+<script src="/js/Archive/board/update.js?"></script>
 </body>

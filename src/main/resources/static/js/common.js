@@ -1,3 +1,7 @@
+function nvl(st){
+	return (st) ? st : '';
+}
+
 //숫자 두 자리 자릿수 맞추기
 function select(num) {
 	if (num < 10) {
@@ -30,6 +34,7 @@ function inpParam(query){
 }
 
 //TimeStamp -> Date formatter (yyyy-mm-dd hh:mm:ss.s)
+//TimeStamp -> Date formatter (yyyy-mm-dd hh:mm:ss)
 function dateFormatter(date) {
 	let dateFormatt	 = new Date(date);
 	
@@ -41,9 +46,10 @@ function dateFormatter(date) {
 	let minute		 = select(dateFormatt.getMinutes());
 	let seconds		 = select(dateFormatt.getSeconds());
 
-	let milliseconds = dateFormatt.getMilliseconds();
+//	let milliseconds = dateFormatt.getMilliseconds();
 	
-	return year+'-'+month+'-'+day+' '+hour+':'+minute+':'+seconds+'.'+milliseconds;
+//	return year+'-'+month+'-'+day+' '+hour+':'+minute+':'+seconds+'.'+milliseconds;
+	return year+'-'+month+'-'+day+' '+hour+':'+minute+':'+seconds;
 }
 
 

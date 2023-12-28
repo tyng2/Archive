@@ -109,6 +109,19 @@ public class Common {
 		return ip;
 	}
 	
+	public static String getDevice(HttpServletRequest request) {
+		String pc = "PC";
+		String mb = "Mobile";
+		String res= "";
+		String userAgent = request.getHeader("User-Agent").toUpperCase();
+		if (userAgent.indexOf("MOBI") > -1) {
+			res = mb;
+		} else {
+			res = pc;
+		}
+		return res;
+	}
+	
 	private static HttpURLConnection connect(String apiUrl){
         try {
             URL url = new URL(apiUrl);

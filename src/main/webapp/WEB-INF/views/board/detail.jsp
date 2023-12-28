@@ -57,8 +57,8 @@
 <!-- 		<div id="CommentAn"></div> -->
 		<div class="p-4 mb-3 bg-white" id="commentArea">
 			<div id="comment"></div>
-			
-			<form action="boardComment.do" method="POST">
+			<div id="commentPageBlock" class="p-4"><div class="custom-pagination text-center"></div></div>
+			<form action="boardComment" method="POST">
 				<input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}">
 				
 				<input type="hidden" name="bordId" id="bordId" value="${board.bordId }">
@@ -68,9 +68,9 @@
 				<c:if test="${isLogin }">
 				<textarea name="commCont" id="commCont" cols="30" rows="4" class="form-control" 
 					placeholder="Write your comment here..."></textarea><br>
-				<button type="button" id="insertComment" class="btn btn-custom btn-md" style="float: right;">등록</button>
+				<button type="button" id="insertComment" class="btn btn-custom btn-md" style="float: right;">등록</button><br><br>
 				</c:if>
-			</form><br><br>
+			</form>
 		</div>
 
 		<div class="p-4 mb-3">
@@ -82,7 +82,7 @@
 				</c:if>
 <%-- 				<c:if test="${sessionID.equals(board.userId) }"> --%>
 				<c:if test="${loginSessionVo.userId == board.userId }">
-					<a href="boardModify.do?bordId=${board.bordId }&pageNum=${param.pageNum }&category=${param.bordCatg }" class="btn btn-custom btn-md">수정</a>
+					<a href="update?bordId=${board.bordId }&userId=${board.userId }&pageNum=${param.pageNum }&category=${param.bordCatg }" class="btn btn-custom btn-md">수정</a>
 					<a href="boardDeleteProcess.do?bordId=${board.bordId }&pageNum=${param.pageNum }&category=${param.bordCatg }" class="btn btn-custom btn-md">삭제</a>
 				</c:if>
 <%-- 				<a href="reply.do?re_ref=${board.bord_refr }&re_lev=${board.bord_levl }&re_seq=${board.bord_seqn }&category=${board.bordCatg }&pageNum=${param.pageNum }&pcategory=${param.bordCatg }" class="btn btn-custom btn-md">답글</a> --%>

@@ -46,7 +46,7 @@ board:
   block : 5
   
 comment:
-  limit : 10
+  limit : 5
   block : 5
   
 domain: http://localhost:8080

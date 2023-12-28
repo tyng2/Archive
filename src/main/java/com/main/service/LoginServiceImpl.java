@@ -153,8 +153,10 @@ public class LoginServiceImpl implements LoginService {
 		}
 		session.setAttribute("loginSession", login);
 		Map<String, String> input = Map.of(
-			"userId"	, user.getUserId() + "",
-			"loginType"	, user.getSnsType()
+			"userId"		, user.getUserId() + "",
+			"loginIp"		, Common.getClientIP(),
+			"loginDevice"	, Common.getDevice(request),
+			"loginType"		, user.getSnsType()
 		);
 		usersMapper.insertUserLog(input);
 	}

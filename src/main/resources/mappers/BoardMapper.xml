@@ -21,6 +21,7 @@
 		b.bord_hitc, 
 		b.bord_wrip,
 		f.file_cnt,
+		bc.comment_cnt,
 		(SELECT COUNT(bord_id) FROM board 
 			WHERE 1=1
 			<if test="search != null and search != ''">
@@ -44,6 +45,14 @@
 		GROUP BY bord_id
 	) f
 		ON f.bord_id = b.bord_id
+	LEFT OUTER JOIN (
+		SELECT
+			bord_id,
+			COUNT(comm_id) comment_cnt
+		FROM board_comment
+		GROUP BY bord_id 
+	) bc
+		ON bc.bord_id = b.bord_id
 	WHERE 1 = 1
 	<if test="search != null and search != ''">
 		AND bord_titl LIKE CONCAT('%', #{search}, '%')
@@ -142,7 +151,7 @@
 	LEFT OUTER JOIN users u
 		ON c.user_id = u.user_id
 	WHERE c.bord_id = #{bordId}
-	ORDER BY c.comm_date
+	ORDER BY c.comm_date DESC
 	LIMIT #{pageSize} OFFSET #{startRow} 
 </select>
 

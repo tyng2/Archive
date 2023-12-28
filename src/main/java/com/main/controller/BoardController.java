@@ -115,6 +115,33 @@ public class BoardController {
 		return "redirect:/board";
 	}
 	
+	@GetMapping("/update")
+	public String update(@RequestParam Map<String, String> paramMap, Model model) {
+		log.info("update");
+		
+//		String category = Common.nvl(paramMap.get("category"));
+//		model.addAttribute("category"		, category);
+		
+		String bordId	= Common.nvl(paramMap.get("bordId"));
+		int userId		= Common.str2Int(paramMap.get("userId"));
+		
+		LoginSessionVo login = loginService.getLoginData();
+		
+		if (!ObjectUtils.isEmpty(login) && userId == login.getUserId()) {
+			List<CategoryVo> categoryList = boardService.getCategoryList();
+			Map<String, Object> detail = boardService.getDetail(bordId);
+			
+			model.addAttribute("categoryList"	, categoryList);
+			model.addAttribute("board"			, detail.get("board"));
+			model.addAttribute("files"			, detail.get("files"));
+			return "board/update";
+			
+		} else {
+			return "redirect:/board";
+		}
+	}
+	
+	
 	@GetMapping("/detail")
 	public String detail(@RequestParam Map<String, String> paramMap, Model model) {
 		log.info("detail");
@@ -208,7 +235,7 @@ public class BoardController {
 		String pageNum	= Common.nvl(paramMap.get("pageNum"));
 		
 		Map<String, Object> commentMap = boardService.getCommentList(bordId, pageNum);
-		
+		log.info("comment :: {}", commentMap.toString());
 		return commentMap;
 	}
 	

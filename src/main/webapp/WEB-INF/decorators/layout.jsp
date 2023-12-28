@@ -24,6 +24,6 @@
 	<sitemesh:write property="body" />
     
 	<jsp:include page="/WEB-INF/views/common/footer.jsp" />
-	
+	<script src="/js/layout.js?"></script>
 </body>
 </html>

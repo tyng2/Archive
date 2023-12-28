@@ -120,7 +120,7 @@ public class BoardServiceImpl implements BoardService {
 		pageNum			= (pageNum > 0) ? pageNum : 1;
 		int startRow	= (pageNum - 1) * COMM_LIMIT_SIZE;
 		
-		List<CommentVo> commentList = boardMapper.getCommentList(bordId, COMM_PAGE_BLOCK_SIZE, startRow);
+		List<CommentVo> commentList = boardMapper.getCommentList(bordId, COMM_LIMIT_SIZE, startRow);
 		
 		int allRowCount = 0;
 		if (commentList.size() > 0) {

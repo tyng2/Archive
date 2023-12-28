@@ -70,8 +70,8 @@
 
 <insert id="insertUserLog" parameterType="java.util.HashMap">
 	INSERT INTO user_log
-	(user_id, login_status, login_type)
-	VALUES (#{userId}, #{loginStatus}, #{loginType})
+	(user_id, login_ip, login_device, login_type)
+	VALUES (#{userId}, #{loginIp}, #{loginDevice}, #{loginType})
 </insert>
 
 </mapper>
