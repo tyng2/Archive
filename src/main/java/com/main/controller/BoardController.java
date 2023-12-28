@@ -141,6 +141,20 @@ public class BoardController {
 		}
 	}
 	
+	@PostMapping("/update")
+	public String updateProcess(@RequestParam Map<String, String> paramMap, @RequestParam(required = false, name = "mFile") MultipartFile[] mFile, Model model) {
+		
+		String bordId = Common.nvl(paramMap.get("bordId"));
+		int userId		= Common.str2Int(paramMap.get("userId"));
+		
+		LoginSessionVo login = loginService.getLoginData();
+		if (!ObjectUtils.isEmpty(login) && userId == login.getUserId()) {
+			
+		}
+		
+		return "redirect:/detail?boardId="+bordId;
+	}
+	
 	
 	@GetMapping("/detail")
 	public String detail(@RequestParam Map<String, String> paramMap, Model model) {

@@ -32,8 +32,8 @@ var update = (function() {
 			obj.setAttribute("class", "form-control");
 			obj.setAttribute("id", "file" + (filecountTemp + 1));
 			parents.appendChild(obj);
+			document.getElementById("file_cnt").value = filecountTemp + 1;
 		}
-		document.getElementById("file_cnt").value = filecountTemp + 1;
 	};
 	
 	function file_delete() {

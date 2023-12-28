@@ -70,7 +70,7 @@
 		<div class="row form-group" id="fileArea">
 			<div class="col-md-12">
 				<label class="text-black" for="title">File</label>
-				<input type="hidden" id="file_cnt" name="file_cnt" value="1">
+				<input type="hidden" id="file_cnt" name="file_cnt" value="${files.size() }">
 				<button type="button" class="btn btn-none fileAdd"><img src="images/add.png" width="22px" height="22px"></button>
 				<button type="button" class="btn btn-none fileDel"><img src="images/minus.png" width="22px" height="22px"></button>
 				<div>
@@ -78,7 +78,7 @@
 				</div>
 				<div id="file_add_form" >
 					<c:forEach items="${files }" var="item" varStatus="s">
-						<c:if test="${not s.first }"><br></c:if>
+						<c:if test="${not s.first }"><br id="br${s.count }"></c:if>
 						<input type="file" name='mFile' class="form-control" id="file${s.count }">
 					</c:forEach>
 				</div>
