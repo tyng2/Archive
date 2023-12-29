@@ -15,7 +15,8 @@
 
 <script src="/js/typed.js"></script>
 <script src="/js/main.js"></script>
-<script src="/js/common.js"></script>
+<script src="/js/common/common.js"></script>
+<script src="/js/common/commfn.js"></script>
 <spring:eval var="activeProfile" expression="@environment.getProperty('spring.profiles.active')" />
 <c:choose>
 	<c:when test="${activeProfile eq 'local' }">

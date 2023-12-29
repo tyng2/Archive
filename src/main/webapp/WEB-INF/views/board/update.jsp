@@ -29,7 +29,7 @@
 <div class="row">
 
 	<div style="width: 100%">
-	<form action="update" class="p-5 bg-white" method="POST" enctype="multipart/form-data">
+	<form action="updateProcess" class="p-5 bg-white" method="POST" enctype="multipart/form-data">
 		<input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}">
 		
 		<h2 class="h4 text-black mb-5">Update</h2>
@@ -79,7 +79,8 @@
 				<div id="file_add_form" >
 					<c:forEach items="${files }" var="item" varStatus="s">
 						<c:if test="${not s.first }"><br id="br${s.count }"></c:if>
-						<input type="file" name='mFile' class="form-control" id="file${s.count }">
+						<input type="file" name='mFile' class="form-control" id="file${s.count }" data-file_id="${item.fileId }" value="file/${item.fileOlnm }">
+<%-- 						<label for="file${s.count }" class="form-control">${item.fileOlnm }</label> --%>
 					</c:forEach>
 				</div>
 			</div>

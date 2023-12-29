@@ -4,7 +4,7 @@
 
 $(function() {
 	function listSite(){
-		ajaxAction({
+		common.ajax({
 			url: 'siteList.do',
 			success: function(result) {
 				
@@ -35,7 +35,7 @@ $(function() {
 		var param = {
 			'siteNum': siteNum	
 		};
-		ajaxAction({
+		common.ajax({
 			url		: 'siteDelete.do',
 			data	: param,
 			success	: function() {
@@ -79,7 +79,7 @@ $(function() {
 			'name'	: name,
 			'url'	: url
 		};
-		ajaxAction({
+		common.ajax({
 			url		: 'siteProcess.do',
 			type	: 'post',
 			data	: param,

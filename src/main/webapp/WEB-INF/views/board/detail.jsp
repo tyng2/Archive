@@ -82,7 +82,7 @@
 				</c:if>
 <%-- 				<c:if test="${sessionID.equals(board.userId) }"> --%>
 				<c:if test="${loginSessionVo.userId == board.userId }">
-					<a href="update?bordId=${board.bordId }&userId=${board.userId }&pageNum=${param.pageNum }&category=${param.bordCatg }" class="btn btn-custom btn-md">수정</a>
+					<a href="javascript:void(0);" class="btn btn-custom btn-md update">수정</a>
 					<a href="boardDeleteProcess.do?bordId=${board.bordId }&pageNum=${param.pageNum }&category=${param.bordCatg }" class="btn btn-custom btn-md">삭제</a>
 				</c:if>
 <%-- 				<a href="reply.do?re_ref=${board.bord_refr }&re_lev=${board.bord_levl }&re_seq=${board.bord_seqn }&category=${board.bordCatg }&pageNum=${param.pageNum }&pcategory=${param.bordCatg }" class="btn btn-custom btn-md">답글</a> --%>

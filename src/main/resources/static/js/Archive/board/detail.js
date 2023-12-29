@@ -7,7 +7,7 @@ var detail = (function() {
 		$('.download').on('click', function(){
 			let fileId = $(this).data('file_id');
 			
-			ajaxAction({
+			common.ajax({
 				url: 'download',
 				type: 'POST',
 				data: {
@@ -37,7 +37,7 @@ var detail = (function() {
 				'pageNum'	: pageNum
 			};
 			
-			ajaxAction({
+			common.ajax({
 				url		: '/insertComment',
 				type	: 'POST',
 				data	: param,
@@ -64,7 +64,7 @@ var detail = (function() {
 			let param 		= {
 				'commId': commId
 			};
-			ajaxAction({
+			common.ajax({
 				url		: '/deleteComment',
 				type	: 'POST',
 				data	: param,
@@ -84,6 +84,12 @@ var detail = (function() {
 			listComment(pageNum);
 		});
 		
+		$('#view').on('click', '.update', function(){
+			let bordId	= $('#bordId').val();
+			let pageNum	= $('#pageNum').val();
+			
+		});
+		
 	};
 	
 	function listComment(page){
@@ -95,7 +101,7 @@ var detail = (function() {
 			'pageNum'	: pageNum
 		};
 		
-		ajaxAction({
+		common.ajax({
 			url		: '/comment',
 			type	: 'GET',
 			data	: param,
@@ -123,7 +129,7 @@ var detail = (function() {
 		
 			$pClone = $p.clone().addClass('em').appendTo($comment);
 			$('<b></b>').html(obj.nickname+'&nbsp;&nbsp;&nbsp;&nbsp;').appendTo($pClone);	
-			$span.clone().addClass('smallFont').html(dateFormatter(obj.commDate)).appendTo($pClone);
+			$span.clone().addClass('smallFont').html(common.dateFormatter(obj.commDate)).appendTo($pClone);
 			
 			if (boardAuth == 'true'){
 				$spanClone = $span.clone().attr('style', 'float: right;').appendTo($pClone);

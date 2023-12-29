@@ -141,7 +141,7 @@ public class BoardController {
 		}
 	}
 	
-	@PostMapping("/update")
+	@PostMapping("/updateProcess")
 	public String updateProcess(@RequestParam Map<String, String> paramMap, @RequestParam(required = false, name = "mFile") MultipartFile[] mFile, Model model) {
 		
 		String bordId = Common.nvl(paramMap.get("bordId"));
