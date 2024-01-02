@@ -1,12 +1,32 @@
-var login = (function(){
+$('#login').CMinit(function(){
 	
-	var _init = function(){
+	var $page = $('#login');
+	
+	var _view = (function(){
 		
-	};
+		var _init = function(){
+			
+		};
+		
+		return {
+			init : _init
+		};
+	})();
 	
-	
+	var _hand = (function(){
+		
+		var _init = function(){
+			
+		};
+		
+		return {
+			init : _init
+		};
+	})();
 	
 	return {
-		init : _init
+		page : $page,
+		view : _view,
+		hand : _hand
 	};
-}());
+});

@@ -4,7 +4,7 @@
     <title>Update TEST</title>
     <jsp:include page="/WEB-INF/views/common/commonHeader.jsp" />
 </head>
-<body>
+<body id="update">
 <div class="site-blocks-cover inner-page-cover overlay" style="background-image: url(images/hero_1.jpg);"
 	data-aos="fade" data-stellar-background-ratio="0.5">
 	<div class="container">

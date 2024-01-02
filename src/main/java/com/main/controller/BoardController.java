@@ -5,7 +5,6 @@ import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -27,7 +26,6 @@ import com.main.service.BoardService;
 import com.main.service.LoginService;
 import com.main.vo.BoardVo;
 import com.main.vo.CategoryVo;
-import com.main.vo.CommentVo;
 import com.main.vo.FileVo;
 import com.main.vo.LoginSessionVo;
 import com.main.vo.PageInfo;
@@ -47,6 +45,7 @@ public class BoardController {
 	@Autowired
 	private LoginService loginService;
 	
+	@SuppressWarnings("unchecked")
 	@GetMapping("/board")
 	public String board(@RequestParam Map<String, String> paramMap, Model model) {
 		log.info("board");
@@ -54,6 +53,7 @@ public class BoardController {
 		paramMap.put("category", Common.nvl(paramMap.get("category")));
 		
 		Map<String, Object> result = boardService.getBoardList(paramMap);
+		
 		
 		List<BoardVo> boardList	= (List<BoardVo>) result.get("boardList");
 		PageInfo pageInfo		= (PageInfo) result.get("pageInfo");
@@ -115,7 +115,7 @@ public class BoardController {
 		return "redirect:/board";
 	}
 	
-	@GetMapping("/update")
+	@PostMapping("/update")
 	public String update(@RequestParam Map<String, String> paramMap, Model model) {
 		log.info("update");
 		

@@ -78,7 +78,7 @@
 </div>
 </div>
 
-<script src="/js/boardPT/user/login.js"></script>
+<script src="/js/Archive/user/login.js"></script>
 <script>
 </script>
 </body>

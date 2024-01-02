@@ -5,7 +5,7 @@
     <title>detail TEST</title>
     <jsp:include page="/WEB-INF/views/common/commonHeader.jsp" />
 </head>
-<body>
+<body id="detail">
 <div id="boardAuth" style="display: none;">${loginSessionVo.userId == board.userId || loginSessionVo.userAuth == 'admin' }</div>
 <div class="site-blocks-cover inner-page-cover overlay"
 	style="background-image: url(images/hero_1.jpg);" data-aos="fade"
@@ -61,8 +61,9 @@
 			<form action="boardComment" method="POST">
 				<input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}">
 				
-				<input type="hidden" name="bordId" id="bordId" value="${board.bordId }">
-				<input type="hidden" name="pageNum" id="pageNum" value="${param.pageNum }">
+				<input type="hidden" name="bordId"	id="bordId"		value="${board.bordId }">
+				<input type="hidden" name="pageNum"	id="pageNum"	value="${param.pageNum }">
+				<input type="hidden" name="userId"	id="userId"		value="${board.userId }">
 <%-- 				<input type="hidden" name="bordCatg" id="bordCatg" value="${param.bordCatg }"> --%>
 		
 				<c:if test="${isLogin }">

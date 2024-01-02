@@ -1,20 +1,20 @@
-var common = (function(){
+var CMJS = (function(){
 	
-	function _nvl(st){
+	var _nvl = function(st){
 		return (st) ? st : '';
-	}
+	};
 	
 	//숫자 두 자리 자릿수 맞추기
-	function _select(num) {
+	var _select = function(num) {
 		if (num < 10) {
 			return '0' + num;
 		} else {
 			return num;
 		}
-	}
+	};
 	
 	// query 내부의 input 파라미터 세팅
-	function _inpParam(query){
+	var _inpParam = function(query){
 		let param		= {};
 		
 		$(query).find('input').each(function() {
@@ -30,11 +30,10 @@ var common = (function(){
 		});
 		console.log('param::'+param);
 		return param;
-	}
+	};
 	
-	//TimeStamp -> Date formatter (yyyy-mm-dd hh:mm:ss.s)
 	//TimeStamp -> Date formatter (yyyy-mm-dd hh:mm:ss)
-	function _dateFormatter(date) {
+	var _dateFormatter = function(date) {
 		let dateFormatt	 = new Date(date);
 		
 		let year		 = dateFormatt.getFullYear();
@@ -49,10 +48,10 @@ var common = (function(){
 		
 	//	return year+'-'+month+'-'+day+' '+hour+':'+minute+':'+seconds+'.'+milliseconds;
 		return year+'-'+month+'-'+day+' '+hour+':'+minute+':'+seconds;
-	}
+	};
 	
 	
-	function _ajax(paramData){
+	var _ajax = function(paramData){
 		$.ajax({
 			url			: paramData.url,
 			type		: paramData.type,
@@ -72,12 +71,25 @@ var common = (function(){
 			beforeSend	: paramData.beforeSend,
 			complete	: paramData.complete
 		});
-	}
+	};
+	
+	var _submit = function(url, param, method){
+		let $form	= $('<form>').attr('method', (method) ? method : 'GET');
+		let $inp	= $('<input>').attr('type','hidden');
+
+		$form.attr('action',url);
+		$.each(param, function(k, v){
+			$form.append($inp.clone().attr('name',k).val(v));
+		});
+		$('body').append($form);
+		$form.submit();
+	};
 	
 	return {
 		nvl				: _nvl,
 		inpParam		: _inpParam,
 		dateFormatter	: _dateFormatter,
-		ajax			: _ajax
+		ajax			: _ajax,
+		submit			: _submit,
 	};
 }());
