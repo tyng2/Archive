@@ -140,6 +140,7 @@
 		c.comm_id,
 		c.bord_id,
 		c.user_id,
+		c.user_id = #{userId} isCreated,
 		u.nickname,
 		c.comm_cont,
 		c.comm_date,

@@ -5,3 +5,6 @@
 <c:if test="${isLogin }">
 	<c:set var="loginSessionVo" scope="request" value="${sessionScope.loginSession }" />
 </c:if>
+<script>
+var TESTDATA = 'TEST1';
+</script>

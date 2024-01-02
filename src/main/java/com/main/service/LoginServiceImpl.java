@@ -49,6 +49,7 @@ public class LoginServiceImpl implements LoginService {
 
 	
 /* s:NAVER */
+	@SuppressWarnings("deprecation")
 	@Override
 	public String naverAuthorizeURL() {
 		log.info("naver oauth2.0/authorize");

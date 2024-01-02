@@ -16,7 +16,7 @@ $('#detail').CMinit(function(){
 						fileId : fileId
 					},
 					success: function(data){
-						fileDownload(data, fileId);
+						_fileDownload(data, fileId);
 					}
 				});
 			});
@@ -92,7 +92,7 @@ $('#detail').CMinit(function(){
 			
 		};
 		
-		function fileDownload(dateStr, fileId){
+		var _fileDownload = function(dateStr, fileId){
 			location.href = 'download?dateStr='+dateStr+'&fileId='+fileId;
 		};
 		
@@ -109,7 +109,7 @@ $('#detail').CMinit(function(){
 			_listComment();
 		};
 		
-		function _listComment(page){
+		var _listComment = function(page){
 			let bordId	= $('#bordId').val();
 			let pageNum	= (page) ? page : $('#pageNum').val();
 			
@@ -123,13 +123,13 @@ $('#detail').CMinit(function(){
 				type	: 'GET',
 				data	: param,
 				success	: function(result) {
-					drawComment(result.commentList, result.pageInfo.allRowCount);
-					drawCommentPageBlock(result.pageInfo);
+					_drawComment(result.commentList, result.pageInfo.allRowCount);
+					_drawCommentPageBlock(result.pageInfo);
 				}
 			});
 		};
 		
-		function drawComment(result, allRowCount){
+		var _drawComment = function(result, allRowCount){
 			let $comment 	= $('#comment').empty();
 			let $p			= $('<p>');
 			let $span		= $('<span>');
@@ -137,8 +137,6 @@ $('#detail').CMinit(function(){
 			let $a			= $('<a>');
 			
 			let $pClone, $spanClone;	// 일반적으로 close
-			
-			let boardAuth 	= document.querySelector('#boardAuth').innerHTML;
 			
 			$p.clone().addClass('mb-4').html('댓글 : ' + allRowCount).appendTo($comment);
 			
@@ -148,7 +146,7 @@ $('#detail').CMinit(function(){
 				$('<b></b>').html(obj.nickname+'&nbsp;&nbsp;&nbsp;&nbsp;').appendTo($pClone);	
 				$span.clone().addClass('smallFont').html(CMJS.dateFormatter(obj.commDate)).appendTo($pClone);
 				
-				if (boardAuth == 'true'){
+				if (obj.isCreated == 1){
 					$spanClone = $span.clone().attr('style', 'float: right;').appendTo($pClone);
 					
 					$inp.clone().attr('id', 'commId'+i).val(obj.commId).appendTo($spanClone);
@@ -160,7 +158,7 @@ $('#detail').CMinit(function(){
 			});
 		};
 		
-		function drawCommentPageBlock(pageInfo){
+		var _drawCommentPageBlock = function(pageInfo){
 			let $pageBlock	= $('#commentPageBlock .custom-pagination').empty();
 			let $span		= $('<span>');
 			let $img		= $('<img>').attr({'width':'18px','height':'18px'});

@@ -14,7 +14,7 @@ public class CommentVo {
 	private Timestamp commDate;
 	
 	
-	private int cnt;
+	private int cnt, isCreated;
 	
 	private String nickname;
 

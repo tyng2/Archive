@@ -26,6 +26,3 @@
 		<script src="js/vue.js"></script>
 	</c:otherwise>
 </c:choose>
-<script>
-var TESTDATA = 'TEST';
-</script>

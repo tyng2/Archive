@@ -1,13 +1,17 @@
 var CMJS = (function(){
 	
-	var _nvl = function(st){
-		return (st) ? st : '';
+	var _nvl = function(st, d){
+		return (st) ? st : (d) ? d : '';
 	};
 	
 	//숫자 두 자리 자릿수 맞추기
 	var _select = function(num) {
+		num = (num && num >= 0) ? num : 0;
 		if (num < 10) {
 			return '0' + num;
+		} else if (num > 99) {
+			let strN = num + '';
+			return strN.substr(strN.length - 2);
 		} else {
 			return num;
 		}

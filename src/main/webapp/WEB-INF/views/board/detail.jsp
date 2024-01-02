@@ -6,7 +6,6 @@
     <jsp:include page="/WEB-INF/views/common/commonHeader.jsp" />
 </head>
 <body id="detail">
-<div id="boardAuth" style="display: none;">${loginSessionVo.userId == board.userId || loginSessionVo.userAuth == 'admin' }</div>
 <div class="site-blocks-cover inner-page-cover overlay"
 	style="background-image: url(images/hero_1.jpg);" data-aos="fade"
 	data-stellar-background-ratio="0.5">

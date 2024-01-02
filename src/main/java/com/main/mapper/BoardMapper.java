@@ -29,7 +29,7 @@ public interface BoardMapper {
 	
 	public FileVo getFile(@Param("fileId") String fileId);
 	
-	public List<CommentVo> getCommentList(@Param("bordId") String bordId, @Param("pageSize") int pageSize, @Param("startRow") int startRow);
+	public List<CommentVo> getCommentList(@Param("bordId") String bordId, @Param("userId") int userId, @Param("pageSize") int pageSize, @Param("startRow") int startRow);
 	
 	public int insertComment(CommentVo comment);
 	
