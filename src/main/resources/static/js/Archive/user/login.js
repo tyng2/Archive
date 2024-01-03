@@ -6,6 +6,16 @@ $('#login').CMinit(function(){
 		
 		var _init = function(){
 			
+			$page.on('click', '#naverLogin', function(){
+				let param = {};
+				
+				if ($('#redirectURI').val()) {
+					param['redirectURI'] = $('#redirectURI').val(); 
+				}
+				
+				CMJS.submit('/naver-login', param);
+			});
+			
 		};
 		
 		return {

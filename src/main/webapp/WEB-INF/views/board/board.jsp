@@ -5,7 +5,7 @@
     <title>board Archive</title>
     <jsp:include page="/WEB-INF/views/common/commonHeader.jsp" />
 </head>
-<body>
+<body id="board">
 	<div class="site-blocks-cover inner-page-cover overlay" style="background-image: url(images/hero_1.jpg);" 
 		data-aos="fade" data-stellar-background-ratio="0.5">
 		<div class="container">
@@ -23,7 +23,7 @@
 	</div>
 	
 	<section class="site-section">
-	<h2 class="text-black site-section-heading text-center" id="board">Every</h2>
+	<h2 class="text-black site-section-heading text-center" id="title">Every</h2>
 	
 	<div class="container">
 		<div class="row">
@@ -76,10 +76,10 @@
 					<c:set value="${nowDays - regDays }" var="dayDiff" />
 					<c:choose>
 					<c:when test="${dayDiff == 0 }">
-					<fmt:formatDate value="${v.bordDate }" pattern="HH:mm:ss"/>
+						<fmt:formatDate value="${v.bordDate }" pattern="HH:mm:ss"/>
 					</c:when>
 					<c:otherwise>
-					<fmt:formatDate value="${v.bordDate }" pattern="yy.MM.dd"/>
+						<fmt:formatDate value="${v.bordDate }" pattern="yy.MM.dd"/>
 					</c:otherwise>
 					</c:choose>
 					</td>
@@ -101,28 +101,28 @@
 					<c:if test="${pageInfo.allRowCount > 0 }">
 		
 					<c:if test="${pageInfo.startPage > pageInfo.pageBlockSize }">
-<%-- 						<a href="board?pageNum=1&search=${search }&#board">1</a> --%>
+<%-- 						<a href="board?pageNum=1&search=${search }">1</a> --%>
 <!-- 						<span class="more-page">...</span> -->
-						<a href="board?pageNum=${pageInfo.startPage - 1 }&search=${search }&#board"><span class="pt"><img src="images/left-arrow.png" width="18px" height="18px"></span></a>
+						<a href="board?pageNum=${pageInfo.startPage - 1 }&search=${search }&#title"><span class="pt"><img src="images/left-arrow.png" width="18px" height="18px"></span></a>
 					</c:if>
 		
 					<c:forEach begin="${pageInfo.startPage }" end="${pageInfo.endPage }" step="1" varStatus="s">
 					
 					<c:choose>
 					<c:when test="${s.current == pageInfo.pageNum }">
-					<span>${s.current }</span>
+						<span>${s.current }</span>
 					</c:when>
 					<c:otherwise>
-						<a href="board?pageNum=${s.current }&search=${search }&#board">${s.current }</a>
+						<a href="board?pageNum=${s.current }&search=${search }&#title">${s.current }</a>
 					</c:otherwise>
 					</c:choose>
 					
 					</c:forEach>
 		
 					<c:if test="${pageInfo.endPage < pageInfo.maxPage }">
-						<a href="board?pageNum=${pageInfo.endPage + 1 }&search=${search }&#board"><span class="pt"><img src="images/right-arrow.png" width="18px" height="18px"></span></a>
+						<a href="board?pageNum=${pageInfo.endPage + 1 }&search=${search }&#title"><span class="pt"><img src="images/right-arrow.png" width="18px" height="18px"></span></a>
 <!-- 						<span class="more-page">...</span> -->
-<%-- 						<a href="board?pageNum=${pageInfo.maxPage }&search=${search }&#board">${pageInfo.maxPage }</a> --%>
+<%-- 						<a href="board?pageNum=${pageInfo.maxPage }&search=${search }&#title">${pageInfo.maxPage }</a> --%>
 					</c:if>
 		
 					</c:if>

@@ -6,12 +6,20 @@ $('#update').CMinit(function(){
 		
 		var _init = function(){
 			
-			$('#fileArea').on('click', '.fileAdd', function(){
+			$('#fileArea', $page).on('click', '.fileAdd', function(){
 				_fileAdd();
 			});
 			
-			$('#fileArea').on('click', '.fileDel', function(){
+			$('#fileArea', $page).on('click', '.fileDel', function(){
 				_fileDelete();
+			});
+			
+			$('#fileArea', $page).on('click', '.delete', function(){
+				let fileId = $(this).data('file_id');
+				
+				if (confirm('이 파일을 삭제합니까?')) {
+					_hand.deleteFile(fileId);
+				}
 			});
 			
 		};
@@ -61,8 +69,28 @@ $('#update').CMinit(function(){
 			
 		};
 		
+		var _deleteFile = function(fileId){
+			CMJS.ajax({
+				url		: '/deleteFile',
+				type	: 'POST',
+				data	: {
+					fileId : fileId
+				},
+				success	: function(result){
+					if (result == 1) {
+						$('#fileA'+fileId).remove();
+						let fileSize = $('#file_size').val();
+						$('#file_size').val(fileSize - 1);
+					} else {
+						alert('fail!');
+					}
+				}
+			});
+		};
+		
 		return {
-			init : _init
+			init		: _init,
+			deleteFile	: _deleteFile
 		};
 	})();
 	

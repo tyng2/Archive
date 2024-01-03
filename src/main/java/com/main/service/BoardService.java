@@ -13,12 +13,16 @@ public interface BoardService {
 	
 	public Map<String, Object> getBoardList(Map<String, String> paramMap);
 	
+	public int updateBoard(BoardVo board);
+	
 	public List<CategoryVo> getCategoryList();
 	
 	public int insertFile(FileVo file);
 	
 	public FileVo getFile(String fileId);
-
+	
+	public int deleteFile(String fileId);
+	
 	public Map<String, Object> getDetail(String bordId);
 	
 	public Map<String, Object> getCommentList(String bordId, String pageNow);

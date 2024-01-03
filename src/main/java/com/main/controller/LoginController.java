@@ -30,8 +30,11 @@ public class LoginController {
 	@GetMapping("/login")
 	public String login(HttpServletRequest request, Model model) {
 		
-//		String apiURL = loginService.naverAuthorizeURL(request);
-//		model.addAttribute("naverLoginURL", apiURL);
+		String redirectURI = Common.nvl(request.getParameter("redirectURI"));
+		if (!"".equals(redirectURI)) {
+			HttpSession session = request.getSession();
+			session.setAttribute("loginRedirect", redirectURI);
+		}
 		return "user/login";
 	}
 	
@@ -52,6 +55,8 @@ public class LoginController {
 //		String error			= Common.nvl(paramMap.get("error"));
 //		String err_description	= Common.nvl(paramMap.get("err_description"));
 		
+		String redirectURI = "";
+		
 		try {
 			ObjectMapper mapper = new ObjectMapper();
 			
@@ -71,6 +76,10 @@ public class LoginController {
 			HttpSession session = request.getSession();
 			session.setAttribute("naver_profile", respMap);
 			
+			Object loginRedirect = session.getAttribute("loginRedirect");
+			redirectURI = (loginRedirect != null) ? (String) loginRedirect : "";
+			session.removeAttribute("loginRedirect");
+			
 			String id = Common.nvl(respMap.get("id"));
 			
 			String msg = loginService.connNaverUserBySnsId(id, respMap);
@@ -79,8 +88,7 @@ public class LoginController {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		
-		return "redirect:/";
+		return "redirect:/"+redirectURI;
 	}
 	
 	@GetMapping("/oauth/token")

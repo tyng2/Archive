@@ -6,7 +6,7 @@ $('#detail').CMinit(function(){
 		
 		var _init = function(){
 		
-			$('.download').on('click', function(){
+			$('.download', $page).on('click', function(){
 				let fileId = $(this).data('file_id');
 				
 				CMJS.ajax({
@@ -26,7 +26,7 @@ $('#detail').CMinit(function(){
 				let $commCont 	= $('#commCont');
 				let bordId		= $('#bordId').val();
 				let commCont	= $commCont.val();
-				let pageNum		= $('#pageNum').val();
+//				let pageNum		= $('#pageNum').val();
 				
 				if (!commCont) {
 					alert('No content!');
@@ -35,8 +35,8 @@ $('#detail').CMinit(function(){
 				
 				let param 		= {
 					'bordId'	: bordId,
-					'commCont'	: commCont,
-					'pageNum'	: pageNum
+					'commCont'	: commCont
+//					'pageNum'	: pageNum
 				};
 				
 				CMJS.ajax({
@@ -84,8 +84,8 @@ $('#detail').CMinit(function(){
 			$('#view').on('click', '.update', function(){
 				var param = {
 					bordId	: $('#bordId').val(),
-					pageNum	: $('#pageNum').val(),
-					userId	: $('#userId').val()
+					userId	: $('#userId').val(),
+					pageNum	: $('#pageNum').val()
 				};
 				CMJS.submit('update', param, 'POST');
 			});
@@ -111,9 +111,9 @@ $('#detail').CMinit(function(){
 		
 		var _listComment = function(page){
 			let bordId	= $('#bordId').val();
-			let pageNum	= (page) ? page : $('#pageNum').val();
+			let pageNum	= (page) ? page : 0;
 			
-			var param	= {
+			let param	= {
 				'bordId'	: bordId,
 				'pageNum'	: pageNum
 			};
@@ -164,7 +164,7 @@ $('#detail').CMinit(function(){
 			let $img		= $('<img>').attr({'width':'18px','height':'18px'});
 			let $a			= $('<a>').attr('href','javascript:void(0);');
 			let $imgClone;
-		console.log(pageInfo);
+console.log(pageInfo);
 		
 			if (pageInfo.allRowCount > 0) {
 				

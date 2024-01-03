@@ -65,6 +65,12 @@
 	LIMIT #{pageSize} OFFSET #{startRow} 
 </select>
 
+<update id="updateBoard" parameterType="com.main.vo.BoardVo">
+	UPDATE board
+	SET bord_catg = #{bordCatg}, bord_titl = #{bordTitl}, bord_cont = #{bordCont}
+	WHERE bord_id = #{bordId}
+</update>
+
 <update id="addHitc">
 	UPDATE board
 	SET bord_hitc = bord_hitc + 1
@@ -130,30 +136,56 @@
 	WHERE file_id = #{fileId}
 </select>
 
+<delete id="deleteFile">
+	DELETE
+	FROM board_file
+	WHERE file_id = #{fileId}
+</delete>
+
 <!-- File -->
 
 
 <!-- Comment -->
 
+<select id="getCommentCnt" resultType="int">
+	SELECT
+		COUNT(comm_id) cnt
+	FROM board_comment
+	WHERE bord_id = #{bordId} 
+</select>
+
 <select id="getCommentList" resultType="com.main.vo.CommentVo">
 	SELECT
-		c.comm_id,
-		c.bord_id,
-		c.user_id,
-		c.user_id = #{userId} isCreated,
-		u.nickname,
-		c.comm_cont,
-		c.comm_date,
-		(SELECT COUNT(comm_id) 
-			FROM board_comment
-			WHERE bord_id = #{bordId} 
-		) cnt
-	FROM board_comment c
-	LEFT OUTER JOIN users u
-		ON c.user_id = u.user_id
-	WHERE c.bord_id = #{bordId}
-	ORDER BY c.comm_date DESC
-	LIMIT #{pageSize} OFFSET #{startRow} 
+		a.comm_id,
+		a.bord_id,
+		a.user_id,
+		a.isCreated,
+		a.nickname,
+		a.comm_cont,
+		a.comm_date,
+		a.cnt
+	FROM (
+		SELECT
+			c.comm_id,
+			c.bord_id,
+			c.user_id,
+			c.user_id = #{userId} isCreated,
+			u.nickname,
+			c.comm_cont,
+			c.comm_date,
+			(SELECT COUNT(comm_id) 
+				FROM board_comment
+				WHERE bord_id = #{bordId} 
+			) cnt,
+			ROW_NUMBER() OVER() rnum
+		FROM board_comment c
+		LEFT OUTER JOIN users u
+			ON c.user_id = u.user_id
+		WHERE c.bord_id = #{bordId}
+		ORDER BY c.comm_date ASC
+	) a
+	WHERE a.rnum > #{startRow}
+	LIMIT #{pageSize} 
 </select>
 
 <insert id="insertComment" parameterType="com.main.vo.CommentVo">

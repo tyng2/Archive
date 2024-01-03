@@ -13,6 +13,15 @@
 // 		$(this).addClass('active');
 // 	});
 // });
+$(document).ready(function() {
+	$('#loginBtn').on('click', function(){
+		let url = window.location.pathname + window.location.search;
+		let param = {
+			redirectURI : url.substr(1)
+		};
+		CMJS.submit('/login', param);
+	});
+});
 </script>
 <div class="site-wrap">
 	<div class="site-mobile-menu">
@@ -38,10 +47,10 @@
 					<p class="mb-0 social-media">
 					<c:choose>
 					<c:when test="${!isLogin }">
-						<a href="login"><button class="log">로그인</button></a>
+						<a href="javascript:void(0);" id="loginBtn"><button class="log">로그인</button></a>
 					</c:when>
 					<c:otherwise>
-						<span class="mr-3" style=""><a href="#"><b>${loginSessionVo.nickname }</b></a>님 로그인 중</span>
+						<span class="mr-3" style=""><a href="javascript:void(0);"><b>${loginSessionVo.nickname }</b></a>님 로그인 중</span>
 						<a href="logout"><button class="log">로그아웃</button></a>
 					</c:otherwise>
 					</c:choose>

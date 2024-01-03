@@ -1,15 +1,19 @@
 package com.main.service;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
 import com.main.comm.Common;
 import com.main.comm.PageSet;
+import com.main.comm.cmmFile;
 import com.main.mapper.BoardMapper;
 import com.main.vo.BoardVo;
 import com.main.vo.CategoryVo;
@@ -47,6 +51,8 @@ public class BoardServiceImpl implements BoardService {
 		COMM_PAGE_BLOCK_SIZE = comment_block;
 	}
 	
+	private final Logger log = LoggerFactory.getLogger(this.getClass());
+	
 	@Autowired
 	private BoardMapper boardMapper;
 	
@@ -83,6 +89,11 @@ public class BoardServiceImpl implements BoardService {
 		result.put("boardList"	, boardList);
 		return result;
 	}
+	
+	@Override
+	public int updateBoard(BoardVo board) {
+		return boardMapper.updateBoard(board);
+	}
 
 	@Override
 	public List<CategoryVo> getCategoryList() {
@@ -97,6 +108,18 @@ public class BoardServiceImpl implements BoardService {
 	@Override
 	public FileVo getFile(String fileId) {
 		return boardMapper.getFile(fileId);
+	}
+	
+	@Override
+	public int deleteFile(String fileId) {
+		
+		int res = 0;
+		if (cmmFile.deleteFile(boardMapper.getFile(fileId))) {
+			res = boardMapper.deleteFile(fileId);
+		} else {
+			log.error("파일 삭제 실패");
+		}
+		return res;
 	}
 
 	@Override
@@ -117,22 +140,31 @@ public class BoardServiceImpl implements BoardService {
 	public Map<String, Object> getCommentList(String bordId, String pageNow) {
 		
 		int pageNum		= Common.str2Int(pageNow);
-		pageNum			= (pageNum > 0) ? pageNum : 1;
-		int startRow	= (pageNum - 1) * COMM_LIMIT_SIZE;
+		int allRowCount	= boardMapper.getCommentCnt(bordId);
+log.info("pageNum : {}",pageNum);		
+		List<CommentVo> commentList = null;
 		
-		LoginSessionVo login = null;
-		int userId		= 0;
-		if (loginService.isLogin()) {
-			login		= loginService.getLoginData();
-			userId		= login.getUserId();
+		if (allRowCount > 0) {
+			
+			int maxPage		= (int) Math.ceil(allRowCount / (double) COMM_LIMIT_SIZE);
+			pageNum			= (pageNum > 0) ? pageNum : maxPage;
+			int startRow	= (pageNum - 1) * COMM_LIMIT_SIZE;
+log.info("pageNum : {}",pageNum);			
+			LoginSessionVo login = null;
+			int userId		= 0;
+			if (loginService.isLogin()) {
+				login		= loginService.getLoginData();
+				userId		= login.getUserId();
+			}
+			commentList = boardMapper.getCommentList(bordId, userId, COMM_LIMIT_SIZE, startRow);
+		} else {
+			commentList = new ArrayList<CommentVo>();
 		}
 		
-		List<CommentVo> commentList = boardMapper.getCommentList(bordId, userId, COMM_LIMIT_SIZE, startRow);
-		
-		int allRowCount = 0;
-		if (commentList.size() > 0) {
-			allRowCount = (commentList.get(0) != null) ? commentList.get(0).getCnt() : 0;
-		}
+//		int allRowCount = 0;
+//		if (commentList.size() > 0) {
+//			allRowCount = (commentList.get(0) != null) ? commentList.get(0).getCnt() : 0;
+//		}
 		
 		PageInfo pageInfo = PageSet.getPageData(pageNum, allRowCount, COMM_LIMIT_SIZE, COMM_PAGE_BLOCK_SIZE);
 		Map<String, Object> result = new HashMap<String, Object>();
@@ -140,7 +172,7 @@ public class BoardServiceImpl implements BoardService {
 		result.put("commentList", commentList);
 		return result;
 	}
-
+	
 	@Override
 	public int insertComment(Map<String, String> paramMap) {
 		
@@ -151,7 +183,7 @@ public class BoardServiceImpl implements BoardService {
 		
 		CommentVo comment = new CommentVo();
 		comment.setBordId(bordId);
-		comment.setCommCont(commCont); 
+		comment.setCommCont(commCont);
 		comment.setUserId(login.getUserId());
 		
 		return boardMapper.insertComment(comment);

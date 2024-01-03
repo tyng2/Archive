@@ -99,5 +99,15 @@ public class cmmFile {
 		
 		return fileByte;
 	}
+	
+	public static boolean deleteFile(FileVo file) {
+		boolean result = false;
+		File delFile = new File(filePath + file.getFileSvnm());
+		if (delFile.exists()) {
+			delFile.delete();
+			result = true;
+		}
+		return result;
+	}
 
 }

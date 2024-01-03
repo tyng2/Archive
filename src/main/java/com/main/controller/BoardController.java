@@ -144,21 +144,45 @@ public class BoardController {
 	@PostMapping("/updateProcess")
 	public String updateProcess(@RequestParam Map<String, String> paramMap, @RequestParam(required = false, name = "mFile") MultipartFile[] mFile, Model model) {
 		
-		String bordId = Common.nvl(paramMap.get("bordId"));
-		int userId		= Common.str2Int(paramMap.get("userId"));
+		int bordId	= Common.str2Int(paramMap.get("bordId"));
+		int userId	= Common.str2Int(paramMap.get("userId"));
 		
 		LoginSessionVo login = loginService.getLoginData();
 		if (!ObjectUtils.isEmpty(login) && userId == login.getUserId()) {
 			
+			BoardVo board = new BoardVo();
+			board.setBordId(bordId);
+			board.setBordCatg(Common.str2Int(paramMap.get("categy")));
+			board.setBordTitl(Common.nvl(paramMap.get("title")));
+			board.setBordCont(Common.nvl(paramMap.get("content")));
+			
+			boardService.updateBoard(board);
+			log.info("UPDATE ID : {}", bordId);
+			
+			int cntFile = 0;
+			List<String> mFileList = new ArrayList<String>();
+			for (MultipartFile f : mFile) {
+				if (f.isEmpty()) {
+					continue;
+				} else {
+					FileVo file = cmmFile.fileUpload(f);
+					mFileList.add(file.getFileSvnm());
+					
+					file.setBordId(bordId);
+					boardService.insertFile(file);
+					cntFile++;
+				}
+			}
+			log.info("FILE : {}", cntFile);
 		}
 		
-		return "redirect:/detail?boardId="+bordId;
+		return "redirect:/detail?bordId="+bordId;
 	}
 	
 	
 	@GetMapping("/detail")
 	public String detail(@RequestParam Map<String, String> paramMap, Model model) {
-		log.info("detail");
+		log.info("detail :: {}", paramMap.get("bordId"));
 		
 		String bordId = Common.nvl(paramMap.get("bordId"));
 		
@@ -238,15 +262,22 @@ public class BoardController {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		
 	}
+	
+	@ResponseBody
+	@PostMapping("/deleteFile")
+	public int deleteFile(@RequestParam Map<String, String> paramMap) {
+		String fileId = Common.nvl(paramMap.get("fileId"));
+		return boardService.deleteFile(fileId);
+	}
+	
 	
 	@ResponseBody
 	@GetMapping("/comment")
 	public Map<String, Object> comment(@RequestParam Map<String, String> paramMap) {
 		log.info("comment");
 		String bordId	= Common.nvl(paramMap.get("bordId"));
-		String pageNum	= Common.nvl(paramMap.get("pageNum"));
+		String pageNum	= Common.nvl(paramMap.get("pageNum"), "0");
 		
 		Map<String, Object> commentMap = boardService.getCommentList(bordId, pageNum);
 		log.info("comment :: {}", commentMap.toString());

@@ -31,6 +31,8 @@
 	<div style="width: 100%">
 	<form action="updateProcess" class="p-5 bg-white" method="POST" enctype="multipart/form-data">
 		<input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}">
+		<input type="hidden" id="bordId"	name="bordId" value="${board.bordId }">
+		<input type="hidden" id="userId"	name="userId" value="${board.userId }">
 		
 		<h2 class="h4 text-black mb-5">Update</h2>
 
@@ -70,18 +72,28 @@
 		<div class="row form-group" id="fileArea">
 			<div class="col-md-12">
 				<label class="text-black" for="title">File</label>
-				<input type="hidden" id="file_cnt" name="file_cnt" value="${files.size() }">
+				<input type="hidden" id="file_size" name="file_size" value="${files.size() }">
+				<input type="hidden" id="file_cnt"	name="file_cnt" value="1">
 				<button type="button" class="btn btn-none fileAdd"><img src="images/add.png" width="22px" height="22px"></button>
 				<button type="button" class="btn btn-none fileDel"><img src="images/minus.png" width="22px" height="22px"></button>
-				<div>
-				
-				</div>
-				<div id="file_add_form" >
-					<c:forEach items="${files }" var="item" varStatus="s">
-						<c:if test="${not s.first }"><br id="br${s.count }"></c:if>
-						<input type="file" name='mFile' class="form-control" id="file${s.count }" data-file_id="${item.fileId }" value="file/${item.fileOlnm }">
-<%-- 						<label for="file${s.count }" class="form-control">${item.fileOlnm }</label> --%>
+				<c:if test="${files.size() != 0 }">
+				<div class="bg-white">
+					<p class="mb-0">
+					<c:forEach items="${files }" var="item">
+						<a href="javascript:void(0);" class="delete" id="fileA${item.fileId }" data-file_id="${item.fileId }">
+							<button type="button" class="file themeBtn4 mb-2">${item.fileOlnm }</button>
+						</a>
 					</c:forEach>
+					</p>
+				</div>
+				</c:if>
+				<div id="file_add_form" >
+					<input type="file" name='mFile' class="form-control" id="file1">
+<%-- 					<c:forEach items="${files }" var="item" varStatus="s"> --%>
+<%-- 						<c:if test="${not s.first }"><br id="br${s.count }"></c:if> --%>
+<%-- 						<input type="file" name='mFile' class="form-control" id="file${s.count }" data-file_id="${item.fileId }" value="file/${item.fileOlnm }"> --%>
+<%-- <%-- 						<label for="file${s.count }" class="form-control">${item.fileOlnm }</label> --%>
+<%-- 					</c:forEach> --%>
 				</div>
 			</div>
 		</div>

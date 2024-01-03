@@ -17,6 +17,8 @@ public interface BoardMapper {
 	
 	public List<BoardVo> getBoardList(@Param("search") String search, @Param("category") String category, @Param("pageSize") int pageSize, @Param("startRow") int startRow);
 	
+	public int updateBoard(BoardVo board);
+	
 	public int addHitc(@Param("bordId") String bordId);
 	
 	public BoardVo getBoard(@Param("bordId") String bordId);
@@ -28,6 +30,10 @@ public interface BoardMapper {
 	public List<FileVo> getFileList(@Param("bordId") String bordId);
 	
 	public FileVo getFile(@Param("fileId") String fileId);
+	
+	public int deleteFile(@Param("fileId") String fileId);
+	
+	public int getCommentCnt(@Param("bordId") String bordId);
 	
 	public List<CommentVo> getCommentList(@Param("bordId") String bordId, @Param("userId") int userId, @Param("pageSize") int pageSize, @Param("startRow") int startRow);
 	
