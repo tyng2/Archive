@@ -4,7 +4,7 @@
     <title>board TEST</title>
     <jsp:include page="/WEB-INF/views/common/commonHeader.jsp" />
 </head>
-<body>
+<body id="write">
 <div class="site-blocks-cover inner-page-cover overlay" style="background-image: url(images/hero_1.jpg);"
 	data-aos="fade" data-stellar-background-ratio="0.5">
 	<div class="container">
@@ -25,9 +25,6 @@
 <section class="site-section bg-light">
 
 <!-- content -->
-<%
-// String category = (String) request.getParameter("bord_catg");
-%>
 <div class="container">
 <div class="row">
 
@@ -37,7 +34,9 @@
 		
 		<h2 class="h4 text-black mb-5">Write</h2>
 
-		<input type="hidden" name="category" value="${param.category }">
+		<input type="hidden" id="pageNum"	name="pageNum"	value="${pageNum }">
+		<input type="hidden" id="search"	name="search"	value="${search }">
+		<input type="hidden" id="category"	name="category"	value="${category }">
 		<div class="row form-group">
 			<div class="col-md-6 mb-3 mb-md-0">
 				<label class="text-black" for="fname">Category</label><br>
@@ -98,7 +97,7 @@
 		<div class="row form-group">
 			<div class="col-md-12">
 				<input type="submit" value="작성" class="btn btn-primary btn-md" >
-				<a href="board" class="btn btn-custom btn-md" style="float: right;">목록</a>
+				<a href="javascript:void(0);" class="btn btn-custom btn-md listBtn" style="float: right;">목록</a>
 			</div>
 		</div>
 

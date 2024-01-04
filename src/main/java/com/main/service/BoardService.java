@@ -15,7 +15,11 @@ public interface BoardService {
 	
 	public int updateBoard(BoardVo board);
 	
+	public int deleteBoard(String bordId);
+	
 	public List<CategoryVo> getCategoryList();
+	
+	public String getCategoryName(String catgId);
 	
 	public int insertFile(FileVo file);
 	
@@ -29,5 +33,5 @@ public interface BoardService {
 	
 	public int insertComment(Map<String, String> paramMap);
 	
-	public int deleteComment(String commId);
+	public int deleteComment(String commId, String bordId);
 }

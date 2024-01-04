@@ -97,6 +97,11 @@
 	WHERE b.bord_id = #{bordId}
 </select>
 
+<delete id="deleteBoard">
+	DELETE FROM board
+	WHERE bord_id = #{bordId}
+</delete>
+
 <select id="getCategoryList" resultType="com.main.vo.CategoryVo">
 	SELECT
 		catg_id,
@@ -106,6 +111,12 @@
 	ORDER BY catg_name
 </select>
 
+<select id="getCategoryName">
+	SELECT
+		catg_name
+	FROM category
+	WHERE catg_id = #{catgId}
+</select>
 
 <!-- File -->
 
@@ -195,7 +206,16 @@
 </insert>
 
 <delete id="deleteComment">
-	DELETE FROM board_comment WHERE comm_id = #{commId}
+	DELETE FROM board_comment 
+	WHERE 1=1
+	<choose>
+	<when test="commId != null and commId != ''">
+		AND comm_id = #{commId}
+	</when>
+	<when test="bordId != null and bordId != ''">
+		AND bord_id = #{bordId}
+	</when>
+	</choose>
 </delete>
 
 <!-- Comment -->

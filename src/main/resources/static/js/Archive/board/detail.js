@@ -26,7 +26,6 @@ $('#detail').CMinit(function(){
 				let $commCont 	= $('#commCont');
 				let bordId		= $('#bordId').val();
 				let commCont	= $commCont.val();
-//				let pageNum		= $('#pageNum').val();
 				
 				if (!commCont) {
 					alert('No content!');
@@ -36,7 +35,6 @@ $('#detail').CMinit(function(){
 				let param 		= {
 					'bordId'	: bordId,
 					'commCont'	: commCont
-//					'pageNum'	: pageNum
 				};
 				
 				CMJS.ajax({
@@ -81,14 +79,45 @@ $('#detail').CMinit(function(){
 				_hand.listComment(pageNum);
 			});
 			
-			$('#view').on('click', '.update', function(){
+			$('#view', $page).on('click', '.update', function(){
 				var param = {
 					bordId	: $('#bordId').val(),
 					userId	: $('#userId').val(),
 					pageNum	: $('#pageNum').val()
 				};
-				CMJS.submit('update', param, 'POST');
+				CMJS.submit('/update', param, 'POST');
 			});
+			
+			$('#view', $page).on('click', '.delete', function(){
+				if (confirm('정말 삭제하시겠습니까?')) {
+					var param = {
+						bordId	: $('#bordId').val(),
+						userId	: $('#userId').val(),
+						category: $('#category').val(),
+						pageNum	: $('#pageNum').val()
+					};
+					CMJS.submit('/deleteBoard', param, 'POST');
+				}
+			});
+			
+			$('#view', $page).on('click', '.listBtn', function(){
+				let category	= $('#category').val();
+				let search		= $('#search').val();
+				let pageNum		= $('#pageNum').val();
+				let param		= {};
+				if (category) {
+					param['category']	= category;
+				}
+				if (search) {
+					param['search']		= search;
+				}
+				if (pageNum) {
+					param['pageNum']	= pageNum;
+				}
+				let qs			= CMJS.getQueryString(param);
+				location.href	= '/board' + qs + '&#title';
+			});
+			
 			
 		};
 		

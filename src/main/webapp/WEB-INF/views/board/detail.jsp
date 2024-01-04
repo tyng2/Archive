@@ -4,6 +4,14 @@
 <head>
     <title>detail TEST</title>
     <jsp:include page="/WEB-INF/views/common/commonHeader.jsp" />
+    <style type="text/css">
+    	.bordCont {
+    		font-family	: 'Quicksand';
+    		font-size	: 15px;
+    		margin		: 20px 0;
+    		min-height	: 160px;
+    	}
+    </style>
 </head>
 <body id="detail">
 <div class="site-blocks-cover inner-page-cover overlay"
@@ -50,7 +58,7 @@
 		</c:if>
 					
 		<div class="p-4 mb-3 bg-white">
-			<p><pre style="font-family: 'Quicksand'; font-size: 15px; margin: 20px 0; min-height: 160px;">${board.bordCont }</pre></p>
+			<pre class="bordCont">${board.bordCont }</pre>
 			<p class="" style="text-align: right;">조회 : ${board.bordHitc }</p>
 		</div>
 <!-- 		<div id="CommentAn"></div> -->
@@ -60,10 +68,11 @@
 			<form action="boardComment" method="POST">
 				<input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}">
 				
-				<input type="hidden" name="bordId"	id="bordId"		value="${board.bordId }">
-				<input type="hidden" name="pageNum"	id="pageNum"	value="${param.pageNum }">
-				<input type="hidden" name="userId"	id="userId"		value="${board.userId }">
-<%-- 				<input type="hidden" name="bordCatg" id="bordCatg" value="${param.bordCatg }"> --%>
+				<input type="hidden" name="bordId"		id="bordId"		value="${board.bordId }">
+				<input type="hidden" name="userId"		id="userId"		value="${board.userId }">
+				<input type="hidden" name="pageNum"		id="pageNum"	value="${pageNum }">
+				<input type="hidden" name="category"	id="category"	value="${category }">
+				<input type="hidden" name="search"		id="search"		value="${search }">
 		
 				<c:if test="${isLogin }">
 				<textarea name="commCont" id="commCont" cols="30" rows="4" class="form-control" 
@@ -78,24 +87,24 @@
 			<c:if test="${isLogin }">
 <%-- 				<c:if test="${sessionID.equals('admin') && !sessionID.equals(board.userId) }"> --%>
 				<c:if test="${loginSessionVo.userAuth == 'admin' && loginSessionVo.userId != board.userId }">
-					<a href="boardDeleteProcess.do?bordId=${board.bordId }&pageNum=${param.pageNum }&category=${param.bordCatg }" class="btn btn-custom btn-md">삭제</a>
+					<a href="javascript:void(0);" class="btn btn-custom btn-md delete">삭제</a>
 				</c:if>
 <%-- 				<c:if test="${sessionID.equals(board.userId) }"> --%>
 				<c:if test="${loginSessionVo.userId == board.userId }">
 					<a href="javascript:void(0);" class="btn btn-custom btn-md update">수정</a>
-					<a href="boardDeleteProcess.do?bordId=${board.bordId }&pageNum=${param.pageNum }&category=${param.bordCatg }" class="btn btn-custom btn-md">삭제</a>
+					<a href="javascript:void(0);" class="btn btn-custom btn-md delete">삭제</a>
 				</c:if>
 <%-- 				<a href="reply.do?re_ref=${board.bord_refr }&re_lev=${board.bord_levl }&re_seq=${board.bord_seqn }&category=${board.bordCatg }&pageNum=${param.pageNum }&pcategory=${param.bordCatg }" class="btn btn-custom btn-md">답글</a> --%>
 			</c:if>
-			<c:choose>
-			<c:when test="${param.bordCatg == null }">
-				<a href="board?pageNum=${param.pageNum }&#board" class="btn btn-custom btn-md">목록</a>
-			</c:when>
-			<c:otherwise>
-				<a href="board?category=${board.bordCatg }&pageNum=${param.pageNum }&#board" class="btn btn-custom btn-md">목록</a>
-			</c:otherwise>
-			</c:choose>
-				
+			<a href="javascript:void(0);" class="btn btn-custom btn-md listBtn">목록</a>
+<%-- 			<c:choose> --%>
+<%-- 			<c:when test="${param.bordCatg == null }"> --%>
+<%-- 				<a href="board?pageNum=${param.pageNum }&#board" class="btn btn-custom btn-md">목록</a> --%>
+<%-- 			</c:when> --%>
+<%-- 			<c:otherwise> --%>
+<%-- 				<a href="board?category=${board.bordCatg }&pageNum=${param.pageNum }&#board" class="btn btn-custom btn-md">목록</a> --%>
+<%-- 			</c:otherwise> --%>
+<%-- 			</c:choose> --%>
 			</p>
 		</div>
 	</div>

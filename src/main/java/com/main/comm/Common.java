@@ -6,6 +6,8 @@ import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.Map;
+import java.util.concurrent.atomic.AtomicInteger;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -48,6 +50,21 @@ public class Common {
 			num = 0;
 		}
 		return num;
+	}
+	
+	public static String getQueryString(Map<String, String> map) {
+		AtomicInteger index = new AtomicInteger();
+		StringBuffer sb	= new StringBuffer();
+		sb.append("?");
+		map.forEach((k, v)->{
+			if (index.getAndIncrement() != 0) {
+				sb.append("&");
+			}
+			sb.append(k);
+			sb.append("=");
+			sb.append(v);
+		});
+		return sb.toString();
 	}
 	
 	/* message	== null : url로 리다이렉트 (url == null인 경우 잘못된 호출임)

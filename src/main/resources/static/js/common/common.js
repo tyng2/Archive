@@ -78,15 +78,31 @@ var CMJS = (function(){
 	};
 	
 	var _submit = function(url, param, method){
+		$('#submitForm').remove();
+		
 		let $form	= $('<form>').attr('method', (method) ? method : 'GET');
 		let $inp	= $('<input>').attr('type','hidden');
 
-		$form.attr('action',url);
+		$form.attr({'action':url,'id':'submitForm'});
 		$.each(param, function(k, v){
 			$form.append($inp.clone().attr('name',k).val(v));
 		});
 		$('body').append($form);
 		$form.submit();
+	};
+	
+	var _getQueryString = function(param){
+		let str = '?';
+		let ind = 0;
+		$.each(param, function(k, v){
+			if (ind++ != 0) {
+				str += '&';
+			}
+			str += k;
+			str += '=';
+			str += v;
+		});
+		return str;
 	};
 	
 	return {
@@ -95,5 +111,6 @@ var CMJS = (function(){
 		dateFormatter	: _dateFormatter,
 		ajax			: _ajax,
 		submit			: _submit,
+		getQueryString	: _getQueryString
 	};
 }());

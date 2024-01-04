@@ -5,6 +5,7 @@ import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -48,19 +49,29 @@ public class BoardController {
 	@SuppressWarnings("unchecked")
 	@GetMapping("/board")
 	public String board(@RequestParam Map<String, String> paramMap, Model model) {
-		log.info("board");
+		log.info("board {}", paramMap.toString());
 		
-		paramMap.put("category", Common.nvl(paramMap.get("category")));
+		String category	= Common.nvl(paramMap.get("category"));
+		String search	= Common.nvl(paramMap.get("search"));
 		
-		Map<String, Object> result = boardService.getBoardList(paramMap);
-		
+		Map<String, Object> result	= boardService.getBoardList(paramMap);
 		
 		List<BoardVo> boardList	= (List<BoardVo>) result.get("boardList");
 		PageInfo pageInfo		= (PageInfo) result.get("pageInfo");
 		
 		model.addAttribute("pageInfo"	, pageInfo);
 		model.addAttribute("boardList"	, boardList);
-		model.addAttribute("search"		, paramMap.get("search"));
+		
+		if (!"".equals(search)) {
+			model.addAttribute("search", search);
+		}
+		if (!"".equals(category)) {
+			Map<String, String> cateMap = Map.of(
+				"catgName"	, boardService.getCategoryName(category),
+				"catgId"	, category
+			);
+			model.addAttribute("category", cateMap);
+		}
 //		model.addAttribute("hitList"	, hitList);
 		return "board/board";
 	}
@@ -69,10 +80,14 @@ public class BoardController {
 	public String write(@RequestParam Map<String, String> paramMap, Model model) {
 		log.info("write");
 		
+		String pageNum	= Common.nvl(paramMap.get("pageNum"));
 		String category = Common.nvl(paramMap.get("category"));
+		String search	= Common.nvl(paramMap.get("search"));
 		List<CategoryVo> categoryList = boardService.getCategoryList();
 		model.addAttribute("categoryList"	, categoryList);
+		model.addAttribute("pageNum"		, pageNum);
 		model.addAttribute("category"		, category);
+		model.addAttribute("search"			, search);
 		return "board/write";
 	}
 	
@@ -179,17 +194,53 @@ public class BoardController {
 		return "redirect:/detail?bordId="+bordId;
 	}
 	
+	@PostMapping("/deleteBoard")
+	public String deleteBoard(@RequestParam Map<String, String> paramMap, Model model) {
+		
+		String bordId	= Common.nvl(paramMap.get("bordId"));
+		int userId		= Common.str2Int(paramMap.get("userId"));
+		
+		String category = Common.nvl(paramMap.get("category"));
+		String search	= Common.nvl(paramMap.get("search"));
+		String pageNum	= Common.nvl(paramMap.get("pageNum"));
+		
+		LoginSessionVo login = loginService.getLoginData();
+		if (!ObjectUtils.isEmpty(login) && userId == login.getUserId()) {
+			int cnt = boardService.deleteBoard(bordId);
+			log.info("bc deleteFile :: {}", cnt);
+		}
+		
+		Map<String, String> q = new HashMap<String, String>();
+		if (!"".equals(category)) {
+			q.put("category"	, category);
+		}
+		if (!"".equals(search)) {
+			q.put("search"		, search);
+		}
+		if (!"".equals(pageNum)) {
+			q.put("pageNum"		, pageNum);
+		}
+		String qs = Common.getQueryString(q);
+		return "redirect:/board"+qs;
+	}
+	
 	
 	@GetMapping("/detail")
 	public String detail(@RequestParam Map<String, String> paramMap, Model model) {
 		log.info("detail :: {}", paramMap.get("bordId"));
 		
-		String bordId = Common.nvl(paramMap.get("bordId"));
+		String bordId	= Common.nvl(paramMap.get("bordId"));
+		String category = Common.nvl(paramMap.get("category"));
+		String search	= Common.nvl(paramMap.get("search"));
+		String pageNum	= Common.nvl(paramMap.get("pageNum"));
 		
 		Map<String, Object> detail = boardService.getDetail(bordId);
 		
 		model.addAttribute("board", detail.get("board"));
 		model.addAttribute("files", detail.get("files"));
+		model.addAttribute("category"	, category);
+		model.addAttribute("search"		, search);
+		model.addAttribute("pageNum"	, pageNum);
 		return "board/detail";
 	}
 	
@@ -303,7 +354,7 @@ public class BoardController {
 		int cnt = 0;
 		
 		if (!commId.isEmpty()) {
-			cnt = boardService.deleteComment(commId);
+			cnt = boardService.deleteComment(commId, null);
 		}
 		
 		return cnt;

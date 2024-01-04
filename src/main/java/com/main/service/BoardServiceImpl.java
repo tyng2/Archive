@@ -10,6 +10,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.main.comm.Common;
 import com.main.comm.PageSet;
@@ -94,10 +95,34 @@ public class BoardServiceImpl implements BoardService {
 	public int updateBoard(BoardVo board) {
 		return boardMapper.updateBoard(board);
 	}
+	
+	@Transactional(rollbackFor = Exception.class)
+	@Override
+	public int deleteBoard(String bordId) {
+		boardMapper.deleteBoard(bordId);
+		boardMapper.deleteComment(null, bordId);
+		
+		List<FileVo> fileList = boardMapper.getFileList(bordId);
+		int res = 0;
+		for (FileVo fileVo : fileList) {
+			if (cmmFile.deleteFile(boardMapper.getFile(fileVo.getFileId()+""))) {
+				res += boardMapper.deleteFile(fileVo.getFileId()+"");
+			} else {
+				log.error("파일 삭제 실패");
+			}
+		}
+		log.info("파일 {}건 삭제", res);
+		return res;
+	}
 
 	@Override
 	public List<CategoryVo> getCategoryList() {
 		return boardMapper.getCategoryList();
+	}
+	
+	@Override
+	public String getCategoryName(String catgId) {
+		return boardMapper.getCategoryName(catgId);
 	}
 
 	@Override
@@ -190,8 +215,8 @@ log.info("pageNum : {}",pageNum);
 	}
 
 	@Override
-	public int deleteComment(String commId) {
-		return boardMapper.deleteComment(commId);
+	public int deleteComment(String commId, String bordId) {
+		return boardMapper.deleteComment(commId, bordId);
 	}
 	
 	

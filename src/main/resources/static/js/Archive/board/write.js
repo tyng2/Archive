@@ -12,6 +12,24 @@ $('#write').CMinit(function(){
 			$('#fileArea').on('click', '.fileDel', function(){
 				_fileDelete();
 			});
+			
+			$page.on('click', '.listBtn', function(){
+				console.log('listBtn');
+				let category	= $('#category').val();
+				let search		= $('#search').val();
+				let pageNum		= $('#pageNum').val();
+				let param		= {};
+				if (category) {
+					param['category']	= category;
+				}
+				if (search) {
+					param['search']		= search;
+				}
+				if (pageNum) {
+					param['pageNum']	= pageNum;
+				}
+				CMJS.submit('/board', param);
+			});
 		};
 		
 		var _fileAdd = function() {

@@ -23,7 +23,11 @@ public interface BoardMapper {
 	
 	public BoardVo getBoard(@Param("bordId") String bordId);
 	
+	public int deleteBoard(@Param("bordId") String bordId);
+	
 	public List<CategoryVo> getCategoryList();
+	
+	public String getCategoryName(@Param("catgId") String catgId);
 	
 	public int insertFile(FileVo file);
 	
@@ -39,7 +43,7 @@ public interface BoardMapper {
 	
 	public int insertComment(CommentVo comment);
 	
-	public int deleteComment(@Param("commId") String commId);
+	public int deleteComment(@Param("commId") String commId, @Param("bordId") String bordId);
 	
 	
 }
