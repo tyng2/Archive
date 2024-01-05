@@ -57,10 +57,14 @@ public class LoginServiceImpl implements LoginService {
 		String redirectURL = URLEncoder.encode(DOMAIN + "/oauth/login");
 		SecureRandom random = new SecureRandom();
 		String state = new BigInteger(130, random).toString();
-		String apiURL = "https://nid.naver.com/oauth2.0/authorize?response_type=code";
-		apiURL += "&client_id=" + CLIENT_ID_NAVER;
-	    apiURL += "&redirect_uri=" + redirectURL;
-	    apiURL += "&state=" + state;
+		String apiURL = "https://nid.naver.com/oauth2.0/authorize";
+		Map<String, String> q = Map.of(
+			"response_type"	, "code",
+			"client_id"		, CLIENT_ID_NAVER,
+			"redirect_uri"	, redirectURL,
+			"state"			, state
+		);
+		apiURL += Common.getQueryString(q);
 	    
 	    HttpServletRequest request	= ((ServletRequestAttributes) RequestContextHolder.getRequestAttributes()).getRequest();
 		HttpSession session = request.getSession();
@@ -76,11 +80,15 @@ public class LoginServiceImpl implements LoginService {
 		String code		= Common.nvl(paramMap.get("code"));
 		String state	= Common.nvl(paramMap.get("state"));
 		
-		String apiURL = "https://nid.naver.com/oauth2.0/token?grant_type=authorization_code";
-		apiURL += "&client_id=" + CLIENT_ID_NAVER;
-		apiURL += "&client_secret=" + CLIENT_SECRET_NAVER;
-		apiURL += "&code=" + code;
-	    apiURL += "&state=" + state;
+		String apiURL = "https://nid.naver.com/oauth2.0/token";
+		Map<String, String> q = Map.of(
+			"grant_type"	, "authorization_code",
+			"client_id"		, CLIENT_ID_NAVER,
+			"client_secret"	, CLIENT_SECRET_NAVER,
+			"code"			, code,
+			"state"			, state
+		);
+		apiURL += Common.getQueryString(q);
 		
 	    String respToken = Common.callAPI(apiURL, "GET", null);
 	    

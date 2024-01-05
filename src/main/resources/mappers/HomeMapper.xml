@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTO Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.main.mapper.HomeMapper">
+
+<!-- menu -->
+
+<select id="getMenuList" resultType="com.main.vo.MenuVo">
+	WITH RECURSIVE menuTree AS (
+		SELECT 1 depth,
+			CAST(CONCAT(m1.menu_order) AS VARCHAR(10)) seq,
+			m1.*
+		FROM menu m1
+		WHERE menu_parent = 0
+		UNION ALL
+		SELECT p.depth + 1 depth,
+			CONCAT(p.seq,'_',c.menu_order) seq,
+			c.*
+		FROM menuTree p
+		JOIN menu c
+			ON p.menu_id = c.menu_parent
+	)
+	SELECT
+		m1.depth,
+		m1.menu_id,
+		m1.menu_parent,
+		m1.menu_name,
+		m1.menu_link,
+		m1.menu_order,
+		m1.rd_auth,
+		m1.wr_auth,
+		m1.use_yn,
+		m1.created_date,
+		CASE 
+			WHEN m2.child_cnt IS NOT NULL THEN m2.child_cnt
+			ELSE 0
+		END child_cnt
+	FROM menuTree m1
+	LEFT OUTER JOIN (
+		SELECT 
+			menu_id,
+			menu_parent,
+			COUNT(menu_parent) child_cnt 
+		FROM menu 
+		GROUP BY menu_parent
+	) m2
+		ON m1.menu_id = m2.menu_parent
+	WHERE m1.use_yn = 'Y'
+	ORDER BY m1.seq
+</select>
+
+<!-- menu -->
+
+
+</mapper>

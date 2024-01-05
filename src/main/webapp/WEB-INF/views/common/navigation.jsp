@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%-- <c:set var="currentTime" value="<%=System.currentTimeMillis() %>"/> --%>
 <%-- <c:if test="${cookie.cookieID != null && sessionID == null }"> --%>
 <%-- <c:set var="sessionID" scope="session" value="${cookie.cookieID.value }"/> --%>
@@ -84,26 +85,52 @@ $(document).ready(function() {
 			<nav class="site-navigation position-relative text-right" role="navigation">
 
 				<ul class="site-menu js-clone-nav mr-auto d-none d-lg-block">
-					<li><a href="main.do">Home</a></li>
- 					<li><a href="notice.do">Notice</a></li>
-					<li class="has-children"><a href="board">Board</a>
-						<ul class="dropdown">
+					<li><a href="/">Home</a></li>
+					<c:if test="${not empty menuList }">
+					<c:forEach var="menu" items="${menuList }" varStatus="vs">
+						<fmt:parseNumber var="childCnt" value="${menu.childCnt }" type="number"/>
+						<c:choose>
+						<c:when test="${menu.childCnt gt 0 }">
+							<c:set var="menuChildCnt" value="${childCnt }" />
+							<fmt:parseNumber var="index" value="0" integerOnly="true"/>
+							<li class="has-children"><a href="${menu.menuLink }">${menu.menuName }</a>
+								<ul class="dropdown">
+						</c:when>
+						<c:otherwise>
+							<li><a href="${menu.menuLink }">${menu.menuName }</a></li>
+						</c:otherwise>
+						</c:choose>
+						
+						<c:if test="${menu.depth gt 1 }">
+							<c:set var="index" value="${index + 1 }" />
+						</c:if>
+						<c:if test="${index eq menuChildCnt }">
+							</ul></li>
+						</c:if>
+					</c:forEach>
+					</c:if>
+<!--  					<li><a href="notice.do">Notice</a></li> -->
+<!-- 					<li class="has-children"><a href="board">Board</a> -->
+<!-- 						<ul class="dropdown"> -->
 <!-- 							<li><a href="board?bord_catg=C">C</a></li> -->
 <!-- 							<li><a href="board?bord_catg=Java">Java</a></li> -->
 <!-- 							<li><a href="board?bord_catg=Python">Python</a></li> -->
 <!-- 							<li><a href="board?bord_catg=SQL">SQL</a></li> -->
 <!-- 							<li><a href="board?bord_catg=Web">Web</a></li> -->
-							<li><a href="board?bord_catg=기타">기타</a></li>
-							<li><a href="board?bord_catg=잡담">잡담</a></li>
-						</ul></li>
-					<li><a href="boardChartForm.do">Stat</a></li>
-					<c:if test="${loginSessionVo.userAuth == 'admin' }">
-					<li class="has-children"><a href="admin.do">Admin</a>
-						<ul class="dropdown">
-							<li><a href="memberList.do">Member</a></li>
-							<li><a href="adminChartForm.do">Stat</a></li>
-						</ul></li>
-					</c:if>
+<!-- 							<li><a href="board?category=1">기타</a></li> -->
+<!-- 							<li><a href="board?category=2">잡담</a></li> -->
+<!-- 						</ul></li> -->
+<!-- 					<li><a href="boardChartForm.do">Stat</a></li> -->
+<%-- 					<c:forEach var="" items="" > --%>
+<!-- 						<li><a href="board">Board</a> -->
+<%-- 					</c:forEach> --%>
+<%-- 					<c:if test="${loginSessionVo.userAuth == 'admin' }"> --%>
+<!-- 					<li class="has-children"><a href="admin.do">Admin</a> -->
+<!-- 						<ul class="dropdown"> -->
+<!-- 							<li><a href="memberList.do">Member</a></li> -->
+<!-- 							<li><a href="adminChartForm.do">Stat</a></li> -->
+<!-- 						</ul></li> -->
+<%-- 					</c:if> --%>
 				</ul>
 			</nav>
 			</div>
