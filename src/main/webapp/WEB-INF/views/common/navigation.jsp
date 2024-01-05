@@ -104,7 +104,7 @@ $(document).ready(function() {
 						<c:if test="${menu.depth gt 1 }">
 							<c:set var="index" value="${index + 1 }" />
 						</c:if>
-						<c:if test="${index eq menuChildCnt }">
+						<c:if test="${index eq menuChildCnt and index gt 0 }">
 							</ul></li>
 						</c:if>
 					</c:forEach>
