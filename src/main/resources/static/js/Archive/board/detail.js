@@ -196,6 +196,7 @@ $('#detail').CMinit(function(){
 console.log(pageInfo);
 		
 			if (pageInfo.allRowCount > 0) {
+				$('#commentPageBlock').show();
 				
 				if (pageInfo.startPage > pageInfo.pageBlockSize) {
 					$imgClone = $img.clone().attr('src','images/left-arrow.png');
@@ -212,6 +213,8 @@ console.log(pageInfo);
 					$imgClone = $img.clone().attr('src','images/right-arrow.png');
 					$pageBlock.append($a.clone().addClass('pageBtn').data('page_num',pageInfo.endPage+1).html($span.clone().addClass('pt').html($imgClone)));
 				}
+			} else {
+				$('#commentPageBlock').hide();
 			}
 			
 		};

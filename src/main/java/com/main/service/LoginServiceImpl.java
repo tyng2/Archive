@@ -15,8 +15,8 @@ import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.context.request.ServletRequestAttributes;
 
 import com.main.comm.Common;
+import com.main.comm.SessionUtil;
 import com.main.mapper.UsersMapper;
-import com.main.vo.LoginSessionVo;
 import com.main.vo.UsersVo;
 
 import jakarta.servlet.http.HttpServletRequest;
@@ -111,7 +111,7 @@ public class LoginServiceImpl implements LoginService {
 	}
 
 	@Override
-	public String connNaverUserBySnsId(String snsId, Map<String, String> profileMap) {
+	public String connNaverUserBySnsId(HttpServletRequest request, String snsId, Map<String, String> profileMap) {
 		UsersVo user	= usersMapper.getUsersBySnsId(snsId);
 		String msg		= "";
 		
@@ -145,52 +145,25 @@ public class LoginServiceImpl implements LoginService {
 			
 			user.setUserId(userId);
 		}
-		loginProcess(user);
+		loginProcess(request, user);
 		
 		return msg;
 	}
 /* e:NAVER */
 
 	@Override
-	public void loginProcess(UsersVo user) {
-		HttpServletRequest request	= ((ServletRequestAttributes) RequestContextHolder.getRequestAttributes()).getRequest();
-		HttpSession session			= request.getSession();
-		LoginSessionVo login		= new LoginSessionVo(user.getUserId(), user.getUserName(), user.getEmail(), user.getNickname(), user.getMobile(), user.getSnsType(), user.getAuthName());
-		
-		if (session.getAttribute("loginSession") != null) {
-			session.invalidate();
+	public void loginProcess(HttpServletRequest request, UsersVo user) {
+		if (SessionUtil.login(request, user)) {
+			Map<String, String> input = Map.of(
+				"userId"		, user.getUserId() + "",
+				"loginIp"		, Common.getClientIP(),
+				"loginDevice"	, Common.getDevice(request),
+				"loginType"		, user.getSnsType()
+			);
+			usersMapper.insertUserLog(input);
 		}
-		session.setAttribute("loginSession", login);
-		Map<String, String> input = Map.of(
-			"userId"		, user.getUserId() + "",
-			"loginIp"		, Common.getClientIP(),
-			"loginDevice"	, Common.getDevice(request),
-			"loginType"		, user.getSnsType()
-		);
-		usersMapper.insertUserLog(input);
 	}
 
-	@Override
-	public void logout() {
-		HttpServletRequest request	= ((ServletRequestAttributes) RequestContextHolder.getRequestAttributes()).getRequest();
-		HttpSession session			= request.getSession();
-		session.invalidate();
-	}
-
-	@Override
-	public boolean isLogin() {
-		LoginSessionVo login = getLoginData();
-		return !ObjectUtils.isEmpty(login);
-	}
-
-	@Override
-	public LoginSessionVo getLoginData() {
-		HttpServletRequest request	= ((ServletRequestAttributes) RequestContextHolder.getRequestAttributes()).getRequest();
-		HttpSession session			= request.getSession();
-		LoginSessionVo login		= (LoginSessionVo) session.getAttribute("loginSession");
-		return login;
-	}
-	
 	
 
 	

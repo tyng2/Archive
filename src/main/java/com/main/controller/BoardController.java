@@ -22,9 +22,9 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
 
 import com.main.comm.Common;
+import com.main.comm.SessionUtil;
 import com.main.comm.cmmFile;
 import com.main.service.BoardService;
-import com.main.service.LoginService;
 import com.main.vo.BoardVo;
 import com.main.vo.CategoryVo;
 import com.main.vo.FileVo;
@@ -42,9 +42,6 @@ public class BoardController {
 	
 	@Autowired
 	private BoardService boardService;
-	
-	@Autowired
-	private LoginService loginService;
 	
 	@SuppressWarnings("unchecked")
 	@GetMapping("/board")
@@ -92,14 +89,14 @@ public class BoardController {
 	}
 	
 	@PostMapping("/write")
-	public String writeProcess(@RequestParam Map<String, String> paramMap, @RequestParam(required = false, name = "mFile") MultipartFile[] mFile, Model model) {
+	public String writeProcess(HttpServletRequest request, @RequestParam Map<String, String> paramMap, @RequestParam(required = false, name = "mFile") MultipartFile[] mFile, Model model) {
 		log.info("write POST");
 		
 //		ResponseEntity<String> res = null;
 		
-		LoginSessionVo login = loginService.getLoginData();
+		LoginSessionVo login = SessionUtil.getLoginData(request);
 		
-		int userId = (loginService.isLogin()) ? login.getUserId() : 0;
+		int userId = (SessionUtil.isLogin(request)) ? login.getUserId() : 0;
 		
 		BoardVo board = new BoardVo();
 		board.setUserId(userId);
@@ -131,7 +128,7 @@ public class BoardController {
 	}
 	
 	@PostMapping("/update")
-	public String update(@RequestParam Map<String, String> paramMap, Model model) {
+	public String update(HttpServletRequest request, @RequestParam Map<String, String> paramMap, Model model) {
 		log.info("update");
 		
 //		String category = Common.nvl(paramMap.get("category"));
@@ -140,7 +137,7 @@ public class BoardController {
 		String bordId	= Common.nvl(paramMap.get("bordId"));
 		int userId		= Common.str2Int(paramMap.get("userId"));
 		
-		LoginSessionVo login = loginService.getLoginData();
+		LoginSessionVo login = SessionUtil.getLoginData(request);
 		
 		if (!ObjectUtils.isEmpty(login) && userId == login.getUserId()) {
 			List<CategoryVo> categoryList = boardService.getCategoryList();
@@ -157,12 +154,12 @@ public class BoardController {
 	}
 	
 	@PostMapping("/updateProcess")
-	public String updateProcess(@RequestParam Map<String, String> paramMap, @RequestParam(required = false, name = "mFile") MultipartFile[] mFile, Model model) {
+	public String updateProcess(HttpServletRequest request, @RequestParam Map<String, String> paramMap, @RequestParam(required = false, name = "mFile") MultipartFile[] mFile, Model model) {
 		
 		int bordId	= Common.str2Int(paramMap.get("bordId"));
 		int userId	= Common.str2Int(paramMap.get("userId"));
 		
-		LoginSessionVo login = loginService.getLoginData();
+		LoginSessionVo login = SessionUtil.getLoginData(request);
 		if (!ObjectUtils.isEmpty(login) && userId == login.getUserId()) {
 			
 			BoardVo board = new BoardVo();
@@ -195,7 +192,7 @@ public class BoardController {
 	}
 	
 	@PostMapping("/deleteBoard")
-	public String deleteBoard(@RequestParam Map<String, String> paramMap, Model model) {
+	public String deleteBoard(HttpServletRequest request, @RequestParam Map<String, String> paramMap, Model model) {
 		
 		String bordId	= Common.nvl(paramMap.get("bordId"));
 		int userId		= Common.str2Int(paramMap.get("userId"));
@@ -204,7 +201,7 @@ public class BoardController {
 		String search	= Common.nvl(paramMap.get("search"));
 		String pageNum	= Common.nvl(paramMap.get("pageNum"));
 		
-		LoginSessionVo login = loginService.getLoginData();
+		LoginSessionVo login = SessionUtil.getLoginData(request);
 		if (!ObjectUtils.isEmpty(login) && userId == login.getUserId()) {
 			int cnt = boardService.deleteBoard(bordId);
 			log.info("bc deleteFile :: {}", cnt);

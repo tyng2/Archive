@@ -39,7 +39,7 @@ $(document).ready(function() {
 			<div class="row">
 				<div class="col-md-6">
 					<p align="left" class="mb-0">
-					<c:if test="${loginSessionVo.userAuth == 'admin' }">
+					<c:if test="${loginSessionVo.authId eq 1 }">
 						<img src="images/adminIcon.png" width="25px;">
 					</c:if>
 					</p>
@@ -78,7 +78,7 @@ $(document).ready(function() {
 
 			<div class="col-11 col-xl-2">
 				<h1 class="mb-0 site-logo">
-					<a href="/" class="text-black h2 mb-0">Potal</a>
+					<a href="/" class="text-black h2 mb-0">Archive</a>
 				</h1>
 			</div>
 			<div class="col-12 col-md-10 d-none d-xl-block">

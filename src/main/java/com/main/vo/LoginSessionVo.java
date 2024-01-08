@@ -9,7 +9,7 @@ import lombok.Setter;
 @AllArgsConstructor
 public class LoginSessionVo {
 	
-	private int userId;
+	private int userId, authId;
 	
 	private String userName, email, nickname, mobile, type, userAuth;
 	

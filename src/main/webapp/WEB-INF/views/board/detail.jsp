@@ -64,7 +64,7 @@
 <!-- 		<div id="CommentAn"></div> -->
 		<div class="p-4 mb-3 bg-white" id="commentArea">
 			<div id="comment"></div>
-			<div id="commentPageBlock" class="p-4"><div class="custom-pagination text-center"></div></div>
+			<div id="commentPageBlock" class="p-4" style="display: none;"><div class="custom-pagination text-center"></div></div>
 			<form action="boardComment" method="POST">
 				<input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}">
 				
@@ -86,15 +86,15 @@
 			<p style="text-align: right;" class="mb-0">
 			<c:if test="${isLogin }">
 <%-- 				<c:if test="${sessionID.equals('admin') && !sessionID.equals(board.userId) }"> --%>
-				<c:if test="${loginSessionVo.userAuth == 'admin' && loginSessionVo.userId != board.userId }">
+				<c:if test="${loginSessionVo.authId eq 1 && loginSessionVo.userId ne board.userId }">
 					<a href="javascript:void(0);" class="btn btn-custom btn-md delete">삭제</a>
 				</c:if>
 <%-- 				<c:if test="${sessionID.equals(board.userId) }"> --%>
-				<c:if test="${loginSessionVo.userId == board.userId }">
+				<c:if test="${loginSessionVo.userId eq board.userId }">
 					<a href="javascript:void(0);" class="btn btn-custom btn-md update">수정</a>
 					<a href="javascript:void(0);" class="btn btn-custom btn-md delete">삭제</a>
 				</c:if>
-<%-- 				<a href="reply.do?re_ref=${board.bord_refr }&re_lev=${board.bord_levl }&re_seq=${board.bord_seqn }&category=${board.bordCatg }&pageNum=${param.pageNum }&pcategory=${param.bordCatg }" class="btn btn-custom btn-md">답글</a> --%>
+<%-- 				<a href="reply?re_ref=${board.bord_refr }&re_lev=${board.bord_levl }&re_seq=${board.bord_seqn }&category=${board.bordCatg }&pageNum=${param.pageNum }&pcategory=${param.bordCatg }" class="btn btn-custom btn-md">답글</a> --%>
 			</c:if>
 			<a href="javascript:void(0);" class="btn btn-custom btn-md listBtn">목록</a>
 <%-- 			<c:choose> --%>

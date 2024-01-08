@@ -2,8 +2,9 @@ package com.main.service;
 
 import java.util.Map;
 
-import com.main.vo.LoginSessionVo;
 import com.main.vo.UsersVo;
+
+import jakarta.servlet.http.HttpServletRequest;
 
 public interface LoginService {
 	
@@ -14,15 +15,9 @@ public interface LoginService {
 	
 	public String getNaverProfile(Map<String, String> tokenMap);
 
-	public String connNaverUserBySnsId(String snsId, Map<String, String> profileMap);
+	public String connNaverUserBySnsId(HttpServletRequest request, String snsId, Map<String, String> profileMap);
 /* e:NAVER */
 	
-	public void loginProcess(UsersVo user);
-	
-	public void logout();
-	
-	public boolean isLogin();
-	
-	public LoginSessionVo getLoginData();
+	public void loginProcess(HttpServletRequest request, UsersVo user);
 	
 }

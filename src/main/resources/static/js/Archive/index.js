@@ -27,7 +27,7 @@ $('#index').CMinit(function(){
 					'url'	: url
 				};
 				CMJS.ajax({
-					url		: 'siteProcess.do',
+					url		: '/insertSite',
 					type	: 'post',
 					data	: param,
 					success	: function() {
@@ -39,6 +39,11 @@ $('#index').CMinit(function(){
 					}
 				});
 				$addSite = $('#addSite').removeAttr('disabled');
+			});
+			
+			$page.on('click', '.deleteSite', function(){
+				let key = $(this).data('site_key');
+				_hand.delSite(key);
 			});
 			
 		};
@@ -68,7 +73,7 @@ $('#index').CMinit(function(){
 		
 		var _listSite = function(){
 			CMJS.ajax({
-				url: 'siteList.do',
+				url: '/siteList',
 				success: function(result) {
 					
 					var $siteList	= $('#siteList').empty();
@@ -80,9 +85,9 @@ $('#index').CMinit(function(){
 					
 					for (var i in result) {
 						$h2Clone = $h2.clone().appendTo($siteList);
-						$a.clone().attr('href',result[i].url).attr('target','_blank').attr('style','margin-right:2rem;').html(result[i].siteName).appendTo($h2Clone);
-						$inp.clone().attr('id','siteNum'+i).val(result[i].siteNum).appendTo($h2Clone);
-						$a.clone().attr('style','cursor: pointer;').attr('onclick','delSite('+i+')').html($img.clone()).appendTo($h2Clone);
+						$a.clone().attr('href',result[i].siteUrl).attr('target','_blank').attr('style','margin-right:2rem;').html(result[i].siteName).appendTo($h2Clone);
+						$inp.clone().attr('id','siteId'+i).val(result[i].siteId).appendTo($h2Clone);
+						$a.clone().attr('data-site_key',i).addClass('deleteSite').css('cursor','pointer').html($img.clone()).appendTo($h2Clone);
 					}
 				},
 				error: function(xhr, status, error){
@@ -92,14 +97,15 @@ $('#index').CMinit(function(){
 		};
 		
 		var _delSite = function(i){
-			var id = '#siteNum' + i;
-			var siteNum = $(id).val();
-			console.log(siteNum);
+			var id = '#siteId' + i;
+			var siteId = $(id).val();
+			console.log(siteId);
 			var param = {
-				'siteNum': siteNum	
+				'siteId': siteId	
 			};
 			CMJS.ajax({
-				url		: 'siteDelete.do',
+				url		: '/deleteSite',
+				type	: 'post',
 				data	: param,
 				success	: function() {
 					_listSite();

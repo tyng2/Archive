@@ -58,7 +58,7 @@
 				<span class="button-checkbox">
       					<button type="button" class="btn btn-lg" data-color="primary">로그인 상태 유지</button>
 			        <input type="checkbox" value="true" name="loginChk" class="hidden" style="display: none;" />
-			        <a href="passwordForm.do#f" class="btn btn-custom btn-md" style="float: right;">비밀번호 찾기</a>
+			        <a href="passwordForm#f" class="btn btn-custom btn-md" style="float: right;">비밀번호 찾기</a>
 			    </span>
 				<!-- <label>로그인 상태 유지</label>
 					<input type="checkbox" name="loginChk" value="true" class="form-control"> -->
@@ -68,7 +68,7 @@
 			<div class="row form-group">
 				<div class="col-md-12"><br>
 				<button class="btn btn-custom btn-md">Sign In</button>
-				<a href="join.do#f" class="btn btn-custom btn-md" style="float: right;">Sign Up</a>
+				<a href="join#f" class="btn btn-custom btn-md" style="float: right;">Sign Up</a>
 				</div>
 			</div>
 

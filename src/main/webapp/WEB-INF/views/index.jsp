@@ -130,7 +130,7 @@
 	<div class="container">
 		<div class="row">
 		<c:forEach items="${noticeList }" var="n">
-			<div class="col-md-6 col-lg-4" onclick="location.href='notice.do';" style="cursor: pointer;">
+			<div class="col-md-6 col-lg-4" onclick="location.href='notice';" style="cursor: pointer;">
 				<div class="p-3 box-with-humber">
 					<div class="number-behind">${n.noti_numb }.</div>
 					<h2>${n.noti_titl }</h2>
@@ -157,7 +157,7 @@
 	
 	<c:forEach items="${boardList }" var="b">
 	
-		<div style="cursor: pointer;" onclick="location.href='/detail?bord_numb=${b.bord_numb }&pageNum=1';">
+		<div style="cursor: pointer;" onclick="location.href='/detail?bordId=${b.bordId }&pageNum=1';">
 			<div class="testimonial">
 		
 				<blockquote class="mb-5">

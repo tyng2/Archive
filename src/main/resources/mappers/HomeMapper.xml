@@ -4,13 +4,18 @@
 
 <!-- menu -->
 
-<select id="getMenuList" resultType="com.main.vo.MenuVo">
+<select id="getMenuList" parameterType="java.util.List" resultType="com.main.vo.MenuVo">
 	WITH RECURSIVE menuTree AS (
 		SELECT 1 depth,
 			CAST(CONCAT(m1.menu_order) AS VARCHAR(10)) seq,
 			m1.*
 		FROM menu m1
-		WHERE menu_parent = 0
+		WHERE m1.menu_parent = 0
+			AND m1.rd_auth IN (
+			<foreach item="item" separator="," collection="authList">
+				${item}
+			</foreach>
+			)
 		UNION ALL
 		SELECT p.depth + 1 depth,
 			CONCAT(p.seq,'_',c.menu_order) seq,
@@ -18,6 +23,12 @@
 		FROM menuTree p
 		JOIN menu c
 			ON p.menu_id = c.menu_parent
+		WHERE 1=1
+		AND p.rd_auth IN (
+		<foreach item="item" separator="," collection="authList">
+			${item}
+		</foreach>
+		)
 	)
 	SELECT
 		m1.depth,
@@ -49,6 +60,30 @@
 </select>
 
 <!-- menu -->
+
+
+<select id="getSiteList" resultType="com.main.vo.SiteVo">
+	SELECT
+		site_id,
+		user_id,
+		site_name,
+		site_url,
+		created_date
+	FROM site
+	WHERE user_id = #{userId}
+</select>
+
+<insert id="insertSite" parameterType="com.main.vo.SiteVo">
+	INSERT INTO site
+	(user_id, site_name, site_url)
+	VALUES (#{userId}, #{siteName}, #{siteUrl})
+</insert>
+
+<delete id="deleteSite" parameterType="com.main.vo.SiteVo">
+	DELETE FROM site
+	WHERE user_id = #{userId}
+		AND site_id = #{siteId}
+</delete>
 
 
 </mapper>

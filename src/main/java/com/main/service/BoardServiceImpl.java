@@ -11,9 +11,13 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import org.springframework.util.ObjectUtils;
+import org.springframework.web.context.request.RequestContextHolder;
+import org.springframework.web.context.request.ServletRequestAttributes;
 
 import com.main.comm.Common;
 import com.main.comm.PageSet;
+import com.main.comm.SessionUtil;
 import com.main.comm.cmmFile;
 import com.main.mapper.BoardMapper;
 import com.main.vo.BoardVo;
@@ -22,6 +26,8 @@ import com.main.vo.CommentVo;
 import com.main.vo.FileVo;
 import com.main.vo.LoginSessionVo;
 import com.main.vo.PageInfo;
+
+import jakarta.servlet.http.HttpServletRequest;
 
 @Service
 public class BoardServiceImpl implements BoardService {
@@ -56,9 +62,6 @@ public class BoardServiceImpl implements BoardService {
 	
 	@Autowired
 	private BoardMapper boardMapper;
-	
-	@Autowired
-	private LoginService loginService;
 	
 	@Override
 	public int insertBoard(BoardVo board) {
@@ -150,9 +153,21 @@ public class BoardServiceImpl implements BoardService {
 	@Override
 	public Map<String, Object> getDetail(String bordId) {
 		
-		boardMapper.addHitc(bordId);
 		BoardVo board		= boardMapper.getBoard(bordId);
 		List<FileVo> files	= boardMapper.getFileList(bordId);
+
+		HttpServletRequest request	= ((ServletRequestAttributes) RequestContextHolder.getRequestAttributes()).getRequest();
+		LoginSessionVo login = SessionUtil.getLoginData(request);
+		
+		if (login == null || ObjectUtils.isEmpty(login)) {
+			
+		}
+		
+		
+		if (login != null && login.getUserId() != board.getUserId()) {
+			boardMapper.addHitc(bordId);
+			board.setBordHitc(board.getBordHitc() + 1);
+		}
 		
 		Map<String, Object> res = Map.of(
 			"board"	, board,
@@ -169,6 +184,7 @@ public class BoardServiceImpl implements BoardService {
 log.info("pageNum : {}",pageNum);		
 		List<CommentVo> commentList = null;
 		
+		
 		if (allRowCount > 0) {
 			
 			int maxPage		= (int) Math.ceil(allRowCount / (double) COMM_LIMIT_SIZE);
@@ -177,8 +193,10 @@ log.info("pageNum : {}",pageNum);
 log.info("pageNum : {}",pageNum);			
 			LoginSessionVo login = null;
 			int userId		= 0;
-			if (loginService.isLogin()) {
-				login		= loginService.getLoginData();
+			
+			HttpServletRequest request	= ((ServletRequestAttributes) RequestContextHolder.getRequestAttributes()).getRequest();
+			if (SessionUtil.isLogin(request)) {
+				login		= SessionUtil.getLoginData(request);
 				userId		= login.getUserId();
 			}
 			commentList = boardMapper.getCommentList(bordId, userId, COMM_LIMIT_SIZE, startRow);
@@ -201,7 +219,8 @@ log.info("pageNum : {}",pageNum);
 	@Override
 	public int insertComment(Map<String, String> paramMap) {
 		
-		LoginSessionVo login = loginService.getLoginData();
+		HttpServletRequest request	= ((ServletRequestAttributes) RequestContextHolder.getRequestAttributes()).getRequest();
+		LoginSessionVo login		= SessionUtil.getLoginData(request);
 		
 		int bordId		= Common.str2Int(paramMap.get("bordId"));
 		String commCont	= Common.nvl(paramMap.get("commCont"));

@@ -183,7 +183,7 @@
 					<h3 class="h5 text-black mb-3">Recent Comments</h3>
 					<ul class="list-unstyled">
 						<c:forEach items="${commentList }" var="cl">
-							<li class="mb-2"><a href="detail?bordId=${cl.bordId }&#CommentAn">${cl.commCont }</a></li>
+							<li class="mb-2"><a href="detail?bordId=${cl.bordId }&#CommentArea">${cl.commCont }</a></li>
 						</c:forEach>
 						<!-- <li class="mb-2"><a href="#">Joefrey</a> <em>in</em> <a
 							href="#">Lorem ipsum dolor sit amet</a></li>

@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.main.comm.Common;
+import com.main.comm.SessionUtil;
 import com.main.service.LoginService;
 
 import jakarta.servlet.http.HttpServletRequest;
@@ -82,7 +83,7 @@ public class LoginController {
 			
 			String id = Common.nvl(respMap.get("id"));
 			
-			String msg = loginService.connNaverUserBySnsId(id, respMap);
+			String msg = loginService.connNaverUserBySnsId(request, id, respMap);
 			log.info(msg);
 			
 		} catch (Exception e) {
@@ -106,9 +107,9 @@ public class LoginController {
 	}
 	
 	@GetMapping("/logout")
-	public String logout() {
+	public String logout(HttpServletRequest request) {
 		log.info("logout");
-		loginService.logout();
+		SessionUtil.logout(request);
 		
 		return "redirect:/";
 	}
