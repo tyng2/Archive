@@ -62,7 +62,7 @@ public class HomeController {
 	}
 	
 	@ResponseBody
-	@PostMapping("insertSite")
+	@PostMapping("/insertSite")
 	public int insertSite(HttpServletRequest request, @RequestParam Map<String, String> paramMap) {
 		int cnt = 0;
 		if (SessionUtil.isLogin(request)) {
@@ -78,7 +78,7 @@ public class HomeController {
 	}
 	
 	@ResponseBody
-	@PostMapping("deleteSite")
+	@PostMapping("/deleteSite")
 	public int deleteSite(HttpServletRequest request, @RequestParam Map<String, String> paramMap) {
 		int cnt = 0;
 		if (SessionUtil.isLogin(request)) {
@@ -90,6 +90,12 @@ public class HomeController {
 		}
 		log.info("DELETE CNT :: {}", cnt);
 		return cnt;
+	}
+	
+	@GetMapping("/error")
+	public String error() {
+		log.info("error");
+		return "redirect:/";
 	}
 	
 }

@@ -13,6 +13,8 @@ public interface HomeMapper {
 	
 	public List<MenuVo> getMenuList(@Param("authList") List<Integer> authList);
 	
+	public MenuVo getMenuByLink(@Param("menuLink") String menuLink);
+	
 	public List<SiteVo> getSiteList(@Param("userId") int userId);
 	
 	public int insertSite(SiteVo site);

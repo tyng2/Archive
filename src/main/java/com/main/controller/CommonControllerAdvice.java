@@ -9,7 +9,6 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ModelAttribute;
 
-import com.main.comm.Common;
 import com.main.comm.SessionUtil;
 import com.main.service.HomeService;
 import com.main.vo.LoginSessionVo;
@@ -28,13 +27,17 @@ public class CommonControllerAdvice {
 	@ModelAttribute
 	public void handleRequest(HttpServletRequest request, Model model) {
 		LoginSessionVo login = SessionUtil.getLoginData(request);
+		
+		String uri = request.getRequestURI();
 		int auth = 3;
 		if (login != null) {
-			log.info("login userauth :: {}", login.getAuthId());
 			auth = login.getAuthId();
 		}
-		List<MenuVo> menuList = homeService.getMenuList(auth);
-		model.addAttribute("menuList", menuList);
+		List<MenuVo> menuList	= homeService.getMenuList(auth);
+		MenuVo curMenu			= homeService.getMenuByLink(uri);
+		
+		model.addAttribute("menuList"	, menuList);
+		model.addAttribute("curMenu"	, curMenu);
 		log.info("menu :: {}", menuList);
 	}
 

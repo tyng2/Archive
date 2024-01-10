@@ -37,14 +37,14 @@ $(document).ready(function() {
 	<div class="border-bottom top-bar py-2">
 		<div class="container">
 			<div class="row">
-				<div class="col-md-6">
+				<div class="col-2">
 					<p align="left" class="mb-0">
 					<c:if test="${login.authId eq 1 }">
 						<img src="images/adminIcon.png" width="25px;">
 					</c:if>
 					</p>
 				</div>
-				<div class="col-md-6">
+				<div class="col-10">
 					<p class="mb-0 social-media">
 					<c:choose>
 					<c:when test="${!isLogin }">

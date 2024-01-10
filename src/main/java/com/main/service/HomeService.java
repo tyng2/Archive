@@ -10,6 +10,8 @@ public interface HomeService {
 	
 	public List<MenuVo> getMenuList(int auth);
 	
+	public MenuVo getMenuByLink(String menuLink);
+	
 	public Map<String, Object> getIndexSlideCont();
 	
 	public List<SiteVo> getSiteList(int userId);

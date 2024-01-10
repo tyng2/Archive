@@ -44,6 +44,12 @@ public class HomeServiceImpl implements HomeService {
 	}
 	
 	
+	
+	@Override
+	public MenuVo getMenuByLink(String menuLink) {
+		return homeMapper.getMenuByLink(menuLink);
+	}
+
 	@Override
 	public Map<String, Object> getIndexSlideCont() {
 		int boardLimit	= 3;

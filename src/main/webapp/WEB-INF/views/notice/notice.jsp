@@ -91,7 +91,7 @@
 		</c:choose>
 			
 		<p style="text-align: right;" class="mt-4">
-			<c:if test="${isLogin and login.authId eq 1 }">
+			<c:if test="${isLogin and login.authId le curMenu.wrAuth }">
 				<a href="noticeWrite" class="btn btn-custom btn-md">글쓰기</a>
 			</c:if>
 		</p>

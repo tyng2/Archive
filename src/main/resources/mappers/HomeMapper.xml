@@ -59,6 +59,20 @@
 	ORDER BY m1.seq
 </select>
 
+<select id="getMenuByLink" resultType="com.main.vo.MenuVo">
+	SELECT
+		menu_id,
+		menu_parent,
+		menu_name,
+		menu_order,
+		rd_auth,
+		wr_auth,
+		created_date
+	FROM menu
+	WHERE use_yn = 'Y'
+		AND menu_link = #{menuLink}
+</select>
+
 <!-- menu -->
 
 

@@ -149,7 +149,7 @@
 			</div>
 			
 			<p style="text-align: right;" class="mt-4">
-				<c:if test="${isLogin }">
+				<c:if test="${isLogin and login.authId le curMenu.wrAuth }">
 					<a href="javascript:void(0);" class="btn btn-primary btn-md write">글쓰기</a>
 				</c:if>
 			</p>
