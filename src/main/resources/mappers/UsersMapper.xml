@@ -16,6 +16,7 @@
 		u.sns_type,
 		u.sns_profile,
 		u.sns_connect_date,
+		u.auth_id,
 		a.auth_name
 	FROM users u
 	LEFT OUTER JOIN user_auth a

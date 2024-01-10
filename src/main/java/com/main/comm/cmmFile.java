@@ -32,6 +32,8 @@ public class cmmFile {
 		filePath = path;
 	}
 	
+	public final static String FILE_DOWNLOAD_SESSION_CHK = "fileDownloadChk";
+	
 	// 실제 파일 생성 : 원래 파일 이름, 저장된 파일 이름을 리턴
 	public static FileVo fileUpload(MultipartFile file) {
 		log.info("fileUpload!");

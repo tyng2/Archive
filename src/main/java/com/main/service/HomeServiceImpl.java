@@ -2,6 +2,7 @@ package com.main.service;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -9,8 +10,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 
+import com.main.mapper.BoardMapper;
 import com.main.mapper.HomeMapper;
+import com.main.mapper.NoticeMapper;
+import com.main.vo.BoardVo;
 import com.main.vo.MenuVo;
+import com.main.vo.NoticeVo;
 import com.main.vo.SiteVo;
 
 @Service
@@ -21,6 +26,12 @@ public class HomeServiceImpl implements HomeService {
 	@Autowired
 	private HomeMapper homeMapper;
 	
+	@Autowired
+	private BoardMapper boardMapper;
+	
+	@Autowired
+	private NoticeMapper noticeMapper;
+	
 	@Cacheable(value = "menu", key = "#p0", unless = "#result == null")
 	@Override
 	public List<MenuVo> getMenuList(int auth) {
@@ -30,6 +41,22 @@ public class HomeServiceImpl implements HomeService {
 		}
 		log.info("AUTHLIST :: {}", authList.toString());
 		return homeMapper.getMenuList(authList);
+	}
+	
+	
+	@Override
+	public Map<String, Object> getIndexSlideCont() {
+		int boardLimit	= 3;
+		int noticeLimit	= 3;
+		
+		List<BoardVo> boardList		= boardMapper.getBoardList(null, null, boardLimit, 0);
+		List<NoticeVo> noticeList	= noticeMapper.getNotice(noticeLimit, 0);
+		
+		Map<String, Object> result = Map.of(
+			"boardList"		, boardList,
+			"noticeList"	, noticeList
+		);
+		return result;
 	}
 
 	@Override

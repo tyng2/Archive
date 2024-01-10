@@ -7,6 +7,7 @@ import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.Map;
+import java.util.SplittableRandom;
 import java.util.concurrent.atomic.AtomicInteger;
 
 import org.slf4j.Logger;
@@ -44,7 +45,7 @@ public class Common {
 	public static int str2Int(String st) {
 		int num = 0;
 		try {
-			num = Integer.parseInt(st);
+			num = (st != null) ? Integer.parseInt(st) : 0;
 		} catch (NumberFormatException e) {
 			log.info("str2Int >> {} is not integer", st);
 			num = 0;
@@ -190,6 +191,18 @@ public class Common {
 
 		log.info("RESULT :: {}", res);
 		return res;
+	}
+	
+	public static boolean calcProbability(int num) {
+		boolean result = false;
+		if (num > 0) {
+			SplittableRandom random = new SplittableRandom();
+			int calcNum = random.nextInt(0, 100);
+			if (calcNum < num) {
+				result = true;
+			}
+		}
+		return result;
 	}
 	
 	

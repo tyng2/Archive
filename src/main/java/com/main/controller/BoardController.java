@@ -254,7 +254,7 @@ public class BoardController {
 			String dateStr		= df.format(new Date());
 			
 			HttpSession session = request.getSession();
-			session.setAttribute("fileDownloadChk", dateStr + "/" + fileId);
+			session.setAttribute(cmmFile.FILE_DOWNLOAD_SESSION_CHK, dateStr + "/" + fileId);
 			msg = dateStr;
 		}
 		
@@ -269,8 +269,8 @@ public class BoardController {
 		String fileId	= Common.nvl(paramMap.get("fileId"));
 		
 		HttpSession session = request.getSession();
-		String chkVal		= (String) session.getAttribute("fileDownloadChk");
-		session.removeAttribute("fileDownloadChk");
+		String chkVal		= (String) session.getAttribute(cmmFile.FILE_DOWNLOAD_SESSION_CHK);
+		session.removeAttribute(cmmFile.FILE_DOWNLOAD_SESSION_CHK);
 		
 		log.info("chkVal : {}", chkVal);
 		try {

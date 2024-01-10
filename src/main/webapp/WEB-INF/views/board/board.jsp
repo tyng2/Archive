@@ -125,7 +125,7 @@
 				<c:forEach begin="${pageInfo.startPage }" end="${pageInfo.endPage }" step="1" varStatus="s">
 				
 				<c:choose>
-				<c:when test="${s.current == pageInfo.pageNum }">
+				<c:when test="${s.current eq pageInfo.pageNum }">
 					<span>${s.current }</span>
 				</c:when>
 				<c:otherwise>

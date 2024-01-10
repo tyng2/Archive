@@ -49,6 +49,10 @@ comment:
   limit : 5
   block : 5
   
+noti:
+  limit : 5
+  block : 5
+  
 domain: http://localhost:8080
   
 naver:

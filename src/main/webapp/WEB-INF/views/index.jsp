@@ -132,9 +132,9 @@
 		<c:forEach items="${noticeList }" var="n">
 			<div class="col-md-6 col-lg-4" onclick="location.href='notice';" style="cursor: pointer;">
 				<div class="p-3 box-with-humber">
-					<div class="number-behind">${n.noti_numb }.</div>
-					<h2>${n.noti_titl }</h2>
-					<p>${n.noti_cont }</p>
+					<div class="number-behind">${n.notiId }.</div>
+					<h2>${n.notiTitle }</h2>
+					<p>${n.notiCont }</p>
 				</div>
 			</div>
 		</c:forEach>
@@ -161,14 +161,14 @@
 			<div class="testimonial">
 		
 				<blockquote class="mb-5">
-					<h3>${b.bord_titl }</h3>
-					<p>&ldquo;${b.bord_cont }&rdquo;</p>
+					<h3>${b.bordTitl }</h3>
+					<p>&ldquo;${b.bordCont }&rdquo;</p>
 				</blockquote>
 		
 				<figure class="mb-4 d-flex align-items-center justify-content-center">
 					<div>
 					</div>
-					<p>${b.user_id }</p>
+					<p>${b.userId }</p>
 				</figure>
 			</div>
 		</div>

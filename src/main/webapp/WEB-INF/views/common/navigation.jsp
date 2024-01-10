@@ -39,7 +39,7 @@ $(document).ready(function() {
 			<div class="row">
 				<div class="col-md-6">
 					<p align="left" class="mb-0">
-					<c:if test="${loginSessionVo.authId eq 1 }">
+					<c:if test="${login.authId eq 1 }">
 						<img src="images/adminIcon.png" width="25px;">
 					</c:if>
 					</p>
@@ -51,7 +51,7 @@ $(document).ready(function() {
 						<a href="javascript:void(0);" id="loginBtn"><button class="log">로그인</button></a>
 					</c:when>
 					<c:otherwise>
-						<span class="mr-3" style=""><a href="javascript:void(0);"><b>${loginSessionVo.nickname }</b></a>님 로그인 중</span>
+						<span class="mr-3" style=""><a href="javascript:void(0);"><b>${login.nickname }</b></a>님 로그인 중</span>
 						<a href="logout"><button class="log">로그아웃</button></a>
 					</c:otherwise>
 					</c:choose>
@@ -124,7 +124,7 @@ $(document).ready(function() {
 <%-- 					<c:forEach var="" items="" > --%>
 <!-- 						<li><a href="board">Board</a> -->
 <%-- 					</c:forEach> --%>
-<%-- 					<c:if test="${loginSessionVo.userAuth == 'admin' }"> --%>
+<%-- 					<c:if test="${login.userAuth == 'admin' }"> --%>
 <!-- 					<li class="has-children"><a href="admin.do">Admin</a> -->
 <!-- 						<ul class="dropdown"> -->
 <!-- 							<li><a href="memberList.do">Member</a></li> -->

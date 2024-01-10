@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.main.mapper.NoticeMapper">
+
+<select id="getNotice" resultType="com.main.vo.NoticeVo">
+	SELECT
+		noti_id,
+		user_id,
+		noti_title,
+		noti_cont,
+		created_date,
+		(SELECT COUNT(noti_id) FROM notice) cnt
+	FROM notice
+	ORDER BY noti_id DESC
+	LIMIT #{pageSize} OFFSET #{startRow}
+</select>
+
+<insert id="insertNotice" parameterType="com.main.vo.NoticeVo">
+	INSERT INTO notice
+	(user_id, noti_title, noti_cont)
+	VALUES (#{userId}, #{notiTitle}, #{notiCont})
+</insert>
+
+</mapper>

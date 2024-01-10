@@ -86,11 +86,11 @@
 			<p style="text-align: right;" class="mb-0">
 			<c:if test="${isLogin }">
 <%-- 				<c:if test="${sessionID.equals('admin') && !sessionID.equals(board.userId) }"> --%>
-				<c:if test="${loginSessionVo.authId eq 1 && loginSessionVo.userId ne board.userId }">
+				<c:if test="${login.authId eq 1 && login.userId ne board.userId }">
 					<a href="javascript:void(0);" class="btn btn-custom btn-md delete">삭제</a>
 				</c:if>
 <%-- 				<c:if test="${sessionID.equals(board.userId) }"> --%>
-				<c:if test="${loginSessionVo.userId eq board.userId }">
+				<c:if test="${login.userId eq board.userId }">
 					<a href="javascript:void(0);" class="btn btn-custom btn-md update">수정</a>
 					<a href="javascript:void(0);" class="btn btn-custom btn-md delete">삭제</a>
 				</c:if>
