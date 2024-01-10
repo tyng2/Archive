@@ -193,11 +193,17 @@ public class Common {
 		return res;
 	}
 	
+	// num/100 확률
 	public static boolean calcProbability(int num) {
+		return calcProbability(num, 100);
+	}
+	
+	// num/maxNum 확률
+	public static boolean calcProbability(int num, int maxNum) {
 		boolean result = false;
 		if (num > 0) {
 			SplittableRandom random = new SplittableRandom();
-			int calcNum = random.nextInt(0, 100);
+			int calcNum = random.nextInt(0, maxNum);
 			if (calcNum < num) {
 				result = true;
 			}
