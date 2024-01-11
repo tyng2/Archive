@@ -8,10 +8,12 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.w3c.dom.events.EventException;
 
 import com.main.comm.Common;
 import com.main.comm.SessionUtil;
@@ -35,7 +37,6 @@ public class HomeController {
 	public String index(HttpServletRequest request, Model model) {
 		boolean isLogin = SessionUtil.isLogin(request);
 		log.info("{}",isLogin);
-		
 		
 		Map<String, Object> result	= homeService.getIndexSlideCont();
 		
@@ -92,10 +93,6 @@ public class HomeController {
 		return cnt;
 	}
 	
-	@GetMapping("/error")
-	public String error() {
-		log.info("error");
-		return "redirect:/";
-	}
+	
 	
 }

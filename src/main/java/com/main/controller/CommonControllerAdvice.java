@@ -5,9 +5,14 @@ import java.util.List;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ControllerAdvice;
+import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.ResponseStatus;
+import org.springframework.web.servlet.NoHandlerFoundException;
+import org.w3c.dom.events.EventException;
 
 import com.main.comm.SessionUtil;
 import com.main.service.HomeService;
@@ -40,5 +45,12 @@ public class CommonControllerAdvice {
 		model.addAttribute("curMenu"	, curMenu);
 		log.info("menu :: {}", menuList);
 	}
+	
+//	@ResponseStatus(HttpStatus.NOT_FOUND)
+//	@ExceptionHandler(NoHandlerFoundException.class)
+//	public String errorHandler(EventException exception, Model model) {
+//		log.info("ERROR1!");
+//		return "error1";
+//	}
 
 }

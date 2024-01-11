@@ -34,6 +34,11 @@ server:
   servlet:
     session:
       timeout: 600
+  error:
+    include-exception: true
+    include-stacktrace: always
+    whitelabel:
+      enabled: false
       
 logging:
   config: classpath:logback-archive.xml
