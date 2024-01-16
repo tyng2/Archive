@@ -16,5 +16,7 @@ public interface AdminMapper {
 	public int insertMenu(MenuVo menu);
 	
 	public int deleteMenu(@Param("menuId") String menuId);
+	
+	public int updateMenu(MenuVo menu);
 
 }

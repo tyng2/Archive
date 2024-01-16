@@ -28,29 +28,37 @@ $('#detail').CMinit(function(){
 				let commCont	= $commCont.val();
 				
 				if (!commCont) {
-					alert('No content!');
-					return false;
-				}
-				
-				let param 		= {
-					'bordId'	: bordId,
-					'commCont'	: commCont
-				};
-				
-				CMJS.ajax({
-					url		: '/insertComment',
-					type	: 'POST',
-					data	: param,
-					success	: function(data) {
-						if (data > 0) {
-							$commCont.val('');
-							_hand.listComment();
-						} else {
-							alert('something wrong');
+					Swal.fire({
+						text	: '내용이 없습니다.',
+						icon	: 'warning'
+					}).then(result => {
+						$commCont.focus();
+					});
+					
+				} else {
+					let param 	= {
+						'bordId'	: bordId,
+						'commCont'	: commCont
+					};
+					
+					CMJS.ajax({
+						url		: '/insertComment',
+						type	: 'POST',
+						data	: param,
+						success	: function(data) {
+							if (data > 0) {
+								$commCont.val('');
+								_hand.listComment();
+							} else {
+								Swal.fire({
+									text	: 'something wrong',
+									icon	: 'warning'
+								});
+							}
 						}
-					}
-				});
-				$insertComment = $('#insertComment').removeAttr('disabled');
+					});
+					$insertComment = $('#insertComment').removeAttr('disabled');
+				}
 			});
 			
 			$('#comment').on('click', '.delComment', function(){
@@ -67,7 +75,10 @@ $('#detail').CMinit(function(){
 						if (data > 0) {
 							_hand.listComment();
 						} else {
-							alert('something wrong');
+							Swal.fire({
+								text	: 'something wrong',
+								icon	: 'warning'
+							});
 						}
 					}
 				});

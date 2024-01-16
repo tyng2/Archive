@@ -5,7 +5,7 @@ $('#menuList').CMinit(function(){
 	var _view = (function(){
 		
 		var _init = function(){
-			
+			/*
 			$page.on('click', '#chAll', function() {
 				if ($('#chAll').is(':checked')){
 					$('input:checkbox[name=chBoxId]').prop('checked', true);
@@ -13,7 +13,7 @@ $('#menuList').CMinit(function(){
 					$('input:checkbox[name=chBoxId]').prop('checked', false);
 				}
 			});
-			
+			*/
 			$('table', $page).on('click', '.addMenu', function(){
 				
 				if ($('.add_menu_tr').length == 0) {
@@ -31,6 +31,11 @@ $('#menuList').CMinit(function(){
 				}
 			});
 			
+			$('table', $page).on('click', '.delMenu', function(){
+				let $target	= $(this).closest('tr');
+				_hand.deleteMenuApply($target);
+			});
+			
 			$('table', $page).on('click', '.addMenuApply', function(){
 				console.log('addMenuApply click!');
 				_hand.insertMenuApply();
@@ -40,16 +45,11 @@ $('#menuList').CMinit(function(){
 				$('.add_menu_tr').remove();
 			});
 			
-			$('table', $page).on('click', '.delMenu', function(){
-				let $target	= $(this).closest('tr');
-				_hand.deleteMenuApply($target);
-			});
-			
 			$page.on('click', '#addMenu', function(){
 				
 				if ($('.add_menu_tr').length == 0) {
 					let $target = $('table tbody tr').last();
-					createMenuInput($target, 0);
+					createMenuInput($target, null);
 					
 				} else {
 					Swal.fire({
@@ -60,6 +60,45 @@ $('#menuList').CMinit(function(){
 					});
 				}
 			});
+			
+			$page.on('click', '#modMenu', function(){
+				let $chkMenu	= $('input[name="chkMenu"]:checked');
+				
+				if ($chkMenu.length < 1) {
+					Swal.fire({
+						text	: '수정할 메뉴를 선택하세요.',
+						icon	: 'warning'
+					});
+					
+				} else {
+					
+					if ($('.mod_menu_tr').length == 0){
+						let $tr		= $chkMenu.closest('tr');
+						modifyMenuInput($tr, null);
+						
+					} else {
+						Swal.fire({
+							text	: '이미 수정중인 메뉴가 있습니다.',
+							icon	: 'warning'
+						}).then(result => {
+							$('.mod_menu_tr td').first().find('input').focus();
+						});
+					}
+				}
+			});
+			
+			$('table', $page).on('click', '.modMenuApply', function(){
+				console.log('modMenuApply click!');
+				_hand.modifyMenuApply();
+			});
+			$('table', $page).on('click', '.modMenuCancel', function(){
+				console.log('modMenuCancel click!');
+				$('.mod_tr').removeClass('mod_tr').show();
+				$('.mod_menu_tr').remove();
+			});
+			
+			
+			
 			
 		};
 		
@@ -75,6 +114,7 @@ $('#menuList').CMinit(function(){
 			
 			$trClone = $tr.clone().addClass('add_menu_tr');
 			
+			$td.clone().appendTo($trClone);
 			$td.clone().addClass('text-left').html($inp.clone().addClass('add_menu_name').css('width','100%')).appendTo($trClone);
 			$td.clone().addClass('text-left').html($inp.clone().addClass('add_menu_link').css('width','100%')).appendTo($trClone);
 			$td.clone().html($inp.clone().addClass('add_menu_rd').css('width','100%')).appendTo($trClone);
@@ -83,8 +123,36 @@ $('#menuList').CMinit(function(){
 						.append($btn.clone().addClass('btn-custom btn-sm addMenuCancel').css('float','right').text('취소'))
 						.appendTo($trClone);
 			$trClone.insertAfter($target);
-			
 			$('#menuId').val(menuId);
+		};
+		
+		var modifyMenuInput = function($target){
+			let $tr		= $('<tr>');
+			let $td		= $('<td>');
+			let $inp	= $('<input>').attr('type','text');
+			let $btn	= $('<button>').attr('type','button').addClass('btn');
+			let $trClone;
+			
+			let menuId	= $target.data('menu_id');
+			
+			let name	= CMJS.nvl($target.find('td').eq(1).text()).replaceAll('└','').trim();
+			let link	= CMJS.nvl($target.find('td').eq(2).text());
+			let rd		= CMJS.nvl($target.find('td').eq(3).text());
+			let wr		= CMJS.nvl($target.find('td').eq(4).text());
+			
+			$trClone	= $tr.clone().addClass('mod_menu_tr');
+			$td.clone().appendTo($trClone);
+			$td.clone().addClass('text-left').html($inp.clone().addClass('mod_menu_name').css('width','100%').val(name)).appendTo($trClone);
+			$td.clone().addClass('text-left').html($inp.clone().addClass('mod_menu_link').css('width','100%').val(link)).appendTo($trClone);
+			$td.clone().html($inp.clone().addClass('mod_menu_rd').css('width','100%').val(rd)).appendTo($trClone);
+			$td.clone().html($inp.clone().addClass('mod_menu_wr').css('width','100%').val(wr)).appendTo($trClone);
+			$td.clone() .append($btn.clone().addClass('btn-success btn-sm modMenuApply').text('적용'))
+						.append($btn.clone().addClass('btn-custom btn-sm modMenuCancel').css('float','right').text('취소'))
+						.appendTo($trClone);
+			$trClone.insertAfter($target);
+			$('#menuId').val(menuId);
+			
+			$target.addClass('mod_tr').hide();
 		};
 		
 		return {
@@ -165,10 +233,49 @@ $('#menuList').CMinit(function(){
 			});
 		};
 		
+		var _modifyMenuApply = function(){
+			let menuName	= $('.mod_menu_name').val();
+			let menuLink	= $('.mod_menu_link').val();
+			let rdAuth		= $('.mod_menu_rd').val();
+			let wrAuth		= $('.mod_menu_wr').val();
+			let menuId		= $('#menuId').val();
+			
+			let param = {
+				'menuName'	: menuName,
+				'menuLink'	: menuLink,
+				'rdAuth'	: rdAuth,
+				'wrAuth'	: wrAuth,
+				'menuId'	: menuId
+			};
+			
+			CMJS.ajax({
+				url		: '/modifyMenu',
+				type	: 'POST',
+				data	: param,
+				success	: function(res){
+					if (res == 1) {
+						Swal.fire({
+							text	: '메뉴 수정이 완료되었습니다.',
+							icon	: 'info'
+						}).then(result => {
+							location.reload();
+						});
+					} else {
+						Swal.fire({
+							text	: '메뉴 수정에 실패하였습니다.',
+							icon	: 'warning'
+						});
+					}
+				}
+			});
+		};
+		
+		
 		return {
 			init			: _init,
 			insertMenuApply	: _insertMenuApply,
-			deleteMenuApply	: _deleteMenuApply
+			deleteMenuApply	: _deleteMenuApply,
+			modifyMenuApply	: _modifyMenuApply
 		};
 	})();
 	

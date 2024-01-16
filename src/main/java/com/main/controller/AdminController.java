@@ -81,6 +81,29 @@ public class AdminController {
 		return cnt;
 	}
 	
+	@ResponseBody
+	@CacheEvict(value = "menu", allEntries = true)
+	@PostMapping("/modifyMenu")
+	public int modifyMenu(@RequestParam Map<String, String> paramMap) {
+		log.info("MODIFY MENU :: {}", paramMap.toString());
+		
+		String menuName		= Common.nvl(paramMap.get("menuName"));
+		String menuLink		= Common.nvl(paramMap.get("menuLink"));
+		int rdAuth			= Common.str2Int(paramMap.get("rdAuth"));
+		int wrAuth			= Common.str2Int(paramMap.get("wrAuth"));
+		int menuId			= Common.str2Int(paramMap.get("menuId"));
+		
+		MenuVo menu			= new MenuVo();
+		menu.setMenuName(menuName);
+		menu.setMenuLink(menuLink);
+		menu.setRdAuth(rdAuth);
+		menu.setWrAuth(wrAuth);
+		menu.setMenuId(menuId);
+		
+		int cnt = adminService.updateMenu(menu);
+		return cnt;
+	}
+	
 	
 	
 

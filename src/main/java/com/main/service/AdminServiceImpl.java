@@ -29,6 +29,13 @@ public class AdminServiceImpl implements AdminService {
 	public int deleteMenu(String menuId) {
 		return adminMapper.deleteMenu(menuId);
 	}
+
+	@Override
+	public int updateMenu(MenuVo menu) {
+		return adminMapper.updateMenu(menu);
+	}
+	
+	
 	
 
 }

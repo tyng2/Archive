@@ -26,4 +26,29 @@
 	WHERE menu_id = #{menuId}
 </delete>
 
+<update id="updateMenu" parameterType="com.main.vo.MenuVo">
+	UPDATE menu
+	<trim prefix="SET" suffixOverrides=",">
+	<if test="menuName != null">
+		menu_name = #{menuName},
+	</if>
+	<if test="menuLink != null">
+		menu_link = #{menuLink},
+	</if>
+	<if test="menuOrder != null and menuOrder != 0">
+		menu_order = #{menuOrder},
+	</if>
+	<if test="rdAuth != null and rdAuth != 0">
+		rd_auth = #{rdAuth},
+	</if>
+	<if test="wrAuth != null and wrAuth != 0">
+		wr_auth = #{wrAuth},
+	</if>
+	<if test="useYn!= null">
+		use_yn = #{useYn},
+	</if>
+	</trim>
+	WHERE menu_id = #{menuId}
+</update>
+
 </mapper>

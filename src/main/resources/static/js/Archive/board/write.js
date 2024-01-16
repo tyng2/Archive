@@ -36,8 +36,10 @@ $('#write').CMinit(function(){
 //			var size = 50;
 			var filecountTemp	= parseInt(document.getElementById("file_cnt").value);
 			if (filecountTemp == 10) {
-				alert("파일 업로드는 최대 10개까지 가능합니다.");
-				return;
+				Swal.fire({
+					text	: '파일 업로드는 최대 10개까지 가능합니다.',
+					icon	: 'info'
+				});
 			} else {
 				var parents	= document.getElementById("file_add_form");
 				var br		= document.createElement("br");

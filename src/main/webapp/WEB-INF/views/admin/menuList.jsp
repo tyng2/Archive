@@ -43,6 +43,7 @@
 				<thead>
 					<tr>
 <!-- 					<th width="16px"><input type="checkbox" id="chAll"></th> -->
+					<th width="16px"></th>
 <!-- 					<th width="20px">ID</th> -->
 					<th width="150px">NAME</th>
 					<th>LINK</th>
@@ -59,7 +60,7 @@
 				<c:otherwise>
 				<c:forEach items="${menuList }" var="v">
 					<tr data-menu_id="${v.menuId }">
-<%-- 					<td><input type="radio" name="chBoxId" value="${v.menuId }" ></td> --%>
+					<td><input type="radio" name="chkMenu" value="${v.menuId }" ></td>
 <%-- 					<td class="title1"><a href="memberModifyForm.do?id=${v.menuId }">${v.menuId }</a></td> --%>
 					<td class="text-left"><c:if test="${v.depth gt 1 }">└&nbsp;</c:if>${v.menuName }</td>
 					<td class="text-left">${v.menuLink }</td>
@@ -80,8 +81,10 @@
 				</div>
 
 				<p style="text-align: right;" class="mt-4">
+					<button type="button" id="menuOrderUpper" class="btn btn-custom btn-sm orderBtn">▲</button>
+					<button type="button" id="menuOrderLower" class="btn btn-custom btn-sm orderBtn">▼</button>
 					<button type="button" id="addMenu" class="btn btn-success btn-md">ADD MENU</button>
-					<button type="button" id="apply" class="btn btn-primary btn-md">Apply</button>
+					<button type="button" id="modMenu" class="btn btn-primary btn-md">Modify</button>
 				</p>
 				
 <%--

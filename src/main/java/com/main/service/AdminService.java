@@ -12,5 +12,7 @@ public interface AdminService {
 	public int insertMenu(MenuVo menu);
 	
 	public int deleteMenu(String menuId);
+	
+	public int updateMenu(MenuVo menu);
 
 }

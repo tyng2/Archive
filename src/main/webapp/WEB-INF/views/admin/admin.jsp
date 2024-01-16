@@ -42,7 +42,7 @@
 					</tr>
 					<tr>
 					<td><a href="userList"><img src="images/admin.png" style="height: 200px;"></a></td>
-					<td><a href="menu"><img src="images/menu.png" style="height: 200px;"></a></td>
+					<td><a href="menuList"><img src="images/menu.png" style="height: 200px;"></a></td>
 <!-- 					<td><a href="adminChartForm.do"><img src="images/chart.png" style="height: 200px;"></a></td> -->
 					</tr>
 				</table>

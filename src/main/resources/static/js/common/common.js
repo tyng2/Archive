@@ -27,7 +27,11 @@ var CMJS = (function(){
 			value		= $this.val();
 			if (value == '') {
 				param = 1;
-				alert(name + ' 항목을 입력하세요.');
+				Swal.fire({
+					text	: name + ' 항목을 입력하세요.',
+					icon	: 'info'
+				});
+//				alert(name + ' 항목을 입력하세요.');
 				return false;
 			}
 			param[name]	= value;

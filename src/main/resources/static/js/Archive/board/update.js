@@ -29,8 +29,10 @@ $('#update').CMinit(function(){
 			var filecountTemp	= parseInt(document.getElementById("file_cnt").value);
 			var fileCnt			= $('.delete').length;
 			if (filecountTemp + fileCnt == 10) {
-				alert("파일 업로드는 최대 10개까지 가능합니다.");
-				return;
+				Swal.fire({
+					text	: '파일 업로드는 최대 10개까지 가능합니다.',
+					icon	: 'info'
+				});
 			} else {
 				var parents	= document.getElementById("file_add_form");
 				var br		= document.createElement("br");
@@ -84,7 +86,10 @@ $('#update').CMinit(function(){
 						let fileSize = $('#file_size').val();
 						$('#file_size').val(fileSize - 1);
 					} else {
-						alert('fail!');
+						Swal.fire({
+							text	: 'fail!',
+							icon	: 'warning'
+						});
 					}
 				}
 			});
