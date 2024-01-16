@@ -15,9 +15,10 @@
 <jsp:include page="/WEB-INF/views/common/navigation.jsp" />
 <div class="site-section bg-light">
 	<div class="container">
-		<div>
-			404 ERROR
-			${msg }
+		<div class="row">
+			404 ERROR ${msg }
+			<br>
+			PAGE NOT FOUND
 		</div>
 	</div>
 </div>

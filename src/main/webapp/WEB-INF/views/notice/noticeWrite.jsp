@@ -52,7 +52,7 @@
 				<div class="row form-group">
 					<div class="col-md-12">
 						<input type="submit" value="등록" class="btn btn-primary btn-md">
-						<a href="notice.do" class="btn btn-custom btn-md" style="float: right;">목록</a>
+						<a href="notice" class="btn btn-custom btn-md" style="float: right;">목록</a>
 					</div>
 				</div>
 

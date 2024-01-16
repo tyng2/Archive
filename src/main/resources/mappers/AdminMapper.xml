@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.main.mapper.AdminMapper">
+
+<select id="getUserList" resultType="com.main.vo.UsersVo">
+	SELECT
+		*
+	FROM users
+</select>
+
+<insert id="insertMenu" parameterType="com.main.vo.MenuVo">
+	INSERT INTO menu
+	(menu_parent, menu_name, menu_link, menu_order, rd_auth, wr_auth)
+	VALUES (#{menuParent},#{menuName},#{menuLink},
+		(
+		SELECT
+			IFNULL(MAX(m.menu_order) + 1, 1)
+		FROM menu m
+		WHERE m.menu_parent = #{menuParent} 
+		),
+	#{rdAuth},#{wrAuth})
+</insert>
+
+<delete id="deleteMenu">
+	DELETE FROM menu
+	WHERE menu_id = #{menuId}
+</delete>
+
+</mapper>

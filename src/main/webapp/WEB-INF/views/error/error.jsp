@@ -4,7 +4,7 @@
 	<meta charset="UTF-8" content="no-cache" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
-	<title>ERROR &mdash; Template</title>
+	<title>${code }ERROR &mdash; Template</title>
 	<link rel="shortcut icon" href="/images/a.png">
 	
 	<jsp:include page="/WEB-INF/views/common/commonHeader.jsp" />
@@ -15,7 +15,7 @@
 <jsp:include page="/WEB-INF/views/common/navigation.jsp" />
 <div class="site-section bg-light">
 	<div class="container">
-		ERROR
+		${code } ERROR
 	</div>
 </div>
 <script>

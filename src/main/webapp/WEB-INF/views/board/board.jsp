@@ -43,7 +43,7 @@
 		<!-- bootstrapBoard -->
 	
 			<div class="panel-body">
-			<table class="table table-striped table-bordered table-list">
+			<table class="table table-striped table-list">
 			<thead>
 				<tr>
 				<!-- <th width="10%">게시판</th> -->

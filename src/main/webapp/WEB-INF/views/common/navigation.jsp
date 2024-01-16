@@ -109,7 +109,7 @@ $(document).ready(function() {
 						</c:if>
 					</c:forEach>
 					</c:if>
-<!--  					<li><a href="notice.do">Notice</a></li> -->
+<!--  					<li><a href="notice">Notice</a></li> -->
 <!-- 					<li class="has-children"><a href="board">Board</a> -->
 <!-- 						<ul class="dropdown"> -->
 <!-- 							<li><a href="board?bord_catg=C">C</a></li> -->
