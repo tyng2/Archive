@@ -62,7 +62,7 @@ $('#menuList').CMinit(function(){
 			});
 			
 			$page.on('click', '#modMenu', function(){
-				let $chkMenu	= $('input[name="chkMenu"]:checked');
+				let $chkMenu = $('input[name="chkMenu"]:checked');
 				
 				if ($chkMenu.length < 1) {
 					Swal.fire({
@@ -97,7 +97,21 @@ $('#menuList').CMinit(function(){
 				$('.mod_menu_tr').remove();
 			});
 			
-			
+			$page.on('click', '.orderBtn', function(){
+				let $chkMenu = $('input[name="chkMenu"]:checked');
+				
+				if ($chkMenu.length < 1) {
+					Swal.fire({
+						text	: '수정할 메뉴를 선택하세요.',
+						icon	: 'warning'
+					});
+					
+				} else {
+					let orderFlag	= $(this).data('order_flag');
+					let $chk		= $chkMenu.closest('tr');
+					_hand.modifyMenuOrderApply($chk, orderFlag);
+				}
+			});
 			
 			
 		};
@@ -271,11 +285,98 @@ $('#menuList').CMinit(function(){
 		};
 		
 		
+		var _modifyMenuOrderApply = function($chk, orderFlag){
+			
+			let menuIdChk		= $chk.data('menu_id');
+			let menuOrderChk	= $chk.data('menu_order');
+			let menuParentChk	= $chk.data('menu_parent');
+			let $target;
+			
+			if (orderFlag == 'u') {
+				$target = $chk.prev('tr');
+			} else if (orderFlag == 'd') {
+				$target = $chk.next('tr');
+			}
+			
+			if ($target.length > 0) {
+				while(menuParentChk != $target.data('menu_parent')){
+					if (orderFlag == 'u') {
+						$target = $target.prev('tr');
+					} else if (orderFlag == 'd') {
+						$target = $target.next('tr');
+					}
+					if ($target.length == 0) {
+						break;
+					}
+				}
+				
+				if ($target.length > 0) {
+					let menuIdTar		= $target.data('menu_id');
+					let menuOrderTar	= $target.data('menu_order');
+//					let menuParentTar	= $target.data('menu_parent');
+					
+					let param = {
+						'menuIdChk'		: menuIdChk,
+						'newOrderChk'	: menuOrderTar,
+						'menuIdTar'		: menuIdTar,
+						'newOrderTar'	: menuOrderChk
+					};
+					CMJS.ajax({
+						url		: '/modifyMenuOrder',
+						type	: 'POST',
+						data	: param,
+						success	: function(res){
+							if (res == 2) {
+								Swal.fire({
+									text	: '순서가 변경되었습니다.',
+									icon	: 'info'
+								}).then(result => {
+									location.reload();
+								});
+							} else {
+								Swal.fire({
+									text	: '순서 변경에 실패하였습니다.',
+									icon	: 'warning'
+								});
+							}
+						}
+					});
+				
+				} else {
+					let txt = '';
+					if (orderFlag == 'u') {
+						txt = '최상단 메뉴입니다.';
+					} else if (orderFlag == 'd') {
+						txt = '최하단 메뉴입니다.';
+					}
+					Swal.fire({
+						text	: txt,
+						icon	: 'warning'
+					});
+				}
+				
+			} else {
+				let txt = '';
+				if (orderFlag == 'u') {
+					txt = '최상단 메뉴입니다.';
+				} else if (orderFlag == 'd') {
+					txt = '최하단 메뉴입니다.';
+				}
+				Swal.fire({
+					text	: txt,
+					icon	: 'warning'
+				});
+			}
+			
+		};
+		
+		
 		return {
-			init			: _init,
-			insertMenuApply	: _insertMenuApply,
-			deleteMenuApply	: _deleteMenuApply,
-			modifyMenuApply	: _modifyMenuApply
+			init					: _init,
+			insertMenuApply			: _insertMenuApply,
+			deleteMenuApply			: _deleteMenuApply,
+			modifyMenuApply			: _modifyMenuApply,
+			modifyMenuOrderApply	: _modifyMenuOrderApply
 		};
 	})();
 	

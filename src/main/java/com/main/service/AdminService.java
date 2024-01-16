@@ -14,5 +14,7 @@ public interface AdminService {
 	public int deleteMenu(String menuId);
 	
 	public int updateMenu(MenuVo menu);
+	
+	public int switchMenuOrder(MenuVo menuChk, MenuVo menuTar);
 
 }

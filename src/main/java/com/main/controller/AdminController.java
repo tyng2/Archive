@@ -104,6 +104,29 @@ public class AdminController {
 		return cnt;
 	}
 	
+	@ResponseBody
+	@CacheEvict(value = "menu", allEntries = true)
+	@PostMapping("/modifyMenuOrder")
+	public int modifyMenuOrder(@RequestParam Map<String, String> paramMap) {
+		log.info("MODIFY MENU :: {}", paramMap.toString());
+		
+		int menuIdChk	= Common.str2Int(paramMap.get("menuIdChk"));
+		int newOrderChk	= Common.str2Int(paramMap.get("newOrderChk"));
+		int menuIdTar	= Common.str2Int(paramMap.get("menuIdTar"));
+		int newOrderTar	= Common.str2Int(paramMap.get("newOrderTar"));
+		
+		MenuVo menuChk	= new MenuVo();
+		menuChk.setMenuId(menuIdChk);
+		menuChk.setMenuOrder(newOrderChk);
+		MenuVo menuTar	= new MenuVo();
+		menuTar.setMenuId(menuIdTar);
+		menuTar.setMenuOrder(newOrderTar);
+		
+		int cnt = adminService.switchMenuOrder(menuChk, menuTar);
+		
+		return cnt;
+	}
+	
 	
 	
 

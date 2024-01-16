@@ -59,7 +59,7 @@
 				</c:when>
 				<c:otherwise>
 				<c:forEach items="${menuList }" var="v">
-					<tr data-menu_id="${v.menuId }">
+					<tr data-menu_id="${v.menuId }" data-menu_order="${v.menuOrder }" data-menu_parent="${v.menuParent }">
 					<td><input type="radio" name="chkMenu" value="${v.menuId }" ></td>
 <%-- 					<td class="title1"><a href="memberModifyForm.do?id=${v.menuId }">${v.menuId }</a></td> --%>
 					<td class="text-left"><c:if test="${v.depth gt 1 }">└&nbsp;</c:if>${v.menuName }</td>
@@ -81,8 +81,8 @@
 				</div>
 
 				<p style="text-align: right;" class="mt-4">
-					<button type="button" id="menuOrderUpper" class="btn btn-custom btn-sm orderBtn">▲</button>
-					<button type="button" id="menuOrderLower" class="btn btn-custom btn-sm orderBtn">▼</button>
+					<button type="button" class="btn btn-custom btn-sm orderBtn" data-order_flag="u">▲</button>
+					<button type="button" class="btn btn-custom btn-sm orderBtn" data-order_flag="d">▼</button>
 					<button type="button" id="addMenu" class="btn btn-success btn-md">ADD MENU</button>
 					<button type="button" id="modMenu" class="btn btn-primary btn-md">Modify</button>
 				</p>
