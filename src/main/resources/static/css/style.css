@@ -423,7 +423,8 @@ h1, h2, h3, h4, h5, .h1, .h2, .h3, .h4, .h5 {
 /* Navbar */
 .site-navbar {
 	margin-bottom: 0px;
-	z-index: 1999;
+/*	z-index: 1999;*/
+	z-index: 500;
 	position: relative;
 	width: 100%;
 }

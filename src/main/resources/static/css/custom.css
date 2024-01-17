@@ -263,7 +263,9 @@ textarea {
 	padding: 0.75rem;
 }
 
-
+.modal-dialog-custom {
+	margin: 25% auto;
+}
 
 
 

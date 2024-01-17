@@ -25,7 +25,7 @@ public class CommonControllerAdvice {
 	private HomeService homeService;
 	
 	@ModelAttribute
-	public void handleRequest(HttpServletRequest request, Model model) {
+	public void handleRequest(HttpServletRequest request, Model model) throws Exception {
 		LoginSessionVo login = SessionUtil.getLoginData(request);
 		
 		String uri = request.getRequestURI();
@@ -36,8 +36,15 @@ public class CommonControllerAdvice {
 		List<MenuVo> menuList	= homeService.getMenuList(auth);
 		MenuVo curMenu			= homeService.getMenuByLink(uri);
 		
+		if (curMenu != null) {
+			log.info("AUTH :: {} | {}", curMenu.getRdAuth(), auth);		
+			if (curMenu.getRdAuth() < auth) {
+				log.info("EXCEPTION");
+				throw new Exception("ACCESS DENIED");
+			}
+			model.addAttribute("curMenu"	, curMenu);
+		}
 		model.addAttribute("menuList"	, menuList);
-		model.addAttribute("curMenu"	, curMenu);
 		log.info("menu :: {}", menuList);
 	}
 	

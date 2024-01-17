@@ -8,6 +8,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.main.mapper.AdminMapper;
 import com.main.vo.MenuVo;
+import com.main.vo.UserAuthVo;
 import com.main.vo.UsersVo;
 
 @Service
@@ -19,6 +20,21 @@ public class AdminServiceImpl implements AdminService {
 	@Override
 	public List<UsersVo> getUserList() {
 		return adminMapper.getUserList();
+	}
+	
+	@Override
+	public UsersVo getUserById(String userId) {
+		return adminMapper.getUserById(userId);
+	}
+	
+	@Override
+	public int updateUser(UsersVo user) {
+		return adminMapper.updateUser(user);
+	}
+
+	@Override
+	public List<UserAuthVo> getUserAuth() {
+		return adminMapper.getUserAuth();
 	}
 
 	@Override

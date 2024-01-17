@@ -58,6 +58,11 @@ var CMJS = (function(){
 		return year+'-'+month+'-'+day+' '+hour+':'+minute+':'+seconds;
 	};
 	
+	var _timestampFormatter = function(date){
+		let d = new Date(date);
+		return _dateFormatter(d);
+	};
+	
 	
 	var _ajax = function(paramData){
 		$.ajax({
@@ -110,11 +115,12 @@ var CMJS = (function(){
 	};
 	
 	return {
-		nvl				: _nvl,
-		inpParam		: _inpParam,
-		dateFormatter	: _dateFormatter,
-		ajax			: _ajax,
-		submit			: _submit,
-		getQueryString	: _getQueryString
+		nvl					: _nvl,
+		inpParam			: _inpParam,
+		dateFormatter		: _dateFormatter,
+		timestampFormatter	: _timestampFormatter,
+		ajax				: _ajax,
+		submit				: _submit,
+		getQueryString		: _getQueryString
 	};
 }());

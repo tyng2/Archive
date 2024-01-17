@@ -17,6 +17,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import com.main.comm.Common;
 import com.main.service.AdminService;
 import com.main.vo.MenuVo;
+import com.main.vo.UserAuthVo;
 import com.main.vo.UsersVo;
 
 @Controller
@@ -35,10 +36,44 @@ public class AdminController {
 	
 	@GetMapping("/userList")
 	public String userAdmin(Model model) {
-		
 		List<UsersVo> userList = adminService.getUserList();
 		model.addAttribute("userList", userList);
 		return "admin/userList";
+	}
+	
+	@ResponseBody
+	@PostMapping("/getUser")
+	public Map<String, Object> getUserById(@RequestParam Map<String, String> paramMap) {
+		log.info("getUSER :: {}", paramMap.toString());
+		
+		String userId	= Common.nvl(paramMap.get("userId"));
+		
+		UsersVo user	= adminService.getUserById(userId);
+		List<UserAuthVo> authList = adminService.getUserAuth();
+		
+		Map<String, Object> result = Map.of(
+			"user"		, user,
+			"authList"	, authList
+		);
+		return result;
+	}
+	
+	@ResponseBody
+	@PostMapping("/updateUser")
+	public int updateUser(@RequestParam Map<String, String> paramMap) {
+		
+		int userId = Common.str2Int(paramMap.get("userId")); 
+		int authId = Common.str2Int(paramMap.get("authId"));
+		
+		UsersVo user = new UsersVo();
+		if (userId != 0) {
+			user.setUserId(userId);
+		}
+		if (authId != 0) {
+			user.setAuthId(authId);
+		}
+		int cnt = adminService.updateUser(user);
+		return cnt;
 	}
 	
 	@CacheEvict(value = "menu", allEntries = true)

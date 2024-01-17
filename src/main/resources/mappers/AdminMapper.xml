@@ -4,8 +4,68 @@
 
 <select id="getUserList" resultType="com.main.vo.UsersVo">
 	SELECT
-		*
+		u.user_id,
+		u.user_txid,
+		u.user_name,
+		u.email,
+		u.nickname,
+		u.auth_id,
+		a.auth_name,
+		u.create_date,
+		u.modify_date,
+		u.sns_type,
+		u.sns_profile,
+		u.sns_connect_date
+	FROM users u
+	JOIN user_auth a
+		ON u.auth_id = a.auth_id
+</select>
+
+<select id="getUserById" resultType="com.main.vo.UsersVo">
+	SELECT
+		user_id,
+		user_txid,
+		user_name,
+		email,
+		nickname,
+		auth_id,
+		create_date,
+		modify_date,
+		sns_type,
+		sns_profile,
+		sns_connect_date
 	FROM users
+	WHERE user_id = #{userId}
+</select>
+
+<update id="updateUser" parameterType="com.main.vo.UsersVo">
+	UPDATE users
+	<trim prefix="SET" >
+	<if test="email != null">
+		email = #{email},
+	</if>
+	<if test="nickname != null">
+		nickname = #{nickname},
+	</if>
+	<if test="mobile != null">
+		mobile = #{mobile},
+	</if>
+	<if test="authId != null">
+		auth_id = #{authId},
+	</if>
+	<if test="snsType != null">
+		sns_type = #{snsType},
+	</if>
+		modify_date = CURRENT_TIMESTAMP()
+	</trim>
+	WHERE user_id = #{userId}
+</update>
+
+<select id="getUserAuth" resultType="com.main.vo.UserAuthVo">
+	SELECT
+		auth_id,
+		auth_name
+	FROM user_auth
 </select>
 
 <insert id="insertMenu" parameterType="com.main.vo.MenuVo">
