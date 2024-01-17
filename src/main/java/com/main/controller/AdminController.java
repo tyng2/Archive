@@ -62,8 +62,9 @@ public class AdminController {
 	@PostMapping("/updateUser")
 	public int updateUser(@RequestParam Map<String, String> paramMap) {
 		
-		int userId = Common.str2Int(paramMap.get("userId")); 
-		int authId = Common.str2Int(paramMap.get("authId"));
+		int userId		= Common.str2Int(paramMap.get("userId"));
+		int authId		= Common.str2Int(paramMap.get("authId"));
+		String nickname	= Common.nvl(paramMap.get("nickname"));
 		
 		UsersVo user = new UsersVo();
 		if (userId != 0) {
@@ -72,7 +73,18 @@ public class AdminController {
 		if (authId != 0) {
 			user.setAuthId(authId);
 		}
+		if (!"".equals(nickname)) {
+			user.setNickname(nickname);
+		}
 		int cnt = adminService.updateUser(user);
+		return cnt;
+	}
+	
+	@ResponseBody
+	@PostMapping("/deleteUser")
+	public int deleteUser(@RequestParam Map<String, String> paramMap) {
+		String userId	= Common.nvl(paramMap.get("userId"));
+		int cnt			= adminService.deleteUser(userId);
 		return cnt;
 	}
 	

@@ -32,7 +32,7 @@ $('#userList').CMinit(function(){
 				});
 			});
 			
-			$('#userDetailModal').on('hide.bs.modal', function(){
+			$('#userDetailModal').on('hidden.bs.modal', function(){
 				modalModifyFormCtrl(true);
 			});
 			
@@ -44,7 +44,6 @@ $('#userList').CMinit(function(){
 			$('#modifyUserApply').on('click', function(){
 				let param		= getInpParam($('#userModalForm'));
 				param['userId']	= $('#user_id_modal').val();
-				
 				modalModifyFormCtrl(true);
 				
 				CMJS.ajax({
@@ -60,6 +59,36 @@ $('#userList').CMinit(function(){
 					}
 				});
 				
+			});
+			
+			$('#dropOutUser').on('click', function(){
+				let userId = $('#user_id_modal').val();
+				
+				CMJS.ajax({
+					url		: '/deleteUser',
+					type	: 'POST',
+					data	: {
+						'userId' : userId
+					},
+					success	: function(data) {
+						if (data > 0) {
+							Swal.fire({
+								text	: '삭제가 완료되었습니다.',
+								icon	: 'info'
+							}).then(result => {
+								location.reload();
+							});
+							
+						} else {
+							Swal.fire({
+								text	: 'Something wrong.',
+								icon	: 'info'
+							}).then(result => {
+								$('#userDetailModal').modal('hide');
+							});
+						}
+					}
+				});
 			});
 			
 		};

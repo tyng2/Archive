@@ -19,6 +19,7 @@
 	FROM users u
 	JOIN user_auth a
 		ON u.auth_id = a.auth_id
+	ORDER BY u.user_id DESC
 </select>
 
 <select id="getUserById" resultType="com.main.vo.UsersVo">

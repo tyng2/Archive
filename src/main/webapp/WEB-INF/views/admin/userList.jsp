@@ -40,17 +40,17 @@
 						<input type="text" class="form-control disabled" id="email_modal" name="email" disabled="disabled">
 					</div>
 					<div class="form-group col-6">
+						<label for="sns_type_modal" class="col-form-label">TYPE</label>
+						<input type="text" class="form-control disabled" id="sns_type_modal" name="snsType" disabled="disabled">
+					</div>
+					<div class="form-group col-6">
 						<label for="nickname_modal" class="col-form-label">NickName</label>
-						<input type="text" class="form-control disabled" id="nickname_modal" name="nickname" disabled="disabled">
+						<input type="text" class="form-control editable" id="nickname_modal" name="nickname" disabled="disabled">
 					</div>
 					<div class="form-group col-6">
 						<label for="auth_modal" class="col-form-label">Auth</label>
 <!-- 						<input type="text" class="form-control editable" id="auth_modal" disabled="disabled"> -->
 						<select class="form-control editable" id="auth_modal" name="authId" disabled="disabled"></select>
-					</div>
-					<div class="form-group col-6">
-						<label for="sns_type_modal" class="col-form-label">TYPE</label>
-						<input type="text" class="form-control disabled" id="sns_type_modal" name="snsType" disabled="disabled">
 					</div>
 					<div class="form-group col-6">
 						<label for="create_date_modal" class="col-form-label">CRDT</label>
@@ -61,7 +61,7 @@
 						<input type="text" class="form-control disabled" id="modify_date_modal" name="modifyDate" disabled="disabled">
 					</div>
 				</div>
-<%--				
+<%--
 				<div class="form-group">
 					<label for="recipient-name" class="col-form-label">Recipient:</label>
 					<input type="text" class="form-control" id="recipient-name">
@@ -74,6 +74,7 @@
 			</form>
 			</div>
 			<div class="modal-footer">
+				<button type="button" class="btn btn-danger" id="dropOutUser">DropOut</button>
 				<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
 				<button type="button" class="btn btn-primary" id="modifyUser">Modify</button>
 				<button type="button" class="btn btn-success" id="modifyUserApply" style="display: none;">Apply</button>
@@ -107,7 +108,7 @@
 <!-- 	</div> -->
 <!-- </div> -->
 <section class="site-section">
-<h2 class="text-black site-section-heading text-center" id="lst">User List</h2>
+	<h2 class="text-black site-section-heading text-center" id="lst">User List</h2>
 	<div class="container">
 		<div class="row">
 			<div style="width: 100%;">
@@ -125,28 +126,25 @@
 					<th>E-MAIL</th>
 					<th width="30px">AUTH</th>
 					<th width="170px">REG_DATE</th>
-					<!-- <th width="16px"></th> -->
+<!-- 					<th width="16px"></th> -->
 					</tr>
 				</thead>
 				<tbody>
 				<c:choose>
 				<c:when test="${empty userList }">
-				<tr><td colspan="8" style="text-align: center;">No user.</td></tr>
+					<tr><td colspan="8" style="text-align: center;">No user.</td></tr>
 				</c:when>
 				<c:otherwise>
 				<c:forEach items="${userList }" var="v">
 					<tr data-user_id="${v.userId }" data-toggle="modal" data-target="#userDetailModal">
-					<%-- <td><a href="javascript:delMember('${v.id }')"><i class="material-icons">clear</i></a></td> --%>
 					<td><input type="checkbox" name="chBoxId" value="${v.userId }" ></td>
-<%-- 					<td class="title1"><a href="memberModifyForm.do?id=${v.userId }&pageNum=${pageInfoMap.pageNum }">${v.userId }</a></td> --%>
-					<td class="title1"><a href="memberModifyForm.do?id=${v.userId }&pageNum=${pageInfoMap }">${v.userId }</a></td>
+					<td class="title1">${v.userId }</td>
 					<td>${fn:toUpperCase(v.snsType) }</td>
 <%-- 					<td>${v.userName }</td> --%>
 					<td>${v.nickname }</td>
 					<td>${v.email }</td>
-					<td>${v.authId }</td>
+					<td>${v.authName }</td>
 					<td><fmt:formatDate value="${v.createDate }" pattern="yyyy.MM.dd HH:mm:ss"/></td>
-					<%-- <td><a href="javascript:delMember('${v.id }')"><i class="material-icons">clear</i></a></td> --%>
 					</tr>
 				</c:forEach>
 				</c:otherwise>
@@ -200,11 +198,10 @@
 				</form>
 				
 				<h3 class="h5 text-black mb-3">Search</h3>
-				<form action="memberList.do" method="get">
+				<form action="userList" method="get">
 					<%-- <input type="hidden" name="category" value="${param.category }"> --%>
 					<div class="form-group d-flex">
-						<input type="text" class="form-control" name="search"
-							placeholder="ID로 검색" value="${search }">
+						<input type="text" class="form-control" name="search" placeholder="ID로 검색" value="${search }">
 					</div>
 				</form>
 				

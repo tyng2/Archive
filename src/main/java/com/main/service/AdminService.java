@@ -14,6 +14,8 @@ public interface AdminService {
 	
 	public int updateUser(UsersVo user);
 	
+	public int deleteUser(String userId);
+	
 	public List<UserAuthVo> getUserAuth();
 	
 	public int insertMenu(MenuVo menu);

@@ -6,8 +6,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import com.main.comm.Common;
 import com.main.mapper.AdminMapper;
+import com.main.mapper.HomeMapper;
+import com.main.mapper.UsersMapper;
 import com.main.vo.MenuVo;
+import com.main.vo.SiteVo;
 import com.main.vo.UserAuthVo;
 import com.main.vo.UsersVo;
 
@@ -16,6 +20,12 @@ public class AdminServiceImpl implements AdminService {
 	
 	@Autowired
 	private AdminMapper adminMapper;
+	
+	@Autowired
+	private UsersMapper usersMapper;
+	
+	@Autowired
+	private HomeMapper homeMapper;
 
 	@Override
 	public List<UsersVo> getUserList() {
@@ -30,6 +40,19 @@ public class AdminServiceImpl implements AdminService {
 	@Override
 	public int updateUser(UsersVo user) {
 		return adminMapper.updateUser(user);
+	}
+	
+	@Override
+	public int deleteUser(String userId) {
+		
+		int cnt = 0; 
+		cnt += usersMapper.deleteUser(userId);
+		
+		SiteVo site = new SiteVo();
+		site.setUserId(Common.str2Int(userId));
+		cnt += homeMapper.deleteSite(site);
+		
+		return cnt;
 	}
 
 	@Override

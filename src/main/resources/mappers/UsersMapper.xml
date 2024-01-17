@@ -75,4 +75,10 @@
 	VALUES (#{userId}, #{loginIp}, #{loginDevice}, #{loginType})
 </insert>
 
+
+<delete id="deleteUser">
+	DELETE FROM users
+	WHERE user_id = #{userId}
+</delete>
+
 </mapper>

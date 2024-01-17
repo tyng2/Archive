@@ -18,5 +18,7 @@ public interface UsersMapper {
 	
 	public int insertUserLog(Map<String, String> input);
 	
+	public int deleteUser(@Param("userId") String userId);
+	
 	
 }
