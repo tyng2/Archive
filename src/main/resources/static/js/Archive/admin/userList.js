@@ -58,7 +58,6 @@ $('#userList').CMinit(function(){
 						}
 					}
 				});
-				
 			});
 			
 			$('#dropOutUser').on('click', function(){
@@ -90,7 +89,6 @@ $('#userList').CMinit(function(){
 					}
 				});
 			});
-			
 		};
 		
 		var setModalData = function(data){

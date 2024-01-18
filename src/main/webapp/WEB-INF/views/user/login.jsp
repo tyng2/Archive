@@ -80,6 +80,4 @@
 </div>
 
 <script src="/js/Archive/user/login.js"></script>
-<script>
-</script>
 </body>
