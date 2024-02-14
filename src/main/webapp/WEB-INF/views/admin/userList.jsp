@@ -94,7 +94,7 @@
 				<div class="row justify-content-center mb-4">
 					<div class="col-md-8 text-center">
 						<h1>Administrator Menu</h1>
-						<p class="lead mb-5">회원 목록</p>
+						<p class="lead mb-5">User List</p>
 					</div>
 				</div>
 

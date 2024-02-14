@@ -1,5 +1,15 @@
 /* custom */
 
+@font-face {
+	font-family: 'NEXONLv2Gothic';
+	src: url('/src/main/resources/static/fonts/NEXON\ Lv2\ Gothic.ttf') format('truetype');
+	unicode-range: U+AC00-D7AF;
+}
+
+body {
+	font-family: 'NEXONLv2Gothic' !important;
+}
+
 .left {
 	text-align: left;
 }

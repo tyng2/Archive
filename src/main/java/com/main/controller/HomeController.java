@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -91,6 +92,18 @@ public class HomeController {
 		return cnt;
 	}
 	
+	@ResponseBody
+	@GetMapping("/api/test/{num}")
+	public Map<String, String> testAPI(@PathVariable("num") String num){
+		int n = Common.str2Int(num);
+		int r = n * 142857;
+		
+		Map<String, String> resultMap = Map.of(
+			"resultNum"	,r+"",
+			"inputNum"	,num
+		);
+		return resultMap;
+	}
 	
 	
 }
