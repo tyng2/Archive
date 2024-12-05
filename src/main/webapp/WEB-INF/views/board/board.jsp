@@ -6,7 +6,7 @@
     <jsp:include page="/WEB-INF/views/common/commonHeader.jsp" />
 </head>
 <body id="board">
-<div class="site-blocks-cover inner-page-cover overlay" style="background-image: url(images/hero_1.jpg);" 
+<div class="site-blocks-cover inner-page-cover overlay" style="background-image: url(images/img_2.jpg);" 
 	data-aos="fade" data-stellar-background-ratio="0.5">
 	<div class="container">
 		<div class="row align-items-center justify-content-center text-center">
@@ -185,14 +185,16 @@
 						<c:forEach items="${commentList }" var="cl">
 							<li class="mb-2"><a href="detail?bordId=${cl.bordId }&#CommentArea">${cl.commCont }</a></li>
 						</c:forEach>
-						<!-- <li class="mb-2"><a href="#">Joefrey</a> <em>in</em> <a
+						<%-- 
+						<li class="mb-2"><a href="#">Joefrey</a> <em>in</em> <a
 							href="#">Lorem ipsum dolor sit amet</a></li>
 						<li class="mb-2"><a href="#">Joefrey</a> <em>in</em> <a
 							href="#">Quaerat rerum voluptatibus veritatis</a></li>
 						<li class="mb-2"><a href="#">Joefrey</a> <em>in</em> <a
 							href="#">Maiores sapiente veritatis reprehenderit</a></li>
 						<li class="mb-2"><a href="#">Joefrey</a> <em>in</em> <a
-							href="#">Natus eligendi nobis</a></li> -->
+							href="#">Natus eligendi nobis</a></li>
+						--%>
 					</ul>
 				</div>
 			</c:if>

@@ -5,7 +5,7 @@
     <jsp:include page="/WEB-INF/views/common/commonHeader.jsp" />
 </head>
 <body id="write">
-<div class="site-blocks-cover inner-page-cover overlay" style="background-image: url(images/hero_1.jpg);"
+<div class="site-blocks-cover inner-page-cover overlay" style="background-image: url(images/img_2.jpg);"
 	data-aos="fade" data-stellar-background-ratio="0.5">
 	<div class="container">
 		<div class="row align-items-center justify-content-center text-center">
@@ -39,22 +39,22 @@
 		<input type="hidden" id="category"	name="category"	value="${category }">
 		<div class="row form-group">
 			<div class="col-md-6 mb-3 mb-md-0">
-				<label class="text-black" for="fname">Category</label><br>
-				<select class="form-control" name="categy">
 				<c:if test="${not empty categoryList }">
-				<c:forEach var="c" items="${categoryList }">
-					<c:choose>
-					<c:when test="${not empty category }">
-<%-- 						<option value="${c.catg_id }" <% if ("".equals(category)) {%>selected<%} %>>${c.catg_name }</option> --%>
-						<option value="${c.catgId }" <c:if test="${category eq c.catgId }">selected</c:if> >${c.catgName }</option>
-					</c:when>
-					<c:otherwise>
-						<option value="${c.catgId }">${c.catgName }</option>
-					</c:otherwise>
-					</c:choose>
-				</c:forEach>
+				<label class="text-black" for="fname">Category</label><br>
+					<select class="form-control" name="categy">
+					<c:forEach var="c" items="${categoryList }">
+						<c:choose>
+						<c:when test="${not empty category }">
+	<%-- 						<option value="${c.catg_id }" <% if ("".equals(category)) {%>selected<%} %>>${c.catg_name }</option> --%>
+							<option value="${c.catgId }" <c:if test="${category eq c.catgId }">selected</c:if> >${c.catgName }</option>
+						</c:when>
+						<c:otherwise>
+							<option value="${c.catgId }">${c.catgName }</option>
+						</c:otherwise>
+						</c:choose>
+					</c:forEach>
+					</select>
 				</c:if>
-				</select>
 				<!-- <input type="text" id="fname" class="form-control"> -->
 			</div>
 			<div class="col-md-6">
