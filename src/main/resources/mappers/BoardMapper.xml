@@ -90,9 +90,9 @@
 		b.bord_hitc, 
 		b.bord_wrip
 	FROM board b
-	JOIN category c
+	LEFT JOIN category c
 		ON b.bord_catg = c.catg_id
-	LEFT OUTER JOIN users u
+	LEFT JOIN users u
 		ON b.user_id = u.user_id
 	WHERE b.bord_id = #{bordId}
 </select>

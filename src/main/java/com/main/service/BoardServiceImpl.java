@@ -168,7 +168,8 @@ public class BoardServiceImpl implements BoardService {
 			boardMapper.addHitc(bordId);
 			board.setBordHitc(board.getBordHitc() + 1);
 		}
-		
+		log.info("board :: {}", board.toString());
+		log.info("files :: {}", files.toString());
 		Map<String, Object> res = Map.of(
 			"board"	, board,
 			"files"	, files
